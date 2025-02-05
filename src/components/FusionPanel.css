@@ -1,0 +1,15 @@
+.fusion-panel {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.coming-soon {
+  font-family: 'Bangers', cursive;
+  font-size: 1.8rem;
+  color: #f0e130;
+  margin-top: 20px;
+}

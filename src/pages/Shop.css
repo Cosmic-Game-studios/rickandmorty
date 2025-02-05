@@ -1,0 +1,81 @@
+/* ===================================================================== */
+/* Shop Page Styles                                                      */
+/* ===================================================================== */
+
+/* Zentrale Variablen definieren */
+:root {
+  --shop-bg: rgba(255, 255, 255, 0.05);
+  --shop-card-bg: rgba(255, 255, 255, 0.1);
+  --shop-button-gradient-start: #ff0066;
+  --shop-button-gradient-end: #ffcc00;
+  --shop-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --transition-fast: 0.3s ease;
+}
+
+.shop-page {
+  padding: 20px;
+  text-align: center;
+  background: var(--shop-bg);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.shop-card {
+  background: var(--shop-card-bg);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: var(--shop-box-shadow);
+  transition: transform var(--transition-fast);
+}
+
+.shop-card:hover {
+  transform: scale(1.02);
+}
+
+.shop-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.shop-button {
+  background: linear-gradient(45deg, var(--shop-button-gradient-start), var(--shop-button-gradient-end));
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.shop-button:hover {
+  background: linear-gradient(45deg, var(--shop-button-gradient-end), var(--shop-button-gradient-start));
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 480px) {
+  .shop-page {
+    padding: 15px;
+  }
+  .shop-grid {
+    gap: 15px;
+  }
+  .shop-card {
+    padding: 10px;
+  }
+  .shop-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}

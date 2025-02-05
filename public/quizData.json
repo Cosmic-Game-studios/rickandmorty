@@ -1,0 +1,1752 @@
+[
+    {
+      "id": 1,
+      "question": "What is Rick's catchphrase? (Var 1)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 2,
+      "question": "What is Morty's last name? (Var 2)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 3,
+      "question": "Which device does Rick use to travel between dimensions? (Var 3)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 4,
+      "question": "Who is Birdperson? (Var 4)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 5,
+      "question": "What is the Citadel of Ricks? (Var 5)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 6,
+      "question": "Which character famously transforms into a pickle? (Var 6)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 7,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 7)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 8,
+      "question": "Who is Evil Morty? (Var 8)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 9,
+      "question": "Which dimension is Rick primarily from? (Var 9)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 10,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 10)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 11,
+      "question": "What is Rick's catchphrase? (Var 11)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 12,
+      "question": "What is Morty's last name? (Var 12)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 13,
+      "question": "Which device does Rick use to travel between dimensions? (Var 13)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 14,
+      "question": "Who is Birdperson? (Var 14)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 15,
+      "question": "What is the Citadel of Ricks? (Var 15)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 16,
+      "question": "Which character famously transforms into a pickle? (Var 16)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 17,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 17)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 18,
+      "question": "Who is Evil Morty? (Var 18)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 19,
+      "question": "Which dimension is Rick primarily from? (Var 19)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 20,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 20)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 21,
+      "question": "What is Rick's catchphrase? (Var 21)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 22,
+      "question": "What is Morty's last name? (Var 22)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 23,
+      "question": "Which device does Rick use to travel between dimensions? (Var 23)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 24,
+      "question": "Who is Birdperson? (Var 24)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 25,
+      "question": "What is the Citadel of Ricks? (Var 25)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 26,
+      "question": "Which character famously transforms into a pickle? (Var 26)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 27,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 27)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 28,
+      "question": "Who is Evil Morty? (Var 28)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 29,
+      "question": "Which dimension is Rick primarily from? (Var 29)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 30,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 30)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 31,
+      "question": "What is Rick's catchphrase? (Var 31)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 32,
+      "question": "What is Morty's last name? (Var 32)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 33,
+      "question": "Which device does Rick use to travel between dimensions? (Var 33)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 34,
+      "question": "Who is Birdperson? (Var 34)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 35,
+      "question": "What is the Citadel of Ricks? (Var 35)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 36,
+      "question": "Which character famously transforms into a pickle? (Var 36)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 37,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 37)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 38,
+      "question": "Who is Evil Morty? (Var 38)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 39,
+      "question": "Which dimension is Rick primarily from? (Var 39)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 40,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 40)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 41,
+      "question": "What is Rick's catchphrase? (Var 41)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 42,
+      "question": "What is Morty's last name? (Var 42)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 43,
+      "question": "Which device does Rick use to travel between dimensions? (Var 43)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 44,
+      "question": "Who is Birdperson? (Var 44)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 45,
+      "question": "What is the Citadel of Ricks? (Var 45)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 46,
+      "question": "Which character famously transforms into a pickle? (Var 46)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 47,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 47)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 48,
+      "question": "Who is Evil Morty? (Var 48)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 49,
+      "question": "Which dimension is Rick primarily from? (Var 49)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 50,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 50)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 51,
+      "question": "What is Rick's catchphrase? (Var 51)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 52,
+      "question": "What is Morty's last name? (Var 52)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 53,
+      "question": "Which device does Rick use to travel between dimensions? (Var 53)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 54,
+      "question": "Who is Birdperson? (Var 54)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 55,
+      "question": "What is the Citadel of Ricks? (Var 55)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 56,
+      "question": "Which character famously transforms into a pickle? (Var 56)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 57,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 57)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 58,
+      "question": "Who is Evil Morty? (Var 58)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 59,
+      "question": "Which dimension is Rick primarily from? (Var 59)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 60,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 60)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 61,
+      "question": "What is Rick's catchphrase? (Var 61)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 62,
+      "question": "What is Morty's last name? (Var 62)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 63,
+      "question": "Which device does Rick use to travel between dimensions? (Var 63)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 64,
+      "question": "Who is Birdperson? (Var 64)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 65,
+      "question": "What is the Citadel of Ricks? (Var 65)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 66,
+      "question": "Which character famously transforms into a pickle? (Var 66)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 67,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 67)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 68,
+      "question": "Who is Evil Morty? (Var 68)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 69,
+      "question": "Which dimension is Rick primarily from? (Var 69)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 70,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 70)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 71,
+      "question": "What is Rick's catchphrase? (Var 71)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 72,
+      "question": "What is Morty's last name? (Var 72)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 73,
+      "question": "Which device does Rick use to travel between dimensions? (Var 73)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 74,
+      "question": "Who is Birdperson? (Var 74)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 75,
+      "question": "What is the Citadel of Ricks? (Var 75)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 76,
+      "question": "Which character famously transforms into a pickle? (Var 76)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 77,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 77)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 78,
+      "question": "Who is Evil Morty? (Var 78)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 79,
+      "question": "Which dimension is Rick primarily from? (Var 79)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 80,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 80)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 81,
+      "question": "What is Rick's catchphrase? (Var 81)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 82,
+      "question": "What is Morty's last name? (Var 82)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 83,
+      "question": "Which device does Rick use to travel between dimensions? (Var 83)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 84,
+      "question": "Who is Birdperson? (Var 84)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 85,
+      "question": "What is the Citadel of Ricks? (Var 85)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 86,
+      "question": "Which character famously transforms into a pickle? (Var 86)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 87,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 87)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 88,
+      "question": "Who is Evil Morty? (Var 88)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 89,
+      "question": "Which dimension is Rick primarily from? (Var 89)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 90,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 90)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 91,
+      "question": "What is Rick's catchphrase? (Var 91)",
+      "options": ["Wubba Lubba Dub Dub", "To infinity and beyond", "Bazinga", "Great Scott!"],
+      "answer": "Wubba Lubba Dub Dub"
+    },
+    {
+      "id": 92,
+      "question": "What is Morty's last name? (Var 92)",
+      "options": ["Smith", "Johnson", "Williams", "Brown"],
+      "answer": "Smith"
+    },
+    {
+      "id": 93,
+      "question": "Which device does Rick use to travel between dimensions? (Var 93)",
+      "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+      "answer": "Portal Gun"
+    },
+    {
+      "id": 94,
+      "question": "Who is Birdperson? (Var 94)",
+      "options": ["A close friend of Rick", "Morty's enemy", "Summer's boyfriend", "Jerry's cousin"],
+      "answer": "A close friend of Rick"
+    },
+    {
+      "id": 95,
+      "question": "What is the Citadel of Ricks? (Var 95)",
+      "options": [
+        "A space station inhabited solely by Ricks",
+        "Rick's secret base",
+        "A governmental agency",
+        "A military outpost"
+      ],
+      "answer": "A space station inhabited solely by Ricks"
+    },
+    {
+      "id": 96,
+      "question": "Which character famously transforms into a pickle? (Var 96)",
+      "options": ["Rick", "Morty", "Jerry", "Beth"],
+      "answer": "Rick"
+    },
+    {
+      "id": 97,
+      "question": "What is the significance of Szechuan Sauce in the series? (Var 97)",
+      "options": ["A limited-edition sauce", "Rick's favorite meal", "An alien technology", "A portal fuel"],
+      "answer": "A limited-edition sauce"
+    },
+    {
+      "id": 98,
+      "question": "Who is Evil Morty? (Var 98)",
+      "options": ["A mysterious antagonist", "Rick's clone", "Summer's friend", "A government agent"],
+      "answer": "A mysterious antagonist"
+    },
+    {
+      "id": 99,
+      "question": "Which dimension is Rick primarily from? (Var 99)",
+      "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+      "answer": "Dimension C-137"
+    },
+    {
+      "id": 100,
+      "question": "What is the primary function of a Mr. Meeseeks? (Var 100)",
+      "options": ["To complete a task", "To party", "To fight", "To teach"],
+      "answer": "To complete a task"
+    },
+    {
+      "id": 101,
+      "question": "In 'Pickle Rick', why does Rick transform himself into a pickle? (Var 101)",
+      "options": [
+        "To avoid family therapy",
+        "To win a bet",
+        "To conduct a dangerous experiment",
+        "To impress Morty"
+      ],
+      "answer": "To avoid family therapy"
+    },
+    {
+      "id": 102,
+      "question": "In 'The Ricks Must Be Crazy', what is the primary power source for Rick's car battery? (Var 102)",
+      "options": [
+        "A miniature universe",
+        "A plutonium reactor",
+        "Dark matter",
+        "Interdimensional crystals"
+      ],
+      "answer": "A miniature universe"
+    },
+    {
+      "id": 103,
+      "question": "In 'Pickle Rick', what unconventional material does Rick use to construct his exoskeleton? (Var 103)",
+      "options": [
+        "Rat carcasses",
+        "Old tires",
+        "Scrap metal",
+        "Plankton"
+      ],
+      "answer": "Rat carcasses"
+    },
+    {
+      "id": 104,
+      "question": "In 'Meeseeks and Destroy', what existential crisis do the Mr. Meeseeks face? (Var 104)",
+      "options": [
+        "The inability to complete an increasingly difficult task",
+        "Their fading existence",
+        "Being trapped in a time loop",
+        "Lack of purpose after task completion"
+      ],
+      "answer": "The inability to complete an increasingly difficult task"
+    },
+    {
+      "id": 105,
+      "question": "In 'The Rickshank Rickdemption', what is the name of the hybrid character created from Abraham Lincoln and Adolf Hitler? (Var 105)",
+      "options": [
+        "Abradolf Lincler",
+        "Adolibrahm",
+        "Lincoltpig",
+        "Adolfbrad"
+      ],
+      "answer": "Abradolf Lincler"
+    },
+    {
+      "id": 106,
+      "question": "In which episode does Birdperson transform into Phoenixperson? (Var 106)",
+      "options": [
+        "The Wedding Squanchers",
+        "Pickle Rick",
+        "Total Rickall",
+        "Rickmancing the Stone"
+      ],
+      "answer": "The Wedding Squanchers"
+    },
+    {
+      "id": 107,
+      "question": "In 'Mortynight Run', what is the occupation of Krombopulos Michael? (Var 107)",
+      "options": [
+        "Assassin",
+        "Bounty Hunter",
+        "Merchant",
+        "Scientist"
+      ],
+      "answer": "Assassin"
+    },
+    {
+      "id": 108,
+      "question": "In 'The Ricks Must Be Crazy', what ethical dilemma does Rick’s use of a miniature universe highlight? (Var 108)",
+      "options": [
+        "The exploitation of sentient life",
+        "The dangers of unchecked power",
+        "The consequences of time travel",
+        "The futility of existence"
+      ],
+      "answer": "The exploitation of sentient life"
+    },
+    {
+      "id": 109,
+      "question": "What is the official name of the governing body composed solely of Ricks? (Var 109)",
+      "options": [
+        "Council of Ricks",
+        "Rick Tribunal",
+        "Multiverse Assembly",
+        "Rick Collective"
+      ],
+      "answer": "Council of Ricks"
+    },
+    {
+      "id": 110,
+      "question": "In 'Total Rickall', how do the characters initially differentiate between real memories and implanted ones? (Var 110)",
+      "options": [
+        "By testing the plausibility of each memory",
+        "By using a memory detector",
+        "Through a group vote",
+        "By consulting Morty's recollections"
+      ],
+      "answer": "By testing the plausibility of each memory"
+    },
+    {
+      "id": 111,
+      "question": "Which of the following characters was confirmed to be real in 'Total Rickall'? (Var 111)",
+      "options": [
+        "Mr. Poopybutthole",
+        "Snuffles",
+        "Garblov",
+        "Butter Robot"
+      ],
+      "answer": "Mr. Poopybutthole"
+    },
+    {
+      "id": 112,
+      "question": "In 'Rickmancing the Stone', which emotion is primarily explored by the characters? (Var 112)",
+      "options": [
+        "Grief",
+        "Anger",
+        "Jealousy",
+        "Fear"
+      ],
+      "answer": "Grief"
+    },
+    {
+      "id": 113,
+      "question": "In 'The ABC's of Beth', what is the name of the imaginary world that Beth visits? (Var 113)",
+      "options": [
+        "Froopyland",
+        "Wonderland",
+        "Beth's Dream",
+        "Monster Land"
+      ],
+      "answer": "Froopyland"
+    },
+    {
+      "id": 114,
+      "question": "In 'Edge of Tomorty: Rick Die Rickpeat', what object is central to the plot involving alternate timelines? (Var 114)",
+      "options": [
+        "Death crystals",
+        "A magic amulet",
+        "Time grenades",
+        "A paradox machine"
+      ],
+      "answer": "Death crystals"
+    },
+    {
+      "id": 115,
+      "question": "In 'Get Schwifty', which cosmic entity presides over the contest that Earth's inhabitants must participate in? (Var 115)",
+      "options": [
+        "The Cromulons",
+        "The Celestials",
+        "The Ancients",
+        "The Void Lords"
+      ],
+      "answer": "The Cromulons"
+    },
+    {
+      "id": 116,
+      "question": "In 'Rixty Minutes', what underlying concept does the bizarre interdimensional cable primarily suggest? (Var 116)",
+      "options": [
+        "Infinite possibilities",
+        "Predictable chaos",
+        "Uniformity in diversity",
+        "The collapse of time"
+      ],
+      "answer": "Infinite possibilities"
+    },
+    {
+      "id": 117,
+      "question": "Which philosopher's existential ideas are often reflected in Rick's dialogue? (Var 117)",
+      "options": [
+        "Friedrich Nietzsche",
+        "Immanuel Kant",
+        "Jean-Paul Sartre",
+        "Plato"
+      ],
+      "answer": "Friedrich Nietzsche"
+    },
+    {
+      "id": 118,
+      "question": "In 'Vindicators 3: The Return of Worldender', what is the major flaw in the Vindicators' approach to heroism? (Var 118)",
+      "options": [
+        "Their arrogance and lack of self-awareness",
+        "Their reliance on technology",
+        "Their inability to work as a team",
+        "Their disregard for civilian life"
+      ],
+      "answer": "Their arrogance and lack of self-awareness"
+    },
+    {
+      "id": 119,
+      "question": "In 'The Ricklantis Mixup', which social issue is most prominently explored at the Citadel? (Var 119)",
+      "options": [
+        "Class inequality among Ricks and Mortys",
+        "The corruption of power",
+        "The consequences of war",
+        "The collapse of societal norms"
+      ],
+      "answer": "Class inequality among Ricks and Mortys"
+    },
+    {
+      "id": 120,
+      "question": "In 'The Ricklantis Mixup', what is the fate of Evil Morty? (Var 120)",
+      "options": [
+        "He rises to power",
+        "He is exiled",
+        "He is killed",
+        "He remains in obscurity"
+      ],
+      "answer": "He rises to power"
+    },
+    {
+      "id": 121,
+      "question": "In 'Edge of Tomorty: Rick Die Rickpeat', which element forces Morty to confront multiple potential futures? (Var 121)",
+      "options": [
+        "Death crystals",
+        "Time loops",
+        "Alternate Mortys",
+        "A prophetic vision"
+      ],
+      "answer": "Death crystals"
+    },
+    {
+      "id": 122,
+      "question": "In 'Rick Potion #9', what term is used by fans to describe the post-transformation Earth? (Var 122)",
+      "options": [
+        "Cronenberg Earth",
+        "Mutation Earth",
+        "Altered Earth",
+        "New Earth"
+      ],
+      "answer": "Cronenberg Earth"
+    },
+    {
+      "id": 123,
+      "question": "In 'Close Rick-counters of the Rick Kind', which Rick is framed for the serial murders? (Var 123)",
+      "options": [
+        "Rick C-137",
+        "Rick D-99",
+        "Rick J-19",
+        "Rick K-22"
+      ],
+      "answer": "Rick C-137"
+    },
+    {
+      "id": 124,
+      "question": "Which aspect of Rick's character is most emphasized in his confrontations with the Galactic Federation? (Var 124)",
+      "options": [
+        "His disdain for authority",
+        "His scientific curiosity",
+        "His paternal instincts",
+        "His romantic pursuits"
+      ],
+      "answer": "His disdain for authority"
+    },
+    {
+      "id": 125,
+      "question": "In 'Something Ricked This Way Comes', what is the nature of the cursed items sold by the antique shop? (Var 125)",
+      "options": [
+        "They come with a hidden cost",
+        "They cause temporal anomalies",
+        "They transform the owner",
+        "They trap the soul"
+      ],
+      "answer": "They come with a hidden cost"
+    },
+    {
+      "id": 126,
+      "question": "Which of the following is NOT a known dimension designation in the series? (Var 126)",
+      "options": [
+        "Dimension C-137",
+        "Dimension 35-C",
+        "Dimension 7-13",
+        "Dimension J-19"
+      ],
+      "answer": "Dimension 7-13"
+    },
+    {
+      "id": 127,
+      "question": "In 'Rattlestar Ricklactica', what species challenges Morty's perception of time? (Var 127)",
+      "options": [
+        "Sentient snakes",
+        "Time-traveling birds",
+        "Quantum fish",
+        "Dimensional insects"
+      ],
+      "answer": "Sentient snakes"
+    },
+    {
+      "id": 128,
+      "question": "In 'The Vat of Acid Episode', what does Rick use to demonstrate the futility of shortcuts? (Var 128)",
+      "options": [
+        "A fake vat of acid",
+        "A time loop machine",
+        "A simulated environment",
+        "A decoy scheme"
+      ],
+      "answer": "A fake vat of acid"
+    },
+    {
+      "id": 129,
+      "question": "In 'Never Ricking Morty', what narrative device challenges traditional storytelling? (Var 129)",
+      "options": [
+        "Meta storytelling",
+        "Non-linear narrative",
+        "Flashbacks",
+        "Dream sequences"
+      ],
+      "answer": "Meta storytelling"
+    },
+    {
+      "id": 130,
+      "question": "Which episode introduces the character Noob-Noob? (Var 130)",
+      "options": [
+        "Rattlestar Ricklactica",
+        "Look Who's Purging Now",
+        "Morty's Mind Blowers",
+        "Never Ricking Morty"
+      ],
+      "answer": "Rattlestar Ricklactica"
+    },
+    {
+      "id": 131,
+      "question": "In 'Morty's Mind Blowers', what happens to the traumatic memories that Rick deems too dangerous? (Var 131)",
+      "options": [
+        "They are erased",
+        "They are stored away",
+        "They are transferred to a memory bank",
+        "They are sold to collectors"
+      ],
+      "answer": "They are erased"
+    },
+    {
+      "id": 132,
+      "question": "What recurring theme is highlighted by the appearance of multiple alternate versions of Rick and Morty? (Var 132)",
+      "options": [
+        "Infinite possibilities",
+        "Doomed fate",
+        "Inevitability of despair",
+        "Random chance"
+      ],
+      "answer": "Infinite possibilities"
+    },
+    {
+      "id": 133,
+      "question": "In 'The Old Man and the Seat', what secret location does Rick use for his private bathroom? (Var 133)",
+      "options": [
+        "A hidden dimension",
+        "A fortified bunker",
+        "A remote asteroid",
+        "An abandoned space station"
+      ],
+      "answer": "A hidden dimension"
+    },
+    {
+      "id": 134,
+      "question": "Which character’s storyline most poignantly explores themes of identity and self-worth? (Var 134)",
+      "options": [
+        "Jerry",
+        "Beth",
+        "Summer",
+        "Morty"
+      ],
+      "answer": "Jerry"
+    },
+    {
+      "id": 135,
+      "question": "In 'Rest and Ricklaxation', what is the purpose of Rick and Morty’s detoxification process? (Var 135)",
+      "options": [
+        "To separate their negative traits",
+        "To rejuvenate their cells",
+        "To achieve interdimensional harmony",
+        "To escape a viral infection"
+      ],
+      "answer": "To separate their negative traits"
+    },
+    {
+      "id": 136,
+      "question": "Which catchphrase, famously uttered by Rick, is later revealed to have a hidden meaning? (Var 136)",
+      "options": [
+        "Wubba Lubba Dub Dub",
+        "To infinity and beyond",
+        "Bazinga",
+        "Great Scott!"
+      ],
+      "answer": "Wubba Lubba Dub Dub; it means 'I am in great pain, please help'"
+    },
+    {
+      "id": 137,
+      "question": "In 'The Whirly Dirly Conspiracy', what extreme attraction does Rick have that propels the plot? (Var 137)",
+      "options": [
+        "Joining a dangerous theme park ride",
+        "Constructing an elaborate trap",
+        "Enlisting a bounty hunter",
+        "Hiding in a parallel dimension"
+      ],
+      "answer": "Joining a dangerous theme park ride"
+    },
+    {
+      "id": 138,
+      "question": "In 'The Whirly Dirly Conspiracy', what is Rick’s underlying motive for inviting Jerry on the adventure? (Var 138)",
+      "options": [
+        "To resolve their strained relationship",
+        "To test a new invention",
+        "To distract the Galactic Federation",
+        "To save the family business"
+      ],
+      "answer": "To resolve their strained relationship"
+    },
+    {
+      "id": 139,
+      "question": "Which episode subtly reveals Rick’s hidden vulnerability through his family interactions? (Var 139)",
+      "options": [
+        "Pickle Rick",
+        "The Whirly Dirly Conspiracy",
+        "The Old Man and the Seat",
+        "Ricksy Business"
+      ],
+      "answer": "Pickle Rick"
+    },
+    {
+      "id": 140,
+      "question": "In 'Look Who's Purging Now', what societal concept is parodied through the annual purging event? (Var 140)",
+      "options": [
+        "Social Darwinism",
+        "Capitalist consumerism",
+        "Political corruption",
+        "Cultural assimilation"
+      ],
+      "answer": "Social Darwinism"
+    },
+    {
+      "id": 141,
+      "question": "In 'One Crew Over the Crewcoo's Morty', which film genre’s tropes are predominantly parodied? (Var 141)",
+      "options": [
+        "Heist films",
+        "Documentaries",
+        "Mockumentaries",
+        "Musicals"
+      ],
+      "answer": "Heist films"
+    },
+    {
+      "id": 142,
+      "question": "In 'The Rickchurian Mortydate', what is the central conflict between Rick and the President? (Var 142)",
+      "options": [
+        "Ideological differences over governance",
+        "A personal vendetta",
+        "Resource allocation in the multiverse",
+        "Miscommunication"
+      ],
+      "answer": "Ideological differences over governance"
+    },
+    {
+      "id": 143,
+      "question": "In 'Anatomy Park', where is the bizarre amusement park located? (Var 143)",
+      "options": [
+        "Inside a homeless man",
+        "Inside Rick's spaceship",
+        "Inside a laboratory",
+        "Inside a microverse"
+      ],
+      "answer": "Inside a homeless man"
+    },
+    {
+      "id": 144,
+      "question": "In 'The Whirly Dirly Conspiracy', what is the name of the resort where the deadly ride takes place? (Var 144)",
+      "options": [
+        "The Whirly Dirly Resort",
+        "Gravity Falls",
+        "The Plutonian Gardens",
+        "Dimension X Adventure Park"
+      ],
+      "answer": "The Whirly Dirly Resort"
+    },
+    {
+      "id": 145,
+      "question": "In 'Raising Gazorpazorp', what societal issue does Morty confront when dealing with his offspring? (Var 145)",
+      "options": [
+        "Gender identity and parental responsibility",
+        "Interdimensional law",
+        "Economic disparity",
+        "The ethics of time travel"
+      ],
+      "answer": "Gender identity and parental responsibility"
+    },
+    {
+      "id": 146,
+      "question": "Which episode features Rick's technology inadvertently creating a dangerous parallel universe? (Var 146)",
+      "options": [
+        "The Ricks Must Be Crazy",
+        "Close Rick-counters of the Rick Kind",
+        "Vindicators 3: The Return of Worldender",
+        "The Rickshank Rickdemption"
+      ],
+      "answer": "The Ricks Must Be Crazy"
+    },
+    {
+      "id": 147,
+      "question": "In 'Big Trouble in Little Sanchez', what transformation does Rick undergo? (Var 147)",
+      "options": [
+        "He becomes a teenager clone",
+        "He turns into a pickle",
+        "He becomes a supervillain",
+        "He merges with Morty"
+      ],
+      "answer": "He becomes a teenager clone"
+    },
+    {
+      "id": 148,
+      "question": "In 'Big Trouble in Little Sanchez', what is the primary internal conflict faced by Tiny Rick? (Var 148)",
+      "options": [
+        "Struggling with adolescent identity",
+        "Dealing with school bullies",
+        "Rebelling against authority",
+        "A crisis of immortality"
+      ],
+      "answer": "Struggling with adolescent identity"
+    },
+    {
+      "id": 149,
+      "question": "What central theme is explored in 'Morty's Mind Blowers'? (Var 149)",
+      "options": [
+        "The loss of memory and identity",
+        "The chaos of time travel",
+        "The burden of knowledge",
+        "The duality of human nature"
+      ],
+      "answer": "The loss of memory and identity"
+    },
+    {
+      "id": 150,
+      "question": "In 'A Rickle in Time', which scientific principle is manipulated, leading to fractured timelines? (Var 150)",
+      "options": [
+        "Quantum uncertainty",
+        "Relativity",
+        "Time dilation",
+        "Parallel universes"
+      ],
+      "answer": "Quantum uncertainty"
+    },
+    {
+      "id": 151,
+      "question": "In 'A Rickle in Time', what is the consequence of attempting to fix the fractured timeline? (Var 151)",
+      "options": [
+        "Creation of multiple paradoxes",
+        "Erasure of memories",
+        "Infinite time loops",
+        "Formation of new dimensions"
+      ],
+      "answer": "Creation of multiple paradoxes"
+    },
+    {
+      "id": 152,
+      "question": "Which episode uses a train setting to explore the conflict between free will and determinism? (Var 152)",
+      "options": [
+        "Never Ricking Morty",
+        "Edge of Tomorty: Rick Die Rickpeat",
+        "Interdimensional Cable",
+        "Pickle Rick"
+      ],
+      "answer": "Never Ricking Morty"
+    },
+    {
+      "id": 153,
+      "question": "In 'Never Ricking Morty', what narrative device is employed to challenge traditional storytelling? (Var 153)",
+      "options": [
+        "Breaking the fourth wall",
+        "Time travel",
+        "Parallel universes",
+        "Voice-over commentary"
+      ],
+      "answer": "Breaking the fourth wall"
+    },
+    {
+      "id": 154,
+      "question": "In 'The Old Man and the Seat', what underlying message does Rick's secret toilet convey? (Var 154)",
+      "options": [
+        "The isolation of genius",
+        "The importance of privacy",
+        "The futility of societal norms",
+        "The need for escapism"
+      ],
+      "answer": "The isolation of genius"
+    },
+    {
+      "id": 155,
+      "question": "In 'Pickle Rick', what hidden vulnerability of Rick is subtly revealed through his family interactions? (Var 155)",
+      "options": [
+        "A fear of abandonment",
+        "A sense of guilt over neglect",
+        "An underlying need for connection",
+        "A desire for redemption"
+      ],
+      "answer": "An underlying need for connection"
+    },
+    {
+      "id": 156,
+      "question": "Which episode features a storyline where a simple task spirals into chaos due to miscommunication between dimensions? (Var 156)",
+      "options": [
+        "Meeseeks and Destroy",
+        "Close Rick-counters of the Rick Kind",
+        "The Ricks Must Be Crazy",
+        "One Crew Over the Crewcoo's Morty"
+      ],
+      "answer": "Meeseeks and Destroy"
+    },
+    {
+      "id": 157,
+      "question": "In 'Interdimensional Cable 2: Tempting Fate', what recurring motif is used to highlight the absurdity of television? (Var 157)",
+      "options": [
+        "Random commercial parodies",
+        "Incoherent plotlines",
+        "Unexpected celebrity cameos",
+        "Philosophical dialogues"
+      ],
+      "answer": "Random commercial parodies"
+    },
+    {
+      "id": 158,
+      "question": "In 'The Wedding Squanchers', what consequence of immortality is explored through the inability to escape one's past? (Var 158)",
+      "options": [
+        "Eternal suffering",
+        "Forced evolution",
+        "Endless repetition",
+        "Loss of identity"
+      ],
+      "answer": "Loss of identity"
+    },
+    {
+      "id": 159,
+      "question": "In 'The Wedding Squanchers', what significant decision does the family make at the episode's conclusion? (Var 159)",
+      "options": [
+        "Exile from their home dimension",
+        "Embracing a new identity",
+        "Confronting the Galactic Federation",
+        "Denying their past"
+      ],
+      "answer": "Exile from their home dimension"
+    },
+    {
+      "id": 160,
+      "question": "Which episode highlights the consequences of interfering with one’s own timeline by showcasing multiple versions of the same character? (Var 160)",
+      "options": [
+        "A Rickle in Time",
+        "Morty's Mind Blowers",
+        "Never Ricking Morty",
+        "The Ricklantis Mixup"
+      ],
+      "answer": "A Rickle in Time"
+    },
+    {
+      "id": 161,
+      "question": "In 'One Crew Over the Crewcoo's Morty', what is the primary internal challenge faced by the crew? (Var 161)",
+      "options": [
+        "Internal betrayal",
+        "External heist complications",
+        "Time constraints",
+        "Lack of trust"
+      ],
+      "answer": "Internal betrayal"
+    },
+    {
+      "id": 162,
+      "question": "Which obscure interdimensional traveler makes a brief appearance to comment on the absurdity of existence? (Var 162)",
+      "options": [
+        "Scary Terry",
+        "Evil Morty's henchman",
+        "Zeep Xanflorp",
+        "The Deputy of the Galactic Federation"
+      ],
+      "answer": "Scary Terry"
+    },
+    {
+      "id": 163,
+      "question": "In 'Rickmancing the Stone', which element of post-apocalyptic society is most critiqued? (Var 163)",
+      "options": [
+        "The survival of the fittest mentality",
+        "The breakdown of family units",
+        "The reliance on outdated technology",
+        "The formation of cults"
+      ],
+      "answer": "The survival of the fittest mentality"
+    },
+    {
+      "id": 164,
+      "question": "What recurring theme underlies most of Rick's scientific endeavors throughout the series? (Var 164)",
+      "options": [
+        "The pursuit of forbidden knowledge",
+        "The quest for immortality",
+        "The exploration of infinite possibilities",
+        "The manipulation of time"
+      ],
+      "answer": "The exploration of infinite possibilities"
+    },
+    {
+      "id": 165,
+      "question": "Which device is used by Rick to alter his own memories in select episodes? (Var 165)",
+      "options": [
+        "A memory eraser",
+        "A neural destabilizer",
+        "A mind-switcher",
+        "A memory extractor"
+      ],
+      "answer": "A mind-switcher"
+    },
+    {
+      "id": 166,
+      "question": "In the context of Rick and Morty, what does the term 'Schwifty' most accurately imply? (Var 166)",
+      "options": [
+        "Embracing chaos",
+        "Exhibiting coolness",
+        "Rejecting societal norms",
+        "Accepting one's fate"
+      ],
+      "answer": "Embracing chaos"
+    },
+    {
+      "id": 167,
+      "question": "Which episode's title is a play on a famous heist film, and what is the pun referring to? (Var 167)",
+      "options": [
+        "One Crew Over the Crewcoo's Morty; it parodies heist films",
+        "The Rickchurian Mortydate; it references political thrillers",
+        "Rickmancing the Stone; it hints at adventure films",
+        "Pickle Rick; it twists survival stories"
+      ],
+      "answer": "One Crew Over the Crewcoo's Morty; it parodies heist films"
+    },
+    {
+      "id": 168,
+      "question": "In 'Morty's Mind Blowers', what thematic element is underscored by the systematic removal of unwanted memories? (Var 168)",
+      "options": [
+        "The cost of ignorance",
+        "The fragility of identity",
+        "The inevitability of loss",
+        "The burden of consciousness"
+      ],
+      "answer": "The fragility of identity"
+    },
+    {
+      "id": 169,
+      "question": "Which minor character reappears later in the series, revealing unexpected depth and a connection to the multiverse? (Var 169)",
+      "options": [
+        "Noob-Noob",
+        "Scary Terry",
+        "Tiny Rick",
+        "Abradolf Lincler"
+      ],
+      "answer": "Noob-Noob"
+    },
+    {
+      "id": 170,
+      "question": "In 'Interdimensional Cable 2: Tempting Fate', which genre of television is most commonly spoofed? (Var 170)",
+      "options": [
+        "Infomercials",
+        "Reality TV",
+        "Soap operas",
+        "News broadcasts"
+      ],
+      "answer": "Infomercials"
+    },
+    {
+      "id": 171,
+      "question": "Which episode features a storyline where a failed genetic engineering experiment leads to unexpected consequences? (Var 171)",
+      "options": [
+        "Big Trouble in Little Sanchez",
+        "Anatomy Park",
+        "Raising Gazorpazorp",
+        "Rick Potion #9"
+      ],
+      "answer": "Big Trouble in Little Sanchez"
+    },
+    {
+      "id": 172,
+      "question": "In 'Raising Gazorpazorp', what aspect of the Gazorpazorp society does Morty discover? (Var 172)",
+      "options": [
+        "It is matriarchal",
+        "It is based on physical strength",
+        "It is technologically advanced",
+        "It is chaotic"
+      ],
+      "answer": "It is matriarchal"
+    },
+    {
+      "id": 173,
+      "question": "Which episode introduces the concept of a 'memory bank' where erased memories are stored? (Var 173)",
+      "options": [
+        "Morty's Mind Blowers",
+        "The Vat of Acid Episode",
+        "Never Ricking Morty",
+        "Pickle Rick"
+      ],
+      "answer": "Morty's Mind Blowers"
+    },
+    {
+      "id": 174,
+      "question": "In 'The ABC's of Beth', what does Froopyland symbolize in Beth's personal journey? (Var 174)",
+      "options": [
+        "A retreat to innocence",
+        "The cost of creation",
+        "The escape from reality",
+        "A manifestation of inner turmoil"
+      ],
+      "answer": "A manifestation of inner turmoil"
+    },
+    {
+      "id": 175,
+      "question": "In 'Something Ricked This Way Comes', what is the nature of the cursed items that blur the line between commerce and horror? (Var 175)",
+      "options": [
+        "They exploit the buyer's deepest insecurities",
+        "They are imbued with dark magic",
+        "They alter the owner's fate",
+        "They come with a hidden existential cost"
+      ],
+      "answer": "They alter the owner's fate"
+    },
+    {
+      "id": 176,
+      "question": "In 'Ricksy Business', what underlying tension is revealed during the chaotic party? (Var 176)",
+      "options": [
+        "The clash between order and chaos",
+        "Family disintegration",
+        "Moral decay",
+        "Unspoken romantic conflicts"
+      ],
+      "answer": "The clash between order and chaos"
+    },
+    {
+      "id": 177,
+      "question": "Which episode provides the most in-depth look at the backstory of the Citadel of Ricks? (Var 177)",
+      "options": [
+        "The Ricklantis Mixup",
+        "Close Rick-counters of the Rick Kind",
+        "The Ricks Must Be Crazy",
+        "Vindicators 3: The Return of Worldender"
+      ],
+      "answer": "The Ricklantis Mixup"
+    },
+    {
+      "id": 178,
+      "question": "In 'Vindicators 3: The Return of Worldender', what personal failing of Rick is most prominently criticized? (Var 178)",
+      "options": [
+        "His inability to form genuine relationships",
+        "His reckless behavior",
+        "His constant self-destruction",
+        "His reliance on nihilism"
+      ],
+      "answer": "His inability to form genuine relationships"
+    },
+    {
+      "id": 179,
+      "question": "Which episode explores the impact of interdimensional travel on a character’s sense of reality? (Var 179)",
+      "options": [
+        "A Rickle in Time",
+        "Morty's Mind Blowers",
+        "The Old Man and the Seat",
+        "Never Ricking Morty"
+      ],
+      "answer": "A Rickle in Time"
+    },
+    {
+      "id": 180,
+      "question": "Which scientific concept is frequently misrepresented by Rick to justify his reckless experiments? (Var 180)",
+      "options": [
+        "Quantum mechanics",
+        "Relativity",
+        "Thermodynamics",
+        "Evolution"
+      ],
+      "answer": "Quantum mechanics"
+    },
+    {
+      "id": 181,
+      "question": "In the Rick and Morty universe, what is the significance of the number '137'? (Var 181)",
+      "options": [
+        "It designates Rick's home dimension",
+        "It is the number of universes in the multiverse",
+        "It is Morty's lucky number",
+        "It represents a secret code"
+      ],
+      "answer": "It designates Rick's home dimension"
+    },
+    {
+      "id": 182,
+      "question": "In 'Pickle Rick', what does Rick's transformation symbolically represent regarding his personal relationships? (Var 182)",
+      "options": [
+        "His desire to escape emotional vulnerability",
+        "His embrace of his inner monster",
+        "His rejection of conventional family roles",
+        "His pursuit of ultimate freedom"
+      ],
+      "answer": "His desire to escape emotional vulnerability"
+    },
+    {
+      "id": 183,
+      "question": "Which episode delves into the consequences of Rick's abandonment of moral responsibility in the face of cosmic chaos? (Var 183)",
+      "options": [
+        "The Rickchurian Mortydate",
+        "Total Rickall",
+        "Rickmancing the Stone",
+        "Never Ricking Morty"
+      ],
+      "answer": "The Rickchurian Mortydate"
+    },
+    {
+      "id": 184,
+      "question": "In 'Big Trouble in Little Sanchez', how is Rick's past reflected through the character of Tiny Rick? (Var 184)",
+      "options": [
+        "As a lost opportunity for redemption",
+        "As a mirror of his current self",
+        "As a cautionary tale",
+        "As a series of comedic missteps"
+      ],
+      "answer": "As a mirror of his current self"
+    },
+    {
+      "id": 185,
+      "question": "What narrative significance do recurring alternate versions of characters serve in the series? (Var 185)",
+      "options": [
+        "They highlight the fluidity of identity",
+        "They serve solely as comic relief",
+        "They unnecessarily complicate the plot",
+        "They introduce new villains"
+      ],
+      "answer": "They highlight the fluidity of identity"
+    },
+    {
+      "id": 186,
+      "question": "In 'The Whirly Dirly Conspiracy', what unexpected lesson does Rick impart regarding trust and companionship? (Var 186)",
+      "options": [
+        "That vulnerability can be a strength",
+        "That isolation is preferable",
+        "That trust is a dangerous liability",
+        "That loyalty is overrated"
+      ],
+      "answer": "That vulnerability can be a strength"
+    },
+    {
+      "id": 187,
+      "question": "Which episode critiques the commercialization of personal experiences through its depiction of a wild party? (Var 187)",
+      "options": [
+        "Ricksy Business",
+        "Morty's Mind Blowers",
+        "Interdimensional Cable 2",
+        "Big Trouble in Little Sanchez"
+      ],
+      "answer": "Ricksy Business"
+    },
+    {
+      "id": 188,
+      "question": "In the series, what role does the concept of infinite universes play in shaping its philosophical outlook? (Var 188)",
+      "options": [
+        "It underscores the insignificance of individual actions",
+        "It guarantees endless possibilities for redemption",
+        "It simplifies complex moral choices",
+        "It limits the scope of consequences"
+      ],
+      "answer": "It underscores the insignificance of individual actions"
+    },
+    {
+      "id": 189,
+      "question": "In 'Vindicators 3: The Return of Worldender', which narrative technique is used to satirize superhero tropes? (Var 189)",
+      "options": [
+        "Exaggerated character flaws",
+        "Breaking the fourth wall",
+        "Non-linear storytelling",
+        "Intermittent musical scores"
+      ],
+      "answer": "Exaggerated character flaws"
+    },
+    {
+      "id": 190,
+      "question": "Which episode delves into the idea of self-destruction as a form of existential liberation? (Var 190)",
+      "options": [
+        "Pickle Rick",
+        "Morty's Mind Blowers",
+        "Close Rick-counters of the Rick Kind",
+        "A Rickle in Time"
+      ],
+      "answer": "Pickle Rick"
+    },
+    {
+      "id": 191,
+      "question": "Which episode reveals the consequences of neglecting emotional responsibilities in favor of scientific pursuits? (Var 191)",
+      "options": [
+        "The Old Man and the Seat",
+        "Pickle Rick",
+        "Rickmancing the Stone",
+        "Morty's Mind Blowers"
+      ],
+      "answer": "The Old Man and the Seat"
+    },
+    {
+      "id": 192,
+      "question": "In 'Close Rick-counters of the Rick Kind', what narrative twist challenges the viewer’s perception of reality? (Var 192)",
+      "options": [
+        "The revelation of multiple Ricks with similar identities",
+        "A sudden change in animation style",
+        "The blending of different time periods",
+        "The appearance of a recurring symbolic object"
+      ],
+      "answer": "The revelation of multiple Ricks with similar identities"
+    },
+    {
+      "id": 193,
+      "question": "What does the repeated use of alternate dimensions in the series primarily symbolize? (Var 193)",
+      "options": [
+        "The complexity of choice and consequence",
+        "The simplicity of fate",
+        "The redundancy of existence",
+        "The unpredictability of science"
+      ],
+      "answer": "The complexity of choice and consequence"
+    },
+    {
+      "id": 194,
+      "question": "Which episode provides a meta-commentary on television and storytelling through its anthology format? (Var 194)",
+      "options": [
+        "Never Ricking Morty",
+        "Interdimensional Cable 2: Tempting Fate",
+        "Morty's Mind Blowers",
+        "A Rickle in Time"
+      ],
+      "answer": "Never Ricking Morty"
+    },
+    {
+      "id": 195,
+      "question": "In 'Pickle Rick', what broader philosophical implication is suggested by Rick's rejection of human vulnerability? (Var 195)",
+      "options": [
+        "The inevitability of isolation",
+        "The absurdity of existence",
+        "The failure of emotional connection",
+        "The triumph of intellect over emotion"
+      ],
+      "answer": "The failure of emotional connection"
+    },
+    {
+      "id": 196,
+      "question": "In 'The Rickchurian Mortydate', what power dynamic is most critically examined? (Var 196)",
+      "options": [
+        "The imbalance between political authority and individual freedom",
+        "The disparity between intellectual and emotional labor",
+        "The conflict between tradition and innovation",
+        "The tension between familial loyalty and self-interest"
+      ],
+      "answer": "The imbalance between political authority and individual freedom"
+    },
+    {
+      "id": 197,
+      "question": "Which episode's title is a portmanteau reflecting the fusion of two seemingly opposite concepts? (Var 197)",
+      "options": [
+        "Rickmancing the Stone",
+        "Pickle Rick",
+        "Mortynight Run",
+        "The Rickchurian Mortydate"
+      ],
+      "answer": "Rickmancing the Stone"
+    },
+    {
+      "id": 198,
+      "question": "In 'Total Rickall', which psychological concept do the parasites exploit to infiltrate the family? (Var 198)",
+      "options": [
+        "False memory implantation",
+        "Cognitive dissonance",
+        "Projection",
+        "Confirmation bias"
+      ],
+      "answer": "False memory implantation"
+    },
+    {
+      "id": 199,
+      "question": "Which recurring motif best encapsulates the absurdity of life from Rick's perspective? (Var 199)",
+      "options": [
+        "Interdimensional travel",
+        "Existential nihilism",
+        "Random catchphrases",
+        "Cosmic insignificance"
+      ],
+      "answer": "Existential nihilism"
+    },
+    {
+      "id": 200,
+      "question": "In the overarching narrative of Rick and Morty, what commentary is made about the nature of scientific progress? (Var 200)",
+      "options": [
+        "It is inherently self-destructive",
+        "It leads to unintended consequences",
+        "It is a tool for liberation",
+        "It bridges the gap between reality and fiction"
+      ],
+      "answer": "It leads to unintended consequences"
+    }
+  ]

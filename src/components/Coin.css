@@ -1,0 +1,90 @@
+/* ===================================================================== */
+/* Coin Component Styles                                                 */
+/* ===================================================================== */
+
+/* Zentrale Variablen */
+:root {
+  --coin-size: 50px;
+  --coin-inner-scale: 0.9; /* innerer Coin = 90% der Gesamtgröße */
+  --coin-gradient-start: #ffcc00;
+  --coin-gradient-end: #ff0066;
+  --coin-inner-gradient-end: #ff9933;
+  --coin-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --coin-animation-duration: 3s;
+  
+  --coin-antenna-color: #fff;
+  --coin-antenna-width: 3px;
+  --coin-antenna-height: 15px;
+  --coin-antenna-offset-top: -5px;
+  --coin-antenna-rotate-left: -20deg;
+  --coin-antenna-rotate-right: 20deg;
+  
+  --coin-text-color: #000;
+  --coin-text-font-size: 10px;
+}
+
+/* Haupt-Coin-Stil */
+.coin {
+  width: var(--coin-size);
+  height: var(--coin-size);
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--coin-gradient-start), var(--coin-gradient-end));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: var(--coin-box-shadow);
+  animation: spin var(--coin-animation-duration) linear infinite;
+}
+
+/* Innerer Coin – sorgt für einen leichten 3D-Effekt */
+.coin-inner {
+  width: calc(var(--coin-size) * var(--coin-inner-scale));
+  height: calc(var(--coin-size) * var(--coin-inner-scale));
+  border-radius: 50%;
+  background: radial-gradient(circle at center, var(--coin-gradient-start), var(--coin-inner-gradient-end));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text im Coin */
+.coin-text {
+  color: var(--coin-text-color);
+  font-family: 'Bangers', cursive;
+  font-size: var(--coin-text-font-size);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Pseudo-Elemente für "Antennen" */
+.coin::before,
+.coin::after {
+  content: '';
+  position: absolute;
+  top: var(--coin-antenna-offset-top);
+  width: var(--coin-antenna-width);
+  height: var(--coin-antenna-height);
+  background: var(--coin-antenna-color);
+  border-radius: 3px;
+}
+
+.coin::before {
+  left: 15px;
+  transform: rotate(var(--coin-antenna-rotate-left));
+}
+
+.coin::after {
+  right: 15px;
+  transform: rotate(var(--coin-antenna-rotate-right));
+}
+
+/* Spin-Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

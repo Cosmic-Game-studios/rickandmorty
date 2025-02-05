@@ -16,20 +16,20 @@ function LocationDetails() {
         setLoading(false);
       })
       .catch(err => {
-        setError('Fehler beim Laden der Orts-Details.');
+        setError('Error loading location details.');
         setLoading(false);
       });
   }, [id]);
 
-  if (loading) return <p>Lade Orts-Details...</p>;
+  if (loading) return <p>Loading location details...</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <div className="location-details">
       <h2>{location.name}</h2>
-      <p><strong>Typ:</strong> {location.type}</p>
+      <p><strong>Type:</strong> {location.type}</p>
       <p><strong>Dimension:</strong> {location.dimension}</p>
-      <h3>Bewohner:</h3>
+      <h3>Residents:</h3>
       {location.residents.length > 0 ? (
         <ul>
           {location.residents.map(url => {
@@ -37,15 +37,15 @@ function LocationDetails() {
             const charId = parts[parts.length - 1];
             return (
               <li key={charId}>
-                <Link to={`/character/${charId}`}>Charakter {charId}</Link>
+                <Link to={`/character/${charId}`}>Character {charId}</Link>
               </li>
             );
           })}
         </ul>
       ) : (
-        <p>Keine Bewohner gefunden.</p>
+        <p>No residents found.</p>
       )}
-      <Link to="/locations" className="back-link">Zurück zu Orten</Link>
+      <Link to="/locations" className="back-link">Back to Locations</Link>
     </div>
   );
 }

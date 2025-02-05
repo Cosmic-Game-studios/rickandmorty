@@ -18,7 +18,7 @@ function Locations() {
         setLoading(false);
       })
       .catch(err => {
-        setError('Fehler beim Laden der Orte.');
+        setError('Error loading locations.');
         setLoading(false);
       });
   }, [page]);
@@ -33,22 +33,22 @@ function Locations() {
 
   return (
     <div className="locations-page">
-      <h2>Orte</h2>
+      <h2>Locations</h2>
       {error && <p className="error">{error}</p>}
-      {loading && <p>Lade Orte...</p>}
+      {loading && <p>Loading locations...</p>}
       <div className="locations-grid">
         {locations.map(location => (
           <div key={location.id} className="location-card">
             <h3>{location.name}</h3>
-            <p>Typ: {location.type}</p>
+            <p>Type: {location.type}</p>
             <Link to={`/location/${location.id}`} className="details-link">Details</Link>
           </div>
         ))}
       </div>
       <div className="pagination">
-        <button onClick={handlePrev} disabled={page === 1}>Vorherige</button>
-        <span>Seite {page} von {info ? info.pages : '...'}</span>
-        <button onClick={handleNext} disabled={info && page === info.pages}>Nächste</button>
+        <button onClick={handlePrev} disabled={page === 1}>Previous</button>
+        <span>Page {page} of {info ? info.pages : '...'}</span>
+        <button onClick={handleNext} disabled={info && page === info.pages}>Next</button>
       </div>
     </div>
   );

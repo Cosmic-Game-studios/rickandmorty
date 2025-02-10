@@ -7,21 +7,21 @@ function CharacterCard({ character, unlocked }) {
     requiredLevel = 2,
     baseSpeed = 1,
     characterLevel = 1,
-    rarity,
+    rarity, // Rarity-Wert aus dem Profil
     image,
     name,
   } = character;
 
   const autoUnlocked = level >= requiredLevel;
 
-  // Automatisch freischalten, wenn der User-Level erreicht ist
+  // Automatisches Freischalten, wenn der User-Level erreicht ist
   useEffect(() => {
     if (autoUnlocked && !unlocked) {
       unlockCharacter(character);
     }
   }, [autoUnlocked, unlocked, character, unlockCharacter]);
 
-  // Berechne die effektive Geschwindigkeit nur, wenn sich die Werte ändern
+  // Berechne die effektive Geschwindigkeit nur, wenn sich die relevanten Werte ändern
   const effectiveSpeed = useMemo(() => {
     const upgradeBonus = (characterLevel - 1) * 0.5;
     const rarityBonus = rarity ? (rarity - 1) * 0.5 : 0;

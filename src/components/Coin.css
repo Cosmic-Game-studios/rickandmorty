@@ -35,9 +35,10 @@
   position: relative;
   box-shadow: var(--coin-box-shadow);
   animation: spin var(--coin-animation-duration) linear infinite;
+  will-change: transform;
 }
 
-/* Innerer Coin – sorgt für einen leichten 3D-Effekt */
+/* Innerer Coin – leichter 3D-Effekt */
 .coin-inner {
   width: calc(var(--coin-size) * var(--coin-inner-scale));
   height: calc(var(--coin-size) * var(--coin-inner-scale));

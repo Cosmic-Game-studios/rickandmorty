@@ -18,7 +18,7 @@ function Episodes() {
         setLoading(false);
       })
       .catch(err => {
-        setError('Fehler beim Laden der Episoden.');
+        setError('Error loading episodes.');
         setLoading(false);
       });
   }, [page]);
@@ -33,22 +33,24 @@ function Episodes() {
 
   return (
     <div className="episodes-page">
-      <h2>Episoden</h2>
+      <h2>Episodes</h2>
       {error && <p className="error">{error}</p>}
-      {loading && <p>Lade Episoden...</p>}
+      {loading && <p>Loading episodes...</p>}
       <div className="episodes-grid">
         {episodes.map(episode => (
           <div key={episode.id} className="episode-card">
             <h3>{episode.name}</h3>
             <p>{episode.episode}</p>
-            <Link to={`/episode/${episode.id}`} className="details-link">Details</Link>
+            <Link to={`/episode/${episode.id}`} className="details-link">
+              Details
+            </Link>
           </div>
         ))}
       </div>
       <div className="pagination">
-        <button onClick={handlePrev} disabled={page === 1}>Vorherige</button>
-        <span>Seite {page} von {info ? info.pages : '...'}</span>
-        <button onClick={handleNext} disabled={info && page === info.pages}>Nächste</button>
+        <button onClick={handlePrev} disabled={page === 1}>Previous</button>
+        <span>Page {page} of {info ? info.pages : '...'}</span>
+        <button onClick={handleNext} disabled={info && page === info.pages}>Next</button>
       </div>
     </div>
   );

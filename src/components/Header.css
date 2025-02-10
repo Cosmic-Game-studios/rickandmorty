@@ -131,575 +131,64 @@ main {
 }
 
 /* ============================= */
-/* Home Page                     */
-/* ============================= */
-.home-page {
-  text-align: center;
-  padding: 40px 20px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.hero-section {
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
-
-.hero-title {
-  font-family: 'Bangers', cursive;
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: #f0e130;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-.hero-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.hero-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
-
-/* ============================= */
-/* Info-, Features- & News-Section */
-/* ============================= */
-.info-section,
-.features-section,
-.news-section {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
-.info-section h2,
-.features-section h2,
-.news-section h2 {
-  font-family: 'Bangers', cursive;
-  color: #f0e130;
-  margin-bottom: 10px;
-}
-
-.features-section ul {
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.features-section ul li {
-  margin: 10px 0;
-}
-
-.news-section p {
-  font-size: 1.1rem;
-  margin-top: 10px;
-}
-
-/* ============================= */
-/* Characters & Character Cards  */
-/* ============================= */
-.characters-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.character-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.character-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid transparent;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, border 0.3s ease;
-  text-align: center;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.character-card:hover {
-  transform: scale(1.05);
-  border: 2px solid #f0e130;
-}
-
-.character-card img {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.character-card h3 {
-  font-family: 'Bangers', cursive;
-  margin: 10px 0;
-  font-size: 1.5rem;
-}
-
-/* ============================= */
-/* Quiz Page                     */
-/* ============================= */
-.quiz-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.question-card {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.question-text {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  font-family: 'Bangers', cursive;
-}
-
-.options-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.option {
-  padding: 12px 15px;
-  border: 2px solid transparent;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.option:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.option.selected {
-  border-color: #f0e130;
-  background-color: rgba(240, 225, 48, 0.2);
-}
-
-.feedback {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #f0e130;
-}
-
-.submit-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  padding: 10px 20px;
-  color: #000;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.submit-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
-
-.restart-button {
-  background: linear-gradient(45deg, #4b0082, #9400d3);
-  border: none;
-  padding: 10px 20px;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.restart-button:hover {
-  background: linear-gradient(45deg, #9400d3, #4b0082);
-}
-
-/* ============================= */
-/* Missions Page                 */
-/* ============================= */
-.missions-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.missions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.mission-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.mission-card:hover {
-  transform: scale(1.02);
-}
-
-.mission-description {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  font-family: 'Bangers', cursive;
-}
-
-.mission-reward {
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: #f0e130;
-}
-
-.mission-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.mission-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
-
-.mission-button.completed {
-  background: #555;
-  cursor: default;
-}
-
-/* ============================= */
-/* Episoden & Locations Pages    */
-/* ============================= */
-.episodes-page,
-.locations-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.episodes-grid,
-.locations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.episode-card,
-.location-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.episode-card:hover,
-.location-card:hover {
-  transform: scale(1.02);
-}
-
-.details-link {
-  display: inline-block;
-  margin-top: 10px;
-  color: #f0e130;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.pagination button {
-  padding: 8px 15px;
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  border-radius: 5px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.pagination button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #f0e130;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* ============================= */
-/* Character Details Page        */
-/* ============================= */
-.character-details-page {
-  padding: 20px;
-}
-
-.character-card-detail {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
-}
-
-.detail-image {
-  width: 300px;
-  border-radius: 10px;
-}
-
-.detail-info {
-  flex: 1;
-  font-size: 1.1rem;
-}
-
-.episode-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.episode-list li {
-  margin: 10px 0;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #f0e130;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* ============================= */
-/* Profil-Seite                 */
-/* ============================= */
-.profile-page {
-  padding: 20px;
-  text-align: center;
-}
-
-.profile-info {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px 0;
-}
-
-.profile-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
-  border-radius: 10px;
-  min-width: 120px;
-}
-
-/* Coin Farm Auswahl */
-.coin-farm-selection {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-.coin-farm-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 5px;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease, border 0.3s ease;
-}
-
-.coin-farm-card.selected {
-  border: 2px solid #f0e130;
-}
-
-.coin-farm-card img {
-  width: auto;
-  max-width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Angepasstes Grid für freigeschaltete Charaktere */
-.unlocked-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.unlocked-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 5px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.unlocked-card img {
-  width: auto;
-  max-width: 80px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ============================= */
-/* Upgrade-Button im Profil      */
-/* ============================= */
-.upgrade-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #000;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
-}
-
-.upgrade-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
-
-/* ============================= */
-/* Load More Button (Characters) */
-/* ============================= */
-.load-more-button {
-  display: block;
-  margin: 20px auto;
-  padding: 12px 24px;
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  color: #000;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.load-more-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
-
-/* ============================= */
 /* Responsive Anpassungen        */
 /* ============================= */
 @media (max-width: 768px) {
-  .header h1,
-  .site-title {
+  /* Allgemeine Anpassungen */
+  body {
+    padding: 0 5px;
+  }
+  
+  main {
+    padding: 10px;
+  }
+  
+  .header {
+    padding: 15px;
+  }
+  
+  .site-title,
+  .header h1 {
     font-size: 2.5rem;
   }
-  .character-card h3 {
-    font-size: 1.2rem;
-  }
   
-  /* Hamburger-Button anzeigen */
-  .hamburger {
-    display: block;
-  }
-  
-  /* Navigation im Header ausblenden, standardmäßig */
-  .header nav {
-    display: none;
-  }
-  
-  /* Navigation anzeigen, wenn die Klasse "open" gesetzt ist */
-  .header nav.open {
-    display: block;
-  }
-  
-  /* Navigation vertikal anordnen */
+  /* Navigation & Hamburger */
   .nav-list {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     margin-top: 15px;
   }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  /* Standardmäßig Navigation ausblenden, nur über Hamburger anzeigen */
+  .header nav {
+    display: none;
+  }
+  
+  .header nav.open {
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #4b0082, #9400d3);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
 }
 
-/* ============================= */
-/* Daily Bonus & Bonus Button    */
-/* ============================= */
-.daily-bonus {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px auto;
-  max-width: 400px;
-}
-
-.bonus-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
-}
-
-.bonus-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+@media (max-width: 480px) {
+  .site-title,
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .hamburger .bar {
+    width: 20px;
+    height: 2.5px;
+    margin: 4px auto;
+  }
 }

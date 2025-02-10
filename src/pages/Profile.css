@@ -6,8 +6,8 @@
 :root {
   --profile-bg: rgba(255, 255, 255, 0.1);
   --profile-card-bg: rgba(255, 255, 255, 0.1);
-  --profile-card-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Updated for a more subtle, professional shadow */
-  --profile-page-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased blur for a smoother effect */
+  --profile-card-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtile, professionelle Schatten */
+  --profile-page-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Größere Unschärfe für einen sanfteren Effekt */
   --accent-color: #f0e130;
   --btn-gradient-start: #ff0066;
   --btn-gradient-end: #ffcc00;
@@ -165,6 +165,7 @@
 /* Responsive Adjustments                                              */
 /* ===================================================================== */
 
+/* Für Bildschirme bis 768px */
 @media (max-width: 768px) {
   .profile-page {
     padding: 15px;
@@ -181,9 +182,34 @@
     max-width: 300px;
   }
   
-  /* Adjust Coin Farm Scroll on small screens */
+  /* Anpassung der Coin Farm Scroll */
   .coin-farm-scroll {
     gap: 10px;
     padding: 8px 0;
+  }
+}
+
+/* Für sehr kleine Bildschirme bis 480px */
+@media (max-width: 480px) {
+  .profile-page {
+    padding: 10px;
+  }
+  
+  .profile-info {
+    gap: 10px;
+  }
+  
+  .profile-card {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .card-details {
+    font-size: 0.9rem;
+  }
+  
+  .upgrade-button {
+    padding: 8px 10px;
+    font-size: 0.9rem;
   }
 }

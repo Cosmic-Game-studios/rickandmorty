@@ -1,11 +1,7 @@
-/* ============================= */
-/* Google Fonts Import           */
-/* ============================= */
+/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
-/* ============================= */
-/* Globaler Reset & Basisstyles  */
-/* ============================= */
+/* Globaler Reset & Basisstyles */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -30,9 +26,7 @@ main {
   padding: 20px;
 }
 
-/* ============================= */
 /* Header, Navigation & Hamburger */
-/* ============================= */
 .header {
   background: linear-gradient(90deg, #4b0082, #9400d3);
   padding: 20px;
@@ -65,6 +59,7 @@ main {
   font-size: 1.2rem;
   color: #f0e130;
 }
+
 .coin-display span {
   margin-left: 5px;
 }
@@ -78,6 +73,7 @@ main {
   gap: 15px;
   margin-top: 15px;
 }
+
 .nav-list li a,
 .header nav ul li a {
   text-decoration: none;
@@ -87,6 +83,7 @@ main {
   border: 2px solid transparent;
   transition: all 0.3s ease;
 }
+
 .nav-list li a:hover,
 .header nav ul li a:hover {
   border-color: #f0e130;
@@ -101,6 +98,7 @@ main {
   cursor: pointer;
   outline: none;
 }
+
 .hamburger .bar {
   width: 25px;
   height: 3px;
@@ -109,9 +107,7 @@ main {
   transition: all 0.3s ease;
 }
 
-/* ============================= */
-/* Footer                        */
-/* ============================= */
+/* Footer */
 .footer {
   background: linear-gradient(90deg, #4b0082, #9400d3);
   text-align: center;
@@ -120,9 +116,7 @@ main {
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* ============================= */
-/* Home Page                     */
-/* ============================= */
+/* Home Page */
 .home-page {
   text-align: center;
   padding: 40px 20px;
@@ -133,22 +127,26 @@ main {
   max-width: 800px;
   margin: 0 auto 30px;
 }
+
 .hero-title {
   font-family: 'Bangers', cursive;
   font-size: 3rem;
   margin-bottom: 10px;
   color: #f0e130;
 }
+
 .hero-subtitle {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-bottom: 30px;
 }
+
 .hero-button {
   background: linear-gradient(45deg, #ff0066, #ffcc00);
   padding: 10px 20px;
@@ -159,13 +157,12 @@ main {
   font-weight: bold;
   transition: background 0.3s ease;
 }
+
 .hero-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* ============================= */
 /* Info-, Features- & News-Section */
-/* ============================= */
 .info-section,
 .features-section,
 .news-section {
@@ -174,6 +171,7 @@ main {
   border-radius: 10px;
   margin-bottom: 30px;
 }
+
 .info-section h2,
 .features-section h2,
 .news-section h2 {
@@ -181,33 +179,36 @@ main {
   color: #f0e130;
   margin-bottom: 10px;
 }
+
 .features-section ul {
   list-style: none;
   padding: 0;
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
 .features-section ul li {
   margin: 10px 0;
 }
+
 .news-section p {
   font-size: 1.1rem;
   margin-top: 10px;
 }
 
-/* ============================= */
-/* Characters & Character Cards  */
-/* ============================= */
+/* Characters & Character Cards */
 .characters-page {
   padding: 20px;
   text-align: center;
 }
+
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
+
 .character-card {
   background: rgba(255, 255, 255, 0.1);
   border: 2px solid transparent;
@@ -218,28 +219,30 @@ main {
   padding: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
 .character-card:hover {
   transform: scale(1.05);
   border-color: #f0e130;
 }
+
 .character-card img {
   width: 100%;
   height: auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 .character-card h3 {
   font-family: 'Bangers', cursive;
   margin: 10px 0;
   font-size: 1.5rem;
 }
 
-/* ============================= */
-/* Quiz Page                     */
-/* ============================= */
+/* Quiz Page */
 .quiz-page {
   padding: 20px;
   text-align: center;
 }
+
 .question-card {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -250,17 +253,20 @@ main {
   max-width: 500px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
 .question-text {
   font-family: 'Bangers', cursive;
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
+
 .options-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
   margin-bottom: 20px;
 }
+
 .option {
   padding: 12px 15px;
   border: 2px solid transparent;
@@ -269,19 +275,23 @@ main {
   cursor: pointer;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
+
 .option:hover {
   background: rgba(0, 0, 0, 0.3);
 }
+
 .option.selected {
   border-color: #f0e130;
   background: rgba(240, 225, 48, 0.2);
 }
+
 .feedback {
   font-size: 1.2rem;
   margin-bottom: 20px;
   font-weight: bold;
   color: #f0e130;
 }
+
 .submit-button {
   background: linear-gradient(45deg, #ff0066, #ffcc00);
   border: none;
@@ -292,9 +302,11 @@ main {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .submit-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
+
 .restart-button {
   background: linear-gradient(45deg, #4b0082, #9400d3);
   border: none;
@@ -305,23 +317,24 @@ main {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .restart-button:hover {
   background: linear-gradient(45deg, #9400d3, #4b0082);
 }
 
-/* ============================= */
-/* Missions Page                 */
-/* ============================= */
+/* Missions Page */
 .missions-page {
   padding: 20px;
   text-align: center;
 }
+
 .missions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
+
 .mission-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -329,19 +342,23 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
+
 .mission-card:hover {
   transform: scale(1.02);
 }
+
 .mission-description {
   font-family: 'Bangers', cursive;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
+
 .mission-reward {
   margin-bottom: 15px;
   font-weight: bold;
   color: #f0e130;
 }
+
 .mission-button {
   background: linear-gradient(45deg, #ff0066, #ffcc00);
   border: none;
@@ -351,22 +368,23 @@ main {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .mission-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
+
 .mission-button.completed {
   background: #555;
   cursor: default;
 }
 
-/* ============================= */
-/* Episoden & Locations Pages    */
-/* ============================= */
+/* Episoden & Locations Pages */
 .episodes-page,
 .locations-page {
   padding: 20px;
   text-align: center;
 }
+
 .episodes-grid,
 .locations-grid {
   display: grid;
@@ -374,6 +392,7 @@ main {
   gap: 20px;
   margin-top: 20px;
 }
+
 .episode-card,
 .location-card {
   background: rgba(255, 255, 255, 0.1);
@@ -382,10 +401,12 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
+
 .episode-card:hover,
 .location-card:hover {
   transform: scale(1.02);
 }
+
 .details-link {
   display: inline-block;
   margin-top: 10px;
@@ -393,6 +414,7 @@ main {
   text-decoration: none;
   font-weight: bold;
 }
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -400,6 +422,7 @@ main {
   gap: 10px;
   margin-top: 20px;
 }
+
 .pagination button {
   padding: 8px 15px;
   background: linear-gradient(45deg, #ff0066, #ffcc00);
@@ -410,9 +433,11 @@ main {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .pagination button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
+
 .back-link {
   display: inline-block;
   margin-top: 20px;
@@ -420,16 +445,16 @@ main {
   text-decoration: none;
   font-weight: bold;
 }
+
 .back-link:hover {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* Character Details Page        */
-/* ============================= */
+/* Character Details Page */
 .character-details-page {
   padding: 20px;
 }
+
 .character-card-detail {
   display: flex;
   flex-wrap: wrap;
@@ -440,21 +465,26 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
+
 .detail-image {
   width: 300px;
   border-radius: 10px;
 }
+
 .detail-info {
   flex: 1;
   font-size: 1.1rem;
 }
+
 .episode-list ul {
   list-style: none;
   padding: 0;
 }
+
 .episode-list li {
   margin: 10px 0;
 }
+
 .back-link {
   display: inline-block;
   margin-top: 20px;
@@ -462,23 +492,24 @@ main {
   text-decoration: none;
   font-weight: bold;
 }
+
 .back-link:hover {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* Profil-Seite                 */
-/* ============================= */
+/* Profil-Seite */
 .profile-page {
   padding: 20px;
   text-align: center;
 }
+
 .profile-info {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin: 20px 0;
 }
+
 .profile-card {
   background: rgba(255, 255, 255, 0.1);
   padding: 15px;
@@ -494,6 +525,7 @@ main {
   flex-wrap: wrap;
   margin: 20px 0;
 }
+
 .coin-farm-card {
   background: rgba(255, 255, 255, 0.1);
   padding: 5px;
@@ -502,9 +534,11 @@ main {
   cursor: pointer;
   transition: transform 0.3s ease, border 0.3s ease;
 }
+
 .coin-farm-card.selected {
   border: 2px solid #f0e130;
 }
+
 .coin-farm-card img {
   width: auto;
   max-width: 80px;
@@ -513,19 +547,21 @@ main {
   margin: 0 auto;
 }
 
-/* Angepasstes Grid für freigeschaltete Charaktere */
+/* Unlocked Characters Grid */
 .unlocked-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 15px;
   margin-top: 20px;
 }
+
 .unlocked-card {
   background: rgba(255, 255, 255, 0.1);
   padding: 5px;
   border-radius: 10px;
   text-align: center;
 }
+
 .unlocked-card img {
   width: auto;
   max-width: 80px;
@@ -534,9 +570,7 @@ main {
   margin: 0 auto;
 }
 
-/* ============================= */
-/* Upgrade-Button im Profil      */
-/* ============================= */
+/* Upgrade-Button im Profil */
 .upgrade-button {
   background: linear-gradient(45deg, #ff0066, #ffcc00);
   border: none;
@@ -548,13 +582,12 @@ main {
   transition: background 0.3s ease;
   margin-top: 10px;
 }
+
 .upgrade-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* ============================= */
-/* Load More Button (Characters) */
-/* ============================= */
+/* (Optional) Load More Button */
 .load-more-button {
   display: block;
   margin: 20px auto;
@@ -568,13 +601,12 @@ main {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .load-more-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* ============================= */
-/* Responsive Anpassungen        */
-/* ============================= */
+/* Responsive Anpassungen */
 @media (max-width: 768px) {
   .header h1,
   .site-title {
@@ -606,9 +638,7 @@ main {
   }
 }
 
-/* ============================= */
-/* Daily Bonus & Bonus Button    */
-/* ============================= */
+/* Daily Bonus & Bonus Button */
 .daily-bonus {
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
@@ -617,6 +647,7 @@ main {
   margin: 20px auto;
   max-width: 400px;
 }
+
 .bonus-button {
   background: linear-gradient(45deg, #ff0066, #ffcc00);
   border: none;
@@ -628,6 +659,7 @@ main {
   transition: background 0.3s ease;
   margin-top: 10px;
 }
+
 .bonus-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }

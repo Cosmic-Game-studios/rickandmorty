@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import './Shop.css';
 
-// Erweiterten Pool mit mehreren möglichen Shop-Artikeln
-const biggerShopCharacters = [
+// Extended pool with multiple possible shop items
+const extendedShopItems = [
   {
     id: 101,
     name: "Rick's Clone",
@@ -68,10 +68,10 @@ const biggerShopCharacters = [
     requiredLevel: 5,
     rarity: 4
   }
-  // Füge hier weitere Shop-Artikel hinzu, falls gewünscht.
+  // Add more shop items here if desired.
 ];
 
-// Hilfsfunktion zum Mischen eines Arrays (Fisher-Yates Shuffle)
+// Helper function: Shuffle an array (Fisher-Yates Shuffle)
 function shuffleArray(array) {
   const newArr = [...array];
   for (let i = newArr.length - 1; i > 0; i--) {
@@ -85,19 +85,19 @@ function Shop() {
   const { coins, level, unlockedCharacters, unlockCharacter, addCoins } = useContext(UserContext);
   const [dailyItems, setDailyItems] = useState([]);
 
-  // Überprüfe das aktuelle Datum (im Format YYYY-MM-DD)
+  // Check the current date (format: YYYY-MM-DD)
   const today = new Date().toISOString().slice(0, 10);
 
   useEffect(() => {
-    // Prüfe, ob für den aktuellen Tag bereits Shop-Artikel gespeichert sind
+    // Check if shop items for the current day are already stored
     const storedDate = localStorage.getItem('dailyShopDate');
     const storedItems = localStorage.getItem('dailyShopItems');
 
     if (storedDate === today && storedItems) {
       setDailyItems(JSON.parse(storedItems));
     } else {
-      // Mische den erweiterten Pool und wähle z. B. 4 Artikel aus
-      const shuffled = shuffleArray(biggerShopCharacters);
+      // Shuffle the extended pool and select, for example, 4 items
+      const shuffled = shuffleArray(extendedShopItems);
       const newDailyItems = shuffled.slice(0, 4);
       setDailyItems(newDailyItems);
       localStorage.setItem('dailyShopDate', today);
@@ -105,53 +105,53 @@ function Shop() {
     }
   }, [today]);
 
-  // Shop ist erst ab Level 10 verfügbar
+  // The shop is available only from level 10
   if (level < 10) {
     return (
       <div className="shop-page">
-        <h2>Charakter-Shop</h2>
-        <p>Der Shop ist ab Level 10 verfügbar. Erreiche Level 10, um einzigartige Charaktere zu kaufen.</p>
+        <h2>Character Shop</h2>
+        <p>The shop is available from level 10. Reach level 10 to purchase unique characters.</p>
       </div>
     );
   }
 
   const purchaseCharacter = (item) => {
-    // Prüfe, ob der Charakter bereits freigeschaltet wurde
+    // Check if the character is already unlocked
     if (unlockedCharacters.find(c => c.id === item.id)) {
-      alert("Charakter bereits freigeschaltet!");
+      alert("Character already unlocked!");
       return;
     }
-    // Prüfe, ob der Spieler genügend Coins hat
+    // Check if the player has enough coins
     if (coins < item.coinPrice) {
-      alert("Nicht genügend Coins!");
+      alert("Not enough coins!");
       return;
     }
-    // Prüfe, ob der Spieler das erforderliche Level erreicht hat
+    // Check if the player has reached the required level
     if (level < item.requiredLevel) {
-      alert("Dein Level ist zu niedrig!");
+      alert("Your level is too low!");
       return;
     }
-    // Coins abziehen
+    // Deduct coins
     addCoins(-item.coinPrice);
-    // Freischalten des Charakters
+    // Unlock the character
     unlockCharacter(item);
-    alert(`${item.name} wurde freigeschaltet!`);
+    alert(`${item.name} has been unlocked!`);
   };
 
   return (
     <div className="shop-page">
-      <h2>Charakter-Shop</h2>
-      <p>Erwerbe einzigartige Charaktere mit deinen Coins. Jeden Tag gibt es neue Angebote!</p>
+      <h2>Character Shop</h2>
+      <p>Purchase unique characters with your coins. New offers available every day!</p>
       <div className="shop-grid">
         {dailyItems.map(item => (
           <div key={item.id} className="shop-card">
             <img src={item.image} alt={item.name} />
             <h3>{item.name}</h3>
-            <p>Preis: {item.coinPrice} Coins</p>
-            <p>Erforderliches Level: {item.requiredLevel}</p>
+            <p>Price: {item.coinPrice} Coins</p>
+            <p>Required Level: {item.requiredLevel}</p>
             <p>Rarity: {item.rarity}</p>
             <button onClick={() => purchaseCharacter(item)} className="shop-button">
-              Kaufen
+              Buy
             </button>
           </div>
         ))}

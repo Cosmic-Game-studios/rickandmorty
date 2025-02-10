@@ -5,7 +5,7 @@ export const UserContext = createContext();
 const LOCAL_STORAGE_KEY = 'rickMortyUserData';
 
 export function UserProvider({ children }) {
-  // Lade gespeicherte Daten oder setze Standardwerte
+  // Gespeicherte Daten aus dem localStorage laden oder Standardwerte setzen
   const storedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || {};
   const [unlockedCharacters, setUnlockedCharacters] = useState(storedData.unlockedCharacters || []);
   const [level, setLevel] = useState(storedData.level || 1);
@@ -13,7 +13,7 @@ export function UserProvider({ children }) {
   const [coins, setCoins] = useState(storedData.coins || 0);
   const [selectedCoinFarm, setSelectedCoinFarm] = useState(storedData.selectedCoinFarm || null);
 
-  // Passive Coin-Generierung (1 Coin pro Minute)
+  // Passive Coin-Generierung: 1 Coin pro Minute
   const coinGenerationSpeed = 1;
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,12 +22,13 @@ export function UserProvider({ children }) {
     return () => clearInterval(interval);
   }, [coinGenerationSpeed]);
 
-  // Speichere den Zustand in localStorage
+  // Zustand in localStorage speichern, sobald sich relevante Werte ändern
   useEffect(() => {
     const data = { unlockedCharacters, level, rewardPoints, coins, selectedCoinFarm };
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
   }, [unlockedCharacters, level, rewardPoints, coins, selectedCoinFarm]);
 
+  // Fügt Reward Points hinzu und erhöht ggf. den Level, wenn ein bestimmter Schwellenwert erreicht wird.
   const addRewardPoints = (points) => {
     setRewardPoints(prev => {
       const newPoints = prev + points;
@@ -38,32 +39,42 @@ export function UserProvider({ children }) {
     });
   };
 
-  // Coins hinzufügen
+  // Coins hinzufügen (z. B. auch über einen täglichen Bonus)
   const addCoins = (amount) => {
     setCoins(prev => prev + amount);
   };
 
+  // Mission erfolgreich abgeschlossen: Belohne den Spieler mit Coins bzw. Reward Points.
   const completeMission = (reward = 100) => {
     addRewardPoints(reward);
   };
 
+  // Quiz korrekt beantwortet: Belohne den Spieler.
   const answerQuizCorrectly = (reward = 50) => {
     addRewardPoints(reward);
   };
 
-  // Beim Freischalten eines Charakters:
-  // - Setze den Startlevel auf 2, damit er sofort einen Bonus hat.
-  // - Weise einen zufälligen Seltenheitsgrad (Rarity) zwischen 1 und 5 zu.
+  // Charakter freischalten: Beim ersten Unlock wird der Charakter mit Startwerten versehen.
   const unlockCharacter = (character) => {
     setUnlockedCharacters(prev => {
+      // Nur hinzufügen, wenn der Charakter noch nicht freigeschaltet wurde
       if (!prev.find(c => c.id === character.id)) {
-        const randomRarity = Math.floor(Math.random() * 5) + 1; // Zufälliger Wert zwischen 1 und 5
-        return [...prev, { ...character, characterLevel: 2, baseSpeed: 1, rarity: randomRarity }];
+        const randomRarity = Math.floor(Math.random() * 5) + 1; // Zufälliger Rarity-Wert zwischen 1 und 5
+        return [
+          ...prev, 
+          { 
+            ...character, 
+            characterLevel: 2, 
+            baseSpeed: 1, 
+            rarity: randomRarity 
+          }
+        ];
       }
       return prev;
     });
   };
 
+  // Charakter upgraden: Kosten 100 Coins, wenn genügend Coins vorhanden sind
   const upgradeCharacter = (characterId) => {
     const cost = 100;
     if (coins >= cost) {
@@ -78,7 +89,7 @@ export function UserProvider({ children }) {
     }
   };
 
-  // Auswahl eines Coin Farm Charakters
+  // Auswahl eines Coin-Farm-Charakters
   const selectCoinFarm = (characterId) => {
     setSelectedCoinFarm(characterId);
   };
@@ -96,11 +107,11 @@ export function UserProvider({ children }) {
       id: Date.now(), // Generiere eine eindeutige ID
       name: `Fusion of ${char1.name} & ${char2.name}`,
       image: "https://via.placeholder.com/150?text=Fusion", // Platzhalterbild
-      // Setze den Level als Maximum der beiden plus 1
+      // Level: Maximum der beiden + 1
       characterLevel: Math.max(char1.characterLevel, char2.characterLevel) + 1,
       // Basisgeschwindigkeit als Durchschnitt der beiden
       baseSpeed: (char1.baseSpeed + char2.baseSpeed) / 2,
-      // Seltenheit als aufgerundeter Durchschnitt der beiden
+      // Seltenheit als aufgerundeter Durchschnitt
       rarity: Math.ceil((char1.rarity + char2.rarity) / 2),
       // Optional: Setze requiredLevel auf den niedrigeren Wert der beiden
       requiredLevel: Math.min(char1.requiredLevel, char2.requiredLevel)
@@ -122,8 +133,8 @@ export function UserProvider({ children }) {
         upgradeCharacter,
         selectedCoinFarm,
         selectCoinFarm,
-        addCoins, // Wird für den täglichen Bonus genutzt
-        fuseCharacters // Fusionsfunktion
+        addCoins,       // Für den täglichen Bonus oder andere Coin-Aktionen
+        fuseCharacters  // Fusionsfunktion
       }}
     >
       {children}

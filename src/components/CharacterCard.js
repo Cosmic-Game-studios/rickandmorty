@@ -2,7 +2,13 @@ import React, { useContext, useEffect, useMemo } from 'react';
 import { UserContext } from '../context/UserContext';
 
 function CharacterCard({ character, unlocked }) {
-  const { level, unlockCharacter } = useContext(UserContext);
+  const { level, unlockCharacter, unlockedCharacters } = useContext(UserContext);
+  
+  // Falls der Charakter freigeschaltet ist, überschreibe die übergebenen Werte
+  // mit den aktualisierten Werten aus unlockedCharacters
+  const unlockedData = unlockedCharacters.find(c => c.id === character.id);
+  const characterData = unlocked && unlockedData ? { ...character, ...unlockedData } : character;
+  
   const {
     requiredLevel = 2,
     baseSpeed = 1,
@@ -10,18 +16,18 @@ function CharacterCard({ character, unlocked }) {
     rarity,
     image,
     name,
-  } = character;
+  } = characterData;
 
   const autoUnlocked = level >= requiredLevel;
 
-  // Automatically unlock when the user's level is reached
+  // Automatisches Freischalten, wenn der User-Level erreicht ist
   useEffect(() => {
     if (autoUnlocked && !unlocked) {
       unlockCharacter(character);
     }
   }, [autoUnlocked, unlocked, character, unlockCharacter]);
 
-  // Calculate the effective speed only when the values change
+  // Berechne die effektive Geschwindigkeit basierend auf baseSpeed, Level-Bonus und rarity-Bonus
   const effectiveSpeed = useMemo(() => {
     const upgradeBonus = (characterLevel - 1) * 0.5;
     const rarityBonus = rarity ? (rarity - 1) * 0.5 : 0;
@@ -36,7 +42,7 @@ function CharacterCard({ character, unlocked }) {
         <>
           <p>Unlocked</p>
           <p>Speed: {effectiveSpeed.toFixed(2)}</p>
-          <p>Rarity: {rarity || "Not specified"}</p>
+          <p>Rarity: {rarity !== undefined ? rarity : 'Not specified'}</p>
         </>
       ) : (
         <p className="required-level">Required level: {requiredLevel}</p>

@@ -14,24 +14,24 @@ function CharacterDetails() {
       setLoading(true);
       setError('');
       try {
-        // Charakterdaten abrufen
+        // Fetch character data
         const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
         if (!response.ok) {
-          throw new Error('Fehler beim Laden des Charakters.');
+          throw new Error('Error loading character.');
         }
         const data = await response.json();
         setCharacter(data);
         setLoading(false);
 
-        // Episodendaten abrufen, falls vorhanden
+        // Fetch episode data if available
         if (data.episode && data.episode.length > 0) {
           const episodeIds = data.episode.map(ep => ep.split('/').pop());
           const epResponse = await fetch(`https://rickandmortyapi.com/api/episode/${episodeIds.join(',')}`);
           if (!epResponse.ok) {
-            throw new Error('Fehler beim Laden der Episoden.');
+            throw new Error('Error loading episodes.');
           }
           const epData = await epResponse.json();
-          // Falls nur ein einzelnes Ergebnis vorliegt, in ein Array packen
+          // If only a single result is returned, wrap it in an array
           setEpisodes(Array.isArray(epData) ? epData : [epData]);
         } else {
           setEpisodes([]);
@@ -47,10 +47,10 @@ function CharacterDetails() {
     fetchCharacterDetails();
   }, [id]);
 
-  if (loading) return <p>Lade Charakterdetails...</p>;
+  if (loading) return <p>Loading character details...</p>;
   if (error) return <p>{error}</p>;
 
-  // Destrukturiere zur besseren Lesbarkeit
+  // Destructure for better readability
   const {
     name,
     image,
@@ -69,17 +69,17 @@ function CharacterDetails() {
         <div className="detail-info">
           <h2>{name}</h2>
           <p><strong>Status:</strong> {status}</p>
-          <p><strong>Spezies:</strong> {species}</p>
-          <p><strong>Geschlecht:</strong> {gender}</p>
-          <p><strong>Ursprung:</strong> {origin?.name}</p>
-          <p><strong>Letzter Aufenthaltsort:</strong> {location?.name}</p>
+          <p><strong>Species:</strong> {species}</p>
+          <p><strong>Gender:</strong> {gender}</p>
+          <p><strong>Origin:</strong> {origin?.name}</p>
+          <p><strong>Last known location:</strong> {location?.name}</p>
           {rarity && <p><strong>Rarity:</strong> {rarity}</p>}
         </div>
       </div>
       <div className="episode-list">
-        <h3>Episoden, in denen {name} erscheint:</h3>
+        <h3>Episodes in which {name} appears:</h3>
         {episodesLoading ? (
-          <p>Lade Episoden...</p>
+          <p>Loading episodes...</p>
         ) : episodes.length > 0 ? (
           <ul>
             {episodes.map(ep => (
@@ -91,11 +91,11 @@ function CharacterDetails() {
             ))}
           </ul>
         ) : (
-          <p>Keine Episoden gefunden.</p>
+          <p>No episodes found.</p>
         )}
       </div>
       <Link to="/characters" className="back-link">
-        Zurück zu Charakteren
+        Back to Characters
       </Link>
     </div>
   );

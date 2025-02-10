@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useMemo } from 'react';
+import React, { createContext, useState, useEffect, useMemo, useCallback } from 'react';
 
 export const UserContext = createContext();
 
@@ -14,11 +14,11 @@ export function UserProvider({ children }) {
   const [selectedCoinFarm, setSelectedCoinFarm] = useState(storedData.selectedCoinFarm || null);
 
   // Hilfsfunktion: Berechnet die effektive Geschwindigkeit eines Charakters
-  const computeEffectiveSpeed = (character) => {
+  const computeEffectiveSpeed = useCallback((character) => {
     const upgradeBonus = (character.characterLevel - 1) * 0.5;
     const rarityBonus = character.rarity ? (character.rarity - 1) * 0.5 : 0;
     return character.baseSpeed + upgradeBonus + rarityBonus;
-  };
+  }, []);
 
   // Dynamisch berechnete Coin-Generierungsgeschwindigkeit:
   // Basisgeschwindigkeit (mindestens 1 Coin pro Minute) + effektive Geschwindigkeit des ausgewählten Coin-Farm-Charakters (falls ausgewählt)
@@ -32,12 +32,12 @@ export function UserProvider({ children }) {
       }
     }
     return baseSpeed + additionalSpeed;
-  }, [unlockedCharacters, selectedCoinFarm]);
+  }, [unlockedCharacters, selectedCoinFarm, computeEffectiveSpeed]);
 
   // Passive Coin-Generierung: Coins werden jede Minute anhand des coinGenerationSpeed hinzugefügt
   useEffect(() => {
     const interval = setInterval(() => {
-      setCoins(prev => prev + coinGenerationSpeed);
+      setCoins(prevCoins => prevCoins + coinGenerationSpeed);
     }, 60000); // 60000 ms = 1 Minute
     return () => clearInterval(interval);
   }, [coinGenerationSpeed]);
@@ -49,39 +49,39 @@ export function UserProvider({ children }) {
   }, [unlockedCharacters, level, rewardPoints, coins, selectedCoinFarm]);
 
   // Fügt Reward Points hinzu und erhöht ggf. den Level, wenn ein Schwellenwert erreicht wird
-  const addRewardPoints = (points) => {
-    setRewardPoints(prev => {
-      const newPoints = prev + points;
+  const addRewardPoints = useCallback((points) => {
+    setRewardPoints(prevPoints => {
+      const newPoints = prevPoints + points;
       if (newPoints >= level * 500) {
-        setLevel(current => current + 1);
+        setLevel(currentLevel => currentLevel + 1);
       }
       return newPoints;
     });
-  };
+  }, [level]);
 
   // Coins hinzufügen (z. B. auch über einen täglichen Bonus)
-  const addCoins = (amount) => {
-    setCoins(prev => prev + amount);
-  };
+  const addCoins = useCallback((amount) => {
+    setCoins(prevCoins => prevCoins + amount);
+  }, []);
 
-  // Mission erfolgreich abgeschlossen: Belohne den Spieler mit Coins bzw. Reward Points.
-  const completeMission = (reward = 100) => {
+  // Mission erfolgreich abgeschlossen: Belohne den Spieler
+  const completeMission = useCallback((reward = 100) => {
     addRewardPoints(reward);
-  };
+  }, [addRewardPoints]);
 
-  // Quiz korrekt beantwortet: Belohne den Spieler.
-  const answerQuizCorrectly = (reward = 50) => {
+  // Quiz korrekt beantwortet: Belohne den Spieler
+  const answerQuizCorrectly = useCallback((reward = 50) => {
     addRewardPoints(reward);
-  };
+  }, [addRewardPoints]);
 
-  // Charakter freischalten: Beim ersten Unlock wird der Charakter mit Startwerten versehen.
-  const unlockCharacter = (character) => {
-    setUnlockedCharacters(prev => {
+  // Charakter freischalten: Beim ersten Unlock wird der Charakter mit Startwerten versehen
+  const unlockCharacter = useCallback((character) => {
+    setUnlockedCharacters(prevChars => {
       // Nur hinzufügen, wenn der Charakter noch nicht freigeschaltet wurde
-      if (!prev.find(c => c.id === character.id)) {
+      if (!prevChars.find(c => c.id === character.id)) {
         const randomRarity = Math.floor(Math.random() * 5) + 1; // Zufälliger Rarity-Wert zwischen 1 und 5
         return [
-          ...prev, 
+          ...prevChars, 
           { 
             ...character, 
             characterLevel: 2, 
@@ -90,78 +90,92 @@ export function UserProvider({ children }) {
           }
         ];
       }
-      return prev;
+      return prevChars;
     });
-  };
+  }, []);
 
   // Charakter upgraden: Kosten steigen dynamisch – der Upgrade kostet 100 Coins mal dem aktuellen Level des Charakters
-  const upgradeCharacter = (characterId) => {
-    const charToUpgrade = unlockedCharacters.find(c => c.id === characterId);
-    if (!charToUpgrade) {
-      alert("Character not found!");
-      return;
-    }
-    const currentLevel = charToUpgrade.characterLevel || 1;
-    const cost = 100 * currentLevel;
-    if (coins >= cost) {
-      setCoins(prev => prev - cost);
-      setUnlockedCharacters(prev =>
-        prev.map(c =>
-          c.id === characterId ? { ...c, characterLevel: currentLevel + 1 } : c
-        )
+  const upgradeCharacter = useCallback((characterId) => {
+    setUnlockedCharacters(prevChars => {
+      const charToUpgrade = prevChars.find(c => c.id === characterId);
+      if (!charToUpgrade) {
+        alert("Character not found!");
+        return prevChars;
+      }
+      const currentLevel = charToUpgrade.characterLevel || 1;
+      const cost = 100 * currentLevel;
+      if (coins < cost) {
+        alert("Not enough coins!");
+        return prevChars;
+      }
+      // Coins werden abgezogen
+      setCoins(prevCoins => prevCoins - cost);
+      // Charakter-Level wird erhöht
+      return prevChars.map(c =>
+        c.id === characterId ? { ...c, characterLevel: currentLevel + 1 } : c
       );
-    } else {
-      alert("Not enough coins!");
-    }
-  };
+    });
+  }, [coins]);
 
   // Auswahl eines Coin-Farm-Charakters
-  const selectCoinFarm = (characterId) => {
+  const selectCoinFarm = useCallback((characterId) => {
     setSelectedCoinFarm(characterId);
-  };
+  }, []);
 
   // Fusionsfunktion: Kombiniert zwei freigeschaltete Charaktere zu einem neuen Fusions-Charakter.
   // Die beiden ursprünglichen Charaktere werden aus der Liste entfernt.
-  const fuseCharacters = (id1, id2) => {
-    const char1 = unlockedCharacters.find(c => c.id === id1);
-    const char2 = unlockedCharacters.find(c => c.id === id2);
-    if (!char1 || !char2) {
-      alert("Both characters must be unlocked!");
-      return;
-    }
-    const newCharacter = {
-      id: Date.now(), // Generiere eine eindeutige ID
-      name: `Fusion of ${char1.name} & ${char2.name}`,
-      image: "https://via.placeholder.com/150?text=Fusion", // Platzhalterbild
-      // Level: Maximum der beiden + 1
-      characterLevel: Math.max(char1.characterLevel, char2.characterLevel) + 1,
-      // Basisgeschwindigkeit als Durchschnitt der beiden
-      baseSpeed: (char1.baseSpeed + char2.baseSpeed) / 2,
-      // Seltenheit als aufgerundeter Durchschnitt
-      rarity: Math.ceil((char1.rarity + char2.rarity) / 2),
-      // Optional: Setze requiredLevel auf den niedrigeren Wert der beiden
-      requiredLevel: Math.min(char1.requiredLevel, char2.requiredLevel)
-    };
-    setUnlockedCharacters(prev => prev.filter(c => c.id !== id1 && c.id !== id2).concat(newCharacter));
-  };
+  const fuseCharacters = useCallback((id1, id2) => {
+    setUnlockedCharacters(prevChars => {
+      const char1 = prevChars.find(c => c.id === id1);
+      const char2 = prevChars.find(c => c.id === id2);
+      if (!char1 || !char2) {
+        alert("Both characters must be unlocked!");
+        return prevChars;
+      }
+      const newCharacter = {
+        id: Date.now(), // Generiere eine eindeutige ID
+        name: `Fusion of ${char1.name} & ${char2.name}`,
+        image: "https://via.placeholder.com/150?text=Fusion", // Platzhalterbild
+        characterLevel: Math.max(char1.characterLevel, char2.characterLevel) + 1,
+        baseSpeed: (char1.baseSpeed + char2.baseSpeed) / 2,
+        rarity: Math.ceil((char1.rarity + char2.rarity) / 2),
+        requiredLevel: Math.min(char1.requiredLevel, char2.requiredLevel)
+      };
+      return prevChars.filter(c => c.id !== id1 && c.id !== id2).concat(newCharacter);
+    });
+  }, []);
+
+  // Den gesamten Kontextwert memoisieren
+  const contextValue = useMemo(() => ({
+    unlockedCharacters,
+    unlockCharacter,
+    level,
+    rewardPoints,
+    coins,
+    completeMission,
+    answerQuizCorrectly,
+    upgradeCharacter,
+    selectedCoinFarm,
+    selectCoinFarm,
+    addCoins,       // Für den täglichen Bonus oder andere Coin-Aktionen
+    fuseCharacters  // Fusionsfunktion
+  }), [
+    unlockedCharacters,
+    unlockCharacter,
+    level,
+    rewardPoints,
+    coins,
+    completeMission,
+    answerQuizCorrectly,
+    upgradeCharacter,
+    selectedCoinFarm,
+    selectCoinFarm,
+    addCoins,
+    fuseCharacters
+  ]);
 
   return (
-    <UserContext.Provider
-      value={{
-        unlockedCharacters,
-        unlockCharacter,
-        level,
-        rewardPoints,
-        coins,
-        completeMission,
-        answerQuizCorrectly,
-        upgradeCharacter,
-        selectedCoinFarm,
-        selectCoinFarm,
-        addCoins,       // Für den täglichen Bonus oder andere Coin-Aktionen
-        fuseCharacters  // Fusionsfunktion
-      }}
-    >
+    <UserContext.Provider value={contextValue}>
       {children}
     </UserContext.Provider>
   );

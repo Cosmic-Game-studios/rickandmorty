@@ -1749,4 +1749,117 @@
       ],
       "answer": "It leads to unintended consequences"
     }
+[
+  {
+    "id": 201,
+    "question": "In 'The Old Man and the Seat', what unique element does Rick incorporate into his private toilet design to ensure complete privacy?",
+    "options": [
+      "A quantum encryption system",
+      "A dimensional rift mechanism",
+      "An AI surveillance system",
+      "A self-destruct protocol"
+    ],
+    "answer": "A dimensional rift mechanism"
+  },
+  {
+    "id": 202,
+    "question": "In 'The ABC's of Beth', what metaphorical role does Froopyland play in reflecting Beth's inner conflicts?",
+    "options": [
+      "It represents her lost childhood innocence",
+      "It symbolizes chaotic creativity",
+      "It mirrors her struggle with identity and control",
+      "It is a utopia she strives to create"
+    ],
+    "answer": "It mirrors her struggle with identity and control"
+  },
+  {
+    "id": 203,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', what paradox is highlighted by Morty's repeated attempts to alter his future?",
+    "options": [
+      "Temporal inertia",
+      "The bootstrap paradox",
+      "Infinite recursion",
+      "Predestination paradox"
+    ],
+    "answer": "Predestination paradox"
+  },
+  {
+    "id": 204,
+    "question": "In 'Vindicators 3: The Return of Worldender', what underlying message does Rick convey about heroism?",
+    "options": [
+      "Heroism is an illusion",
+      "The pursuit of heroism leads to self-destruction",
+      "True strength is found in humility",
+      "Heroes are defined by their failures"
+    ],
+    "answer": "The pursuit of heroism leads to self-destruction"
+  },
+  {
+    "id": 205,
+    "question": "In 'The Rickshank Rickdemption', what philosophical stance does Rick express about reality and freedom?",
+    "options": [
+      "Reality is an illusion and freedom is a state of mind",
+      "All realities are equally valid and freedom is relative",
+      "True freedom is the absence of consequences",
+      "Existence is meaningless without personal responsibility"
+    ],
+    "answer": "All realities are equally valid and freedom is relative"
+  },
+  {
+    "id": 206,
+    "question": "In 'Rickmancing the Stone', what underlying theme is conveyed through the portrayal of post-apocalyptic society?",
+    "options": [
+      "The resilience of the human spirit",
+      "The inevitability of societal collapse",
+      "The harshness of survival",
+      "The reclamation of lost identity"
+    ],
+    "answer": "The harshness of survival"
+  },
+  {
+    "id": 207,
+    "question": "In 'Pickle Rick', beyond its surface-level absurdity, what does Rick's transformation most critically signify regarding his family relationships?",
+    "options": [
+      "A desperate bid for independence",
+      "A refusal to face emotional intimacy",
+      "An exploration of self-destruction",
+      "A manifestation of hidden vulnerability"
+    ],
+    "answer": "A refusal to face emotional intimacy"
+  },
+  {
+    "id": 208,
+    "question": "In 'The Whirly Dirly Conspiracy', what does Rick's decision to involve Jerry in the adventure ultimately reveal about his character?",
+    "options": [
+      "His need for validation",
+      "His underlying insecurity",
+      "His desire for genuine connection",
+      "His indifference to family"
+    ],
+    "answer": "His underlying insecurity"
+  },
+  {
+    "id": 209,
+    "question": "In 'Close Rick-counters of the Rick Kind', what is the primary philosophical conflict among various Ricks?",
+    "options": [
+      "The search for identity versus conformity",
+      "The nature of free will in an infinite multiverse",
+      "The balance between chaos and order",
+      "The isolation inherent in genius"
+    ],
+    "answer": "The nature of free will in an infinite multiverse"
+  },
+  {
+    "id": 210,
+    "question": "In 'Morty's Mind Blowers', what thematic message is conveyed by the selective erasure of memories?",
+    "options": [
+      "The price of ignorance is high",
+      "Memories define personal identity",
+      "Suppressing trauma leads to freedom",
+      "The cyclical nature of pain and relief"
+    ],
+    "answer": "Memories define personal identity"
+  }
+]
+
   ]

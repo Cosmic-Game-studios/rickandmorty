@@ -1,39 +1,10 @@
 /* ============================= */
-/* Google Fonts Import           */
-/* ============================= */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
-
-/* ============================= */
-/* Globaler Reset & Basisstyles  */
-/* ============================= */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: radial-gradient(circle at 30% 30%, #1a1a1a, #000);
-  color: #fff;
-  line-height: 1.6;
-}
-
-/* Container der gesamten App */
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-  padding: 20px;
-}
-
-/* ============================= */
 /* Header & Navigation           */
 /* ============================= */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
+
 .header {
   background: linear-gradient(90deg, #4b0082, #9400d3);
   padding: 20px;
@@ -99,9 +70,7 @@ main {
   border-radius: 5px;
 }
 
-/* ============================= */
-/* Hamburger-Menü Styles         */
-/* ============================= */
+/* Hamburger-Menü */
 .hamburger {
   display: none;
   background: none;
@@ -119,30 +88,8 @@ main {
   transition: all 0.3s ease;
 }
 
-/* ============================= */
-/* Footer                        */
-/* ============================= */
-.footer {
-  background: linear-gradient(90deg, #4b0082, #9400d3);
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* ============================= */
-/* Responsive Anpassungen        */
-/* ============================= */
+/* Responsive Anpassungen für Header */
 @media (max-width: 768px) {
-  /* Allgemeine Anpassungen */
-  body {
-    padding: 0 5px;
-  }
-  
-  main {
-    padding: 10px;
-  }
-  
   .header {
     padding: 15px;
   }
@@ -152,7 +99,6 @@ main {
     font-size: 2.5rem;
   }
   
-  /* Navigation & Hamburger */
   .nav-list {
     flex-direction: column;
     align-items: center;

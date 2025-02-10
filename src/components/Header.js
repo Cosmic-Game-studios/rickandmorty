@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import Coin from './Coin';
-import './Header.css'; // Importiere die CSS-Datei
+import './Header.css'; // Import the CSS file
 
 function Header() {
   const { coins } = useContext(UserContext);
@@ -20,23 +20,23 @@ function Header() {
           <span>{coins} Coins</span>
         </div>
         <h1 className="site-title">Rick and Morty Adventure</h1>
-        {/* Hamburger-Button – wird in der Desktop-Ansicht via CSS ausgeblendet */}
-        <button className="hamburger" onClick={toggleMenu} aria-label="Navigation umschalten">
+        {/* Hamburger button – hidden in the desktop view via CSS */}
+        <button className="hamburger" onClick={toggleMenu} aria-label="Toggle navigation">
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
       </div>
-      {/* Die Klasse "open" wird hinzugefügt, wenn menuOpen true ist */}
+      {/* The "open" class is added when menuOpen is true */}
       <nav className={menuOpen ? "open" : ""}>
         <ul className="nav-list">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/characters">Charaktere</Link></li>
-          <li><Link to="/episodes">Episoden</Link></li>
-          <li><Link to="/locations">Orte</Link></li>
-          <li><Link to="/missions">Missionen</Link></li>
+          <li><Link to="/characters">Characters</Link></li>
+          <li><Link to="/episodes">Episodes</Link></li>
+          <li><Link to="/locations">Locations</Link></li>
+          <li><Link to="/missions">Missions</Link></li>
           <li><Link to="/quiz">Quiz</Link></li>
-          <li><Link to="/profile">Profil</Link></li>
+          <li><Link to="/profile">Profile</Link></li>
           <li><Link to="/shop">Shop</Link></li>
         </ul>
       </nav>

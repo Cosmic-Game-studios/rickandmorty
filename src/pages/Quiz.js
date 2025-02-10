@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 
-// Hilfsfunktion: Array mischen (Fisher-Yates Shuffle)
+// Helper function: Shuffle an array (Fisher-Yates Shuffle)
 function shuffleArray(array) {
   const newArr = [...array];
   for (let i = newArr.length - 1; i > 0; i--) {
@@ -23,19 +23,19 @@ function Quiz() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // Lade Quizfragen aus der JSON-Datei im public-Ordner
+  // Load quiz questions from the JSON file in the public folder
   useEffect(() => {
     fetch('/quizData.json')
       .then(response => {
         if (!response.ok) {
-          throw new Error('Fehler beim Laden der Quizfragen.');
+          throw new Error('Error loading quiz questions.');
         }
         return response.json();
       })
       .then(data => {
         setAllQuestions(data);
         const shuffledData = shuffleArray(data);
-        // Wähle 10 zufällig gemischte Fragen aus und füge eine gemischte Version der Antwortoptionen hinzu
+        // Select 10 randomly shuffled questions and add a shuffled version of the answer options
         const selectedQuestions = shuffledData.slice(0, 10).map(q => ({
           ...q,
           shuffledOptions: shuffleArray(q.options || [])
@@ -49,14 +49,14 @@ function Quiz() {
       });
   }, []);
 
-  // Funktion zum Aktualisieren des täglichen Quiz-Zählers in localStorage
+  // Function to update the daily quiz counter in localStorage
   const updateDailyQuizCount = () => {
     const today = new Date().toISOString().slice(0, 10);
     let data = { date: today, count: 0 };
     const stored = localStorage.getItem('dailyQuizData');
     if (stored) {
       const parsed = JSON.parse(stored);
-      // Wenn das gespeicherte Datum nicht gleich heute ist, setze den Zähler zurück
+      // If the stored date is not today, reset the counter
       if (parsed.date !== today) {
         data = { date: today, count: 0 };
       } else {
@@ -67,9 +67,10 @@ function Quiz() {
     localStorage.setItem('dailyQuizData', JSON.stringify(data));
   };
 
-  if (loading) return <p>Lade Quizfragen...</p>;
+  if (loading) return <p>Loading quiz questions...</p>;
   if (error) return <p>{error}</p>;
-  if (!quizQuestions || quizQuestions.length === 0) return <p>Keine Quizfragen verfügbar.</p>;
+  if (!quizQuestions || quizQuestions.length === 0)
+    return <p>No quiz questions available.</p>;
 
   const handleAnswer = () => {
     const currentQuiz = quizQuestions[currentQuestion];
@@ -77,10 +78,10 @@ function Quiz() {
 
     if (selected === currentQuiz.answer) {
       setScore(prev => prev + 1);
-      completeMission(50); // 50 Punkte für eine richtige Antwort
-      setFeedback('Richtige Antwort! +50 Punkte');
+      completeMission(50); // 50 points for a correct answer
+      setFeedback('Correct answer! +50 points');
     } else {
-      setFeedback('Falsche Antwort.');
+      setFeedback('Wrong answer.');
     }
 
     setTimeout(() => {
@@ -90,7 +91,7 @@ function Quiz() {
         setFeedback('');
       } else {
         setQuizCompleted(true);
-        updateDailyQuizCount(); // Aktualisiere den täglichen Zähler, wenn das Quiz abgeschlossen ist
+        updateDailyQuizCount(); // Update the daily counter when the quiz is completed
       }
     }, 1500);
   };
@@ -98,8 +99,10 @@ function Quiz() {
   if (quizCompleted) {
     return (
       <div className="quiz-page">
-        <h2>Quiz abgeschlossen!</h2>
-        <p>Du hast {score} von {quizQuestions.length} Fragen richtig beantwortet.</p>
+        <h2>Quiz Completed!</h2>
+        <p>
+          You answered {score} out of {quizQuestions.length} questions correctly.
+        </p>
       </div>
     );
   }
@@ -108,7 +111,9 @@ function Quiz() {
     <div className="quiz-page">
       <h2>Rick and Morty Quiz</h2>
       <div className="question-card">
-        <p className="question-text">{quizQuestions[currentQuestion]?.question}</p>
+        <p className="question-text">
+          {quizQuestions[currentQuestion]?.question}
+        </p>
         <div className="options-grid">
           {(quizQuestions[currentQuestion]?.shuffledOptions || []).map((option, index) => (
             <div
@@ -122,7 +127,7 @@ function Quiz() {
         </div>
         {feedback && <p className="feedback">{feedback}</p>}
         <button onClick={handleAnswer} disabled={!selected} className="submit-button">
-          Antwort absenden
+          Submit Answer
         </button>
       </div>
     </div>

@@ -9,7 +9,7 @@ import React, {
 } from 'react';
 import { UserContext } from '../context/UserContext';
 
-// Lazy-Loading der CharacterCard-Komponente
+// Lazy-load the CharacterCard component
 const CharacterCard = React.lazy(() => import('../components/CharacterCard'));
 
 function Characters() {
@@ -21,18 +21,18 @@ function Characters() {
   const [error, setError] = useState('');
   const loadMoreRef = useRef(null);
 
-  // Asynchrones Laden der Charaktere
+  // Asynchronously load characters
   const loadCharacters = useCallback(async (pageNumber) => {
     setLoading(true);
     setError('');
     try {
       const response = await fetch(`https://rickandmortyapi.com/api/character?page=${pageNumber}`);
       if (!response.ok) {
-        throw new Error('Fehler beim Laden der Charaktere');
+        throw new Error('Error loading characters');
       }
       const data = await response.json();
 
-      // Füge neue Charaktere hinzu, ohne Duplikate
+      // Add new characters without duplicates
       setCharacters((prevChars) => {
         const existingIds = new Set(prevChars.map((c) => c.id));
         const startingIndex = prevChars.length;
@@ -40,7 +40,7 @@ function Characters() {
           .filter((character) => !existingIds.has(character.id))
           .map((character, index) => ({
             ...character,
-            // Falls requiredLevel nicht gesetzt ist, wird es anhand des Index berechnet
+            // If requiredLevel is not set, compute it based on the index
             requiredLevel: character.requiredLevel || startingIndex + index + 2,
           }));
         return [...prevChars, ...newCharacters];
@@ -54,19 +54,19 @@ function Characters() {
     }
   }, []);
 
-  // Lade Charaktere, wenn sich die Seitenzahl ändert
+  // Load characters when the page number changes
   useEffect(() => {
     loadCharacters(page);
   }, [page, loadCharacters]);
 
-  // Funktion zum Laden der nächsten Seite
+  // Function to load the next page
   const loadMore = useCallback(() => {
     if (hasMore && !loading) {
       setPage(prevPage => prevPage + 1);
     }
   }, [hasMore, loading]);
 
-  // Infinite Scrolling über IntersectionObserver
+  // Infinite scrolling using IntersectionObserver
   useEffect(() => {
     if (loading) return;
     const observer = new IntersectionObserver((entries) => {
@@ -85,7 +85,7 @@ function Characters() {
     };
   }, [loading, hasMore, loadMore]);
 
-  // Memoisiere die gerenderten CharacterCards
+  // Memoize the rendered CharacterCards
   const renderedCharacters = useMemo(() => {
     return characters.map((character, index) => {
       const unlocked = unlockedCharacters.some((c) => c.id === character.id);
@@ -101,15 +101,15 @@ function Characters() {
 
   return (
     <div className="characters-page">
-      <h2>Alle Charaktere</h2>
+      <h2>All Characters</h2>
       {error && <p className="error">{error}</p>}
-      <Suspense fallback={<div>Lade Charaktere...</div>}>
+      <Suspense fallback={<div>Loading characters...</div>}>
         <div className="character-grid">
           {renderedCharacters}
         </div>
       </Suspense>
-      {loading && <p>Lade mehr Charaktere...</p>}
-      {/* Dieser leere div-Block löst das Nachladen per IntersectionObserver aus */}
+      {loading && <p>Loading more characters...</p>}
+      {/* This empty div triggers loading more characters via IntersectionObserver */}
       <div ref={loadMoreRef} style={{ height: '1px' }} />
     </div>
   );

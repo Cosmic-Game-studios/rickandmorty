@@ -41,7 +41,9 @@ function Locations() {
           <div key={location.id} className="location-card">
             <h3>{location.name}</h3>
             <p>Type: {location.type}</p>
-            <Link to={`/location/${location.id}`} className="details-link">Details</Link>
+            <Link to={`/location/${location.id}`} className="details-link">
+              Details
+            </Link>
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ function DailyBonus() {
   const { addCoins } = useContext(UserContext);
   const [bonusClaimed, setBonusClaimed] = useState(false);
   const [bonusAvailable, setBonusAvailable] = useState(false);
-  const bonusAmount = 10; // Bonuscoins
+  const bonusAmount = 10; // Bonus coins
   const bonusKey = 'dailyBonusLastClaim';
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function DailyBonus() {
   if (bonusClaimed) {
     return (
       <div className="daily-bonus">
-        <p>Daily Bonus bereits eingelöst!</p>
+        <p>Daily bonus already claimed!</p>
       </div>
     );
   }
@@ -37,9 +37,9 @@ function DailyBonus() {
   if (bonusAvailable) {
     return (
       <div className="daily-bonus">
-        <p>Heute gibt es einen Daily Bonus von {bonusAmount} Coins!</p>
+        <p>Today's daily bonus: {bonusAmount} coins!</p>
         <button onClick={claimBonus} className="bonus-button">
-          Bonus einlösen
+          Claim Bonus
         </button>
       </div>
     );

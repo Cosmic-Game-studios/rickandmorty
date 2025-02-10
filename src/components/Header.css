@@ -1,12 +1,12 @@
 /* ============================= */
-/* Google Fonts importieren      */
+/* Google Fonts Import           */
 /* ============================= */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
 /* ============================= */
-/* Globales Reset & Basisstyles  */
+/* Globaler Reset & Basisstyles  */
 /* ============================= */
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -71,6 +71,7 @@ main {
   margin-left: 5px;
 }
 
+/* Navigation-Liste */
 .nav-list,
 .header nav ul {
   list-style: none;

@@ -14,14 +14,14 @@ function CharacterCard({ character, unlocked }) {
 
   const autoUnlocked = level >= requiredLevel;
 
-  // Automatisches Freischalten, wenn der User-Level erreicht ist
+  // Automatically unlock when the user's level is reached
   useEffect(() => {
     if (autoUnlocked && !unlocked) {
       unlockCharacter(character);
     }
   }, [autoUnlocked, unlocked, character, unlockCharacter]);
 
-  // Berechne die effektive Geschwindigkeit nur bei Änderung der Werte
+  // Calculate the effective speed only when the values change
   const effectiveSpeed = useMemo(() => {
     const upgradeBonus = (characterLevel - 1) * 0.5;
     const rarityBonus = rarity ? (rarity - 1) * 0.5 : 0;
@@ -34,12 +34,12 @@ function CharacterCard({ character, unlocked }) {
       <h3>{name}</h3>
       {autoUnlocked || unlocked ? (
         <>
-          <p>Freigeschaltet</p>
+          <p>Unlocked</p>
           <p>Speed: {effectiveSpeed.toFixed(2)}</p>
-          <p>Rarity: {rarity || "Nicht festgelegt"}</p>
+          <p>Rarity: {rarity || "Not specified"}</p>
         </>
       ) : (
-        <p className="required-level">Benötigtes Level: {requiredLevel}</p>
+        <p className="required-level">Required level: {requiredLevel}</p>
       )}
     </div>
   );

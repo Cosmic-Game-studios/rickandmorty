@@ -1,118 +1,48 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useCallback,
-  useMemo,
-  useRef,
-  Suspense,
-} from 'react';
+import React, { useContext, useEffect, useMemo } from 'react';
 import { UserContext } from '../context/UserContext';
 
-// Lazy-load the CharacterCard component
-const CharacterCard = React.lazy(() => import('../components/CharacterCard'));
+function CharacterCard({ character, unlocked }) {
+  const { level, unlockCharacter } = useContext(UserContext);
+  const {
+    requiredLevel = 2,
+    baseSpeed = 1,
+    characterLevel = 1,
+    rarity,
+    image,
+    name,
+  } = character;
 
-function Characters() {
-  const { unlockedCharacters } = useContext(UserContext);
-  const [characters, setCharacters] = useState([]);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const loadMoreRef = useRef(null);
+  const autoUnlocked = level >= requiredLevel;
 
-  // Asynchronously load characters
-  const loadCharacters = useCallback(async (pageNumber) => {
-    setLoading(true);
-    setError('');
-    try {
-      const response = await fetch(`https://rickandmortyapi.com/api/character?page=${pageNumber}`);
-      if (!response.ok) {
-        throw new Error('Error loading characters');
-      }
-      const data = await response.json();
-
-      // Add new characters without duplicates
-      setCharacters((prevChars) => {
-        const existingIds = new Set(prevChars.map((c) => c.id));
-        const startingIndex = prevChars.length;
-        const newCharacters = data.results
-          .filter((character) => !existingIds.has(character.id))
-          .map((character, index) => ({
-            ...character,
-            // If requiredLevel is not set, compute it based on the index
-            requiredLevel: character.requiredLevel || startingIndex + index + 2,
-          }));
-        return [...prevChars, ...newCharacters];
-      });
-
-      setHasMore(Boolean(data.info.next));
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  // Load characters when the page number changes
+  // Automatisch freischalten, wenn der User-Level erreicht ist
   useEffect(() => {
-    loadCharacters(page);
-  }, [page, loadCharacters]);
-
-  // Function to load the next page
-  const loadMore = useCallback(() => {
-    if (hasMore && !loading) {
-      setPage(prevPage => prevPage + 1);
+    if (autoUnlocked && !unlocked) {
+      unlockCharacter(character);
     }
-  }, [hasMore, loading]);
+  }, [autoUnlocked, unlocked, character, unlockCharacter]);
 
-  // Infinite scrolling using IntersectionObserver
-  useEffect(() => {
-    if (loading) return;
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && hasMore) {
-        loadMore();
-      }
-    }, { threshold: 1 });
-    const currentRef = loadMoreRef.current;
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, [loading, hasMore, loadMore]);
-
-  // Memoize the rendered CharacterCards
-  const renderedCharacters = useMemo(() => {
-    return characters.map((character, index) => {
-      const unlocked = unlockedCharacters.some((c) => c.id === character.id);
-      return (
-        <CharacterCard
-          key={`${character.id}-${index}`}
-          character={character}
-          unlocked={unlocked}
-        />
-      );
-    });
-  }, [characters, unlockedCharacters]);
+  // Berechne die effektive Geschwindigkeit nur, wenn sich die Werte ändern
+  const effectiveSpeed = useMemo(() => {
+    const upgradeBonus = (characterLevel - 1) * 0.5;
+    const rarityBonus = rarity ? (rarity - 1) * 0.5 : 0;
+    return baseSpeed + upgradeBonus + rarityBonus;
+  }, [baseSpeed, characterLevel, rarity]);
 
   return (
-    <div className="characters-page">
-      <h2>All Characters</h2>
-      {error && <p className="error">{error}</p>}
-      <Suspense fallback={<div>Loading characters...</div>}>
-        <div className="character-grid">
-          {renderedCharacters}
-        </div>
-      </Suspense>
-      {loading && <p>Loading more characters...</p>}
-      {/* This empty div triggers loading more characters via IntersectionObserver */}
-      <div ref={loadMoreRef} style={{ height: '1px' }} />
+    <div className={`character-card ${autoUnlocked || unlocked ? 'unlocked' : 'locked'}`}>
+      <img src={image} alt={name} loading="lazy" />
+      <h3>{name}</h3>
+      {autoUnlocked || unlocked ? (
+        <>
+          <p>Unlocked</p>
+          <p>Speed: {effectiveSpeed.toFixed(2)}</p>
+          <p>Rarity: {rarity}</p>
+        </>
+      ) : (
+        <p className="required-level">Required level: {requiredLevel}</p>
+      )}
     </div>
   );
 }
 
-export default React.memo(Characters);
+export default React.memo(CharacterCard);

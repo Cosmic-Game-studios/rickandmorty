@@ -157,15 +157,14 @@ function Profile() {
                   <p>Character Level: {character.characterLevel}</p>
                   <p>Speed: {calculateEffectiveSpeed(character)}</p>
                   <p>
-                    Rarity:{' '}
-                    {character.rarity ? character.rarity : 'Not set'}
+                    Rarity: {character.rarity ? character.rarity : 'Not set'}
                   </p>
                 </div>
                 <button
                   onClick={() => upgradeCharacter(character.id)}
                   className="upgrade-button"
                 >
-                  Upgrade (100 Coins)
+                  Upgrade (Cost: {100 * (character.characterLevel || 1)} Coins)
                 </button>
               </div>
             ))}

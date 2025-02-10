@@ -13,28 +13,31 @@ import Profile from './pages/Profile';
 import Shop from './pages/Shop'; // Neue Shop-Seite importieren
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/characters" element={<Characters />} />
-          <Route path="/character/:id" element={<CharacterDetails />} />
-          <Route path="/episodes" element={<Episodes />} />
-          <Route path="/episode/:id" element={<EpisodeDetails />} />
-          <Route path="/locations" element={<Locations />} />
-          <Route path="/location/:id" element={<LocationDetails />} />
-          <Route path="/missions" element={<Missions />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/shop" element={<Shop />} /> {/* Shop-Seite hinzugefügt */}
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <UserProvider>
+      <div className="app">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/characters" element={<Characters />} />
+            <Route path="/character/:id" element={<CharacterDetails />} />
+            <Route path="/episodes" element={<Episodes />} />
+            <Route path="/episode/:id" element={<EpisodeDetails />} />
+            <Route path="/locations" element={<Locations />} />
+            <Route path="/location/:id" element={<LocationDetails />} />
+            <Route path="/missions" element={<Missions />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/shop" element={<Shop />} /> {/* Shop-Seite hinzugefügt */}
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </UserProvider>
   );
 }
 

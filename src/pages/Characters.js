@@ -19,7 +19,7 @@ function Characters() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Asynchrone Funktion zum Laden von Charakteren
+  // Asynchrone Funktion zum Laden von Charakteren (memoized)
   const loadCharacters = useCallback(async (pageNumber) => {
     setLoading(true);
     setError('');
@@ -38,6 +38,7 @@ function Characters() {
           .filter((character) => !existingIds.has(character.id))
           .map((character, index) => ({
             ...character,
+            // Setze requiredLevel basierend auf der aktuellen Länge + Index, falls nicht vorhanden
             requiredLevel: startingIndex + index + 2,
           }));
         return [...prevChars, ...newCharacters];
@@ -81,9 +82,11 @@ function Characters() {
     <div className="characters-page">
       <h2>Alle Charaktere</h2>
       {error && <p className="error">{error}</p>}
-      {/* Suspense-Wrapper sorgt für einen Fallback, solange die CharacterCard-Komponente geladen wird */}
+      {/* Suspense-Wrapper: Zeigt Fallback an, solange CharacterCard geladen wird */}
       <Suspense fallback={<div>Lade Charaktere...</div>}>
-        <div className="character-grid">{renderedCharacters}</div>
+        <div className="character-grid">
+          {renderedCharacters}
+        </div>
       </Suspense>
       {loading && <p>Lade mehr Charaktere...</p>}
       {hasMore && !loading && (
@@ -95,4 +98,4 @@ function Characters() {
   );
 }
 
-export default Characters;
+export default React.memo(Characters);

@@ -94,18 +94,24 @@ export function UserProvider({ children }) {
     });
   };
 
-  // Charakter upgraden: Kosten 100 Coins, wenn genügend Coins vorhanden sind
+  // Charakter upgraden: Kosten steigen dynamisch – der Upgrade kostet 100 Coins mal dem aktuellen Level des Charakters
   const upgradeCharacter = (characterId) => {
-    const cost = 100;
+    const charToUpgrade = unlockedCharacters.find(c => c.id === characterId);
+    if (!charToUpgrade) {
+      alert("Character not found!");
+      return;
+    }
+    const currentLevel = charToUpgrade.characterLevel || 1;
+    const cost = 100 * currentLevel;
     if (coins >= cost) {
       setCoins(prev => prev - cost);
       setUnlockedCharacters(prev =>
         prev.map(c =>
-          c.id === characterId ? { ...c, characterLevel: (c.characterLevel || 1) + 1 } : c
+          c.id === characterId ? { ...c, characterLevel: currentLevel + 1 } : c
         )
       );
     } else {
-      alert("Nicht genügend Coins!");
+      alert("Not enough coins!");
     }
   };
 
@@ -120,7 +126,7 @@ export function UserProvider({ children }) {
     const char1 = unlockedCharacters.find(c => c.id === id1);
     const char2 = unlockedCharacters.find(c => c.id === id2);
     if (!char1 || !char2) {
-      alert("Beide Charaktere müssen freigeschaltet sein!");
+      alert("Both characters must be unlocked!");
       return;
     }
     const newCharacter = {
@@ -136,7 +142,6 @@ export function UserProvider({ children }) {
       // Optional: Setze requiredLevel auf den niedrigeren Wert der beiden
       requiredLevel: Math.min(char1.requiredLevel, char2.requiredLevel)
     };
-    // Entferne die beiden ursprünglichen Charaktere und füge den Fusions-Charakter hinzu
     setUnlockedCharacters(prev => prev.filter(c => c.id !== id1 && c.id !== id2).concat(newCharacter));
   };
 

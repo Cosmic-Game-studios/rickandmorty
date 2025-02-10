@@ -10,7 +10,7 @@ function CharacterDetails() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    async function fetchCharacterDetails() {
+    const fetchCharacterDetails = async () => {
       try {
         // Charakterdaten abrufen
         const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
@@ -24,23 +24,22 @@ function CharacterDetails() {
         // Episodendaten abrufen, falls vorhanden
         if (data.episode && data.episode.length > 0) {
           const episodeIds = data.episode.map(ep => ep.split('/').pop());
-          try {
-            const epResponse = await fetch(`https://rickandmortyapi.com/api/episode/${episodeIds.join(',')}`);
-            if (!epResponse.ok) {
-              throw new Error('Fehler beim Laden der Episoden.');
-            }
-            const epData = await epResponse.json();
-            setEpisodes(Array.isArray(epData) ? epData : [epData]);
-          } catch (epError) {
-            console.error(epError);
+          const epResponse = await fetch(`https://rickandmortyapi.com/api/episode/${episodeIds.join(',')}`);
+          if (!epResponse.ok) {
+            throw new Error('Fehler beim Laden der Episoden.');
           }
+          const epData = await epResponse.json();
+          // Falls nur ein einzelnes Ergebnis vorliegt, in ein Array packen
+          setEpisodes(Array.isArray(epData) ? epData : [epData]);
+        } else {
+          setEpisodes([]);
         }
       } catch (err) {
         setError(err.message);
       } finally {
         setEpisodesLoading(false);
       }
-    }
+    };
 
     fetchCharacterDetails();
   }, [id]);
@@ -48,23 +47,34 @@ function CharacterDetails() {
   if (loading) return <p>Lade Charakterdetails...</p>;
   if (error) return <p>{error}</p>;
 
+  // Destrukturierung zur besseren Lesbarkeit
+  const {
+    name,
+    image,
+    status,
+    species,
+    gender,
+    origin,
+    location,
+    rarity
+  } = character;
+
   return (
     <div className="character-details-page">
       <div className="character-card-detail">
-        <img src={character.image} alt={character.name} className="detail-image" />
+        <img src={image} alt={name} className="detail-image" />
         <div className="detail-info">
-          <h2>{character.name}</h2>
-          <p><strong>Status:</strong> {character.status}</p>
-          <p><strong>Spezies:</strong> {character.species}</p>
-          <p><strong>Geschlecht:</strong> {character.gender}</p>
-          <p><strong>Ursprung:</strong> {character.origin?.name}</p>
-          <p><strong>Letzter Aufenthaltsort:</strong> {character.location?.name}</p>
-          {/* Falls ein Seltenheitswert gesetzt ist, anzeigen */}
-          {character.rarity && <p><strong>Rarity:</strong> {character.rarity}</p>}
+          <h2>{name}</h2>
+          <p><strong>Status:</strong> {status}</p>
+          <p><strong>Spezies:</strong> {species}</p>
+          <p><strong>Geschlecht:</strong> {gender}</p>
+          <p><strong>Ursprung:</strong> {origin?.name}</p>
+          <p><strong>Letzter Aufenthaltsort:</strong> {location?.name}</p>
+          {rarity && <p><strong>Rarity:</strong> {rarity}</p>}
         </div>
       </div>
       <div className="episode-list">
-        <h3>Episoden, in denen {character.name} erscheint:</h3>
+        <h3>Episoden, in denen {name} erscheint:</h3>
         {episodesLoading ? (
           <p>Lade Episoden...</p>
         ) : episodes.length > 0 ? (

@@ -13,6 +13,8 @@ body {
   background: radial-gradient(circle at 30% 30%, #1a1a1a, #000);
   color: #fff;
   line-height: 1.6;
+  /* Für kleinen Bildschirm evtl. etwas Innenabstand */
+  padding: 0 10px;
 }
 
 .app {
@@ -606,60 +608,106 @@ main {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* Responsive Anpassungen */
+/* Responsive Anpassungen für alle Seiten */
 @media (max-width: 768px) {
+  body {
+    padding: 0 5px;
+  }
+
+  main {
+    padding: 10px;
+  }
+  
   .header h1,
   .site-title {
     font-size: 2.5rem;
   }
-  .character-card h3 {
-    font-size: 1.2rem;
-  }
-  .hamburger {
-    display: block;
-  }
-  .header nav {
-    display: none;
-  }
-  .header nav.open {
-    display: block;
-    width: 100%;
-    background: linear-gradient(90deg, #4b0082, #9400d3);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-  }
+  
   .nav-list {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     margin-top: 15px;
   }
+  
+  .character-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .character-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .hero-section {
+    padding: 20px 10px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .info-section,
+  .features-section,
+  .news-section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .profile-card {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Anpassung der Coin Farm Auswahl */
+  .coin-farm-selection,
+  .coin-farm-scroll {
+    gap: 10px;
+    padding: 8px 0;
+  }
+  
+  /* Reduziere Abstände bei Pagination */
+  .pagination {
+    gap: 5px;
+  }
 }
 
-/* Daily Bonus & Bonus Button */
-.daily-bonus {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px auto;
-  max-width: 400px;
-}
-
-.bonus-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
-}
-
-.bonus-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+/* Weitere Anpassungen für sehr kleine Bildschirme (max-width: 480px) */
+@media (max-width: 480px) {
+  .site-title,
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .character-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+  
+  .character-card h3 {
+    font-size: 1rem;
+  }
+  
+  .info-section,
+  .features-section,
+  .news-section {
+    padding: 10px;
+  }
 }

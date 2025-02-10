@@ -1,20 +1,20 @@
 /* ===================================================================== */
-/* Profil Page Styles                                                    */
+/* Profile Page Styles                                                 */
 /* ===================================================================== */
 
-/* Zentrale Variablen */
+/* Central Variables */
 :root {
   --profile-bg: rgba(255, 255, 255, 0.1);
   --profile-card-bg: rgba(255, 255, 255, 0.1);
-  --profile-card-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-  --profile-page-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  --profile-card-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Updated for a more subtle, professional shadow */
+  --profile-page-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased blur for a smoother effect */
   --accent-color: #f0e130;
   --btn-gradient-start: #ff0066;
   --btn-gradient-end: #ffcc00;
   --transition-fast: 0.3s ease;
 }
 
-/* Profil-Seite */
+/* Profile Page */
 .profile-page {
   padding: 30px;
   max-width: 1200px;
@@ -25,7 +25,7 @@
   box-shadow: var(--profile-page-shadow);
 }
 
-/* Layout der Profil-Informationen */
+/* Profile Information Layout */
 .profile-info {
   display: flex;
   flex-wrap: wrap;
@@ -43,7 +43,7 @@
   box-shadow: var(--profile-card-shadow);
 }
 
-/* Horizontale Coin Farm Auswahl */
+/* Horizontal Coin Farm Selection */
 .coin-farm-scroll {
   display: flex;
   overflow-x: auto;
@@ -71,7 +71,7 @@
   border: 2px solid var(--accent-color);
 }
 
-/* Vertikales Layout für freigeschaltete Charaktere */
+/* Vertical Layout for Unlocked Characters */
 .unlocked-list {
   display: flex;
   flex-direction: column;
@@ -105,7 +105,7 @@
   text-align: left;
 }
 
-/* Upgrade-Button */
+/* Upgrade Button */
 .upgrade-button {
   background: linear-gradient(45deg, var(--btn-gradient-start), var(--btn-gradient-end));
   border: none;
@@ -122,7 +122,7 @@
   background: linear-gradient(45deg, var(--btn-gradient-end), var(--btn-gradient-start));
 }
 
-/* Pagination Controls für freigeschaltete Charaktere */
+/* Pagination Controls for Unlocked Characters */
 .pagination-controls {
   display: flex;
   justify-content: center;
@@ -151,7 +151,7 @@
   color: var(--accent-color);
 }
 
-/* FusionPanel (falls integriert) */
+/* Fusion Panel (if integrated) */
 .fusion-panel {
   background: rgba(255, 255, 255, 0.05);
   padding: 20px;
@@ -162,7 +162,7 @@
 }
 
 /* ===================================================================== */
-/* Responsive Anpassungen                                                */
+/* Responsive Adjustments                                              */
 /* ===================================================================== */
 
 @media (max-width: 768px) {
@@ -181,7 +181,7 @@
     max-width: 300px;
   }
   
-  /* Anpassung der Coin Farm Scroll bei kleinen Bildschirmen */
+  /* Adjust Coin Farm Scroll on small screens */
   .coin-farm-scroll {
     gap: 10px;
     padding: 8px 0;

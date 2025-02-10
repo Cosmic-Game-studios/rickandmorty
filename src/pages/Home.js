@@ -9,10 +9,10 @@ import React, {
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 
-// Lazy-Loading der DailyBonus-Komponente
+// Lazy-load the DailyBonus component
 const DailyBonus = lazy(() => import('../components/DailyBonus'));
 
-// Custom Hook, um zu ermitteln, ob der Bildschirm mobil ist
+// Custom hook to determine if the screen is mobile
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   
@@ -28,11 +28,11 @@ const useIsMobile = () => {
 };
 
 const Home = () => {
-  // Kontextwerte extrahieren
+  // Extract context values
   const { level, rewardPoints, coins } = useContext(UserContext);
   const isMobile = useIsMobile();
 
-  // Statische Inhalte für Features und News werden nur bei Änderungen neu erzeugt
+  // Static content for features and news is re-generated only when changes occur
   const features = useMemo(() => (
     <ul>
       <li>Exciting missions and challenging quizzes</li>
@@ -52,12 +52,12 @@ const Home = () => {
 
   return (
     <div className={`home-page ${isMobile ? 'mobile' : ''}`}>
-      {/* Daily Bonus wird per Lazy-Loading eingebunden */}
+      {/* Daily Bonus is loaded lazily */}
       <Suspense fallback={<div className="suspense-fallback">Loading Daily Bonus...</div>}>
         <DailyBonus />
       </Suspense>
 
-      {/* Hero Section als Header */}
+      {/* Hero Section as header */}
       <header className="hero-section">
         <h1 className="hero-title">Rick and Morty Adventure</h1>
         <p className="hero-subtitle">
@@ -70,7 +70,7 @@ const Home = () => {
         </nav>
       </header>
 
-      {/* Fortschrittsübersicht */}
+      {/* Progress Overview */}
       <section className="info-section">
         <h2>Your Progress</h2>
         <p>Level: {level}</p>

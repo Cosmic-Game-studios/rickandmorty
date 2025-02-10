@@ -1,5 +1,5 @@
 /* ============================= */
-/* Google Fonts importieren      */
+/* Google Fonts Import           */
 /* ============================= */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
@@ -32,7 +32,7 @@ main {
 }
 
 /* ============================= */
-/* Header, Navigation & Hamburger*/
+/* Header, Navigation & Hamburger */
 /* ============================= */
 .header {
   background: linear-gradient(90deg, #4b0082, #9400d3);
@@ -99,7 +99,7 @@ main {
   border-radius: 5px;
 }
 
-/* Hamburger-Menü – Standard (Desktop: ausgeblendet) */
+/* Hamburger-Menü – (Desktop: ausgeblendet) */
 .hamburger {
   display: none;
   background: none;
@@ -642,7 +642,6 @@ main {
 /* Responsive Anpassungen        */
 /* ============================= */
 @media (max-width: 768px) {
-  /* Schriftgrößen anpassen */
   .header h1,
   .site-title {
     font-size: 2.5rem;
@@ -650,7 +649,7 @@ main {
   .character-card h3 {
     font-size: 1.2rem;
   }
-
+  
   /* Hamburger-Button sichtbar machen */
   .hamburger {
     display: block;
@@ -661,7 +660,7 @@ main {
     display: none;
   }
   
-  /* Falls per JavaScript beim Klick die Klasse "open" hinzugefügt wird, Navigation anzeigen */
+  /* Navigation anzeigen, wenn "open" gesetzt */
   .header nav.open {
     display: block;
     width: 100%;

@@ -1,17 +1,39 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
-import DailyBonus from '../components/DailyBonus';
+
+// Lazy-Loading der DailyBonus-Komponente
+const DailyBonus = lazy(() => import('../components/DailyBonus'));
 
 function Home() {
   const { level, rewardPoints, coins } = useContext(UserContext);
 
+  // Statische Inhalte memoisiert, damit sie nicht bei jedem Render neu erzeugt werden
+  const features = useMemo(() => (
+    <ul>
+      <li>Exciting missions and challenging quizzes</li>
+      <li>Unlock and upgrade legendary characters</li>
+      <li>Passive coin collection and daily bonus rewards</li>
+      <li>Interdimensional adventures and exclusive events</li>
+    </ul>
+  ), []);
+
+  const newsUpdates = useMemo(() => (
+    <ul>
+      <li>Bug Fixes</li>
+      <li>Performance Optimizations</li>
+      <li>WIP Fusion Character</li>
+    </ul>
+  ), []);
+
   return (
     <div className="home-page">
-      {/* Daily Bonus */}
-      <DailyBonus />
+      {/* Daily Bonus wird per Lazy-Loading eingebunden */}
+      <Suspense fallback={<div>Loading Daily Bonus...</div>}>
+        <DailyBonus />
+      </Suspense>
 
-      {/* Hero Section as Header */}
+      {/* Hero Section als Header */}
       <header className="hero-section">
         <h1 className="hero-title">Rick and Morty Adventure</h1>
         <p className="hero-subtitle">
@@ -24,7 +46,7 @@ function Home() {
         </nav>
       </header>
 
-      {/* Progress Overview */}
+      {/* Fortschrittsübersicht */}
       <section className="info-section">
         <h2>Your Progress</h2>
         <p>Level: {level}</p>
@@ -36,25 +58,16 @@ function Home() {
       {/* Features */}
       <section className="features-section">
         <h2>Features</h2>
-        <ul>
-          <li>Exciting missions and challenging quizzes</li>
-          <li>Unlock and upgrade legendary characters</li>
-          <li>Passive coin collection and daily bonus rewards</li>
-          <li>Interdimensional adventures and exclusive events</li>
-        </ul>
+        {features}
       </section>
 
       {/* News & Updates */}
       <section className="news-section">
         <h2>News & Updates</h2>
-        <ul>
-          <li>Bug Fixes</li>
-          <li>Performance Optimizations</li>
-          <li>WIP Fusion Character</li>
-        </ul>
+        {newsUpdates}
       </section>
     </div>
   );
 }
 
-export default Home;
+export default React.memo(Home);

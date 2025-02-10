@@ -2,14 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    <!-- Favicon -->
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- Preconnect zu Google Fonts für schnellere Font-Auslieferung -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Kritisches CSS kann hier inline eingebettet werden (optional) -->
+    <!-- <style>
+      /* Minimal CSS für Above-the-Fold-Content */
+    </style> -->
+
+    <!-- Standard Meta-Tags -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Rick and Morty Adventure App" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Strukturierte Daten als JSON‑LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Rick and Morty Adventure",
+        "description": "Experience interdimensional adventures with the Rick and Morty Adventure App.",
+        "url": "https://rickandmorty-khaki-nine.vercel.app"
+      }
+    </script>
+
     <title>Rick and Morty Adventure</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <!-- Die React-Skripte werden normalerweise vom Build-Prozess mit defer eingefügt -->
   </body>
 </html>

@@ -1,22 +1,34 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import Coin from './Coin';
+import './Header.css'; // Importiere die CSS-Datei
 
 function Header() {
   const { coins } = useContext(UserContext);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prevState => !prevState);
+  };
 
   return (
     <header className="header">
       <div className="header-top">
-        {/* Coin-Display wird absolut positioniert */}
         <div className="coin-display">
           <Coin />
           <span>{coins} Coins</span>
         </div>
         <h1 className="site-title">Rick and Morty Adventure</h1>
+        {/* Hamburger-Button – wird in der Desktop-Ansicht via CSS ausgeblendet */}
+        <button className="hamburger" onClick={toggleMenu} aria-label="Navigation umschalten">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
       </div>
-      <nav>
+      {/* Die Klasse "open" wird hinzugefügt, wenn menuOpen true ist */}
+      <nav className={menuOpen ? "open" : ""}>
         <ul className="nav-list">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/characters">Charaktere</Link></li>

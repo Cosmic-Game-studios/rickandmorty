@@ -1,11 +1,7 @@
-hedar.ccs /* ============================= */
-/* Google Fonts Import           */
-/* ============================= */
+/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
-/* ============================= */
-/* Globaler Reset & Basisstyles  */
-/* ============================= */
+/* Globaler Reset & Basisstyles */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -19,7 +15,6 @@ body {
   line-height: 1.6;
 }
 
-/* Container der gesamten App */
 .app {
   display: flex;
   flex-direction: column;
@@ -31,9 +26,7 @@ main {
   padding: 20px;
 }
 
-/* ============================= */
-/* Header & Navigation           */
-/* ============================= */
+/* Header, Navigation & Hamburger */
 .header {
   background: linear-gradient(90deg, #4b0082, #9400d3);
   padding: 20px;
@@ -71,7 +64,6 @@ main {
   margin-left: 5px;
 }
 
-/* Navigation-Liste */
 .nav-list,
 .header nav ul {
   list-style: none;
@@ -94,14 +86,11 @@ main {
 
 .nav-list li a:hover,
 .header nav ul li a:hover {
-  border: 2px solid #f0e130;
+  border-color: #f0e130;
   background-color: rgba(240, 225, 48, 0.2);
   border-radius: 5px;
 }
 
-/* ============================= */
-/* Hamburger-Menü Styles         */
-/* ============================= */
 .hamburger {
   display: none;
   background: none;
@@ -111,17 +100,14 @@ main {
 }
 
 .hamburger .bar {
-  display: block;
   width: 25px;
   height: 3px;
-  margin: 5px auto;
+  margin: 4px 0;
   background-color: #fff;
   transition: all 0.3s ease;
 }
 
-/* ============================= */
-/* Footer                        */
-/* ============================= */
+/* Footer */
 .footer {
   background: linear-gradient(90deg, #4b0082, #9400d3);
   text-align: center;
@@ -130,9 +116,7 @@ main {
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* ============================= */
-/* Home Page                     */
-/* ============================= */
+/* Home Page */
 .home-page {
   text-align: center;
   padding: 40px 20px;
@@ -178,9 +162,7 @@ main {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* ============================= */
 /* Info-, Features- & News-Section */
-/* ============================= */
 .info-section,
 .features-section,
 .news-section {
@@ -214,9 +196,7 @@ main {
   margin-top: 10px;
 }
 
-/* ============================= */
-/* Characters & Character Cards  */
-/* ============================= */
+/* Characters & Character Cards */
 .characters-page {
   padding: 20px;
   text-align: center;
@@ -230,7 +210,7 @@ main {
 }
 
 .character-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: 2px solid transparent;
   border-radius: 10px;
   overflow: hidden;
@@ -242,7 +222,7 @@ main {
 
 .character-card:hover {
   transform: scale(1.05);
-  border: 2px solid #f0e130;
+  border-color: #f0e130;
 }
 
 .character-card img {
@@ -257,16 +237,14 @@ main {
   font-size: 1.5rem;
 }
 
-/* ============================= */
-/* Quiz Page                     */
-/* ============================= */
+/* Quiz Page */
 .quiz-page {
   padding: 20px;
   text-align: center;
 }
 
 .question-card {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
@@ -277,9 +255,9 @@ main {
 }
 
 .question-text {
+  font-family: 'Bangers', cursive;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  font-family: 'Bangers', cursive;
 }
 
 .options-grid {
@@ -293,18 +271,18 @@ main {
   padding: 12px 15px;
   border: 2px solid transparent;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .option:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .option.selected {
   border-color: #f0e130;
-  background-color: rgba(240, 225, 48, 0.2);
+  background: rgba(240, 225, 48, 0.2);
 }
 
 .feedback {
@@ -344,9 +322,7 @@ main {
   background: linear-gradient(45deg, #9400d3, #4b0082);
 }
 
-/* ============================= */
-/* Missions Page                 */
-/* ============================= */
+/* Missions Page */
 .missions-page {
   padding: 20px;
   text-align: center;
@@ -372,9 +348,9 @@ main {
 }
 
 .mission-description {
+  font-family: 'Bangers', cursive;
   font-size: 1.2rem;
   margin-bottom: 10px;
-  font-family: 'Bangers', cursive;
 }
 
 .mission-reward {
@@ -402,9 +378,7 @@ main {
   cursor: default;
 }
 
-/* ============================= */
-/* Episoden & Locations Pages    */
-/* ============================= */
+/* Episoden & Locations Pages */
 .episodes-page,
 .locations-page {
   padding: 20px;
@@ -476,9 +450,7 @@ main {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* Character Details Page        */
-/* ============================= */
+/* Character Details Page */
 .character-details-page {
   padding: 20px;
 }
@@ -525,9 +497,7 @@ main {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* Profil-Seite                 */
-/* ============================= */
+/* Profil-Seite */
 .profile-page {
   padding: 20px;
   text-align: center;
@@ -577,7 +547,7 @@ main {
   margin: 0 auto;
 }
 
-/* Angepasstes Grid für freigeschaltete Charaktere */
+/* Unlocked Characters Grid */
 .unlocked-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -600,9 +570,7 @@ main {
   margin: 0 auto;
 }
 
-/* ============================= */
-/* Upgrade-Button im Profil      */
-/* ============================= */
+/* Upgrade-Button im Profil */
 .upgrade-button {
   background: linear-gradient(45deg, #ff0066, #ffcc00);
   border: none;
@@ -619,9 +587,7 @@ main {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* ============================= */
-/* Load More Button (Characters) */
-/* ============================= */
+/* (Optional) Load More Button */
 .load-more-button {
   display: block;
   margin: 20px auto;
@@ -640,9 +606,7 @@ main {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* ============================= */
-/* Responsive Anpassungen        */
-/* ============================= */
+/* Responsive Anpassungen */
 @media (max-width: 768px) {
   .header h1,
   .site-title {
@@ -651,23 +615,21 @@ main {
   .character-card h3 {
     font-size: 1.2rem;
   }
-  
-  /* Hamburger-Button anzeigen */
   .hamburger {
     display: block;
   }
-  
-  /* Navigation im Header ausblenden, standardmäßig */
   .header nav {
     display: none;
   }
-  
-  /* Navigation anzeigen, wenn die Klasse "open" gesetzt ist */
   .header nav.open {
     display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #4b0082, #9400d3);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
   }
-  
-  /* Navigation vertikal anordnen */
   .nav-list {
     flex-direction: column;
     align-items: center;
@@ -676,9 +638,7 @@ main {
   }
 }
 
-/* ============================= */
-/* Daily Bonus & Bonus Button    */
-/* ============================= */
+/* Daily Bonus & Bonus Button */
 .daily-bonus {
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
@@ -703,4 +663,6 @@ main {
 .bonus-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
-Auch hier
+index.css
+
+Alle pages soll auch handy optimierte werden

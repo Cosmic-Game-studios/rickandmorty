@@ -36,7 +36,7 @@ main {
 .header {
   background: linear-gradient(90deg, #4b0082, #9400d3);
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -45,7 +45,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-title,
@@ -69,7 +69,6 @@ main {
   margin-left: 5px;
 }
 
-/* Navigation – Standard */
 .nav-list,
 .header nav ul {
   list-style: none;
@@ -91,11 +90,10 @@ main {
 .nav-list li a:hover,
 .header nav ul li a:hover {
   border-color: #f0e130;
-  background-color: rgba(240,225,48,0.2);
+  background-color: rgba(240, 225, 48, 0.2);
   border-radius: 5px;
 }
 
-/* Hamburger-Menü (Desktop: ausgeblendet) */
 .hamburger {
   display: none;
   background: none;
@@ -119,7 +117,7 @@ main {
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
-  box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ============================= */
@@ -128,7 +126,7 @@ main {
 .home-page {
   text-align: center;
   padding: 40px 20px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .hero-section {
@@ -171,7 +169,7 @@ main {
 .info-section,
 .features-section,
 .news-section {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -211,14 +209,14 @@ main {
   margin-top: 20px;
 }
 .character-card {
-  background-color: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border: 2px solid transparent;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, border 0.3s ease;
   text-align: center;
   padding: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 .character-card:hover {
   transform: scale(1.05);
@@ -227,7 +225,7 @@ main {
 .character-card img {
   width: 100%;
   height: auto;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .character-card h3 {
   font-family: 'Bangers', cursive;
@@ -243,14 +241,14 @@ main {
   text-align: center;
 }
 .question-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
   margin-top: 20px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 .question-text {
   font-family: 'Bangers', cursive;
@@ -267,16 +265,16 @@ main {
   padding: 12px 15px;
   border: 2px solid transparent;
   border-radius: 5px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
 .option:hover {
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 .option.selected {
   border-color: #f0e130;
-  background: rgba(240,225,48,0.2);
+  background: rgba(240, 225, 48, 0.2);
 }
 .feedback {
   font-size: 1.2rem;
@@ -325,10 +323,10 @@ main {
   margin-top: 20px;
 }
 .mission-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 .mission-card:hover {
@@ -378,10 +376,10 @@ main {
 }
 .episode-card,
 .location-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 .episode-card:hover,
@@ -436,10 +434,10 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
 }
 .detail-image {
@@ -482,7 +480,7 @@ main {
   margin: 20px 0;
 }
 .profile-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 10px;
   min-width: 120px;
@@ -497,7 +495,7 @@ main {
   margin: 20px 0;
 }
 .coin-farm-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 5px;
   border-radius: 10px;
   text-align: center;
@@ -523,7 +521,7 @@ main {
   margin-top: 20px;
 }
 .unlocked-card {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   padding: 5px;
   border-radius: 10px;
   text-align: center;
@@ -612,7 +610,7 @@ main {
 /* Daily Bonus & Bonus Button    */
 /* ============================= */
 .daily-bonus {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   padding: 15px;
   border-radius: 10px;
   text-align: center;

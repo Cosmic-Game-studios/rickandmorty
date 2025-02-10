@@ -11,6 +11,8 @@ function CharacterDetails() {
 
   useEffect(() => {
     const fetchCharacterDetails = async () => {
+      setLoading(true);
+      setError('');
       try {
         // Charakterdaten abrufen
         const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
@@ -36,6 +38,7 @@ function CharacterDetails() {
         }
       } catch (err) {
         setError(err.message);
+        setLoading(false);
       } finally {
         setEpisodesLoading(false);
       }
@@ -47,7 +50,7 @@ function CharacterDetails() {
   if (loading) return <p>Lade Charakterdetails...</p>;
   if (error) return <p>{error}</p>;
 
-  // Destrukturierung zur besseren Lesbarkeit
+  // Destrukturiere zur besseren Lesbarkeit
   const {
     name,
     image,
@@ -62,7 +65,7 @@ function CharacterDetails() {
   return (
     <div className="character-details-page">
       <div className="character-card-detail">
-        <img src={image} alt={name} className="detail-image" />
+        <img src={image} alt={name} className="detail-image" loading="lazy" />
         <div className="detail-info">
           <h2>{name}</h2>
           <p><strong>Status:</strong> {status}</p>

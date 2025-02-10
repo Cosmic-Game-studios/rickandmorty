@@ -3,6 +3,8 @@ import React, {
   useMemo,
   lazy,
   Suspense,
+  useState,
+  useEffect
 } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
@@ -10,11 +12,27 @@ import { UserContext } from '../context/UserContext';
 // Lazy-Loading der DailyBonus-Komponente
 const DailyBonus = lazy(() => import('../components/DailyBonus'));
 
+// Custom Hook, um zu ermitteln, ob der Bildschirm mobil ist
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  return isMobile;
+};
+
 const Home = () => {
   // Kontextwerte extrahieren
   const { level, rewardPoints, coins } = useContext(UserContext);
+  const isMobile = useIsMobile();
 
-  // Statische Inhalte für Features und News werden mittels useMemo nur bei Änderung neu erzeugt
+  // Statische Inhalte für Features und News werden nur bei Änderungen neu erzeugt
   const features = useMemo(() => (
     <ul>
       <li>Exciting missions and challenging quizzes</li>
@@ -33,9 +51,9 @@ const Home = () => {
   ), []);
 
   return (
-    <div className="home-page">
+    <div className={`home-page ${isMobile ? 'mobile' : ''}`}>
       {/* Daily Bonus wird per Lazy-Loading eingebunden */}
-      <Suspense fallback={<div>Loading Daily Bonus...</div>}>
+      <Suspense fallback={<div className="suspense-fallback">Loading Daily Bonus...</div>}>
         <DailyBonus />
       </Suspense>
 

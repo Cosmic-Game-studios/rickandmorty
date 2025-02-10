@@ -3,8 +3,6 @@ import { UserContext } from '../context/UserContext';
 
 function CharacterCard({ character, unlocked }) {
   const { level, unlockCharacter } = useContext(UserContext);
-
-  // Destrukturiere die relevanten Eigenschaften aus character mit Standardwerten
   const {
     requiredLevel = 2,
     baseSpeed = 1,
@@ -16,14 +14,14 @@ function CharacterCard({ character, unlocked }) {
 
   const autoUnlocked = level >= requiredLevel;
 
-  // Automatisches Freischalten, sobald der User-Level das erforderliche Level erreicht
+  // Automatisches Freischalten, wenn der User-Level erreicht ist
   useEffect(() => {
     if (autoUnlocked && !unlocked) {
       unlockCharacter(character);
     }
   }, [autoUnlocked, unlocked, character, unlockCharacter]);
 
-  // Berechne die effektive Geschwindigkeit nur, wenn sich die Werte ändern
+  // Berechne die effektive Geschwindigkeit nur bei Änderung der Werte
   const effectiveSpeed = useMemo(() => {
     const upgradeBonus = (characterLevel - 1) * 0.5;
     const rarityBonus = rarity ? (rarity - 1) * 0.5 : 0;
@@ -32,13 +30,13 @@ function CharacterCard({ character, unlocked }) {
 
   return (
     <div className={`character-card ${autoUnlocked || unlocked ? 'unlocked' : 'locked'}`}>
-      <img src={image} alt={name} />
+      <img src={image} alt={name} loading="lazy" />
       <h3>{name}</h3>
       {autoUnlocked || unlocked ? (
         <>
           <p>Freigeschaltet</p>
           <p>Speed: {effectiveSpeed.toFixed(2)}</p>
-          <p>Rarity: {rarity ? rarity : "Nicht festgelegt"}</p>
+          <p>Rarity: {rarity || "Nicht festgelegt"}</p>
         </>
       ) : (
         <p className="required-level">Benötigtes Level: {requiredLevel}</p>

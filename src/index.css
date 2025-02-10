@@ -663,3 +663,33 @@ main {
 .bonus-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
+/* Optimierung der Charakterkarten-Seite für Mobilgeräte */
+@media (max-width: 480px) {
+  .character-grid {
+    /* Alle Karten in einer Spalte anzeigen und seitliche Abstände hinzufügen */
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+
+  .character-card {
+    /* Kleinere Abstände und leichterer Schatten für ein kompakteres Layout */
+    padding: 8px;
+    margin: 5px auto;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .character-card h3 {
+    /* Schriftgröße und Abstand anpassen */
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+
+  .character-card img {
+    /* Bild füllt immer die volle Breite des Containers */
+    width: 100%;
+    height: auto;
+  }
+}
+

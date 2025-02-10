@@ -1,6 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react';
-import CharacterCard from '../components/CharacterCard';
+import React, {
+  useState,
+  useEffect,
+  useContext,
+  useCallback,
+  useMemo,
+  Suspense,
+} from 'react';
 import { UserContext } from '../context/UserContext';
+
+// Lazy-Loading der CharacterCard-Komponente
+const CharacterCard = React.lazy(() => import('../components/CharacterCard'));
 
 function Characters() {
   const { unlockedCharacters } = useContext(UserContext);
@@ -10,8 +19,8 @@ function Characters() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Lade Charakterdaten asynchron
-  const loadCharacters = async (pageNumber) => {
+  // Asynchrone Funktion zum Laden von Charakteren
+  const loadCharacters = useCallback(async (pageNumber) => {
     setLoading(true);
     setError('');
     try {
@@ -21,13 +30,12 @@ function Characters() {
       }
       const data = await response.json();
 
-      setCharacters(prevChars => {
-        // Erzeuge eine Liste bereits vorhandener IDs, um Duplikate zu vermeiden
-        const existingIds = new Set(prevChars.map(c => c.id));
+      // Aktualisiere den Characters-State, ohne Duplikate hinzuzufügen
+      setCharacters((prevChars) => {
+        const existingIds = new Set(prevChars.map((c) => c.id));
         const startingIndex = prevChars.length;
-        // Filtere neue Charaktere, die noch nicht vorhanden sind, und erweitere sie mit requiredLevel
         const newCharacters = data.results
-          .filter(character => !existingIds.has(character.id))
+          .filter((character) => !existingIds.has(character.id))
           .map((character, index) => ({
             ...character,
             requiredLevel: startingIndex + index + 2,
@@ -41,34 +49,42 @@ function Characters() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
+  // Lade neue Charaktere, wenn sich die Seitenzahl ändert
   useEffect(() => {
     loadCharacters(page);
-  }, [page]);
+  }, [page, loadCharacters]);
 
-  const loadMore = () => {
+  // Memoisierte Funktion, um die nächste Seite zu laden
+  const loadMore = useCallback(() => {
     if (hasMore && !loading) {
-      setPage(prevPage => prevPage + 1);
+      setPage((prevPage) => prevPage + 1);
     }
-  };
+  }, [hasMore, loading]);
+
+  // Memoisiere die gerenderten Charakterkarten, um unnötige Berechnungen zu vermeiden
+  const renderedCharacters = useMemo(() => {
+    return characters.map((character, index) => {
+      const unlocked = unlockedCharacters.some((c) => c.id === character.id);
+      return (
+        <CharacterCard
+          key={`${character.id}-${index}`}
+          character={character}
+          unlocked={unlocked}
+        />
+      );
+    });
+  }, [characters, unlockedCharacters]);
 
   return (
     <div className="characters-page">
       <h2>Alle Charaktere</h2>
       {error && <p className="error">{error}</p>}
-      <div className="character-grid">
-        {characters.map((character, index) => {
-          const unlocked = unlockedCharacters.some(c => c.id === character.id);
-          return (
-            <CharacterCard
-              key={`${character.id}-${index}`}
-              character={character}
-              unlocked={unlocked}
-            />
-          );
-        })}
-      </div>
+      {/* Suspense-Wrapper sorgt für einen Fallback, solange die CharacterCard-Komponente geladen wird */}
+      <Suspense fallback={<div>Lade Charaktere...</div>}>
+        <div className="character-grid">{renderedCharacters}</div>
+      </Suspense>
       {loading && <p>Lade mehr Charaktere...</p>}
       {hasMore && !loading && (
         <button onClick={loadMore} className="load-more-button">

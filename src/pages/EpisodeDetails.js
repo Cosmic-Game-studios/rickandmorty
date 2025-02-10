@@ -16,32 +16,32 @@ function EpisodeDetails() {
         setLoading(false);
       })
       .catch(err => {
-        setError('Fehler beim Laden der Episoden-Details.');
+        setError('Error loading episode details.');
         setLoading(false);
       });
   }, [id]);
 
-  if (loading) return <p>Lade Episoden-Details...</p>;
+  if (loading) return <p>Loading episode details...</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <div className="episode-details">
       <h2>{episode.name}</h2>
-      <p><strong>Episoden-Code:</strong> {episode.episode}</p>
-      <p><strong>Ausstrahlungsdatum:</strong> {episode.air_date}</p>
-      <h3>Charaktere in dieser Episode:</h3>
+      <p><strong>Episode Code:</strong> {episode.episode}</p>
+      <p><strong>Air Date:</strong> {episode.air_date}</p>
+      <h3>Characters in this episode:</h3>
       <ul>
         {episode.characters.map(url => {
           const parts = url.split('/');
           const charId = parts[parts.length - 1];
           return (
             <li key={charId}>
-              <Link to={`/character/${charId}`}>Charakter {charId}</Link>
+              <Link to={`/character/${charId}`}>Character {charId}</Link>
             </li>
           );
         })}
       </ul>
-      <Link to="/episodes" className="back-link">Zurück zu Episoden</Link>
+      <Link to="/episodes" className="back-link">Back to Episodes</Link>
     </div>
   );
 }

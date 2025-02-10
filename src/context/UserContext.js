@@ -1,11 +1,11 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useMemo } from 'react';
 
 export const UserContext = createContext();
 
 const LOCAL_STORAGE_KEY = 'rickMortyUserData';
 
 export function UserProvider({ children }) {
-  // Load stored data from localStorage or set default values
+  // Gespeicherte Daten aus dem localStorage laden oder Standardwerte setzen
   const storedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || {};
   const [unlockedCharacters, setUnlockedCharacters] = useState(storedData.unlockedCharacters || []);
   const [level, setLevel] = useState(storedData.level || 1);
@@ -13,22 +13,42 @@ export function UserProvider({ children }) {
   const [coins, setCoins] = useState(storedData.coins || 0);
   const [selectedCoinFarm, setSelectedCoinFarm] = useState(storedData.selectedCoinFarm || null);
 
-  // Passive coin generation: 1 coin per minute
-  const coinGenerationSpeed = 1;
+  // Hilfsfunktion: Berechnet die effektive Geschwindigkeit eines Charakters
+  const computeEffectiveSpeed = (character) => {
+    const upgradeBonus = (character.characterLevel - 1) * 0.5;
+    const rarityBonus = character.rarity ? (character.rarity - 1) * 0.5 : 0;
+    return character.baseSpeed + upgradeBonus + rarityBonus;
+  };
+
+  // Dynamisch berechnete Coin-Generierungsgeschwindigkeit:
+  // Basisgeschwindigkeit (mindestens 1 Coin pro Minute) + effektive Geschwindigkeit des ausgewählten Coin-Farm-Charakters (falls ausgewählt)
+  const coinGenerationSpeed = useMemo(() => {
+    const baseSpeed = 1;
+    let additionalSpeed = 0;
+    if (selectedCoinFarm) {
+      const farmCharacter = unlockedCharacters.find(c => c.id === selectedCoinFarm);
+      if (farmCharacter) {
+        additionalSpeed = computeEffectiveSpeed(farmCharacter);
+      }
+    }
+    return baseSpeed + additionalSpeed;
+  }, [unlockedCharacters, selectedCoinFarm]);
+
+  // Passive Coin-Generierung: Coins werden jede Minute anhand des coinGenerationSpeed hinzugefügt
   useEffect(() => {
     const interval = setInterval(() => {
       setCoins(prev => prev + coinGenerationSpeed);
-    }, 60000);
+    }, 60000); // 60000 ms = 1 Minute
     return () => clearInterval(interval);
   }, [coinGenerationSpeed]);
 
-  // Store state in localStorage whenever relevant values change
+  // Zustand in localStorage speichern, sobald sich relevante Werte ändern
   useEffect(() => {
     const data = { unlockedCharacters, level, rewardPoints, coins, selectedCoinFarm };
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
   }, [unlockedCharacters, level, rewardPoints, coins, selectedCoinFarm]);
 
-  // Add reward points and increase level if a certain threshold is reached.
+  // Fügt Reward Points hinzu und erhöht ggf. den Level, wenn ein Schwellenwert erreicht wird
   const addRewardPoints = (points) => {
     setRewardPoints(prev => {
       const newPoints = prev + points;
@@ -39,27 +59,27 @@ export function UserProvider({ children }) {
     });
   };
 
-  // Add coins (e.g., through a daily bonus)
+  // Coins hinzufügen (z. B. auch über einen täglichen Bonus)
   const addCoins = (amount) => {
     setCoins(prev => prev + amount);
   };
 
-  // Mission completed successfully: Reward the player with coins or reward points.
+  // Mission erfolgreich abgeschlossen: Belohne den Spieler mit Coins bzw. Reward Points.
   const completeMission = (reward = 100) => {
     addRewardPoints(reward);
   };
 
-  // Quiz answered correctly: Reward the player.
+  // Quiz korrekt beantwortet: Belohne den Spieler.
   const answerQuizCorrectly = (reward = 50) => {
     addRewardPoints(reward);
   };
 
-  // Unlock character: When unlocking for the first time, assign starting values to the character.
+  // Charakter freischalten: Beim ersten Unlock wird der Charakter mit Startwerten versehen.
   const unlockCharacter = (character) => {
     setUnlockedCharacters(prev => {
-      // Only add if the character hasn't been unlocked yet
+      // Nur hinzufügen, wenn der Charakter noch nicht freigeschaltet wurde
       if (!prev.find(c => c.id === character.id)) {
-        const randomRarity = Math.floor(Math.random() * 5) + 1; // Random rarity value between 1 and 5
+        const randomRarity = Math.floor(Math.random() * 5) + 1; // Zufälliger Rarity-Wert zwischen 1 und 5
         return [
           ...prev, 
           { 
@@ -74,7 +94,7 @@ export function UserProvider({ children }) {
     });
   };
 
-  // Upgrade character: Costs 100 coins if enough coins are available.
+  // Charakter upgraden: Kosten 100 Coins, wenn genügend Coins vorhanden sind
   const upgradeCharacter = (characterId) => {
     const cost = 100;
     if (coins >= cost) {
@@ -85,38 +105,38 @@ export function UserProvider({ children }) {
         )
       );
     } else {
-      alert("Not enough coins!");
+      alert("Nicht genügend Coins!");
     }
   };
 
-  // Select a coin farm character
+  // Auswahl eines Coin-Farm-Charakters
   const selectCoinFarm = (characterId) => {
     setSelectedCoinFarm(characterId);
   };
 
-  // Fusion function: Combines two unlocked characters into a new fusion character.
-  // The two original characters are removed from the list.
+  // Fusionsfunktion: Kombiniert zwei freigeschaltete Charaktere zu einem neuen Fusions-Charakter.
+  // Die beiden ursprünglichen Charaktere werden aus der Liste entfernt.
   const fuseCharacters = (id1, id2) => {
     const char1 = unlockedCharacters.find(c => c.id === id1);
     const char2 = unlockedCharacters.find(c => c.id === id2);
     if (!char1 || !char2) {
-      alert("Both characters must be unlocked!");
+      alert("Beide Charaktere müssen freigeschaltet sein!");
       return;
     }
     const newCharacter = {
-      id: Date.now(), // Generate a unique ID
+      id: Date.now(), // Generiere eine eindeutige ID
       name: `Fusion of ${char1.name} & ${char2.name}`,
-      image: "https://via.placeholder.com/150?text=Fusion", // Placeholder image
-      // Character level: Maximum of the two plus 1
+      image: "https://via.placeholder.com/150?text=Fusion", // Platzhalterbild
+      // Level: Maximum der beiden + 1
       characterLevel: Math.max(char1.characterLevel, char2.characterLevel) + 1,
-      // Base speed as the average of the two
+      // Basisgeschwindigkeit als Durchschnitt der beiden
       baseSpeed: (char1.baseSpeed + char2.baseSpeed) / 2,
-      // Rarity as the rounded-up average
+      // Seltenheit als aufgerundeter Durchschnitt
       rarity: Math.ceil((char1.rarity + char2.rarity) / 2),
-      // Optional: Set requiredLevel to the lower value of the two
+      // Optional: Setze requiredLevel auf den niedrigeren Wert der beiden
       requiredLevel: Math.min(char1.requiredLevel, char2.requiredLevel)
     };
-    // Remove the two original characters and add the fusion character
+    // Entferne die beiden ursprünglichen Charaktere und füge den Fusions-Charakter hinzu
     setUnlockedCharacters(prev => prev.filter(c => c.id !== id1 && c.id !== id2).concat(newCharacter));
   };
 
@@ -133,11 +153,13 @@ export function UserProvider({ children }) {
         upgradeCharacter,
         selectedCoinFarm,
         selectCoinFarm,
-        addCoins,       // For daily bonus or other coin actions
-        fuseCharacters  // Fusion function
+        addCoins,       // Für den täglichen Bonus oder andere Coin-Aktionen
+        fuseCharacters  // Fusionsfunktion
       }}
     >
       {children}
     </UserContext.Provider>
   );
 }
+
+export default UserProvider;

@@ -1,39 +1,44 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useMemo } from 'react';
 import { UserContext } from '../context/UserContext';
 
 function CharacterCard({ character, unlocked }) {
   const { level, unlockCharacter } = useContext(UserContext);
-  
-  // Wenn kein requiredLevel definiert ist, nehmen wir Standardwert 2
-  const requiredLevel = character.requiredLevel || 2;
+
+  // Destrukturiere die relevanten Eigenschaften aus character mit Standardwerten
+  const {
+    requiredLevel = 2,
+    baseSpeed = 1,
+    characterLevel = 1,
+    rarity,
+    image,
+    name,
+  } = character;
+
   const autoUnlocked = level >= requiredLevel;
 
-  // Automatisches Freischalten: Sobald der User-Level das erforderliche Level erreicht und
-  // der Charakter noch nicht freigeschaltet wurde (unlocked === false), wird unlockCharacter aufgerufen.
+  // Automatisches Freischalten, sobald der User-Level das erforderliche Level erreicht
   useEffect(() => {
     if (autoUnlocked && !unlocked) {
       unlockCharacter(character);
     }
   }, [autoUnlocked, unlocked, character, unlockCharacter]);
 
-  // Berechne die effektive Geschwindigkeit:
-  // effectiveSpeed = baseSpeed + Upgradebonus + Rarity-Bonus
-  // Upgradebonus: (characterLevel - 1) * 0.5
-  // Rarity-Bonus: ((rarity - 1) * 0.5) – falls character.rarity definiert ist
-  const effectiveSpeed =
-    (character.baseSpeed || 1) +
-    (((character.characterLevel || 1) - 1) * 0.5) +
-    ((character.rarity ? (character.rarity - 1) * 0.5 : 0));
+  // Berechne die effektive Geschwindigkeit nur, wenn sich die Werte ändern
+  const effectiveSpeed = useMemo(() => {
+    const upgradeBonus = (characterLevel - 1) * 0.5;
+    const rarityBonus = rarity ? (rarity - 1) * 0.5 : 0;
+    return baseSpeed + upgradeBonus + rarityBonus;
+  }, [baseSpeed, characterLevel, rarity]);
 
   return (
     <div className={`character-card ${autoUnlocked || unlocked ? 'unlocked' : 'locked'}`}>
-      <img src={character.image} alt={character.name} />
-      <h3>{character.name}</h3>
+      <img src={image} alt={name} />
+      <h3>{name}</h3>
       {autoUnlocked || unlocked ? (
         <>
           <p>Freigeschaltet</p>
           <p>Speed: {effectiveSpeed.toFixed(2)}</p>
-          <p>Rarity: {character.rarity ? character.rarity : "Nicht festgelegt"}</p>
+          <p>Rarity: {rarity ? rarity : "Nicht festgelegt"}</p>
         </>
       ) : (
         <p className="required-level">Benötigtes Level: {requiredLevel}</p>
@@ -42,4 +47,4 @@ function CharacterCard({ character, unlocked }) {
   );
 }
 
-export default CharacterCard;
+export default React.memo(CharacterCard);

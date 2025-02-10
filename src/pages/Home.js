@@ -1,14 +1,20 @@
-import React, { useContext, useMemo, lazy, Suspense } from 'react';
+import React, {
+  useContext,
+  useMemo,
+  lazy,
+  Suspense,
+} from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 
 // Lazy-Loading der DailyBonus-Komponente
 const DailyBonus = lazy(() => import('../components/DailyBonus'));
 
-function Home() {
+const Home = () => {
+  // Kontextwerte extrahieren
   const { level, rewardPoints, coins } = useContext(UserContext);
 
-  // Statische Inhalte memoisiert, damit sie nicht bei jedem Render neu erzeugt werden
+  // Statische Inhalte für Features und News werden mittels useMemo nur bei Änderung neu erzeugt
   const features = useMemo(() => (
     <ul>
       <li>Exciting missions and challenging quizzes</li>
@@ -68,6 +74,6 @@ function Home() {
       </section>
     </div>
   );
-}
+};
 
 export default React.memo(Home);

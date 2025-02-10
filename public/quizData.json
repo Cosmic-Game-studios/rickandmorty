@@ -2958,6 +2958,939 @@
       "It reveals that chaos governs the universe"
     ],
     "answer": "It shows that control is an illusion"
+  },
+{
+    "id": 321,
+    "question": "What color are Rick's portals?",
+    "options": ["Green", "Blue", "Red", "Yellow"],
+    "answer": "Green"
+  },
+  {
+    "id": 322,
+    "question": "What is Morty's last name?",
+    "options": ["Smith", "Johnson", "Williams", "Brown"],
+    "answer": "Smith"
+  },
+  {
+    "id": 323,
+    "question": "Which device does Rick use to travel between dimensions?",
+    "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 324,
+    "question": "Who is Rick's daughter?",
+    "options": ["Beth", "Summer", "Jessica", "Tammy"],
+    "answer": "Beth"
+  },
+  {
+    "id": 325,
+    "question": "Who is Rick's grandson?",
+    "options": ["Morty", "Jerry", "Tony", "Leo"],
+    "answer": "Morty"
+  },
+  {
+    "id": 326,
+    "question": "Which character is known for the catchphrase 'Wubba Lubba Dub Dub'?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 327,
+    "question": "Which dimension is Rick primarily from?",
+    "options": ["Dimension C-137", "Dimension 35-C", "Dimension J-19", "Dimension K-22"],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 328,
+    "question": "Which character famously transforms into a pickle?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 329,
+    "question": "What is the primary function of a Mr. Meeseeks?",
+    "options": ["To complete a task", "To party", "To fight", "To teach"],
+    "answer": "To complete a task"
+  },
+  {
+    "id": 330,
+    "question": "Which character is often portrayed as insecure and awkward?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 331,
+    "question": "What color is Rick's lab coat typically?",
+    "options": ["White", "Blue", "Green", "It varies"],
+    "answer": "White"
+  },
+  {
+    "id": 332,
+    "question": "What is the name of Morty's school crush?",
+    "options": ["Jessica", "Tammy", "Beth", "Summer"],
+    "answer": "Jessica"
+  },
+  {
+    "id": 333,
+    "question": "Which character frequently shouts 'Get Schwifty'?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 334,
+    "question": "Which organization does Rick often clash with?",
+    "options": ["The Galactic Federation", "The Council of Ricks", "The Vindicators", "The Mortys"],
+    "answer": "The Galactic Federation"
+  },
+  {
+    "id": 335,
+    "question": "Who is Rick's best friend and a recurring alien character?",
+    "options": ["Birdperson", "Squanchy", "Gearhead", "Mr. Poopybutthole"],
+    "answer": "Birdperson"
+  },
+  {
+    "id": 336,
+    "question": "Which character is known for his sarcastic humor and intelligence?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 337,
+    "question": "Which character often shows a desire for adventure despite fear?",
+    "options": ["Morty", "Jerry", "Beth", "Summer"],
+    "answer": "Morty"
+  },
+  {
+    "id": 338,
+    "question": "What does Rick use to create portals?",
+    "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 339,
+    "question": "Which character is frequently ridiculed for his incompetence?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 340,
+    "question": "How does Rick generally view conventional rules?",
+    "options": ["He disregards them", "He strictly follows them", "He questions them", "He ignores them"],
+    "answer": "He disregards them"
+  },
+  {
+    "id": 341,
+    "question": "Which character often shows emotional vulnerability?",
+    "options": ["Morty", "Rick", "Jerry", "Beth"],
+    "answer": "Morty"
+  },
+  {
+    "id": 342,
+    "question": "What is the primary genre of Rick and Morty?",
+    "options": ["Sci-fi comedy", "Drama", "Action", "Horror"],
+    "answer": "Sci-fi comedy"
+  },
+  {
+    "id": 343,
+    "question": "What is Rick's relationship to Morty?",
+    "options": ["Grandfather", "Father", "Uncle", "Brother"],
+    "answer": "Grandfather"
+  },
+  {
+    "id": 344,
+    "question": "Which character is known for his rebellious attitude?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 345,
+    "question": "Which dimension is most frequently mentioned in the series?",
+    "options": ["C-137", "D-99", "J-19", "K-22"],
+    "answer": "C-137"
+  },
+  {
+    "id": 346,
+    "question": "What is the usual color of the portals created by Rick?",
+    "options": ["Green", "Blue", "Red", "Purple"],
+    "answer": "Green"
+  },
+  {
+    "id": 347,
+    "question": "Which character frequently serves as comic relief?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 348,
+    "question": "Which character is known for his extreme intelligence?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 349,
+    "question": "What does Mr. Meeseeks do when given a task?",
+    "options": ["Completes it", "Fails it", "Gives up", "Calls Rick"],
+    "answer": "Completes it"
+  },
+  {
+    "id": 350,
+    "question": "Which character is known for transforming into different forms (like Pickle Rick)?",
+    "options": ["Rick", "Morty", "Birdperson", "Squanchy"],
+    "answer": "Rick"
+  },
+  {
+    "id": 351,
+    "question": "Which family member often doubts Rick's decisions?",
+    "options": ["Morty", "Summer", "Beth", "Jerry"],
+    "answer": "Morty"
+  },
+  {
+    "id": 352,
+    "question": "What is the last name of the main family in the series?",
+    "options": ["Smith", "Jones", "Brown", "Williams"],
+    "answer": "Smith"
+  },
+  {
+    "id": 353,
+    "question": "Which character often shows reluctance when embarking on adventures?",
+    "options": ["Morty", "Rick", "Jerry", "Beth"],
+    "answer": "Morty"
+  },
+  {
+    "id": 354,
+    "question": "What is the predominant setting for Rick's adventures?",
+    "options": ["Different dimensions", "A futuristic city", "An alien planet", "A dystopian future"],
+    "answer": "Different dimensions"
+  },
+  {
+    "id": 355,
+    "question": "Which character is most associated with bizarre scientific experiments?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 356,
+    "question": "What visual effect is commonly used when Rick travels through a portal?",
+    "options": ["Glowing green", "Flashing blue", "Sparking red", "Glittering purple"],
+    "answer": "Glowing green"
+  },
+  {
+    "id": 357,
+    "question": "Which character is known for being overly cautious?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 358,
+    "question": "What is Morty's usual demeanor during adventures?",
+    "options": ["Reluctant", "Enthusiastic", "Indifferent", "Aggressive"],
+    "answer": "Reluctant"
+  },
+  {
+    "id": 359,
+    "question": "Which character is known for being unpredictable?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 360,
+    "question": "Which phrase best describes Rick's overall outlook on life?",
+    "options": ["Nihilistic", "Optimistic", "Pessimistic", "Realistic"],
+    "answer": "Nihilistic"
+  },
+  {
+    "id": 361,
+    "question": "What is Rick's typical reaction when confronted with authority?",
+    "options": ["Defiance", "Obedience", "Confusion", "Fear"],
+    "answer": "Defiance"
+  },
+  {
+    "id": 362,
+    "question": "Which character is frequently portrayed as naive?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 363,
+    "question": "What is the relationship between Rick and Morty?",
+    "options": ["Grandfather and grandson", "Father and son", "Uncle and nephew", "Brothers"],
+    "answer": "Grandfather and grandson"
+  },
+  {
+    "id": 364,
+    "question": "Which recurring element is a hallmark of Rick's inventions?",
+    "options": ["Gadgets", "Portal effects", "Strange fluids", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": 365,
+    "question": "What is a common theme in Rick and Morty?",
+    "options": ["Absurdity", "Existentialism", "Interdimensional travel", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": 366,
+    "question": "Which character is known for their catchphrase 'Wubba Lubba Dub Dub'?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 367,
+    "question": "Which character often questions the morality of Rick's actions?",
+    "options": ["Morty", "Jerry", "Beth", "Summer"],
+    "answer": "Morty"
+  },
+  {
+    "id": 368,
+    "question": "Which character is often the butt of jokes in the series?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 369,
+    "question": "What is the main genre of Rick and Morty?",
+    "options": ["Sci-fi comedy", "Drama", "Action", "Horror"],
+    "answer": "Sci-fi comedy"
+  },
+  {
+    "id": 370,
+    "question": "Which dimension is most frequently referenced in the show?",
+    "options": ["C-137", "D-99", "J-19", "K-22"],
+    "answer": "C-137"
+  },
+  {
+    "id": 371,
+    "question": "Which character is known for his brash attitude?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 372,
+    "question": "What visual element is a trademark of Rick's lab?",
+    "options": ["Strange fluids", "Glowing devices", "Futuristic screens", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": 373,
+    "question": "Which character often displays skepticism about Rick's plans?",
+    "options": ["Morty", "Jerry", "Beth", "Summer"],
+    "answer": "Morty"
+  },
+  {
+    "id": 374,
+    "question": "Which character is known for her independent spirit?",
+    "options": ["Beth", "Summer", "Jessica", "Tammy"],
+    "answer": "Summer"
+  },
+  {
+    "id": 375,
+    "question": "What is Rick's primary source of scientific innovation?",
+    "options": ["Interdimensional energy", "Advanced technology", "Alien resources", "His own genius"],
+    "answer": "His own genius"
+  },
+  {
+    "id": 376,
+    "question": "Which character is most associated with humor and sarcasm?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 377,
+    "question": "What do Rick's portals create?",
+    "options": ["Portals", "Time loops", "Alternate realities", "Energy fields"],
+    "answer": "Portals"
+  },
+  {
+    "id": 378,
+    "question": "Which character is known for frequent outbursts?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 379,
+    "question": "What is Morty's general opinion of Rick's adventures?",
+    "options": ["Reluctance", "Excitement", "Curiosity", "Indifference"],
+    "answer": "Reluctance"
+  },
+  {
+    "id": 380,
+    "question": "Which character often acts as comic relief in the series?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 381,
+    "question": "What is the name of Rick and Morty's family?",
+    "options": ["Smith", "Johnson", "Williams", "Brown"],
+    "answer": "Smith"
+  },
+  {
+    "id": 382,
+    "question": "Which character frequently displays a sense of responsibility?",
+    "options": ["Beth", "Morty", "Summer", "Jerry"],
+    "answer": "Beth"
+  },
+  {
+    "id": 383,
+    "question": "Which character is known for her rebellious attitude?",
+    "options": ["Summer", "Beth", "Jessica", "Tammy"],
+    "answer": "Summer"
+  },
+  {
+    "id": 384,
+    "question": "Which device is central to Rick's interdimensional travels?",
+    "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 385,
+    "question": "What common trait defines Rick's personality?",
+    "options": ["Brashness", "Timidity", "Insecurity", "Modesty"],
+    "answer": "Brashness"
+  },
+  {
+    "id": 386,
+    "question": "Which character is considered the most intelligent?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 387,
+    "question": "What does Rick do when faced with a challenge?",
+    "options": ["Invent a gadget", "Panic", "Ask for help", "Ignore it"],
+    "answer": "Invent a gadget"
+  },
+  {
+    "id": 388,
+    "question": "Which character is known for a lack of confidence?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 389,
+    "question": "What is the main focus of Rick's adventures?",
+    "options": ["Interdimensional travel", "Family drama", "Romantic escapades", "Political intrigue"],
+    "answer": "Interdimensional travel"
+  },
+  {
+    "id": 390,
+    "question": "Which recurring visual element is a trademark of Rick's lab?",
+    "options": ["Strange fluids", "Glowing devices", "Futuristic screens", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": 391,
+    "question": "Which character is both humorous and self-deprecating?",
+    "options": ["Morty", "Jerry", "Rick", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 392,
+    "question": "What is Morty's typical reaction during dangerous situations?",
+    "options": ["Panic", "Calmness", "Excitement", "Indifference"],
+    "answer": "Panic"
+  },
+  {
+    "id": 393,
+    "question": "Which character often struggles with self-doubt?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Morty"
+  },
+  {
+    "id": 394,
+    "question": "What is Rick's attitude toward science?",
+    "options": ["Obsession", "Disinterest", "Pragmatism", "Curiosity"],
+    "answer": "Obsession"
+  },
+  {
+    "id": 395,
+    "question": "Which character is known for their adventurous spirit?",
+    "options": ["Morty", "Jerry", "Beth", "Summer"],
+    "answer": "Summer"
+  },
+  {
+    "id": 396,
+    "question": "What is the most common setting for Rick and Morty's adventures?",
+    "options": ["Different dimensions", "The Smith household", "A futuristic city", "An alien planet"],
+    "answer": "Different dimensions"
+  },
+  {
+    "id": 397,
+    "question": "Which character is criticized for lacking common sense?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 398,
+    "question": "What is a common theme in the show's humor?",
+    "options": ["Absurdity", "Dark humor", "Satire", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": 399,
+    "question": "Which character often initiates conflicts without thinking?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 400,
+    "question": "What is Morty's general opinion of Rick's adventures?",
+    "options": ["Reluctance", "Excitement", "Curiosity", "Indifference"],
+    "answer": "Reluctance"
+  },
+  {
+    "id": 401,
+    "question": "Which character is known as the comic relief in the series?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 402,
+    "question": "What is the family name of Rick and Morty?",
+    "options": ["Smith", "Johnson", "Williams", "Brown"],
+    "answer": "Smith"
+  },
+  {
+    "id": 403,
+    "question": "Which character frequently displays responsibility?",
+    "options": ["Beth", "Morty", "Summer", "Jerry"],
+    "answer": "Beth"
+  },
+  {
+    "id": 404,
+    "question": "Which character is known for her rebellious attitude?",
+    "options": ["Summer", "Beth", "Jessica", "Tammy"],
+    "answer": "Summer"
+  },
+  {
+    "id": 405,
+    "question": "Which device is central to Rick's interdimensional travels?",
+    "options": ["Portal Gun", "Time Machine", "Teleporter", "Spaceship"],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 406,
+    "question": "What is a common trait of Rick's personality?",
+    "options": ["Brashness", "Timidity", "Insecurity", "Modesty"],
+    "answer": "Brashness"
+  },
+  {
+    "id": 407,
+    "question": "Which character is widely regarded as the most intelligent?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 408,
+    "question": "What does Rick often do when faced with a challenge?",
+    "options": ["Invent a gadget", "Panic", "Ask for help", "Ignore it"],
+    "answer": "Invent a gadget"
+  },
+  {
+    "id": 409,
+    "question": "Which character is known for a lack of confidence?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 410,
+    "question": "What is the primary focus of Rick's adventures?",
+    "options": ["Interdimensional travel", "Family drama", "Romantic escapades", "Political intrigue"],
+    "answer": "Interdimensional travel"
+  },
+  {
+    "id": 411,
+    "question": "Which recurring visual element is a trademark of Rick's lab?",
+    "options": ["Strange fluids", "Glowing devices", "Futuristic screens", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": 412,
+    "question": "Which character is both humorous and self-deprecating?",
+    "options": ["Morty", "Jerry", "Rick", "Beth"],
+    "answer": "Rick"
+  },
+  {
+    "id": 413,
+    "question": "What is Morty's typical reaction during dangerous situations?",
+    "options": ["Panic", "Calmness", "Excitement", "Indifference"],
+    "answer": "Panic"
+  },
+  {
+    "id": 414,
+    "question": "Which character often struggles with self-doubt?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Morty"
+  },
+  {
+    "id": 415,
+    "question": "What is Rick's attitude toward science?",
+    "options": ["Obsession", "Disinterest", "Pragmatism", "Curiosity"],
+    "answer": "Obsession"
+  },
+  {
+    "id": 416,
+    "question": "Which character is known for their adventurous spirit?",
+    "options": ["Morty", "Jerry", "Beth", "Summer"],
+    "answer": "Summer"
+  },
+  {
+    "id": 417,
+    "question": "What is the most common setting for Rick and Morty's adventures?",
+    "options": ["Different dimensions", "The Smith household", "A futuristic city", "An alien planet"],
+    "answer": "Different dimensions"
+  },
+  {
+    "id": 418,
+    "question": "Which character is criticized for his lack of common sense?",
+    "options": ["Jerry", "Rick", "Morty", "Beth"],
+    "answer": "Jerry"
+  },
+  {
+    "id": 419,
+    "question": "What is a common theme in the show's humor?",
+    "options": ["Absurdity", "Dark humor", "Satire", "All of the above"],
+    "answer": "All of the above"
+  },
+  {
+    "id": 420,
+    "question": "Which character is known for his catchphrase 'Wubba Lubba Dub Dub'?",
+    "options": ["Rick", "Morty", "Jerry", "Beth"],
+    "answer": "Rick"
+  },
+{
+    "id": 421,
+    "question": "What does Rick's repeated use of the catchphrase 'Wubba Lubba Dub Dub' truly signify about his inner struggles?",
+    "options": [
+      "It is merely a humorous saying",
+      "It hides a cry for help",
+      "It signifies his joy for life",
+      "It reflects his detachment from reality"
+    ],
+    "answer": "It hides a cry for help"
+  },
+  {
+    "id": 422,
+    "question": "How does the concept of infinite universes challenge traditional notions of free will in the series?",
+    "options": [
+      "It reinforces that every choice is predetermined",
+      "It highlights the complexity of decision-making",
+      "It suggests that choices are ultimately meaningless",
+      "It guarantees that every outcome is possible"
+    ],
+    "answer": "It highlights the complexity of decision-making"
+  },
+  {
+    "id": 423,
+    "question": "What does Rick's defiance of conventional morality suggest about his perception of truth?",
+    "options": [
+      "That truth is absolute",
+      "That truth is subjective and fluid",
+      "That truth is irrelevant in the multiverse",
+      "That morality is imposed by society"
+    ],
+    "answer": "That truth is subjective and fluid"
+  },
+  {
+    "id": 424,
+    "question": "How is interdimensional travel used as a metaphor for personal transformation in the show?",
+    "options": [
+      "It represents the loss of identity",
+      "It symbolizes endless possibilities for reinvention",
+      "It is solely a plot device with no deeper meaning",
+      "It indicates a descent into chaos"
+    ],
+    "answer": "It symbolizes endless possibilities for reinvention"
+  },
+  {
+    "id": 425,
+    "question": "What role does existential nihilism play in shaping Rick's worldview?",
+    "options": [
+      "It justifies his reckless behavior",
+      "It undermines all forms of imposed meaning",
+      "It provides him with a moral compass",
+      "It encourages him to form genuine connections"
+    ],
+    "answer": "It undermines all forms of imposed meaning"
+  },
+  {
+    "id": 426,
+    "question": "How does the show critique the concept of family through its portrayal of dysfunctional relationships?",
+    "options": [
+      "By highlighting the absence of genuine connection",
+      "By showing that family bonds are unbreakable",
+      "By idealizing non-traditional family structures",
+      "By focusing solely on individual ambition"
+    ],
+    "answer": "By highlighting the absence of genuine connection"
+  },
+  {
+    "id": 427,
+    "question": "How does the series' non-linear narrative structure contribute to its commentary on the nature of reality?",
+    "options": [
+      "It simplifies complex events",
+      "It challenges the viewer's understanding of time",
+      "It enforces a strict cause-and-effect relationship",
+      "It provides clear, linear explanations"
+    ],
+    "answer": "It challenges the viewer's understanding of time"
+  },
+  {
+    "id": 428,
+    "question": "What philosophical question is raised by the recurring appearance of multiple versions of Rick?",
+    "options": [
+      "What defines individuality?",
+      "Is there a supreme Rick?",
+      "Do all Ricks share the same destiny?",
+      "Are all decisions ultimately identical?"
+    ],
+    "answer": "What defines individuality?"
+  },
+  {
+    "id": 429,
+    "question": "How does Rick's use of technology serve as a metaphor for human ambition and its limits?",
+    "options": [
+      "It symbolizes the relentless pursuit of progress",
+      "It exposes the hubris inherent in human endeavors",
+      "It demonstrates that technology can solve all problems",
+      "It emphasizes the potential for infinite power"
+    ],
+    "answer": "It exposes the hubris inherent in human endeavors"
+  },
+  {
+    "id": 430,
+    "question": "What does the series suggest about the relationship between science and morality?",
+    "options": [
+      "Science is completely separate from ethics",
+      "Scientific progress requires ethical reflection",
+      "Morality hinders scientific discovery",
+      "Ethics are irrelevant in the pursuit of knowledge"
+    ],
+    "answer": "Scientific progress requires ethical reflection"
+  },
+  {
+    "id": 431,
+    "question": "How does Rick's cynical behavior reflect broader existential themes in the show?",
+    "options": [
+      "It signifies a deep internal conflict",
+      "It is purely for comedic effect",
+      "It shows his acceptance of a predetermined fate",
+      "It has no deeper meaning beyond satire"
+    ],
+    "answer": "It signifies a deep internal conflict"
+  },
+  {
+    "id": 432,
+    "question": "What is implied by the show's frequent portrayal of chaotic, unpredictable events?",
+    "options": [
+      "That chaos is a fundamental aspect of reality",
+      "That order is the only truth",
+      "That unpredictability is a plot convenience",
+      "That the universe is inherently benevolent"
+    ],
+    "answer": "That chaos is a fundamental aspect of reality"
+  },
+  {
+    "id": 433,
+    "question": "How does the theme of memory manipulation challenge our understanding of personal identity?",
+    "options": [
+      "By proving that memories are unreliable",
+      "By showing that identity is fluid and constructed",
+      "By asserting that memories are immutable",
+      "By suggesting that forgetting is inherently liberating"
+    ],
+    "answer": "By showing that identity is fluid and constructed"
+  },
+  {
+    "id": 434,
+    "question": "What is the deeper meaning behind Rick's frequent use of dark humor when confronting existential dilemmas?",
+    "options": [
+      "It trivializes the challenges of existence",
+      "It acts as a coping mechanism for inner pain",
+      "It reflects his genuine contentment",
+      "It distracts from his underlying happiness"
+    ],
+    "answer": "It acts as a coping mechanism for inner pain"
+  },
+  {
+    "id": 435,
+    "question": "How does the juxtaposition of absurdity and profundity in the series invite viewers to question traditional narratives of meaning?",
+    "options": [
+      "By offering clear, unambiguous answers",
+      "By combining humor with deep philosophical questions",
+      "By avoiding any serious topics",
+      "By reinforcing established societal norms"
+    ],
+    "answer": "By combining humor with deep philosophical questions"
+  },
+{
+    "id": 436,
+    "question": "In 'The Rickshank Rickdemption', which famous horror film is subtly referenced as an Easter egg?",
+    "options": [
+      "The Shining",
+      "Psycho",
+      "The Exorcist",
+      "Halloween"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 437,
+    "question": "In 'Rick Potion #9', a hidden Easter egg alludes to which iconic sci-fi film?",
+    "options": [
+      "Blade Runner",
+      "Star Wars",
+      "The Matrix",
+      "Back to the Future"
+    ],
+    "answer": "Blade Runner"
+  },
+  {
+    "id": 438,
+    "question": "Which recurring number, often appearing as an Easter egg, is a nod to 'The Hitchhiker's Guide to the Galaxy'?",
+    "options": [
+      "7",
+      "42",
+      "137",
+      "101"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 439,
+    "question": "In 'Anatomy Park', an Easter egg references which popular fantasy series through a subtle visual detail?",
+    "options": [
+      "Harry Potter",
+      "The Lord of the Rings",
+      "Game of Thrones",
+      "The Chronicles of Narnia"
+    ],
+    "answer": "Harry Potter"
+  },
+  {
+    "id": 440,
+    "question": "Which hidden detail in Rick and Morty is a nod to Quentin Tarantino's films?",
+    "options": [
+      "A character's dialogue",
+      "A background poster",
+      "A license plate number",
+      "A hidden tattoo"
+    ],
+    "answer": "A background poster"
+  },
+  {
+    "id": 441,
+    "question": "In several episodes, a digital clock displaying a specific number appears as an Easter egg. What is that number?",
+    "options": [
+      "13",
+      "42",
+      "69",
+      "137"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 442,
+    "question": "In 'Close Rick-counters of the Rick Kind', a line of dialogue mimics a famous cult classic film. Which film is it referencing?",
+    "options": [
+      "The Shining",
+      "Fight Club",
+      "A Clockwork Orange",
+      "Donnie Darko"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 443,
+    "question": "Which hidden Easter egg in the background of certain episodes references a well-known comic book?",
+    "options": [
+      "A hidden comic book on a shelf",
+      "A superhero logo on a wall",
+      "A reference in a character's name",
+      "A coded message on a poster"
+    ],
+    "answer": "A hidden comic book on a shelf"
+  },
+  {
+    "id": 444,
+    "question": "What subtle visual element, often overlooked, serves as an Easter egg for fans of sci-fi literature?",
+    "options": [
+      "A digital clock showing '42'",
+      "A book titled 'Infinite Universes'",
+      "A poster of a famous sci-fi author",
+      "A hidden tagline in the background"
+    ],
+    "answer": "A digital clock showing '42'"
+  },
+  {
+    "id": 445,
+    "question": "In 'Close Rick-counters of the Rick Kind', which Easter egg in the dialogue hints at a famous cult classic film?",
+    "options": [
+      "A reference to 'The Shining'",
+      "A mention of 'Blade Runner'",
+      "A nod to 'Pulp Fiction'",
+      "A callback to '2001: A Space Odyssey'"
+    ],
+    "answer": "A reference to 'The Shining'"
+  },
+  {
+    "id": 446,
+    "question": "Which catchphrase from Rick became a viral meme across the internet?",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Get Schwifty",
+      "Pickle Rick",
+      "I turned myself into a pickle"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 447,
+    "question": "Which character's confused expression is widely used as a reaction meme?",
+    "options": [
+      "Morty",
+      "Rick",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 448,
+    "question": "Which episode sparked a viral meme due to its absurd plot involving a pickle transformation?",
+    "options": [
+      "Pickle Rick",
+      "Total Rickall",
+      "Close Rick-counters of the Rick Kind",
+      "Rickmancing the Stone"
+    ],
+    "answer": "Pickle Rick"
+  },
+  {
+    "id": 449,
+    "question": "Which character's transformation into a pickle became a popular meme and cultural reference?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 450,
+    "question": "Which meme catchphrase from the series is used to humorously announce the start of chaotic events?",
+    "options": [
+      "Get Schwifty",
+      "Wubba Lubba Dub Dub",
+      "Pickle Rick",
+      "Time to get schwifty"
+    ],
+    "answer": "Get Schwifty"
   }
+
+
+
 
 ]

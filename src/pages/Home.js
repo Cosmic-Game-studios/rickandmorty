@@ -47,7 +47,8 @@ const Home = () => {
       <li>Bug Fixes</li>
       <li>Performance Optimizations</li>
       <li>WIP Fusion Character</li>
-    </ul>
+      <li>WIP DE</li>
+ </ul>
   ), []);
 
   return (

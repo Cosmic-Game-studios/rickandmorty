@@ -688,9 +688,12 @@ main {
   }
 
   .character-card img {
-    /* Bild füllt immer die volle Breite des Containers */
-    width: 100%;
+    /* Bilder auf dem Handy kleiner darstellen */
+    width: auto;
+    max-width: 100px;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 

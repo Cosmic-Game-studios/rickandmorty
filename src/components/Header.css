@@ -1,203 +1,133 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aktualisiertes Hamburger-Menü</title>
-  
-  <!-- Google Fonts Import -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap">
-  
-  <style>
-    /* ============================= */
-    /* Header & Navigation           */
-    /* ============================= */
-    
-    .header {
-      background: linear-gradient(90deg, #4b0082, #9400d3);
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      position: relative;
-    }
-    
-    .header-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 10px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .site-title,
-    .header h1 {
-      font-family: 'Bangers', cursive;
-      font-size: 3rem;
-      color: #f0e130;
-      margin-bottom: 10px;
-      text-align: center;
-      flex: 1;
-    }
-    
-    .coin-display {
-      display: flex;
-      align-items: center;
-      font-family: 'Bangers', cursive;
-      font-size: 1.2rem;
-      color: #f0e130;
-    }
-    
-    .coin-display span {
-      margin-left: 5px;
-    }
-    
-    .nav-list,
-    .header nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-      padding: 0;
-    }
-    
-    .nav-list li a,
-    .header nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      padding: 8px 12px;
-      border: 2px solid transparent;
-      transition: all 0.3s ease;
-    }
-    
-    .nav-list li a:hover,
-    .header nav ul li a:hover {
-      border: 2px solid #f0e130;
-      background-color: rgba(240, 225, 48, 0.2);
-      border-radius: 5px;
-    }
-    
-    /* ----------------------------- */
-    /* Hamburger-Menü                */
-    /* ----------------------------- */
-    
-    .hamburger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      outline: none;
-      padding: 10px;
-      z-index: 20; /* Damit der Button über dem Nav liegt */
-    }
-    
-    .hamburger .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      background-color: #fff;
-      transition: all 0.3s ease;
-    }
-    
-    /* Animierte Transformation bei aktivem Zustand */
-    .hamburger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-    
-    /* ----------------------------- */
-    /* Responsive Anpassungen        */
-    /* ----------------------------- */
-    
-    @media (max-width: 768px) {
-      .header {
-        padding: 15px;
-      }
-      .site-title,
-      .header h1 {
-        font-size: 2.5rem;
-      }
-      .nav-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-top: 15px;
-      }
-      .hamburger {
-        display: block;
-      }
-      /* Navigation standardmäßig ausblenden */
-      .header nav {
-        display: none;
-      }
-      /* Bei aktivem Menü */
-      .header nav.open {
-        display: block;
-        width: 100%;
-        background: linear-gradient(90deg, #4b0082, #9400d3);
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 10;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .site-title,
-      .header h1 {
-        font-size: 2rem;
-      }
-      .hamburger .bar {
-        width: 20px;
-        height: 2.5px;
-        margin: 4px auto;
-      }
-    }
-  </style>
-</head>
-<body>
-  
-  <header class="header">
-    <div class="header-top">
-      <h1 class="site-title">Site Title</h1>
-      <!-- Hamburger Button -->
-      <button class="hamburger" id="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-    </div>
-    
-    <!-- Navigation Menü -->
-    <nav id="nav">
-      <ul class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <script>
-    // Umschalten der aktiven Klasse für das Hamburger-Menü und die Navigation
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      nav.classList.toggle('open');
-    });
-  </script>
-  
-</body>
-</html>
+/* ============================= */
+/* Header & Navigation           */
+/* ============================= */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
+
+.header {
+  background: linear-gradient(90deg, #4b0082, #9400d3);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-title,
+.header h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
+  color: #f0e130;
+  margin-bottom: 10px;
+  text-align: center;
+  flex: 1;
+}
+
+.coin-display {
+  display: flex;
+  align-items: center;
+  font-family: 'Bangers', cursive;
+  font-size: 1.2rem;
+  color: #f0e130;
+}
+
+.coin-display span {
+  margin-left: 5px;
+}
+
+.nav-list,
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.nav-list li a,
+.header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-list li a:hover,
+.header nav ul li a:hover {
+  border: 2px solid #f0e130;
+  background-color: rgba(240, 225, 48, 0.2);
+  border-radius: 5px;
+}
+
+/* Hamburger-Menü */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Anpassungen für Header */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px;
+  }
+  .site-title,
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .hamburger {
+    display: block;
+  }
+  /* Navigation standardmäßig ausblenden */
+  .header nav {
+    display: none;
+  }
+  .header nav.open {
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #4b0082, #9400d3);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-title,
+  .header h1 {
+    font-size: 2rem;
+  }
+  .hamburger .bar {
+    width: 20px;
+    height: 2.5px;
+    margin: 4px auto;
+  }
+}

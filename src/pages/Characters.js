@@ -1,3 +1,4 @@
+// src/pages/Characters.js
 import React, {
   useState,
   useEffect,
@@ -8,11 +9,13 @@ import React, {
   Suspense,
 } from 'react';
 import { UserContext } from '../context/UserContext';
+import useIsMobile from '../hooks/useIsMobile';
 
 // Lazy-load the CharacterCard component
 const CharacterCard = React.lazy(() => import('../components/CharacterCard'));
 
 function Characters() {
+  const isMobile = useIsMobile();
   const { unlockedCharacters } = useContext(UserContext);
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
@@ -21,7 +24,7 @@ function Characters() {
   const [error, setError] = useState('');
   const loadMoreRef = useRef(null);
 
-  // Asynchronously load characters
+  // Asynchrones Laden der Characters
   const loadCharacters = useCallback(async (pageNumber) => {
     setLoading(true);
     setError('');
@@ -32,7 +35,7 @@ function Characters() {
       }
       const data = await response.json();
 
-      // Add new characters without duplicates
+      // Neue Characters hinzufügen, ohne Duplikate
       setCharacters((prevChars) => {
         const existingIds = new Set(prevChars.map((c) => (c ? c.id : null)));
         const startingIndex = prevChars.length;
@@ -40,7 +43,7 @@ function Characters() {
           .filter((character) => character && !existingIds.has(character.id))
           .map((character, index) => ({
             ...character,
-            // If requiredLevel is not set, compute it based on the index
+            // Falls requiredLevel nicht gesetzt ist, berechne es anhand des Index
             requiredLevel: character.requiredLevel || startingIndex + index + 2,
           }));
         return [...prevChars, ...newCharacters];
@@ -54,19 +57,19 @@ function Characters() {
     }
   }, []);
 
-  // Load characters when the page number changes
+  // Lade Characters, wenn sich die Seitenzahl ändert
   useEffect(() => {
     loadCharacters(page);
   }, [page, loadCharacters]);
 
-  // Function to load the next page
+  // Funktion zum Laden der nächsten Seite
   const loadMore = useCallback(() => {
     if (hasMore && !loading) {
       setPage((prevPage) => prevPage + 1);
     }
   }, [hasMore, loading]);
 
-  // Infinite scrolling using IntersectionObserver
+  // Infinite Scrolling mit IntersectionObserver
   useEffect(() => {
     if (loading) return;
     const observer = new IntersectionObserver(
@@ -88,7 +91,7 @@ function Characters() {
     };
   }, [loading, hasMore, loadMore]);
 
-  // Memoize the rendered CharacterCards and filter out any undefined/null entries
+  // Memoisiere die gerenderten CharacterCards und filtere ungültige Einträge heraus
   const renderedCharacters = useMemo(() => {
     return characters
       .filter((character) => character !== undefined && character !== null)
@@ -105,7 +108,7 @@ function Characters() {
   }, [characters, unlockedCharacters]);
 
   return (
-    <div className="characters-page">
+    <div className={`characters-page ${isMobile ? 'mobile' : 'desktop'}`}>
       <h2>All Characters</h2>
       {error && <p className="error">{error}</p>}
       <Suspense fallback={<div>Loading characters...</div>}>
@@ -114,7 +117,7 @@ function Characters() {
         </div>
       </Suspense>
       {loading && <p>Loading more characters...</p>}
-      {/* This empty div triggers loading more characters via IntersectionObserver */}
+      {/* Dieses leere Div triggert das Laden weiterer Characters via IntersectionObserver */}
       <div ref={loadMoreRef} style={{ height: '1px' }} />
     </div>
   );

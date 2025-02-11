@@ -1,4 +1,4 @@
- /* Google Fonts Import */
+/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
 /* Globaler Reset & Basisstyles */
@@ -663,6 +663,7 @@ main {
 .bonus-button:hover {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
+
 /* Optimierung der Charakterkarten-Seite für Mobilgeräte */
 @media (max-width: 480px) {
   .character-grid {
@@ -691,4 +692,32 @@ main {
     width: 100%;
     height: auto;
   }
+}
+
+/* === Neue Regeln für mobile/desktop basierend auf React Hook Klassen === */
+
+/* Für die Characters-Seite */
+.characters-page.mobile .character-grid {
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.characters-page.desktop .character-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+/* Für die Character Details-Seite */
+.character-details-page.mobile .character-card-detail {
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-details-page.desktop .character-card-detail {
+  flex-direction: row;
+  align-items: flex-start;
 }

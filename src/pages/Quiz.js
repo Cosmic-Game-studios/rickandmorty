@@ -13,6 +13,10 @@ function shuffleArray(array) {
 
 function Quiz() {
   const { completeMission } = useContext(UserContext);
+  
+  // State für die Sprachauswahl
+  const [language, setLanguage] = useState(null);
+
   const [allQuestions, setAllQuestions] = useState([]);
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -20,12 +24,25 @@ function Quiz() {
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [feedback, setFeedback] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Load quiz questions from the JSON file in the public folder
+  // Zeige zunächst die Sprachauswahl an
+  if (!language) {
+    return (
+      <div className="language-selection">
+        <h2>Please select a language / Bitte wählen Sie eine Sprache</h2>
+        <button onClick={() => setLanguage('en')}>English</button>
+        <button onClick={() => setLanguage('de')}>Deutsch</button>
+      </div>
+    );
+  }
+
+  // Lade Quizfragen abhängig von der gewählten Sprache
   useEffect(() => {
-    fetch('/quizData.json')
+    setLoading(true);
+    const dataUrl = language === 'de' ? '/quizData_de.json' : '/quizData.json';
+    fetch(dataUrl)
       .then(response => {
         if (!response.ok) {
           throw new Error('Error loading quiz questions.');
@@ -35,7 +52,7 @@ function Quiz() {
       .then(data => {
         setAllQuestions(data);
         const shuffledData = shuffleArray(data);
-        // Select 10 randomly shuffled questions and add a shuffled version of the answer options
+        // Wähle 10 zufällig gemischte Fragen aus und mische die Antwortoptionen
         const selectedQuestions = shuffledData.slice(0, 10).map(q => ({
           ...q,
           shuffledOptions: shuffleArray(q.options || [])
@@ -47,16 +64,16 @@ function Quiz() {
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, [language]);
 
-  // Function to update the daily quiz counter in localStorage
+  // Funktion zum Aktualisieren des täglichen Quiz-Counters in localStorage
   const updateDailyQuizCount = () => {
     const today = new Date().toISOString().slice(0, 10);
     let data = { date: today, count: 0 };
     const stored = localStorage.getItem('dailyQuizData');
     if (stored) {
       const parsed = JSON.parse(stored);
-      // If the stored date is not today, reset the counter
+      // Falls das gespeicherte Datum nicht heute ist, wird der Zähler zurückgesetzt
       if (parsed.date !== today) {
         data = { date: today, count: 0 };
       } else {
@@ -78,7 +95,7 @@ function Quiz() {
 
     if (selected === currentQuiz.answer) {
       setScore(prev => prev + 1);
-      completeMission(50); // 50 points for a correct answer
+      completeMission(50); // 50 Punkte für die richtige Antwort
       setFeedback('Correct answer! +50 points');
     } else {
       setFeedback('Wrong answer.');
@@ -91,7 +108,7 @@ function Quiz() {
         setFeedback('');
       } else {
         setQuizCompleted(true);
-        updateDailyQuizCount(); // Update the daily counter when the quiz is completed
+        updateDailyQuizCount(); // Aktualisiere den täglichen Zähler, wenn das Quiz beendet ist
       }
     }, 1500);
   };

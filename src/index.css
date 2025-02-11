@@ -1,6 +1,22 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
+/* CSS-Variablen definieren */
+:root {
+  --font-main: 'Roboto', sans-serif;
+  --font-display: 'Bangers', cursive;
+  --gradient-header: linear-gradient(90deg, #4b0082, #9400d3);
+  --gradient-button: linear-gradient(45deg, #ff0066, #ffcc00);
+  --gradient-button-hover: linear-gradient(45deg, #ffcc00, #ff0066);
+  --gradient-restart: linear-gradient(45deg, #4b0082, #9400d3);
+  --accent-color: #f0e130;
+  --bg-body: radial-gradient(circle at 30% 30%, #1a1a1a, #000);
+  --bg-light: rgba(255, 255, 255, 0.1);
+  --bg-section: rgba(255, 255, 255, 0.05);
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-dark: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 /* Globaler Reset & Basisstyles */
 *, *::before, *::after {
   margin: 0;
@@ -9,8 +25,8 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background: radial-gradient(circle at 30% 30%, #1a1a1a, #000);
+  font-family: var(--font-main);
+  background: var(--bg-body);
   color: #fff;
   line-height: 1.6;
 }
@@ -28,7 +44,7 @@ main {
 
 /* Header, Navigation & Hamburger */
 .header {
-  background: linear-gradient(90deg, #4b0082, #9400d3);
+  background: var(--gradient-header);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -44,9 +60,9 @@ main {
 
 .site-title,
 .header h1 {
-  font-family: 'Bangers', cursive;
+  font-family: var(--font-display);
   font-size: 3rem;
-  color: #f0e130;
+  color: var(--accent-color);
   margin-bottom: 10px;
   text-align: center;
   flex: 1;
@@ -55,9 +71,9 @@ main {
 .coin-display {
   display: flex;
   align-items: center;
-  font-family: 'Bangers', cursive;
+  font-family: var(--font-display);
   font-size: 1.2rem;
-  color: #f0e130;
+  color: var(--accent-color);
 }
 
 .coin-display span {
@@ -86,7 +102,7 @@ main {
 
 .nav-list li a:hover,
 .header nav ul li a:hover {
-  border-color: #f0e130;
+  border-color: var(--accent-color);
   background-color: rgba(240, 225, 48, 0.2);
   border-radius: 5px;
 }
@@ -109,7 +125,7 @@ main {
 
 /* Footer */
 .footer {
-  background: linear-gradient(90deg, #4b0082, #9400d3);
+  background: var(--gradient-header);
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
@@ -120,7 +136,7 @@ main {
 .home-page {
   text-align: center;
   padding: 40px 20px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-section);
 }
 
 .hero-section {
@@ -129,10 +145,10 @@ main {
 }
 
 .hero-title {
-  font-family: 'Bangers', cursive;
+  font-family: var(--font-display);
   font-size: 3rem;
   margin-bottom: 10px;
-  color: #f0e130;
+  color: var(--accent-color);
 }
 
 .hero-subtitle {
@@ -148,7 +164,7 @@ main {
 }
 
 .hero-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: var(--gradient-button);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -159,14 +175,14 @@ main {
 }
 
 .hero-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: var(--gradient-button-hover);
 }
 
 /* Info-, Features- & News-Section */
 .info-section,
 .features-section,
 .news-section {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-section);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
@@ -175,8 +191,8 @@ main {
 .info-section h2,
 .features-section h2,
 .news-section h2 {
-  font-family: 'Bangers', cursive;
-  color: #f0e130;
+  font-family: var(--font-display);
+  color: var(--accent-color);
   margin-bottom: 10px;
 }
 
@@ -204,30 +220,27 @@ main {
 
 .character-grid {
   display: grid;
-  /* Desktop: Flexibel füllend, aber mit mehr Abstand */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
 
-/* Standard Character Card */
 .character-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   border: 2px solid transparent;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, border 0.3s ease;
   text-align: center;
   padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-light);
 }
 
 .character-card:hover {
   transform: scale(1.05);
-  border-color: #f0e130;
+  border-color: var(--accent-color);
 }
 
-/* Zur Vermeidung von CLS: Platzreservierung per aspect-ratio */
 .character-card img {
   width: 100%;
   height: auto;
@@ -236,14 +249,14 @@ main {
 }
 
 .character-card h3 {
-  font-family: 'Bangers', cursive;
+  font-family: var(--font-display);
   margin: 10px 0;
   font-size: 1.5rem;
 }
 
-/* Daily Bonus & Bonus Button – unverändert, wie im Original */
+/* Daily Bonus & Bonus Button */
 .daily-bonus {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-section);
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -252,7 +265,7 @@ main {
 }
 
 .bonus-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: var(--gradient-button);
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -264,7 +277,7 @@ main {
 }
 
 .bonus-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: var(--gradient-button-hover);
 }
 
 /* Quiz Page */
@@ -274,7 +287,7 @@ main {
 }
 
 .question-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   padding: 20px;
   border-radius: 10px;
   display: inline-block;
@@ -285,7 +298,7 @@ main {
 }
 
 .question-text {
-  font-family: 'Bangers', cursive;
+  font-family: var(--font-display);
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
@@ -311,7 +324,7 @@ main {
 }
 
 .option.selected {
-  border-color: #f0e130;
+  border-color: var(--accent-color);
   background: rgba(240, 225, 48, 0.2);
 }
 
@@ -319,11 +332,11 @@ main {
   font-size: 1.2rem;
   margin-bottom: 20px;
   font-weight: bold;
-  color: #f0e130;
+  color: var(--accent-color);
 }
 
 .submit-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: var(--gradient-button);
   border: none;
   padding: 10px 20px;
   color: #000;
@@ -334,11 +347,11 @@ main {
 }
 
 .submit-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: var(--gradient-button-hover);
 }
 
 .restart-button {
-  background: linear-gradient(45deg, #4b0082, #9400d3);
+  background: var(--gradient-restart);
   border: none;
   padding: 10px 20px;
   color: #fff;
@@ -366,10 +379,10 @@ main {
 }
 
 .mission-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-dark);
   transition: transform 0.3s ease;
 }
 
@@ -378,7 +391,7 @@ main {
 }
 
 .mission-description {
-  font-family: 'Bangers', cursive;
+  font-family: var(--font-display);
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -386,11 +399,11 @@ main {
 .mission-reward {
   margin-bottom: 15px;
   font-weight: bold;
-  color: #f0e130;
+  color: var(--accent-color);
 }
 
 .mission-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: var(--gradient-button);
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -400,7 +413,7 @@ main {
 }
 
 .mission-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: var(--gradient-button-hover);
 }
 
 .mission-button.completed {
@@ -425,10 +438,10 @@ main {
 
 .episode-card,
 .location-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-dark);
   transition: transform 0.3s ease;
 }
 
@@ -440,9 +453,13 @@ main {
 .details-link {
   display: inline-block;
   margin-top: 10px;
-  color: #f0e130;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
+}
+
+.details-link:hover {
+  text-decoration: none;
 }
 
 .pagination {
@@ -455,7 +472,7 @@ main {
 
 .pagination button {
   padding: 8px 15px;
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: var(--gradient-button);
   border: none;
   border-radius: 5px;
   color: #000;
@@ -465,13 +482,13 @@ main {
 }
 
 .pagination button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: var(--gradient-button-hover);
 }
 
 .back-link {
   display: inline-block;
   margin-top: 20px;
-  color: #f0e130;
+  color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
 }
@@ -489,10 +506,10 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-dark);
   margin-bottom: 20px;
 }
 
@@ -515,18 +532,6 @@ main {
   margin: 10px 0;
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #f0e130;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
 /* Profil-Seite */
 .profile-page {
   padding: 20px;
@@ -541,7 +546,7 @@ main {
 }
 
 .profile-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   padding: 15px;
   border-radius: 10px;
   min-width: 120px;
@@ -557,7 +562,7 @@ main {
 }
 
 .coin-farm-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   padding: 5px;
   border-radius: 10px;
   text-align: center;
@@ -566,7 +571,7 @@ main {
 }
 
 .coin-farm-card.selected {
-  border: 2px solid #f0e130;
+  border: 2px solid var(--accent-color);
 }
 
 .coin-farm-card img {
@@ -587,7 +592,7 @@ main {
 }
 
 .unlocked-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-light);
   padding: 5px;
   border-radius: 10px;
   text-align: center;
@@ -604,7 +609,7 @@ main {
 
 /* Upgrade-Button im Profil */
 .upgrade-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: var(--gradient-button);
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -616,7 +621,7 @@ main {
 }
 
 .upgrade-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: var(--gradient-button-hover);
 }
 
 /* (Optional) Load More Button */
@@ -624,7 +629,7 @@ main {
   display: block;
   margin: 20px auto;
   padding: 12px 24px;
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: var(--gradient-button);
   color: #000;
   font-size: 1rem;
   font-weight: bold;
@@ -635,12 +640,11 @@ main {
 }
 
 .load-more-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: var(--gradient-button-hover);
 }
 
 /* Responsive Anpassungen für kleinere Geräte */
 @media (max-width: 480px) {
-  /* Auf mobilen Geräten: 3 Spalten in der Charakterübersicht */
   .character-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -648,7 +652,6 @@ main {
     padding: 0 10px;
   }
   
-  /* Die Charakterkarten bleiben erhalten, jedoch werden die Bilder kleiner dargestellt */
   .character-card img {
     max-width: 100px;
     width: auto;

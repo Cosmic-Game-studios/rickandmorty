@@ -81,6 +81,23 @@ main {
   margin-left: 5px;
 }
 
+/* Go to Profile Button – zusätzlicher Abstand */
+.go-to-profile {
+  display: inline-block;
+  margin-top: 20px; /* Erhöhter Abstand zwischen Coins und "Go to Profile" */
+  padding: 10px 20px;
+  background: var(--gradient-button);
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.go-to-profile:hover {
+  background: var(--gradient-button-hover);
+}
+
 .nav-list,
 .header nav ul {
   list-style: none;

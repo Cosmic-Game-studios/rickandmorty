@@ -204,7 +204,7 @@ main {
 
 .character-grid {
   display: grid;
-  /* Standarddefinition – wird bei Vorhandensein der React Hook Klassen überschrieben */
+  /* Ursprüngliche Desktop-Einstellung (flexibel füllend) */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
   margin-top: 20px;
@@ -608,120 +608,27 @@ main {
   background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
-/* Responsive Anpassungen */
-@media (max-width: 768px) {
-  .header h1,
-  .site-title {
-    font-size: 2.5rem;
-  }
-  .character-card h3 {
-    font-size: 1.2rem;
-  }
-  .hamburger {
-    display: block;
-  }
-  .header nav {
-    display: none;
-  }
-  .header nav.open {
-    display: block;
-    width: 100%;
-    background: linear-gradient(90deg, #4b0082, #9400d3);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-  }
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-  }
-}
-
-/* Daily Bonus & Bonus Button */
-.daily-bonus {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px auto;
-  max-width: 400px;
-}
-
-.bonus-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
-}
-
-.bonus-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
-
-/* Optimierung der Charakterkarten-Seite für Mobilgeräte */
+/* Responsive Anpassungen für kleinere Geräte */
 @media (max-width: 480px) {
+  /* Auf mobilen Geräten: 3 Spalten in der Charakterübersicht */
   .character-grid {
-    /* Statt 1 Spalte nun 3 Spalten – damit die Figuren nebeneinander angezeigt werden */
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 10px 0;
     padding: 0 10px;
   }
   
-  .character-card {
-    /* Kleinere Abstände und leichterer Schatten für ein kompakteres Layout */
-    padding: 8px;
-    margin: 5px auto;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  /* Die Charakterkarten bleiben erhalten, jedoch werden die Bilder kleiner dargestellt */
+  .character-card img {
+    max-width: 100px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
   
   .character-card h3 {
     font-size: 1.2rem;
     margin: 5px 0;
   }
-  
-  .character-card img {
-    /* Bilder auf mobilen Geräten kleiner darstellen */
-    width: auto;
-    max-width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-/* === Neue Regeln für mobile/desktop basierend auf React Hook Klassen === */
-
-/* Für die Characters-Seite */
-.characters-page.mobile .character-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin: 10px 0;
-  padding: 0 10px;
-}
-
-.characters-page.desktop .character-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 20px;
-  padding: 0;
-}
-
-/* Für die Character Details-Seite */
-.character-details-page.mobile .character-card-detail {
-  flex-direction: column;
-  align-items: center;
-}
-
-.character-details-page.desktop .character-card-detail {
-  flex-direction: row;
-  align-items: flex-start;
 }

@@ -204,7 +204,7 @@ main {
 
 .character-grid {
   display: grid;
-  /* Desktop-Einstellung: Flexibel füllend, aber mit größerem Abstand */
+  /* Desktop: Flexibel füllend, aber mit mehr Abstand */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
   margin-top: 30px;
@@ -227,7 +227,7 @@ main {
   border-color: #f0e130;
 }
 
-/* Optimierung zur Vermeidung von CLS: Platzreservierung mittels aspect-ratio */
+/* Zur Vermeidung von CLS: Platzreservierung per aspect-ratio */
 .character-card img {
   width: 100%;
   height: auto;
@@ -239,6 +239,32 @@ main {
   font-family: 'Bangers', cursive;
   margin: 10px 0;
   font-size: 1.5rem;
+}
+
+/* Daily Bonus & Bonus Button – unverändert, wie im Original */
+.daily-bonus {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.bonus-button {
+  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.bonus-button:hover {
+  background: linear-gradient(45deg, #ffcc00, #ff0066);
 }
 
 /* Quiz Page */

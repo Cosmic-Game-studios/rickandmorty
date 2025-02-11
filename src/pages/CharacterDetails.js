@@ -1,7 +1,10 @@
+// src/pages/CharacterDetails.js
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import useIsMobile from '../hooks/useIsMobile';
 
 function CharacterDetails() {
+  const isMobile = useIsMobile();
   const { id } = useParams();
   const [character, setCharacter] = useState(null);
   const [episodes, setEpisodes] = useState([]);
@@ -14,7 +17,7 @@ function CharacterDetails() {
       setLoading(true);
       setError('');
       try {
-        // Fetch character data
+        // Lade Character-Daten
         const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
         if (!response.ok) {
           throw new Error('Error loading character.');
@@ -23,7 +26,7 @@ function CharacterDetails() {
         setCharacter(data);
         setLoading(false);
 
-        // Fetch episode data if available
+        // Lade Episoden-Daten, falls vorhanden
         if (data.episode && data.episode.length > 0) {
           const episodeIds = data.episode.map(ep => ep.split('/').pop());
           const epResponse = await fetch(`https://rickandmortyapi.com/api/episode/${episodeIds.join(',')}`);
@@ -31,7 +34,7 @@ function CharacterDetails() {
             throw new Error('Error loading episodes.');
           }
           const epData = await epResponse.json();
-          // If only a single result is returned, wrap it in an array
+          // Falls nur ein einzelnes Ergebnis zurückkommt, in ein Array packen
           setEpisodes(Array.isArray(epData) ? epData : [epData]);
         } else {
           setEpisodes([]);
@@ -50,7 +53,7 @@ function CharacterDetails() {
   if (loading) return <p>Loading character details...</p>;
   if (error) return <p>{error}</p>;
 
-  // Destructure for better readability
+  // Destrukturierung für bessere Lesbarkeit
   const {
     name,
     image,
@@ -63,7 +66,7 @@ function CharacterDetails() {
   } = character;
 
   return (
-    <div className="character-details-page">
+    <div className={`character-details-page ${isMobile ? 'mobile' : 'desktop'}`}>
       <div className="character-card-detail">
         <img src={image} alt={name} className="detail-image" loading="lazy" />
         <div className="detail-info">

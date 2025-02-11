@@ -1,6 +1,17 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
+/* CSS Variablen definieren */
+:root {
+  --primary-color: #f0e130;
+  --secondary-color: #ff0066;
+  --tertiary-color: #ffcc00;
+  --header-gradient-start: #4b0082;
+  --header-gradient-end: #9400d3;
+  --body-bg-light: #1a1a1a;
+  --body-bg-dark: #000;
+}
+
 /* Globaler Reset & Basisstyles */
 *, *::before, *::after {
   margin: 0;
@@ -10,7 +21,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: radial-gradient(circle at 30% 30%, #1a1a1a, #000);
+  background: radial-gradient(circle at 30% 30%, var(--body-bg-light), var(--body-bg-dark));
   color: #fff;
   line-height: 1.6;
 }
@@ -28,10 +39,12 @@ main {
 
 /* Header, Navigation & Hamburger */
 .header {
-  background: linear-gradient(90deg, #4b0082, #9400d3);
+  background: linear-gradient(90deg, var(--header-gradient-start), var(--header-gradient-end));
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .header-top {
@@ -46,7 +59,7 @@ main {
 .header h1 {
   font-family: 'Bangers', cursive;
   font-size: 3rem;
-  color: #f0e130;
+  color: var(--primary-color);
   margin-bottom: 10px;
   text-align: center;
   flex: 1;
@@ -57,11 +70,22 @@ main {
   align-items: center;
   font-family: 'Bangers', cursive;
   font-size: 1.2rem;
-  color: #f0e130;
+  color: var(--primary-color);
 }
 
 .coin-display span {
   margin-left: 5px;
+}
+
+/* Navigation mit sanftem Übergang per max-height */
+.header nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.header nav.open {
+  max-height: 300px; /* Wert je nach Inhalt anpassen */
 }
 
 .nav-list,
@@ -86,7 +110,7 @@ main {
 
 .nav-list li a:hover,
 .header nav ul li a:hover {
-  border-color: #f0e130;
+  border-color: var(--primary-color);
   background-color: rgba(240, 225, 48, 0.2);
   border-radius: 5px;
 }
@@ -109,7 +133,7 @@ main {
 
 /* Footer */
 .footer {
-  background: linear-gradient(90deg, #4b0082, #9400d3);
+  background: linear-gradient(90deg, var(--header-gradient-start), var(--header-gradient-end));
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
@@ -132,7 +156,7 @@ main {
   font-family: 'Bangers', cursive;
   font-size: 3rem;
   margin-bottom: 10px;
-  color: #f0e130;
+  color: var(--primary-color);
 }
 
 .hero-subtitle {
@@ -148,7 +172,7 @@ main {
 }
 
 .hero-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -159,7 +183,7 @@ main {
 }
 
 .hero-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));
 }
 
 /* Info-, Features- & News-Section */
@@ -176,7 +200,7 @@ main {
 .features-section h2,
 .news-section h2 {
   font-family: 'Bangers', cursive;
-  color: #f0e130;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
@@ -222,7 +246,7 @@ main {
 
 .character-card:hover {
   transform: scale(1.05);
-  border-color: #f0e130;
+  border-color: var(--primary-color);
 }
 
 .character-card img {
@@ -281,7 +305,7 @@ main {
 }
 
 .option.selected {
-  border-color: #f0e130;
+  border-color: var(--primary-color);
   background: rgba(240, 225, 48, 0.2);
 }
 
@@ -289,11 +313,11 @@ main {
   font-size: 1.2rem;
   margin-bottom: 20px;
   font-weight: bold;
-  color: #f0e130;
+  color: var(--primary-color);
 }
 
 .submit-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
   border: none;
   padding: 10px 20px;
   color: #000;
@@ -304,11 +328,11 @@ main {
 }
 
 .submit-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));
 }
 
 .restart-button {
-  background: linear-gradient(45deg, #4b0082, #9400d3);
+  background: linear-gradient(45deg, var(--header-gradient-start), var(--header-gradient-end));
   border: none;
   padding: 10px 20px;
   color: #fff;
@@ -319,7 +343,7 @@ main {
 }
 
 .restart-button:hover {
-  background: linear-gradient(45deg, #9400d3, #4b0082);
+  background: linear-gradient(45deg, var(--header-gradient-end), var(--header-gradient-start));
 }
 
 /* Missions Page */
@@ -356,11 +380,11 @@ main {
 .mission-reward {
   margin-bottom: 15px;
   font-weight: bold;
-  color: #f0e130;
+  color: var(--primary-color);
 }
 
 .mission-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -370,7 +394,7 @@ main {
 }
 
 .mission-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));
 }
 
 .mission-button.completed {
@@ -410,9 +434,13 @@ main {
 .details-link {
   display: inline-block;
   margin-top: 10px;
-  color: #f0e130;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
+}
+
+.details-link:hover {
+  text-decoration: underline;
 }
 
 .pagination {
@@ -425,7 +453,7 @@ main {
 
 .pagination button {
   padding: 8px 15px;
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
   border: none;
   border-radius: 5px;
   color: #000;
@@ -435,13 +463,13 @@ main {
 }
 
 .pagination button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));
 }
 
 .back-link {
   display: inline-block;
   margin-top: 20px;
-  color: #f0e130;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
 }
@@ -485,18 +513,6 @@ main {
   margin: 10px 0;
 }
 
-.back-link {
-  display: inline-block;
-  margin-top: 20px;
-  color: #f0e130;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
 /* Profil-Seite */
 .profile-page {
   padding: 20px;
@@ -536,7 +552,7 @@ main {
 }
 
 .coin-farm-card.selected {
-  border: 2px solid #f0e130;
+  border: 2px solid var(--primary-color);
 }
 
 .coin-farm-card img {
@@ -572,7 +588,7 @@ main {
 
 /* Upgrade-Button im Profil */
 .upgrade-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
   border: none;
   padding: 8px 12px;
   border-radius: 5px;
@@ -584,7 +600,7 @@ main {
 }
 
 .upgrade-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));
 }
 
 /* (Optional) Load More Button */
@@ -592,7 +608,7 @@ main {
   display: block;
   margin: 20px auto;
   padding: 12px 24px;
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
   color: #000;
   font-size: 1rem;
   font-weight: bold;
@@ -603,7 +619,33 @@ main {
 }
 
 .load-more-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
+  background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));
+}
+
+/* Daily Bonus & Bonus Button */
+.daily-bonus {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.bonus-button {
+  background: linear-gradient(45deg, var(--secondary-color), var(--tertiary-color));
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.bonus-button:hover {
+  background: linear-gradient(45deg, var(--tertiary-color), var(--secondary-color));
 }
 
 /* Responsive Anpassungen */
@@ -618,18 +660,6 @@ main {
   .hamburger {
     display: block;
   }
-  .header nav {
-    display: none;
-  }
-  .header nav.open {
-    display: block;
-    width: 100%;
-    background: linear-gradient(90deg, #4b0082, #9400d3);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-  }
   .nav-list {
     flex-direction: column;
     align-items: center;
@@ -638,35 +668,9 @@ main {
   }
 }
 
-/* Daily Bonus & Bonus Button */
-.daily-bonus {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  margin: 20px auto;
-  max-width: 400px;
-}
-
-.bonus-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
-}
-
-.bonus-button:hover {
-  background: linear-gradient(45deg, #ffcc00, #ff0066);
-}
 /* Optimierung der Charakterkarten-Seite für Mobilgeräte */
 @media (max-width: 480px) {
   .character-grid {
-    /* Alle Karten in einer Spalte anzeigen und seitliche Abstände hinzufügen */
     grid-template-columns: 1fr;
     gap: 10px;
     margin: 10px 0;
@@ -674,22 +678,18 @@ main {
   }
 
   .character-card {
-    /* Kleinere Abstände und leichterer Schatten für ein kompakteres Layout */
     padding: 8px;
     margin: 5px auto;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   }
 
   .character-card h3 {
-    /* Schriftgröße und Abstand anpassen */
     font-size: 1.2rem;
     margin: 5px 0;
   }
 
   .character-card img {
-    /* Bild füllt immer die volle Breite des Containers */
     width: 100%;
     height: auto;
   }
 }
-

@@ -31,6 +31,7 @@ body {
   line-height: 1.6;
 }
 
+/* App-Container */
 .app {
   display: flex;
   flex-direction: column;
@@ -63,9 +64,9 @@ main {
   font-family: var(--font-display);
   font-size: 3rem;
   color: var(--accent-color);
-  margin-bottom: 10px;
   text-align: center;
   flex: 1;
+  margin-bottom: 10px;
 }
 
 .coin-display {
@@ -107,6 +108,7 @@ main {
   border-radius: 5px;
 }
 
+/* Hamburger-Menü */
 .hamburger {
   display: none;
   background: none;
@@ -121,6 +123,16 @@ main {
   margin: 4px 0;
   background-color: #fff;
   transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Footer */
@@ -230,10 +242,10 @@ main {
   border: 2px solid transparent;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease, border 0.3s ease;
   text-align: center;
   padding: 10px;
   box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease, border 0.3s ease;
 }
 
 .character-card:hover {
@@ -250,8 +262,8 @@ main {
 
 .character-card h3 {
   font-family: var(--font-display);
-  margin: 10px 0;
   font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 /* Daily Bonus & Bonus Button */
@@ -272,8 +284,8 @@ main {
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
   margin-top: 10px;
+  transition: background 0.3s ease;
 }
 
 .bonus-button:hover {

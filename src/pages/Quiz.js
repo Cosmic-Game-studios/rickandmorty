@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
 import { UserContext } from '../context/UserContext';
 
 // Helper function: Shuffle an array (Fisher-Yates Shuffle)
@@ -13,6 +13,11 @@ function shuffleArray(array) {
 
 function Quiz() {
   const { completeMission } = useContext(UserContext);
+
+  // New state for language selection: "en" or "de"
+  const [language, setLanguage] = useState(null);
+
+  // Quiz states
   const [allQuestions, setAllQuestions] = useState([]);
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -20,12 +25,47 @@ function Quiz() {
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [feedback, setFeedback] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Load quiz questions from the JSON file in the public folder
+  // Translation object for basic UI texts
+  const t = useMemo(() => {
+    return {
+      en: {
+        selectLanguage: "Select your language for the quiz",
+        english: "English",
+        german: "Deutsch",
+        loading: "Loading quiz questions...",
+        noQuestions: "No quiz questions available.",
+        quizTitle: "Rick and Morty Quiz",
+        quizCompleted: "Quiz Completed!",
+        progress: (score, total) =>
+          `You answered ${score} out of ${total} questions correctly.`,
+        submit: "Submit Answer"
+      },
+      de: {
+        selectLanguage: "Wählen Sie Ihre Sprache für das Quiz",
+        english: "Englisch",
+        german: "Deutsch",
+        loading: "Quizfragen werden geladen...",
+        noQuestions: "Keine Quizfragen verfügbar.",
+        quizTitle: "Rick and Morty Quiz",
+        quizCompleted: "Quiz abgeschlossen!",
+        progress: (score, total) =>
+          `Sie haben ${score} von ${total} Fragen richtig beantwortet.`,
+        submit: "Antwort absenden"
+      }
+    };
+  }, []);
+
+  // Fetch quiz questions when language is selected
   useEffect(() => {
-    fetch('/quizData.json')
+    if (!language) return;
+    setLoading(true);
+    setError('');
+    // Determine file based on language (adjust file paths as needed)
+    const quizFile = language === 'en' ? '/quizData.en.json' : '/quizData.de.json';
+    fetch(quizFile)
       .then(response => {
         if (!response.ok) {
           throw new Error('Error loading quiz questions.');
@@ -47,7 +87,7 @@ function Quiz() {
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, [language]);
 
   // Function to update the daily quiz counter in localStorage
   const updateDailyQuizCount = () => {
@@ -67,11 +107,23 @@ function Quiz() {
     localStorage.setItem('dailyQuizData', JSON.stringify(data));
   };
 
-  if (loading) return <p>Loading quiz questions...</p>;
+  // If language is not yet selected, display language selection UI
+  if (!language) {
+    return (
+      <div className="quiz-language-selection">
+        <h2>{t.en.selectLanguage}</h2>
+        <button onClick={() => setLanguage('en')}>{t.en.english}</button>
+        <button onClick={() => setLanguage('de')}>{t.en.german}</button>
+      </div>
+    );
+  }
+
+  if (loading) return <p>{t[language].loading}</p>;
   if (error) return <p>{error}</p>;
   if (!quizQuestions || quizQuestions.length === 0)
-    return <p>No quiz questions available.</p>;
+    return <p>{t[language].noQuestions}</p>;
 
+  // Handler for answering a question
   const handleAnswer = () => {
     const currentQuiz = quizQuestions[currentQuestion];
     if (!currentQuiz) return;
@@ -79,9 +131,9 @@ function Quiz() {
     if (selected === currentQuiz.answer) {
       setScore(prev => prev + 1);
       completeMission(50); // 50 points for a correct answer
-      setFeedback('Correct answer! +50 points');
+      setFeedback(language === 'en' ? 'Correct answer! +50 points' : 'Richtige Antwort! +50 Punkte');
     } else {
-      setFeedback('Wrong answer.');
+      setFeedback(language === 'en' ? 'Wrong answer.' : 'Falsche Antwort.');
     }
 
     setTimeout(() => {
@@ -99,17 +151,15 @@ function Quiz() {
   if (quizCompleted) {
     return (
       <div className="quiz-page">
-        <h2>Quiz Completed!</h2>
-        <p>
-          You answered {score} out of {quizQuestions.length} questions correctly.
-        </p>
+        <h2>{t[language].quizCompleted}</h2>
+        <p>{t[language].progress(score, quizQuestions.length)}</p>
       </div>
     );
   }
 
   return (
     <div className="quiz-page">
-      <h2>Rick and Morty Quiz</h2>
+      <h2>{t[language].quizTitle}</h2>
       <div className="question-card">
         <p className="question-text">
           {quizQuestions[currentQuestion]?.question}
@@ -127,7 +177,7 @@ function Quiz() {
         </div>
         {feedback && <p className="feedback">{feedback}</p>}
         <button onClick={handleAnswer} disabled={!selected} className="submit-button">
-          Submit Answer
+          {t[language].submit}
         </button>
       </div>
     </div>

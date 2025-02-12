@@ -3849,7 +3849,558 @@
       "Squanchy"
     ],
     "answer": "Rick"
+  },
+ {
+    "id": 401,
+    "question": "Welcher Charakter wird als der Comic Relief in der Serie angesehen?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 402,
+    "question": "Wie lautet der Familienname von Rick und Morty?",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 403,
+    "question": "Welcher Charakter zeigt häufig Verantwortungsbewusstsein?",
+    "options": [
+      "Beth",
+      "Morty",
+      "Summer",
+      "Jerry"
+    ],
+    "answer": "Beth"
+  },
+  {
+    "id": 404,
+    "question": "Welcher Charakter ist bekannt für ihre rebellische Haltung?",
+    "options": [
+      "Summer",
+      "Beth",
+      "Jessica",
+      "Tammy"
+    ],
+    "answer": "Summer"
+  },
+  {
+    "id": 405,
+    "question": "Welches Gerät ist zentral für Ricks interdimensionale Reisen?",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 406,
+    "question": "Welches gemeinsame Merkmal beschreibt Ricks Persönlichkeit am besten?",
+    "options": [
+      "Bravheit",
+      "Schüchternheit",
+      "Unsicherheit",
+      "Mäßigkeit"
+    ],
+    "answer": "Bravheit"
+  },
+  {
+    "id": 407,
+    "question": "Welcher Charakter gilt allgemein als der intelligenteste?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 408,
+    "question": "Was macht Rick häufig, wenn er vor einer Herausforderung steht?",
+    "options": [
+      "Er erfindet ein Gerät",
+      "Er gerät in Panik",
+      "Er bittet um Hilfe",
+      "Er ignoriert es"
+    ],
+    "answer": "Er erfindet ein Gerät"
+  },
+  {
+    "id": 409,
+    "question": "Welcher Charakter ist bekannt dafür, an Selbstvertrauen zu mangeln?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 410,
+    "question": "Was ist der Hauptfokus von Ricks Abenteuern?",
+    "options": [
+      "Interdimensionale Reisen",
+      "Familiendrama",
+      "Romantische Eskapaden",
+      "Politische Intrigen"
+    ],
+    "answer": "Interdimensionale Reisen"
+  },
+  {
+    "id": 411,
+    "question": "Welches wiederkehrende visuelle Element ist ein Markenzeichen von Ricks Labor?",
+    "options": [
+      "Seltsame Flüssigkeiten",
+      "Leuchtende Geräte",
+      "Futuristische Bildschirme",
+      "Alle oben genannten"
+    ],
+    "answer": "Alle oben genannten"
+  },
+  {
+    "id": 412,
+    "question": "Welcher Charakter wird als humorvoll und selbstironisch dargestellt?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Rick",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 413,
+    "question": "Wie reagiert Morty typischerweise in gefährlichen Situationen?",
+    "options": [
+      "Er gerät in Panik",
+      "Er bleibt ruhig",
+      "Er wird aufgeregt",
+      "Er zeigt Gleichgültigkeit"
+    ],
+    "answer": "Er gerät in Panik"
+  },
+  {
+    "id": 414,
+    "question": "Welcher Charakter kämpft häufig mit Selbstzweifeln?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 415,
+    "question": "Wie steht Rick zur Wissenschaft?",
+    "options": [
+      "Er ist besessen davon",
+      "Er zeigt Desinteresse",
+      "Er ist pragmatisch",
+      "Er ist neugierig"
+    ],
+    "answer": "Er ist besessen davon"
+  },
+  {
+    "id": 416,
+    "question": "Welcher Charakter ist für seinen abenteuerlichen Geist bekannt?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Beth",
+      "Summer"
+    ],
+    "answer": "Summer"
+  },
+  {
+    "id": 417,
+    "question": "Was ist die häufigste Umgebung für Ricks und Mortys Abenteuer?",
+    "options": [
+      "Verschiedene Dimensionen",
+      "Das Smith-Haus",
+      "Eine futuristische Stadt",
+      "Ein außerirdischer Planet"
+    ],
+    "answer": "Verschiedene Dimensionen"
+  },
+  {
+    "id": 418,
+    "question": "Welcher Charakter wird häufig für seinen Mangel an gesundem Menschenverstand kritisiert?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 419,
+    "question": "Welches Thema ist ein häufiges Motiv im Humor der Serie?",
+    "options": [
+      "Absurdität",
+      "Schwarzer Humor",
+      "Satire",
+      "Alle oben genannten"
+    ],
+    "answer": "Alle oben genannten"
+  },
+  {
+    "id": 420,
+    "question": "Welcher Charakter ist bekannt für das Schlagwort 'Wubba Lubba Dub Dub'?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 421,
+    "question": "Was bedeutet Ricks wiederholte Verwendung des Schlagworts 'Wubba Lubba Dub Dub' laut tieferer Interpretation?",
+    "options": [
+      "Es ist nur ein humorvoller Spruch",
+      "Es verbirgt einen Hilferuf",
+      "Es drückt seine Lebensfreude aus",
+      "Es spiegelt seine Realitätsferne wider"
+    ],
+    "answer": "Es verbirgt einen Hilferuf"
+  },
+  {
+    "id": 422,
+    "question": "Wie stellt das Konzept unendlicher Universen traditionelle Vorstellungen des freien Willens in Frage?",
+    "options": [
+      "Es bekräftigt, dass jede Entscheidung vorbestimmt ist",
+      "Es hebt die Komplexität der Entscheidungsfindung hervor",
+      "Es legt nahe, dass Entscheidungen letztlich bedeutungslos sind",
+      "Es garantiert, dass jedes Ergebnis möglich ist"
+    ],
+    "answer": "Es hebt die Komplexität der Entscheidungsfindung hervor"
+  },
+  {
+    "id": 423,
+    "question": "Was deutet Ricks Ablehnung konventioneller Moral in Bezug auf seine Wahrheitsauffassung an?",
+    "options": [
+      "Dass Wahrheit absolut ist",
+      "Dass Wahrheit subjektiv und fließend ist",
+      "Dass Wahrheit im Multiversum irrelevant ist",
+      "Dass Moral von der Gesellschaft auferlegt wird"
+    ],
+    "answer": "Dass Wahrheit subjektiv und fließend ist"
+  },
+  {
+    "id": 424,
+    "question": "Wie wird interdimensionale Reise als Metapher für persönliche Transformation in der Serie genutzt?",
+    "options": [
+      "Es repräsentiert den Verlust der Identität",
+      "Es symbolisiert endlose Möglichkeiten zur Neuerfindung",
+      "Es ist nur ein erzählerisches Mittel ohne tiefere Bedeutung",
+      "Es deutet auf einen Abstieg ins Chaos hin"
+    ],
+    "answer": "Es symbolisiert endlose Möglichkeiten zur Neuerfindung"
+  },
+  {
+    "id": 425,
+    "question": "Welche Rolle spielt existenzieller Nihilismus in Ricks Weltbild?",
+    "options": [
+      "Er rechtfertigt sein rücksichtsloses Verhalten",
+      "Er untergräbt jegliche auferlegte Bedeutung",
+      "Er gibt ihm einen moralischen Kompass",
+      "Er ermutigt ihn, echte Verbindungen einzugehen"
+    ],
+    "answer": "Er untergräbt jegliche auferlegte Bedeutung"
+  },
+  {
+    "id": 426,
+    "question": "Wie kritisiert die Serie das Konzept von Familie durch die Darstellung dysfunktionaler Beziehungen?",
+    "options": [
+      "Indem sie das Fehlen echter Verbindung hervorhebt",
+      "Indem sie zeigt, dass familiäre Bande unzerbrechlich sind",
+      "Indem sie nicht-traditionelle Familienstrukturen idealisiert",
+      "Indem sie ausschließlich individuellen Ehrgeiz fokussiert"
+    ],
+    "answer": "Indem sie das Fehlen echter Verbindung hervorhebt"
+  },
+  {
+    "id": 427,
+    "question": "Wie trägt die nicht-lineare Erzählstruktur der Serie zur Diskussion über die Natur der Realität bei?",
+    "options": [
+      "Indem sie komplexe Ereignisse vereinfacht",
+      "Indem sie das Verständnis von Zeit in Frage stellt",
+      "Indem sie einen strikten Ursache-Wirkung-Zusammenhang durchsetzt",
+      "Indem sie klare lineare Erklärungen liefert"
+    ],
+    "answer": "Indem sie das Verständnis von Zeit in Frage stellt"
+  },
+  {
+    "id": 428,
+    "question": "Welches philosophische Thema wird durch das wiederkehrende Erscheinen mehrerer Ricks in der Serie aufgeworfen?",
+    "options": [
+      "Was definiert Individualität?",
+      "Gibt es einen überlegenen Rick?",
+      "Teilen alle Ricks dasselbe Schicksal?",
+      "Sind alle Entscheidungen letztlich identisch?"
+    ],
+    "answer": "Was definiert Individualität?"
+  },
+  {
+    "id": 429,
+    "question": "Wie dient Ricks Einsatz von Technologie als Metapher für menschlichen Ehrgeiz und seine Grenzen?",
+    "options": [
+      "Es symbolisiert den unermüdlichen Fortschritt",
+      "Es enthüllt die Hybris, die menschliche Bestrebungen begleitet",
+      "Es zeigt, dass Technologie alle Probleme lösen kann",
+      "Es betont das Potenzial unendlicher Macht"
+    ],
+    "answer": "Es enthüllt die Hybris, die menschliche Bestrebungen begleitet"
+  },
+  {
+    "id": 430,
+    "question": "Welche Aussage macht die Serie über das Verhältnis von Wissenschaft und Moral?",
+    "options": [
+      "Wissenschaft ist völlig von Ethik getrennt",
+      "Wissenschaftlicher Fortschritt erfordert ethische Reflexion",
+      "Moral behindert wissenschaftliche Entdeckungen",
+      "Ethik ist irrelevant auf der Suche nach Wissen"
+    ],
+    "answer": "Wissenschaftlicher Fortschritt erfordert ethische Reflexion"
+  },
+  {
+    "id": 431,
+    "question": "Wie spiegelt Ricks zynisches Verhalten breitere existenzielle Themen in der Serie wider?",
+    "options": [
+      "Es weist auf einen tiefen inneren Konflikt hin",
+      "Es dient rein dem humorvollen Effekt",
+      "Es zeigt seine Akzeptanz eines vorbestimmten Schicksals",
+      "Es hat keine tiefere Bedeutung als Satire"
+    ],
+    "answer": "Es weist auf einen tiefen inneren Konflikt hin"
+  },
+  {
+    "id": 432,
+    "question": "Was impliziert die häufige Darstellung chaotischer, unvorhersehbarer Ereignisse in der Serie?",
+    "options": [
+      "Dass Chaos ein fundamentaler Aspekt der Realität ist",
+      "Dass Ordnung die einzige Wahrheit ist",
+      "Dass Unvorhersehbarkeit ein erzählerisches Mittel ist",
+      "Dass das Universum von Natur aus wohlwollend ist"
+    ],
+    "answer": "Dass Chaos ein fundamentaler Aspekt der Realität ist"
+  },
+  {
+    "id": 433,
+    "question": "Wie stellt das Thema der Erinnerungslöschung die traditionelle Vorstellung von persönlicher Identität in Frage?",
+    "options": [
+      "Indem es beweist, dass Erinnerungen unzuverlässig sind",
+      "Indem es zeigt, dass Identität fluid und konstruiert ist",
+      "Indem es behauptet, dass Erinnerungen unveränderlich sind",
+      "Indem es andeutet, dass Vergessen befreiend ist"
+    ],
+    "answer": "Indem es zeigt, dass Identität fluid und konstruiert ist"
+  },
+  {
+    "id": 434,
+    "question": "Was ist die tiefere Bedeutung von Ricks häufigem Einsatz von schwarzem Humor bei existenziellen Dilemmata?",
+    "options": [
+      "Er verharmlost die Herausforderungen der Existenz",
+      "Er dient als Bewältigungsmechanismus für inneren Schmerz",
+      "Er spiegelt seine aufrichtige Zufriedenheit wider",
+      "Er lenkt von seinem wahren Glück ab"
+    ],
+    "answer": "Er dient als Bewältigungsmechanismus für inneren Schmerz"
+  },
+  {
+    "id": 435,
+    "question": "Wie lädt die Kombination von Absurdität und Tiefsinn im Serienstil die Zuschauer ein, traditionelle Sinn-Erzählungen zu hinterfragen?",
+    "options": [
+      "Indem klare, eindeutige Antworten angeboten werden",
+      "Indem Humor mit tiefgründigen philosophischen Fragen kombiniert wird",
+      "Indem ernste Themen vermieden werden",
+      "Indem etablierte gesellschaftliche Normen bekräftigt werden"
+    ],
+    "answer": "Indem Humor mit tiefgründigen philosophischen Fragen kombiniert wird"
+  },
+  {
+    "id": 436,
+    "question": "In 'The Rickshank Rickdemption', auf welchen berühmten Horrorfilm wird subtil als Easter Egg angespielt?",
+    "options": [
+      "The Shining",
+      "Psycho",
+      "The Exorcist",
+      "Halloween"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 437,
+    "question": "In 'Rick Potion #9', verweist ein verstecktes Easter Egg auf welchen ikonischen Sci-Fi-Film?",
+    "options": [
+      "Blade Runner",
+      "Star Wars",
+      "The Matrix",
+      "Back to the Future"
+    ],
+    "answer": "Blade Runner"
+  },
+  {
+    "id": 438,
+    "question": "Welche wiederkehrende Zahl, die oft als Easter Egg auftaucht, ist eine Anspielung auf 'The Hitchhiker's Guide to the Galaxy'?",
+    "options": [
+      "7",
+      "42",
+      "137",
+      "101"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 439,
+    "question": "In 'Anatomy Park', verweist ein Easter Egg subtil auf welche beliebte Fantasy-Serie?",
+    "options": [
+      "Harry Potter",
+      "Der Herr der Ringe",
+      "Game of Thrones",
+      "Die Chroniken von Narnia"
+    ],
+    "answer": "Harry Potter"
+  },
+  {
+    "id": 440,
+    "question": "Welches versteckte Detail in Rick and Morty ist eine Anspielung auf Quentin Tarantinos Filme?",
+    "options": [
+      "Ein Dialog einer Figur",
+      "Ein Hintergrundplakat",
+      "Eine Nummernschild-Nummer",
+      "Ein verstecktes Tattoo"
+    ],
+    "answer": "Ein Hintergrundplakat"
+  },
+  {
+    "id": 441,
+    "question": "In mehreren Episoden erscheint eine Digitaluhr mit welcher Zahl als Easter Egg?",
+    "options": [
+      "13",
+      "42",
+      "69",
+      "137"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 442,
+    "question": "In 'Close Rick-counters of the Rick Kind', auf welchen Kultfilm bezieht sich eine Dialogzeile?",
+    "options": [
+      "The Shining",
+      "Fight Club",
+      "A Clockwork Orange",
+      "Donnie Darko"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 443,
+    "question": "Welches versteckte Easter Egg im Hintergrund verweist auf einen bekannten Comic?",
+    "options": [
+      "Ein versteckter Comic im Regal",
+      "Ein Superhelden-Logo an der Wand",
+      "Eine Anspielung im Namen einer Figur",
+      "Eine codierte Nachricht auf einem Plakat"
+    ],
+    "answer": "Ein versteckter Comic im Regal"
+  },
+  {
+    "id": 444,
+    "question": "Welches subtile visuelle Element dient als Easter Egg für Sci-Fi-Literaturfans?",
+    "options": [
+      "Eine Digitaluhr, die '42' anzeigt",
+      "Ein Buch mit dem Titel 'Infinite Universes'",
+      "Ein Plakat eines berühmten Sci-Fi-Autors",
+      "Ein versteckter Slogan im Hintergrund"
+    ],
+    "answer": "Eine Digitaluhr, die '42' anzeigt"
+  },
+  {
+    "id": 445,
+    "question": "In 'Close Rick-counters of the Rick Kind', welcher Easter Egg-Hinweis in der Dialogzeile spielt auf einen berühmten Kultfilm an?",
+    "options": [
+      "Eine Anspielung auf 'The Shining'",
+      "Eine Erwähnung von 'Blade Runner'",
+      "Ein Verweis auf 'Pulp Fiction'",
+      "Ein Rückbezug auf '2001: A Space Odyssey'"
+    ],
+    "answer": "Eine Anspielung auf 'The Shining'"
+  },
+  {
+    "id": 446,
+    "question": "Welches Schlagwort von Rick wurde zu einem viralen Meme im Internet?",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Get Schwifty",
+      "Pickle Rick",
+      "I turned myself into a pickle"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 447,
+    "question": "Welcher Charakters verwirrter Gesichtsausdruck wird häufig als Reaktions-Meme verwendet?",
+    "options": [
+      "Morty",
+      "Rick",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 448,
+    "question": "Welche Episode löste aufgrund ihrer absurden Handlung mit einer Gurkenverwandlung ein virales Meme aus?",
+    "options": [
+      "Pickle Rick",
+      "Total Rickall",
+      "Close Rick-counters of the Rick Kind",
+      "Rickmancing the Stone"
+    ],
+    "answer": "Pickle Rick"
+  },
+  {
+    "id": 449,
+    "question": "Welcher Charakters Verwandlung in eine Gurke wurde zu einem populären Meme und Kultbezug?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 450,
+    "question": "Welcher Meme-Slogan aus der Serie wird humorvoll zur Einleitung chaotischer Ereignisse genutzt?",
+    "options": [
+      "Get Schwifty",
+      "Wubba Lubba Dub Dub",
+      "Pickle Rick",
+      "Time to get schwifty"
+    ],
+    "answer": "Get Schwifty"
   }
+
 
 
 

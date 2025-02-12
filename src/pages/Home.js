@@ -7,7 +7,6 @@ import React, {
   useEffect
 } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import { UserContext } from '../context/UserContext';
 
 // Lazy-load the DailyBonus component
@@ -15,6 +14,7 @@ const DailyBonus = lazy(() => import('../components/DailyBonus'));
 
 // Custom hook to determine if the screen is mobile (with debounce)
 const useIsMobile = () => {
+  // Ensure window exists (for SSR compatibility)
   const getIsMobile = () => (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
   const [isMobile, setIsMobile] = useState(getIsMobile);
 
@@ -41,7 +41,7 @@ const Home = () => {
   const { level, rewardPoints, coins } = useContext(UserContext);
   const isMobile = useIsMobile();
 
-  // Memoize static content so it isn't recalculated on every render
+  // Memoize static content so it's not recalculated on every render
   const features = useMemo(() => (
     <ul>
       <li>Exciting missions and challenging quizzes</li>
@@ -62,27 +62,6 @@ const Home = () => {
 
   return (
     <div className={`home-page ${isMobile ? 'mobile' : ''}`}>
-      <Helmet>
-        <title>Rick and Morty Adventure - Home</title>
-        <meta
-          name="description"
-          content="Experience interdimensional adventures, master missions, and solve quizzes to unlock legendary characters! Join us for daily bonuses and exciting updates."
-        />
-        <meta
-          name="keywords"
-          content="Rick and Morty, Adventure, Quizzes, Missions, Daily Bonus, Characters, Interdimensional, Gaming"
-        />
-        <link rel="canonical" href="https://www.yoursite.com/" />
-        {/* Open Graph / Facebook Meta Tags */}
-        <meta property="og:title" content="Rick and Morty Adventure - Home" />
-        <meta
-          property="og:description"
-          content="Experience interdimensional adventures, master missions, and solve quizzes to unlock legendary characters!"
-        />
-        <meta property="og:url" content="https://www.yoursite.com/" />
-        <meta property="og:type" content="website" />
-      </Helmet>
-
       {/* Lazy-loaded Daily Bonus */}
       <Suspense fallback={<div className="suspense-fallback">Loading Daily Bonus...</div>}>
         <DailyBonus />

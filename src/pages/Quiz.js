@@ -41,7 +41,9 @@ function Quiz() {
         quizCompleted: "Quiz Completed!",
         progress: (score, total) =>
           `You answered ${score} out of ${total} questions correctly.`,
-        submit: "Submit Answer"
+        submit: "Submit Answer",
+        correctFeedback: "Correct answer! +50 points",
+        wrongFeedback: "Wrong answer."
       },
       de: {
         selectLanguage: "Wählen Sie Ihre Sprache für das Quiz",
@@ -53,7 +55,9 @@ function Quiz() {
         quizCompleted: "Quiz abgeschlossen!",
         progress: (score, total) =>
           `Sie haben ${score} von ${total} Fragen richtig beantwortet.`,
-        submit: "Antwort absenden"
+        submit: "Antwort absenden",
+        correctFeedback: "Richtige Antwort! +50 Punkte",
+        wrongFeedback: "Falsche Antwort."
       }
     };
   }, []);
@@ -107,13 +111,34 @@ function Quiz() {
     localStorage.setItem('dailyQuizData', JSON.stringify(data));
   };
 
-  // If language is not yet selected, display language selection UI
+  // LANGUAGE SELECTION UI
   if (!language) {
     return (
-      <div className="quiz-language-selection">
-        <h2>{t.en.selectLanguage}</h2>
-        <button onClick={() => setLanguage('en')}>{t.en.english}</button>
-        <button onClick={() => setLanguage('de')}>{t.en.german}</button>
+      <div className="quiz-page">
+        <header className="hero-section">
+          <h1 className="hero-title">{t.en.selectLanguage}</h1>
+          <p className="hero-subtitle">
+            {t.en.selectLanguage}
+          </p>
+        </header>
+        <section className="info-section">
+          <div className="hero-buttons" style={{ justifyContent: 'center', gap: '1rem' }}>
+            <button
+              className="hero-button"
+              onClick={() => setLanguage('en')}
+              style={{ padding: '10px 20px' }}
+            >
+              {t.en.english}
+            </button>
+            <button
+              className="hero-button"
+              onClick={() => setLanguage('de')}
+              style={{ padding: '10px 20px' }}
+            >
+              {t.en.german}
+            </button>
+          </div>
+        </section>
       </div>
     );
   }
@@ -131,9 +156,9 @@ function Quiz() {
     if (selected === currentQuiz.answer) {
       setScore(prev => prev + 1);
       completeMission(50); // 50 points for a correct answer
-      setFeedback(language === 'en' ? 'Correct answer! +50 points' : 'Richtige Antwort! +50 Punkte');
+      setFeedback(t[language].correctFeedback);
     } else {
-      setFeedback(language === 'en' ? 'Wrong answer.' : 'Falsche Antwort.');
+      setFeedback(t[language].wrongFeedback);
     }
 
     setTimeout(() => {

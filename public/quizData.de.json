@@ -3300,6 +3300,557 @@
     ],
     "answer": "Ist Identität ausschließlich an die körperliche Form gebunden?"
   },
+{
+    "id": 301,
+    "question": "In 'The Old Man and the Seat', welches einzigartige Element integriert Rick in sein privates Toilettendesign, um absolute Privatsphäre zu gewährleisten?",
+    "options": [
+      "Ein Quantenverschlüsselungssystem",
+      "Ein dimensionsübergreifender Rissmechanismus",
+      "Ein KI-Überwachungssystem",
+      "Ein Selbstzerstörungsprotokoll"
+    ],
+    "answer": "Ein dimensionsübergreifender Rissmechanismus"
+  },
+  {
+    "id": 302,
+    "question": "In 'The ABC's of Beth', welche metaphorische Rolle spielt Froopyland in Beths inneren Konflikten?",
+    "options": [
+      "Es repräsentiert ihre verlorene kindliche Unschuld",
+      "Es symbolisiert chaotische Kreativität",
+      "Es spiegelt ihren Kampf mit Identität und Kontrolle wider",
+      "Es ist eine Utopie, die sie erschaffen möchte"
+    ],
+    "answer": "Es spiegelt ihren Kampf mit Identität und Kontrolle wider"
+  },
+  {
+    "id": 303,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches Paradoxon wird durch Mortys wiederholte Versuche, seine Zukunft zu ändern, hervorgehoben?",
+    "options": [
+      "Zeitliche Trägheit",
+      "Bootstrap-Paradoxon",
+      "Unendliche Rekursion",
+      "Prädestinationsparadoxon"
+    ],
+    "answer": "Prädestinationsparadoxon"
+  },
+  {
+    "id": 304,
+    "question": "In 'Vindicators 3: The Return of Worldender', was ist der größte Fehler im Ansatz der Vindicators zum Heldentum?",
+    "options": [
+      "Ihre Arroganz und mangelnde Selbstwahrnehmung",
+      "Ihre Abhängigkeit von Technologie",
+      "Ihre Unfähigkeit, als Team zu arbeiten",
+      "Ihr Mangel an Rücksichtnahme auf Zivilisten"
+    ],
+    "answer": "Ihre Arroganz und mangelnde Selbstwahrnehmung"
+  },
+  {
+    "id": 305,
+    "question": "In 'The Rickshank Rickdemption', wie heißt der hybride Charakter, der aus Abraham Lincoln und Adolf Hitler erschaffen wurde?",
+    "options": [
+      "Abradolf Lincler",
+      "Adolibrahm",
+      "Lincoltpig",
+      "Adolfbrad"
+    ],
+    "answer": "Abradolf Lincler"
+  },
+  {
+    "id": 306,
+    "question": "In 'Rickmancing the Stone', was ist die primäre Funktion eines Mr. Meeseeks?",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 307,
+    "question": "In 'Pickle Rick', warum verwandelt sich Rick in eine Gurke?",
+    "options": [
+      "Um Familientherapie zu vermeiden",
+      "Um eine Wette zu gewinnen",
+      "Um ein gefährliches Experiment durchzuführen",
+      "Um Morty zu beeindrucken"
+    ],
+    "answer": "Um Familientherapie zu vermeiden"
+  },
+  {
+    "id": 308,
+    "question": "In 'The Ricks Must Be Crazy', was ist die primäre Energiequelle für Ricks Autobatterie?",
+    "options": [
+      "Ein mini Universum",
+      "Ein Plutoniumreaktor",
+      "Dunkle Materie",
+      "Interdimensionale Kristalle"
+    ],
+    "answer": "Ein mini Universum"
+  },
+  {
+    "id": 309,
+    "question": "In 'Pickle Rick', welches unkonventionelle Material benutzt Rick, um sein Exoskelett zu konstruieren?",
+    "options": [
+      "Rattenkadaver",
+      "Alte Reifen",
+      "Schrottmetall",
+      "Plankton"
+    ],
+    "answer": "Rattenkadaver"
+  },
+  {
+    "id": 310,
+    "question": "In 'Meeseeks and Destroy', welche existenzielle Krise erleben die Mr. Meeseeks?",
+    "options": [
+      "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen",
+      "Ihr schwindendes Dasein",
+      "Gefangen in einer Zeitschleife",
+      "Mangel an Sinn nach Aufgabenabschluss"
+    ],
+    "answer": "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen"
+  },
+  {
+    "id": 311,
+    "question": "In 'The Rickshank Rickdemption', welche Bedeutung hat die Zahl '42' als Easter Egg?",
+    "options": [
+      "Es ist Ricks geheimer Code",
+      "Es verweist auf 'The Hitchhiker's Guide to the Galaxy'",
+      "Es repräsentiert die Anzahl der Universen",
+      "Es symbolisiert unendliche Möglichkeiten"
+    ],
+    "answer": "Es verweist auf 'The Hitchhiker's Guide to the Galaxy'"
+  },
+  {
+    "id": 312,
+    "question": "In 'Anatomy Park', welcher versteckte Hinweis ist eine Anspielung auf eine beliebte Fantasy-Serie?",
+    "options": [
+      "Ein Poster eines berühmten Fantasy-Autors",
+      "Ein Buch mit dem Titel 'Infinite Universes'",
+      "Ein subtiler visueller Hinweis",
+      "Der Name eines Charakters"
+    ],
+    "answer": "Ein subtiler visueller Hinweis"
+  },
+  {
+    "id": 313,
+    "question": "Auf welchen Film spielt ein verstecktes Nummernschild an, das als Easter Egg dient?",
+    "options": [
+      "Blade Runner",
+      "Star Wars",
+      "The Matrix",
+      "Back to the Future"
+    ],
+    "answer": "Blade Runner"
+  },
+  {
+    "id": 314,
+    "question": "Welche wiederkehrende Zahl ist eine Anspielung auf 'The Hitchhiker's Guide to the Galaxy'?",
+    "options": [
+      "7",
+      "42",
+      "137",
+      "101"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 315,
+    "question": "In 'Anatomy Park', welche Fantasy-Serie wird durch einen visuellen Hinweis subtil referenziert?",
+    "options": [
+      "Harry Potter",
+      "Der Herr der Ringe",
+      "Game of Thrones",
+      "Die Chroniken von Narnia"
+    ],
+    "answer": "Harry Potter"
+  },
+  {
+    "id": 316,
+    "question": "Welcher versteckte Hinweis in Rick and Morty ist eine Hommage an Quentin Tarantino?",
+    "options": [
+      "Ein Dialog eines Charakters",
+      "Ein Hintergrundplakat",
+      "Ein Nummernschild",
+      "Ein verstecktes Tattoo"
+    ],
+    "answer": "Ein Hintergrundplakat"
+  },
+  {
+    "id": 317,
+    "question": "In mehreren Episoden, welche Zahl erscheint als Easter Egg auf einem digitalen Uhrdisplay?",
+    "options": [
+      "13",
+      "42",
+      "69",
+      "137"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 318,
+    "question": "In 'Close Rick-counters of the Rick Kind', auf welchen Kultfilm wird in einer Dialogzeile angespielt?",
+    "options": [
+      "The Shining",
+      "Fight Club",
+      "A Clockwork Orange",
+      "Donnie Darko"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 319,
+    "question": "Welcher versteckte Easter Egg-Hinweis im Hintergrund verweist auf einen bekannten Comic?",
+    "options": [
+      "Ein versteckter Comic im Regal",
+      "Ein Superhelden-Logo an der Wand",
+      "Eine Anspielung im Namen eines Charakters",
+      "Eine codierte Nachricht auf einem Plakat"
+    ],
+    "answer": "Ein versteckter Comic im Regal"
+  },
+  {
+    "id": 320,
+    "question": "Welches subtile visuelle Element dient als Easter Egg für Fans von Science-Fiction-Literatur?",
+    "options": [
+      "Eine digitale Uhr, die '42' anzeigt",
+      "Ein Buch mit dem Titel 'Infinite Universes'",
+      "Ein Plakat eines berühmten Sci-Fi-Autors",
+      "Ein versteckter Slogan im Hintergrund"
+    ],
+    "answer": "Eine digitale Uhr, die '42' anzeigt"
+  },
+  {
+    "id": 321,
+    "question": "Welches Schlagwort von Rick wurde zu einem viralen Meme?",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Get Schwifty",
+      "Pickle Rick",
+      "I turned myself into a pickle"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 322,
+    "question": "Was ist Mortys Nachname?",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 323,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen?",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 324,
+    "question": "Wer ist Ricks Tochter?",
+    "options": [
+      "Beth",
+      "Summer",
+      "Jessica",
+      "Tammy"
+    ],
+    "answer": "Beth"
+  },
+  {
+    "id": 325,
+    "question": "Wer ist Ricks Enkel?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Tony",
+      "Leo"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 326,
+    "question": "Welcher Charakter ist bekannt für das Schlagwort 'Wubba Lubba Dub Dub'?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 327,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich?",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 328,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 329,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks?",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 330,
+    "question": "Welcher Charakter wird oft als unsicher und unbeholfen dargestellt?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 331,
+    "question": "Welche Farbe hat typischerweise Ricks Laborkittel?",
+    "options": [
+      "Weiß",
+      "Blau",
+      "Grün",
+      "Variiert"
+    ],
+    "answer": "Weiß"
+  },
+  {
+    "id": 332,
+    "question": "Wie heißt Mortys Schwarm in der Schule?",
+    "options": [
+      "Jessica",
+      "Tammy",
+      "Beth",
+      "Summer"
+    ],
+    "answer": "Jessica"
+  },
+  {
+    "id": 333,
+    "question": "Welcher Charakter ruft häufig 'Get Schwifty'?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 334,
+    "question": "Mit welcher Organisation gerät Rick häufig in Konflikt?",
+    "options": [
+      "Die Galactic Federation",
+      "Der Rat der Ricks",
+      "Die Vindicators",
+      "Die Mortys"
+    ],
+    "answer": "Die Galactic Federation"
+  },
+  {
+    "id": 335,
+    "question": "Wer ist Ricks bester Freund und ein wiederkehrender außerirdischer Charakter?",
+    "options": [
+      "Birdperson",
+      "Squanchy",
+      "Gearhead",
+      "Mr. Poopybutthole"
+    ],
+    "answer": "Birdperson"
+  },
+  {
+    "id": 336,
+    "question": "Welcher Charakter ist bekannt für seinen sarkastischen Humor und seine Intelligenz?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 337,
+    "question": "Welcher Charakter zeigt oft den Wunsch nach Abenteuern trotz Angst?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Beth",
+      "Summer"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 338,
+    "question": "Was benutzt Rick, um Portale zu erzeugen?",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 339,
+    "question": "Welcher Charakter wird häufig wegen seiner Inkompetenz verspottet?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 340,
+    "question": "Wie steht Rick allgemein zu konventionellen Regeln?",
+    "options": [
+      "Er missachtet sie",
+      "Er hält sich strikt daran",
+      "Er stellt sie in Frage",
+      "Er ignoriert sie"
+    ],
+    "answer": "Er missachtet sie"
+  },
+  {
+    "id": 341,
+    "question": "Welcher Charakter zeigt oft emotionale Verletzlichkeit?",
+    "options": [
+      "Morty",
+      "Rick",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 342,
+    "question": "Was ist das Hauptgenre von Rick and Morty?",
+    "options": [
+      "Sci-fi Komödie",
+      "Drama",
+      "Action",
+      "Horror"
+    ],
+    "answer": "Sci-fi Komödie"
+  },
+  {
+    "id": 343,
+    "question": "Was ist Ricks Beziehung zu Morty?",
+    "options": [
+      "Großvater",
+      "Vater",
+      "Onkel",
+      "Bruder"
+    ],
+    "answer": "Großvater"
+  },
+  {
+    "id": 344,
+    "question": "Welcher Charakter ist bekannt für seine rebellische Haltung?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 345,
+    "question": "Welche Dimension wird in der Serie am häufigsten erwähnt?",
+    "options": [
+      "C-137",
+      "D-99",
+      "J-19",
+      "K-22"
+    ],
+    "answer": "C-137"
+  },
+  {
+    "id": 346,
+    "question": "Welche Farbe haben üblicherweise die Portale, die Rick erzeugt?",
+    "options": [
+      "Grün",
+      "Blau",
+      "Rot",
+      "Lila"
+    ],
+    "answer": "Grün"
+  },
+  {
+    "id": 347,
+    "question": "Welcher Charakter dient häufig als Comic Relief?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 348,
+    "question": "Welcher Charakter ist bekannt für seine außergewöhnliche Intelligenz?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 349,
+    "question": "Was macht Mr. Meeseeks, wenn er eine Aufgabe bekommt?",
+    "options": [
+      "Er erfüllt sie",
+      "Er scheitert",
+      "Er gibt auf",
+      "Er ruft Rick"
+    ],
+    "answer": "Er erfüllt sie"
+  },
+  {
+    "id": 350,
+    "question": "Welcher Charakter ist bekannt dafür, sich in verschiedene Formen zu verwandeln (wie Pickle Rick)?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Birdperson",
+      "Squanchy"
+    ],
+    "answer": "Rick"
+  }
+
 
 
 

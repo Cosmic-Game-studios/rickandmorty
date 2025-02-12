@@ -2199,7 +2199,1109 @@
       "Er überbrückt die Kluft zwischen Realität und Fiktion"
     ],
     "answer": "Er führt zu unbeabsichtigten Konsequenzen"
-  }
+  },
+ {
+    "id": 201,
+    "question": "In 'The Old Man and the Seat', welches einzigartige Element integriert Rick in sein privates Toilettendesign, um absolute Privatsphäre zu gewährleisten?",
+    "options": [
+      "Ein Quantenverschlüsselungssystem",
+      "Ein dimensionsübergreifender Rissmechanismus",
+      "Ein KI-Überwachungssystem",
+      "Ein Selbstzerstörungsprotokoll"
+    ],
+    "answer": "Ein dimensionsübergreifender Rissmechanismus"
+  },
+  {
+    "id": 202,
+    "question": "In 'The ABC's of Beth', welche metaphorische Rolle spielt Froopyland im Hinblick auf Beths innere Konflikte?",
+    "options": [
+      "Es repräsentiert ihre verlorene kindliche Unschuld",
+      "Es symbolisiert chaotische Kreativität",
+      "Es spiegelt ihren Kampf mit Identität und Kontrolle wider",
+      "Es ist eine Utopie, die sie zu erschaffen versucht"
+    ],
+    "answer": "Es spiegelt ihren Kampf mit Identität und Kontrolle wider"
+  },
+  {
+    "id": 203,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches Paradoxon wird durch Mortys wiederholte Versuche, seine Zukunft zu ändern, hervorgehoben?",
+    "options": [
+      "Zeitliche Trägheit",
+      "Bootstrap-Paradoxon",
+      "Unendliche Rekursion",
+      "Prädestinationsparadoxon"
+    ],
+    "answer": "Prädestinationsparadoxon"
+  },
+  {
+    "id": 204,
+    "question": "In 'Vindicators 3: The Return of Worldender', welche zugrunde liegende Botschaft vermittelt Rick über Heldentum?",
+    "options": [
+      "Es ist von Natur aus selbstzerstörerisch",
+      "Es führt zu unbeabsichtigten Konsequenzen",
+      "Es ist ein von gesellschaftlichen Normen konstruiertes Schauspiel",
+      "Es überbrückt die Kluft zwischen Realität und Fiktion"
+    ],
+    "answer": "Es ist von Natur aus selbstzerstörerisch"
+  },
+  {
+    "id": 205,
+    "question": "In 'The Rickshank Rickdemption', welche philosophische Haltung drückt Rick in Bezug auf Realität und Freiheit aus?",
+    "options": [
+      "Realität ist eine Illusion und Freiheit ein Geisteszustand",
+      "Alle Realitäten sind gleichermaßen gültig und Freiheit ist relativ",
+      "Wahre Freiheit ist das Fehlen von Konsequenzen",
+      "Existenz ist bedeutungslos ohne persönliche Verantwortung"
+    ],
+    "answer": "Alle Realitäten sind gleichermaßen gültig und Freiheit ist relativ"
+  },
+  {
+    "id": 206,
+    "question": "In 'Rickmancing the Stone', welches zugrunde liegende Thema wird durch die Darstellung einer postapokalyptischen Gesellschaft vermittelt?",
+    "options": [
+      "Die Härte des Überlebens",
+      "Die Widerstandsfähigkeit des menschlichen Geistes",
+      "Die Unvermeidlichkeit des gesellschaftlichen Zusammenbruchs",
+      "Die Rückgewinnung verlorener Identität"
+    ],
+    "answer": "Die Härte des Überlebens"
+  },
+  {
+    "id": 207,
+    "question": "In 'Pickle Rick', was symbolisiert Ricks Verwandlung über die oberflächliche Absurdität hinaus am kritischsten in Bezug auf seine familiären Beziehungen?",
+    "options": [
+      "Ein verzweifelter Versuch, unabhängig zu werden",
+      "Seine Weigerung, sich emotional zu öffnen",
+      "Eine Erkundung von Selbstzerstörung",
+      "Eine Manifestation versteckter Verletzlichkeit"
+    ],
+    "answer": "Seine Weigerung, sich emotional zu öffnen"
+  },
+  {
+    "id": 208,
+    "question": "In 'The Whirly Dirly Conspiracy', was enthüllt Ricks Entscheidung, Jerry in das Abenteuer einzubeziehen, letztlich über seinen Charakter?",
+    "options": [
+      "Seine zugrunde liegende Unsicherheit",
+      "Seinen Bedarf an Bestätigung",
+      "Sein Streben nach echter Verbindung",
+      "Seine Gleichgültigkeit gegenüber der Familie"
+    ],
+    "answer": "Seine zugrunde liegende Unsicherheit"
+  },
+  {
+    "id": 209,
+    "question": "In 'Close Rick-counters of the Rick Kind', was ist der primäre philosophische Konflikt zwischen den verschiedenen Ricks?",
+    "options": [
+      "Der Kampf zwischen Identitätssuche und Konformität",
+      "Die Natur des freien Willens in einem unendlichen Multiversum",
+      "Das Gleichgewicht zwischen Chaos und Ordnung",
+      "Die Isolation, die mit Genialität einhergeht"
+    ],
+    "answer": "Die Natur des freien Willens in einem unendlichen Multiversum"
+  },
+  {
+    "id": 210,
+    "question": "In 'Morty's Mind Blowers', welche thematische Botschaft wird durch das selektive Löschen von Erinnerungen vermittelt?",
+    "options": [
+      "Erinnerungen definieren die persönliche Identität",
+      "Der Preis der Unwissenheit ist hoch",
+      "Das Unterdrücken von Traumata führt zu Freiheit",
+      "Die zyklische Natur von Schmerz und Erleichterung"
+    ],
+    "answer": "Erinnerungen definieren die persönliche Identität"
+  },
+  {
+    "id": 211,
+    "question": "In 'The Old Man and the Seat', was ist der Hauptgrund, weshalb sich Rick in seiner privaten Toilette isoliert?",
+    "options": [
+      "Um absolute Privatsphäre zu erreichen",
+      "Um über die Natur der Existenz nachzudenken",
+      "Um familiären Verpflichtungen zu entkommen",
+      "Um sich vor der Galactic Federation zu verstecken"
+    ],
+    "answer": "Um absolute Privatsphäre zu erreichen"
+  },
+  {
+    "id": 212,
+    "question": "In 'The Rickshank Rickdemption', welche Strategie verwendet Rick primär, um die Galactic Federation zu täuschen?",
+    "options": [
+      "Einen gut organisierten Lockvogel-Plan",
+      "Einen direkten Angriff auf ihr Hauptquartier",
+      "Technologischen Sabotageakte",
+      "Ein Gedankenkontrollgerät"
+    ],
+    "answer": "Einen gut organisierten Lockvogel-Plan"
+  },
+  {
+    "id": 213,
+    "question": "In 'Pickle Rick', welches zugrunde liegende persönliche Konflikt symbolisiert Ricks Verwandlung in eine Gurke am stärksten?",
+    "options": [
+      "Seine Angst vor Verletzlichkeit",
+      "Sein Kampf mit der eigenen Identität",
+      "Sein Wunsch, von Verantwortung befreit zu sein",
+      "Seine Ablehnung emotionaler Intimität"
+    ],
+    "answer": "Seine Angst vor Verletzlichkeit"
+  },
+  {
+    "id": 214,
+    "question": "In 'Total Rickall', welches narrative Mittel verwischt hauptsächlich die Grenze zwischen echten und eingepflanzten Erinnerungen?",
+    "options": [
+      "Falsche Erinnerungseinpflanzung durch Parasiten",
+      "Nicht-lineares Erzählen",
+      "Surreale visuelle Effekte",
+      "Fragmentierte Charakterperspektiven"
+    ],
+    "answer": "Falsche Erinnerungseinpflanzung durch Parasiten"
+  },
+  {
+    "id": 215,
+    "question": "In 'Rickmancing the Stone', was symbolisiert das postapokalyptische Setting hauptsächlich?",
+    "options": [
+      "Der Zerfall der Gesellschaft",
+      "Ein Neuanfang",
+      "Der Zusammenbruch der sozialen Ordnung",
+      "Umweltvernachlässigung"
+    ],
+    "answer": "Der Zusammenbruch der sozialen Ordnung"
+  },
+  {
+    "id": 216,
+    "question": "In 'The Ricks Must Be Crazy', welches ethische Dilemma ist zentral in Ricks Schaffung eines Miniaturuniversums?",
+    "options": [
+      "Die Ausbeutung empfindungsfähigen Lebens",
+      "Die Störung der natürlichen Ordnung",
+      "Die Untergrabung des freien Willens",
+      "Ressourcenverknappung"
+    ],
+    "answer": "Die Ausbeutung empfindungsfähigen Lebens"
+  },
+  {
+    "id": 217,
+    "question": "In 'Vindicators 3: The Return of Worldender', wie charakterisiert Rick letztlich das Konzept des Heldentums?",
+    "options": [
+      "Als von gesellschaftlichen Normen konstruierten Schwindel",
+      "Als selbstzerstörerische Unternehmung",
+      "Als Form von Eskapismus",
+      "Als essentielles, wenn auch fehlerhaftes Ideal"
+    ],
+    "answer": "Als selbstzerstörerische Unternehmung"
+  },
+  {
+    "id": 218,
+    "question": "In 'The Ricklantis Mixup', welche narrative Technik wird verwendet, um die Komplexität des Multiversums zu beleuchten?",
+    "options": [
+      "Paralleles Erzählen",
+      "Wechselseitiges Ausschneiden zwischen verschiedenen Universen",
+      "Nicht-lineare Rückblenden",
+      "Gleichzeitige Charakterhandlungen"
+    ],
+    "answer": "Wechselseitiges Ausschneiden zwischen verschiedenen Universen"
+  },
+  {
+    "id": 219,
+    "question": "In 'Morty's Mind Blowers', was ist Ricks zugrunde liegende Motivation für das systematische Löschen traumatischer Erinnerungen?",
+    "options": [
+      "Um Morty vor überwältigenden Wahrheiten zu schützen",
+      "Um seine eigene emotionale Last zu verringern",
+      "Um die Kontrolle über seine Abenteuer zu behalten",
+      "Um gefährliche Informationen zu unterdrücken"
+    ],
+    "answer": "Um seine eigene emotionale Last zu verringern"
+  },
+  {
+    "id": 220,
+    "question": "In 'Pickle Rick', welcher Familienangehörige wird am stärksten von Ricks Verwandlung beeinflusst, wodurch zugrunde liegende familiäre Spannungen offengelegt werden?",
+    "options": [
+      "Morty",
+      "Summer",
+      "Beth",
+      "Jerry"
+    ],
+    "answer": "Beth"
+  },
+  {
+    "id": 221,
+    "question": "In 'The Whirly Dirly Conspiracy', was enthüllt das Resort-Setting über Ricks Charakterentwicklung?",
+    "options": [
+      "Eine Konfrontation mit der eigenen Sterblichkeit",
+      "Die Verletzlichkeit seiner persönlichen Beziehungen",
+      "Ein neutraler Ort der Versöhnung",
+      "Eine temporäre Flucht vor der Verantwortung"
+    ],
+    "answer": "Die Verletzlichkeit seiner persönlichen Beziehungen"
+  },
+  {
+    "id": 222,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie wird das Konzept der 'Familie' unter den Ricks dargestellt?",
+    "options": [
+      "Als irrelevant für ihre Existenz",
+      "Als kollektive Identität",
+      "Als Quelle ständiger Konflikte",
+      "Als Rechtfertigung ihres Handelns"
+    ],
+    "answer": "Als kollektive Identität"
+  },
+  {
+    "id": 223,
+    "question": "In 'The ABC's of Beth', welcher innere Konflikt wird symbolisch durch Beths Reise nach Froopyland dargestellt?",
+    "options": [
+      "Ihre Angst vor Verlassenheit",
+      "Ihr Streben nach Unabhängigkeit",
+      "Der Konflikt zwischen Realität und Fantasie",
+      "Ihre Unfähigkeit, ihre eigene Kreativität zu akzeptieren"
+    ],
+    "answer": "Der Konflikt zwischen Realität und Fantasie"
+  },
+  {
+    "id": 224,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches philosophische Konzept wird durch Mortys Begegnungen mit alternativen Zukünften erforscht?",
+    "options": [
+      "Die Unvermeidlichkeit des Schicksals",
+      "Die Zerbrechlichkeit der Wahl",
+      "Die Illusion der Kontrolle",
+      "Die Last des Wissens"
+    ],
+    "answer": "Die Illusion der Kontrolle"
+  },
+  {
+    "id": 225,
+    "question": "In 'Rickmancing the Stone', welches narrative Element dient als Kritik an der modernen Gesellschaft?",
+    "options": [
+      "Es spiegelt den Zusammenbruch moderner Institutionen wider",
+      "Es symbolisiert Umweltschutz",
+      "Es hebt den Mangel an bedeutungsvollen Beziehungen hervor",
+      "Es betont die Hoffnung trotz des Ruins"
+    ],
+    "answer": "Es spiegelt den Zusammenbruch moderner Institutionen wider"
+  },
+  {
+    "id": 226,
+    "question": "In 'The Ricks Must Be Crazy', welches zugrunde liegende Thema wird bezüglich Ricks technologischem Hochmut behandelt?",
+    "options": [
+      "Der Verlust des freien Willens",
+      "Das Opfer unschuldiger Leben",
+      "Die Korruption seiner eigenen Moral",
+      "Die Untergrabung der natürlichen Ordnung"
+    ],
+    "answer": "Das Opfer unschuldiger Leben"
+  },
+  {
+    "id": 227,
+    "question": "In 'Total Rickall', welches Verhalten der Parasiten kommentiert am kritischsten die Natur des kollektiven Gedächtnisses?",
+    "options": [
+      "Ihre schnelle Replikation",
+      "Ihre Manipulation geteilten Erinnerns",
+      "Ihre nahtlose Integration in die Familie",
+      "Das selektive Löschen traumatischer Ereignisse"
+    ],
+    "answer": "Ihre Manipulation geteilten Erinnerns"
+  },
+  {
+    "id": 228,
+    "question": "In 'Pickle Rick', wie fordert Ricks Verwandlung herkömmliche Vorstellungen von Identität heraus?",
+    "options": [
+      "Es verwischt die Grenze zwischen Mensch und Objekt",
+      "Es bestärkt die Vorstellung eines unveränderlichen Selbst",
+      "Es schafft eine Dichotomie zwischen physischem und mentalem Zustand",
+      "Es macht Identität in einem chaotischen Universum irrelevant"
+    ],
+    "answer": "Es verwischt die Grenze zwischen Mensch und Objekt"
+  },
+  {
+    "id": 229,
+    "question": "In 'The Rickchurian Mortydate', welches zugrunde liegende Thema wird im Machtkampf zwischen Rick und dem Präsidenten am deutlichsten dargestellt?",
+    "options": [
+      "Die Vergeblichkeit politischer Autorität",
+      "Der korrumpierende Einfluss von Macht",
+      "Der Zusammenbruch familiärer Loyalität",
+      "Der Konflikt zwischen Genie und Bürokratie"
+    ],
+    "answer": "Der Konflikt zwischen Genie und Bürokratie"
+  },
+  {
+    "id": 230,
+    "question": "In 'Rickmancing the Stone', wie wird das postapokalyptische Setting genutzt, um das Thema der Selbstzerstörung zu illustrieren?",
+    "options": [
+      "Es wird als Symbol für den Zusammenbruch der Gesellschaft dargestellt",
+      "Es zeigt den Zusammenbruch von Familienwerten",
+      "Es steht für den brutalen Überlebenskampf",
+      "Es spiegelt den inneren Kampf um Hoffnung wider"
+    ],
+    "answer": "Es wird als Symbol für den Zusammenbruch der Gesellschaft dargestellt"
+  },
+  {
+    "id": 231,
+    "question": "In 'The Rickshank Rickdemption', welches narrative Element enthüllt Ricks Manipulation von Machtstrukturen am eindrucksvollsten?",
+    "options": [
+      "Seine komplizierte Fluchtstrategie",
+      "Sein Einsatz von Zeit- und Realitätsmanipulation",
+      "Sein strategischer Einsatz von Täuschung",
+      "Seine emotionale Kälte"
+    ],
+    "answer": "Sein strategischer Einsatz von Täuschung"
+  },
+  {
+    "id": 232,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert die Existenz nahezu identischer Ricks über das Thema Individualität?",
+    "options": [
+      "Dass Individualität eine Illusion ist",
+      "Dass Wiederholung die Norm ist",
+      "Dass das Multiversum die Einzigartigkeit aufhebt",
+      "Dass sich Wiederholungsmuster der Vorstellung von Fortschritt widersetzen"
+    ],
+    "answer": "Dass Individualität eine Illusion ist"
+  },
+  {
+    "id": 233,
+    "question": "In 'Morty's Mind Blowers', welche Aussage wird durch die selektive Beibehaltung bestimmter Erinnerungen gemacht?",
+    "options": [
+      "Dass einige Wahrheiten zu schmerzhaft sind",
+      "Dass Erinnerungen das Wesen der Identität ausmachen",
+      "Dass die Vergangenheit unausweichlich ist",
+      "Dass Vergessen befreiend sein kann"
+    ],
+    "answer": "Dass einige Wahrheiten zu schmerzhaft sind"
+  },
+  {
+    "id": 234,
+    "question": "In 'The Rickshank Rickdemption', wie spiegelt Ricks Manipulation seiner Gefangenen seine Weltanschauung wider?",
+    "options": [
+      "Er zeigt seine Verachtung vor Autoritäten",
+      "Er demonstriert seinen Glauben an das Chaos",
+      "Er unterstreicht seinen Einsatz für individuelle Freiheit",
+      "Er reflektiert seine zynische Sicht auf gesellschaftliche Strukturen"
+    ],
+    "answer": "Er reflektiert seine zynische Sicht auf gesellschaftliche Strukturen"
+  },
+  {
+    "id": 235,
+    "question": "In 'Pickle Rick', welches Element der Episode unterstreicht am effektivsten die Absurdität von Ricks wissenschaftlichen Unternehmungen?",
+    "options": [
+      "Die extremen Maßnahmen, die er ergreift, um zu überleben",
+      "Die bizarre Natur seiner Verwandlung",
+      "Die Reaktionen seiner Familie",
+      "Die Gegenüberstellung von Gewalt und Humor"
+    ],
+    "answer": "Die Gegenüberstellung von Gewalt und Humor"
+  },
+  {
+    "id": 236,
+    "question": "In 'The Whirly Dirly Conspiracy', welche Rolle spielt Jerry hauptsächlich?",
+    "options": [
+      "Comic Relief",
+      "Ein Kontrast zu Ricks Zynismus",
+      "Ein Symbol für familiäre Mittelmäßigkeit",
+      "Ein Agent des Wandels"
+    ],
+    "answer": "Ein Symbol für familiäre Mittelmäßigkeit"
+  },
+  {
+    "id": 237,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert das Auftauchen nahezu identischer Ricks über die Selbstuntersuchung?",
+    "options": [
+      "Dass Selbstuntersuchung vergeblich ist",
+      "Dass sie zu einem tieferen Verständnis der eigenen Fehler führt",
+      "Dass sie eine existentielle Krise auslöst",
+      "Dass sie das Unvermeidliche verstärkt"
+    ],
+    "answer": "Dass sie zu einem tieferen Verständnis der eigenen Fehler führt"
+  },
+  {
+    "id": 238,
+    "question": "In 'Rickmancing the Stone', welche Bedeutung hat die Darstellung einer gesetzlosen Umgebung in Bezug auf den menschlichen Zustand?",
+    "options": [
+      "Sie zeigt, dass Chaos der natürliche Zustand der Gesellschaft ist",
+      "Sie deutet darauf hin, dass Ordnung nur eine menschliche Konstruktion ist",
+      "Sie betont, dass Überleben moralische Kompromisse erfordert",
+      "Sie vermittelt, dass Hoffnung selbst in Ruinen existieren kann"
+    ],
+    "answer": "Sie deutet darauf hin, dass Ordnung nur eine menschliche Konstruktion ist"
+  },
+  {
+    "id": 239,
+    "question": "In 'The Rickshank Rickdemption', welche Rolle spielt Humor im Kontext der dunkleren Themen der Episode?",
+    "options": [
+      "Er verharmlost die Konsequenzen",
+      "Er dient als Bewältigungsmechanismus",
+      "Er unterminiert die Ernsthaftigkeit der Erzählung",
+      "Er schafft einen Kontrast, der die Wirkung der dunkleren Themen verstärkt"
+    ],
+    "answer": "Er schafft einen Kontrast, der die Wirkung der dunkleren Themen verstärkt"
+  },
+  {
+    "id": 240,
+    "question": "In 'Morty's Mind Blowers', was deutet die selektive Bewahrung bestimmter Erinnerungen über die Natur von Trauma an?",
+    "options": [
+      "Dass Trauma zyklisch ist",
+      "Dass nur bedeutende Erinnerungen die Identität formen",
+      "Dass das Vergessen als Abwehrmechanismus dient",
+      "Dass das Gehirn instinktiv Schmerz filtert"
+    ],
+    "answer": "Dass das Vergessen als Abwehrmechanismus dient"
+  },
+  {
+    "id": 241,
+    "question": "In 'The Old Man and the Seat', welchen Kommentar liefert die Serie über Technologie und Privatsphäre?",
+    "options": [
+      "Dass Technologie uns weiter isoliert",
+      "Dass Privatsphäre ein Luxus der Vergangenheit ist",
+      "Dass übermäßige Abhängigkeit von Technologie zum gesellschaftlichen Verfall führt",
+      "Dass selbst Genies Zuflucht vor digitaler Überwachung suchen"
+    ],
+    "answer": "Dass selbst Genies Zuflucht vor digitaler Überwachung suchen"
+  },
+  {
+    "id": 242,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', wie wird durch den zyklischen Verlauf von Ereignissen die traditionelle Vorstellung linearer Zeit in Frage gestellt?",
+    "options": [
+      "Es erzeugt ein Gefühl der Vergeblichkeit",
+      "Es betont die Zufälligkeit des Universums",
+      "Es zwingt die Charaktere, sich ihrem Schicksal zu stellen",
+      "Es verwischt den Unterschied zwischen Ursache und Wirkung"
+    ],
+    "answer": "Es verwischt den Unterschied zwischen Ursache und Wirkung"
+  },
+  {
+    "id": 243,
+    "question": "In 'Rickmancing the Stone', welches narrative Element dient als Kritik an der modernen Gesellschaft? (Var 243)",
+    "options": [
+      "Es wirkt als Kritik am modernen Kapitalismus",
+      "Es spiegelt das interne Chaos der Charaktere wider",
+      "Es dient als Metapher für gescheiterte Regierungsführung",
+      "Es illustriert die Unvermeidlichkeit der Zerstörung"
+    ],
+    "answer": "Es spiegelt das interne Chaos der Charaktere wider"
+  },
+  {
+    "id": 244,
+    "question": "In 'The Rickshank Rickdemption', welches Element von Ricks Dialog fasst seine Weltsicht am effektivsten zusammen? (Var 244)",
+    "options": [
+      "Sein häufiger Einsatz nihilistischer Witze",
+      "Seine Verachtung vor Autoritäten",
+      "Seine ausgeklügelten Rationalisierungen",
+      "Seine paradoxe Selbstwahrnehmung"
+    ],
+    "answer": "Seine paradoxe Selbstwahrnehmung"
+  },
+  {
+    "id": 245,
+    "question": "In 'Morty's Mind Blowers', was deutet die Enthüllung unterdrückter Erinnerungen über die Natur der Realität an? (Var 245)",
+    "options": [
+      "Dass Realität veränderlich ist",
+      "Dass Erinnerungen unzuverlässig sind",
+      "Dass die Vergangenheit unausweichlich ist",
+      "Dass Wahrheit subjektiv ist"
+    ],
+    "answer": "Dass Erinnerungen unzuverlässig sind"
+  },
+  {
+    "id": 246,
+    "question": "In 'Pickle Rick', welches thematische Element wird durch die Gegenüberstellung von Ricks Verwandlung und der Krise seiner Familie verstärkt? (Var 246)",
+    "options": [
+      "Der Zusammenbruch familiärer Bindungen",
+      "Die Absurdität des Eskapismus",
+      "Der Konflikt zwischen Intellekt und Emotion",
+      "Die Unvermeidlichkeit der Selbstzerstörung"
+    ],
+    "answer": "Der Konflikt zwischen Intellekt und Emotion"
+  },
+  {
+    "id": 247,
+    "question": "In 'The Whirly Dirly Conspiracy', welche narrative Funktion erfüllt das Resort-Setting hauptsächlich?",
+    "options": [
+      "Es bietet einen Rahmen für Selbstreflexion",
+      "Es schafft einen Raum zur Konfliktlösung",
+      "Es legt zugrunde liegende Unsicherheiten offen",
+      "Es dient als temporäre Flucht vor der Realität"
+    ],
+    "answer": "Es bietet einen Rahmen für Selbstreflexion"
+  },
+  {
+    "id": 248,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert die wiederkehrende Präsenz nahezu identischer Ricks über das Thema Selbstreplikation?",
+    "options": [
+      "Dass alle Ricks im Grunde identisch sind",
+      "Dass Individualität ein Konstrukt ist",
+      "Dass Selbstreplikation die Evolution vorantreibt",
+      "Dass Variation im unendlichen Multiversum unvermeidlich ist"
+    ],
+    "answer": "Dass Individualität ein Konstrukt ist"
+  },
+  {
+    "id": 249,
+    "question": "In 'Rickmancing the Stone', was spiegelt die Darstellung der verwesenden Landschaft hauptsächlich über den menschlichen Zustand wider?",
+    "options": [
+      "Sie spiegelt die emotionale Verödung der Charaktere wider",
+      "Sie symbolisiert den Zusammenbruch der sozialen Ordnung",
+      "Sie reflektiert die Brutalität des Überlebenskampfes",
+      "Sie steht im Kontrast zu einer unterschwelligen Hoffnung"
+    ],
+    "answer": "Sie symbolisiert den Zusammenbruch der sozialen Ordnung"
+  },
+  {
+    "id": 250,
+    "question": "In 'The Ricks Must Be Crazy', welches zugrunde liegende Thema wird durch das Miniaturuniversum-Experiment thematisiert?",
+    "options": [
+      "Die moralische Zweideutigkeit des wissenschaftlichen Fortschritts",
+      "Die Verletzlichkeit empfindungsfähigen Lebens",
+      "Die Unvorhersehbarkeit der Innovation",
+      "Die ethischen Implikationen von Technologie"
+    ],
+    "answer": "Die moralische Zweideutigkeit des wissenschaftlichen Fortschritts"
+  },
+{
+    "id": 251,
+    "question": "In 'Total Rickall', wie wird die Wahrnehmung von Erinnerung und Identität des Zuschauers in Frage gestellt?",
+    "options": [
+      "Indem widersprüchliche Erinnerungen präsentiert werden",
+      "Durch den Aufbau einer nicht-linearen Erzählung",
+      "Indem die Grenzen zwischen Wahrheit und Fiktion verwischt werden",
+      "Indem die selektive Natur der Erinnerung offenbart wird"
+    ],
+    "answer": "Indem die selektive Natur der Erinnerung offenbart wird"
+  },
+  {
+    "id": 252,
+    "question": "In 'Pickle Rick', was symbolisiert Ricks Verwandlung vor allem in Bezug auf die menschlichen Begrenzungen?",
+    "options": [
+      "Den Triumph über körperliche Beschränkungen",
+      "Die Ablehnung gesellschaftlicher Normen",
+      "Die Entmenschlichung des Genies",
+      "Die Absurdität, Schmerz zu entkommen"
+    ],
+    "answer": "Die Entmenschlichung des Genies"
+  },
+  {
+    "id": 253,
+    "question": "In 'The Whirly Dirly Conspiracy', welches narrative Element offenbart am besten die Dysfunktion in Ricks familiären Beziehungen?",
+    "options": [
+      "Die erzwungene Zusammenarbeit mit Jerry",
+      "Der Einsatz von Sarkasmus",
+      "Die Darstellung von Familienstreitigkeiten",
+      "Der Fokus auf individuelle Isolation"
+    ],
+    "answer": "Die erzwungene Zusammenarbeit mit Jerry"
+  },
+  {
+    "id": 254,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert das wiederkehrende Muster nahezu identischer Ricks?",
+    "options": [
+      "Dass Individualität eine Illusion ist",
+      "Dass Wiederholung die Norm ist",
+      "Dass das Multiversum die Einzigartigkeit aufhebt",
+      "Dass sich Wiederholungsmuster der Vorstellung von Fortschritt widersetzen"
+    ],
+    "answer": "Dass Individualität eine Illusion ist"
+  },
+  {
+    "id": 255,
+    "question": "In 'Rickmancing the Stone', was spiegelt die trostlose Umgebung hauptsächlich über die menschliche Natur wider?",
+    "options": [
+      "Die Brutalität des Überlebenskampfes",
+      "Die Hoffnungslosigkeit des Daseins",
+      "Der Zusammenbruch der sozialen Ordnung",
+      "Die Unbeständigkeit des Selbst"
+    ],
+    "answer": "Der Zusammenbruch der sozialen Ordnung"
+  },
+  {
+    "id": 256,
+    "question": "In 'The Rickshank Rickdemption', welche rhetorische Strategie fasst Ricks Verachtung gegenüber institutioneller Autorität am besten zusammen?",
+    "options": [
+      "Satirischer Spott",
+      "Logische Argumentation",
+      "Emotionaler Appell",
+      "Ironische Selbstabwertung"
+    ],
+    "answer": "Satirischer Spott"
+  },
+  {
+    "id": 257,
+    "question": "In 'Morty's Mind Blowers', wie wird die Zuverlässigkeit der Erinnerung grundlegend in Frage gestellt?",
+    "options": [
+      "Indem gezeigt wird, dass Erinnerungen willkürlich manipuliert werden können",
+      "Durch den Aufbau einer nicht-linearen Erzählstruktur",
+      "Durch den Einsatz surrealer visueller Effekte",
+      "Durch den Vergleich von Erinnerungen verschiedener Charaktere"
+    ],
+    "answer": "Indem gezeigt wird, dass Erinnerungen willkürlich manipuliert werden können"
+  },
+  {
+    "id": 258,
+    "question": "In 'Pickle Rick', welche tiefere metaphorische Implikation wird durch Ricks extreme Verwandlung angedeutet?",
+    "options": [
+      "Dass Identität an körperliche Form gebunden ist",
+      "Dass das Selbst über die physische Form hinausgeht",
+      "Dass menschliche Begrenzungen überwunden werden können",
+      "Dass Transformation immer schmerzhaft ist"
+    ],
+    "answer": "Dass das Selbst über die physische Form hinausgeht"
+  },
+  {
+    "id": 259,
+    "question": "In 'The Whirly Dirly Conspiracy', was suggeriert die erzwungene Zusammenarbeit mit Jerry über menschliche Verbindungen?",
+    "options": [
+      "Dass menschliche Verbindung oberflächlich ist",
+      "Dass Zusammenarbeit notwendig, aber oft unfreiwillig ist",
+      "Dass Menschen trotz aller Unterschiede verbunden sind",
+      "Dass familiäre Bindungen immer problematisch sind"
+    ],
+    "answer": "Dass Zusammenarbeit notwendig, aber oft unfreiwillig ist"
+  },
+  {
+    "id": 260,
+    "question": "In 'Close Rick-counters of the Rick Kind', welche philosophische Frage wirft das wiederkehrende Auftauchen nahezu identischer Ricks auf?",
+    "options": [
+      "Was definiert Individualität?",
+      "Ist freier Wille nur eine Illusion?",
+      "Führt Replikation zur Perfektion?",
+      "Bedeuten Ähnlichkeiten ein geteiltes Schicksal?"
+    ],
+    "answer": "Was definiert Individualität?"
+  },
+  {
+    "id": 261,
+    "question": "In 'Rickmancing the Stone', wie spiegelt der Zusammenbruch gesellschaftlicher Strukturen die inneren Konflikte der Charaktere wider?",
+    "options": [
+      "Indem äußere Umstände innere Zustände widerspiegeln",
+      "Indem der Verlust von Ordnung die innere Zerbrechlichkeit offenlegt",
+      "Indem der Konflikt um Freiheit betont wird",
+      "Indem die Charaktere ihre eigenen Dämonen konfrontieren"
+    ],
+    "answer": "Indem äußere Umstände innere Zustände widerspiegeln"
+  },
+  {
+    "id": 262,
+    "question": "In 'The Rickshank Rickdemption', welches Element von Ricks Fluchtplan spiegelt am besten seine Sicht auf Schicksal und Kontrolle wider?",
+    "options": [
+      "Sein Einsatz von Täuschung",
+      "Seine nonchalante Haltung gegenüber den Gefangenen",
+      "Die Komplexität des Plans",
+      "Sein Vertrauen in die eigene Genialität"
+    ],
+    "answer": "Sein Einsatz von Täuschung"
+  },
+  {
+    "id": 263,
+    "question": "In 'Morty's Mind Blowers', welche methodische Herangehensweise wird genutzt, um die Zuverlässigkeit der Erinnerung in Frage zu stellen?",
+    "options": [
+      "Die willkürliche Manipulation von Erinnerungen",
+      "Der Aufbau einer nicht-linearen Erzählstruktur",
+      "Der Einsatz surrealer visueller Effekte",
+      "Der Vergleich von Erinnerungen verschiedener Charaktere"
+    ],
+    "answer": "Die willkürliche Manipulation von Erinnerungen"
+  },
+  {
+    "id": 264,
+    "question": "In 'Pickle Rick', welche tiefere Bedeutung wird Ricks Findigkeit während seiner Verwandlung zugeschrieben?",
+    "options": [
+      "Sie demonstriert seinen Überlebensinstinkt",
+      "Sie unterstreicht seine Fähigkeit, über körperliche Grenzen hinauszugehen",
+      "Sie symbolisiert die Dualität von Genie und Wahnsinn",
+      "Sie zeigt, dass konventionelle Lösungen ineffektiv sind"
+    ],
+    "answer": "Sie symbolisiert die Dualität von Genie und Wahnsinn"
+  },
+  {
+    "id": 265,
+    "question": "In 'The Whirly Dirly Conspiracy', welche Rolle spielt das Resort-Setting bei der Erkundung des Themas Freiheit?",
+    "options": [
+      "Es dient als Symbol für Fluchtmöglichkeiten",
+      "Es zeigt, dass Freiheit oft erzwungen wird",
+      "Es betont, dass echte Freiheit durch die Umgebung eingeschränkt ist",
+      "Es unterstreicht, dass die Suche nach Freiheit auch Opfer erfordert"
+    ],
+    "answer": "Es zeigt, dass Freiheit oft erzwungen wird"
+  },
+  {
+    "id": 266,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie wird das Konzept der Sterblichkeit unter den verschiedenen Ricks dargestellt?",
+    "options": [
+      "Als unvermeidliches Schicksal",
+      "Als unwichtiger Faktor",
+      "Als Katalysator für Rebellion",
+      "Als verbindendes Element"
+    ],
+    "answer": "Als unvermeidliches Schicksal"
+  },
+  {
+    "id": 267,
+    "question": "In 'Rickmancing the Stone', welchem narrativen Zweck dient die Darstellung der Einöde hauptsächlich?",
+    "options": [
+      "Sie symbolisiert den Zusammenbruch der gesellschaftlichen Ordnung",
+      "Sie steht als Metapher für den Überlebenskampf",
+      "Sie verdeutlicht den Verlust von Hoffnung",
+      "Sie spiegelt die innere Zerrissenheit der Charaktere wider"
+    ],
+    "answer": "Sie symbolisiert den Zusammenbruch der gesellschaftlichen Ordnung"
+  },
+  {
+    "id": 268,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks kalkulierte Gleichgültigkeit gegenüber seinen Gefängniswärtern am meisten über seinen Charakter?",
+    "options": [
+      "Sein fehlendes Mitgefühl",
+      "Seine Überlegenheit in Intellekt und Strategie",
+      "Seine zynische Einstellung gegenüber Autoritäten",
+      "Sein Desinteresse an seinen Mitgefangenen"
+    ],
+    "answer": "Seine zynische Einstellung gegenüber Autoritäten"
+  },
+  {
+    "id": 269,
+    "question": "In 'Morty's Mind Blowers', welche methodische Herangehensweise wird genutzt, um die Zuverlässigkeit der Erinnerung in Frage zu stellen?",
+    "options": [
+      "Die willkürliche Manipulation von Erinnerungen",
+      "Der Aufbau einer nicht-linearen Erzählstruktur",
+      "Der Einsatz surrealer visueller Effekte",
+      "Der Vergleich von Erinnerungen verschiedener Charaktere"
+    ],
+    "answer": "Die willkürliche Manipulation von Erinnerungen"
+  },
+  {
+    "id": 270,
+    "question": "In 'Pickle Rick', welche philosophische Frage wirft Ricks Weigerung, sich mit seiner Familie auseinanderzusetzen, auf?",
+    "options": [
+      "Ob Isolation Freiheit bedeutet",
+      "Ob Vernachlässigung zu Erlösung führt",
+      "Ob das Vermeiden von emotionaler Nähe eine Strategie ist",
+      "Ob familiäre Bindungen überbewertet werden"
+    ],
+    "answer": "Ob das Vermeiden von emotionaler Nähe eine Strategie ist"
+  },
+  {
+    "id": 271,
+    "question": "In 'The Whirly Dirly Conspiracy', was deutet die erzwungene Kameradschaft zwischen Rick und Jerry über menschliche Verbindungen an?",
+    "options": [
+      "Dass Zusammenarbeit oft unfreiwillig ist",
+      "Dass Familienbande immer stark sind",
+      "Dass Isolation unvermeidlich ist",
+      "Dass echte Verbindung nur in Krisenzeiten entsteht"
+    ],
+    "answer": "Dass Zusammenarbeit oft unfreiwillig ist"
+  },
+  {
+    "id": 272,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie wird das Thema Selbstreflexion durch die Spiegelbilder von Rick erforscht?",
+    "options": [
+      "Durch die Betonung der Wiederholung",
+      "Durch das Aufzeigen der inneren Zerrissenheit",
+      "Durch den Vergleich zwischen verschiedenen Versionen",
+      "Durch das Hervorheben des Mangels an Individualität"
+    ],
+    "answer": "Durch das Aufzeigen der inneren Zerrissenheit"
+  },
+  {
+    "id": 273,
+    "question": "In 'Rickmancing the Stone', welches narrative Element fasst das Thema Überleben in einer postapokalyptischen Welt am besten zusammen?",
+    "options": [
+      "Das rohe, ungefilterte Verhalten der Überlebenden",
+      "Die Darstellung von Ressourcenknappheit",
+      "Die symbolische Bedeutung der Einöde",
+      "Der Kampf um persönliche Würde"
+    ],
+    "answer": "Das rohe, ungefilterte Verhalten der Überlebenden"
+  },
+  {
+    "id": 274,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks Manipulation des Gefängnisumfelds über seine Wahrnehmung der Realität?",
+    "options": [
+      "Dass Realität formbar ist",
+      "Dass er die traditionelle Logik ablehnt",
+      "Dass Kontrolle eine Illusion ist",
+      "Dass sein Genie über alle Umstände triumphiert"
+    ],
+    "answer": "Dass Realität formbar ist"
+  },
+  {
+    "id": 275,
+    "question": "In 'Morty's Mind Blowers', was impliziert das selektive Entfernen von Erinnerungen über die Natur von Trauma?",
+    "options": [
+      "Dass Trauma immer wiederkehrt",
+      "Dass Erinnerungen das Wesen der Identität ausmachen",
+      "Dass das Vergessen als Abwehrmechanismus dient",
+      "Dass das Gehirn Schmerz instinktiv filtert"
+    ],
+    "answer": "Dass das Vergessen als Abwehrmechanismus dient"
+  },
+  {
+    "id": 276,
+    "question": "In 'Pickle Rick', was zeigt Ricks extreme Verwandlung über seine Einstellung zu konventionellen Lösungen?",
+    "options": [
+      "Dass er radikale, unorthodoxe Methoden bevorzugt",
+      "Dass er Einfachheit verabscheut",
+      "Dass er Chaos als Strategie ansieht",
+      "Dass er Erwartungen trotzt"
+    ],
+    "answer": "Dass er radikale, unorthodoxe Methoden bevorzugt"
+  },
+  {
+    "id": 277,
+    "question": "In 'The Whirly Dirly Conspiracy', was enthüllt Ricks Bereitschaft, andere in seine Pläne einzubeziehen, über seinen Charakter?",
+    "options": [
+      "Dass er verzweifelt nach Verbindung sucht",
+      "Dass er pragmatisch ist",
+      "Dass er arrogant ist",
+      "Dass er allein nicht funktionieren kann"
+    ],
+    "answer": "Dass er pragmatisch ist"
+  },
+  {
+    "id": 278,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie dient das Konzept der gespiegelten Identitäten als Kritik an der Selbstreplikation?",
+    "options": [
+      "Dass Replikation zur Stagnation führt",
+      "Dass die Originalität in Frage gestellt wird",
+      "Dass Selbstreplikation die Einzigartigkeit untergräbt",
+      "Dass Wiederholungen unvermeidlich sind"
+    ],
+    "answer": "Dass Selbstreplikation die Einzigartigkeit untergräbt"
+  },
+  {
+    "id": 279,
+    "question": "In 'Rickmancing the Stone', welche symbolische Bedeutung hat der Kampf der Überlebenden in der kargen Einöde?",
+    "options": [
+      "Er steht für den Verlust von Würde",
+      "Er symbolisiert die Härte des Überlebenskampfes",
+      "Er spiegelt den Zusammenbruch der sozialen Ordnung wider",
+      "Er deutet auf eine unterdrückte Hoffnung hin"
+    ],
+    "answer": "Er spiegelt den Zusammenbruch der sozialen Ordnung wider"
+  },
+  {
+    "id": 280,
+    "question": "In 'The Rickshank Rickdemption', wie spiegelt Ricks Manipulation von Machtstrukturen primär seine Ideologie wider?",
+    "options": [
+      "Indem er zeigt, dass individuelle Genialität Institutionen übertrumpft",
+      "Indem er die Unwichtigkeit von Macht demonstriert",
+      "Indem er das Konzept von Kontrolle in Frage stellt",
+      "Indem er betont, dass Macht immer korrumpiert"
+    ],
+    "answer": "Indem er zeigt, dass individuelle Genialität Institutionen übertrumpft"
+  },
+  {
+    "id": 281,
+    "question": "In 'Morty's Mind Blowers', wie stellt das selektive Entfernen von Erinnerungen die Natur von Trauma in Frage?",
+    "options": [
+      "Dass Trauma immer wiederkehrt",
+      "Dass Erinnerungen das Wesen der Identität ausmachen",
+      "Dass das Vergessen als Abwehrmechanismus dient",
+      "Dass das Gehirn Schmerz instinktiv filtert"
+    ],
+    "answer": "Dass das Vergessen als Abwehrmechanismus dient"
+  },
+  {
+    "id": 282,
+    "question": "In 'Pickle Rick', welche zugrunde liegende philosophische Frage wirft die Absurdität von Ricks Verwandlung auf?",
+    "options": [
+      "Ist Identität ausschließlich an die Form gebunden?",
+      "Kann man sich jenseits der physischen Form definieren?",
+      "Sind Transformationen immer schmerzhaft?",
+      "Befreit Absurdität den Menschen?"
+    ],
+    "answer": "Kann man sich jenseits der physischen Form definieren?"
+  },
+  {
+    "id": 283,
+    "question": "In 'The Whirly Dirly Conspiracy', wie wird Humor mit Tragödie kontrastiert, um komplexe Beziehungen zu erkunden?",
+    "options": [
+      "Durch den Wechsel zwischen komischen und ernsten Szenen",
+      "Durch die Integration surrealen Humors in ernste Situationen",
+      "Durch den Einsatz von Sarkasmus in Momenten der Trauer",
+      "Durch das Hervorheben der Absurdität des Lebens"
+    ],
+    "answer": "Durch die Integration surrealen Humors in ernste Situationen"
+  },
+  {
+    "id": 284,
+    "question": "In 'Close Rick-counters of the Rick Kind', was symbolisiert das wiederkehrende Motiv von Spiegeln im Kontext der Selbstexploration?",
+    "options": [
+      "Die Vielfalt des Selbst",
+      "Die Fragmentierung der Identität",
+      "Die Wiederholung des Selbst",
+      "Die Dualität der Existenz"
+    ],
+    "answer": "Die Fragmentierung der Identität"
+  },
+  {
+    "id": 285,
+    "question": "In 'Rickmancing the Stone', was impliziert die Darstellung einer gesetzlosen Umgebung über den menschlichen Zustand?",
+    "options": [
+      "Dass Chaos die natürliche Ordnung ist",
+      "Dass die menschliche Existenz zerbrechlich ist",
+      "Dass das Fehlen von Ordnung die Bedeutungslosigkeit des Menschen offenbart",
+      "Dass soziale Normen lediglich Konstrukte sind"
+    ],
+    "answer": "Dass das Fehlen von Ordnung die Bedeutungslosigkeit des Menschen offenbart"
+  },
+  {
+    "id": 286,
+    "question": "In 'The Rickshank Rickdemption', was suggeriert Ricks aufwendiger Fluchtplan über seine Sicht auf Opfer?",
+    "options": [
+      "Dass Opfer für Freiheit notwendig sind",
+      "Dass persönliche Opfer bedeutungslos sind",
+      "Dass Selbstaufopferung den Triumph des Genies bedeutet",
+      "Dass das Streben nach Freiheit immer mit Verlust einhergeht"
+    ],
+    "answer": "Dass persönliche Opfer bedeutungslos sind"
+  },
+  {
+    "id": 287,
+    "question": "In 'Morty's Mind Blowers', wie wird das Thema unterdrückter Traumata durch die Erzählstruktur vermittelt?",
+    "options": [
+      "Durch Fragmentierung der Erzählung",
+      "Durch das Hervorheben wiederkehrender Erinnerungsfetzen",
+      "Durch den bewussten Aufbau von Narrativlücken",
+      "Durch eine Kombination dieser Ansätze"
+    ],
+    "answer": "Durch eine Kombination dieser Ansätze"
+  },
+  {
+    "id": 288,
+    "question": "In 'Pickle Rick', was offenbart Ricks extreme Verwandlung über die Grenzen der menschlichen Form?",
+    "options": [
+      "Dass die physische Form vergänglich ist",
+      "Dass die wahre Essenz jenseits des Körpers liegt",
+      "Dass Begrenzungen überwunden werden können",
+      "Dass Transformation immer mit Schmerz verbunden ist"
+    ],
+    "answer": "Dass die wahre Essenz jenseits des Körpers liegt"
+  },
+  {
+    "id": 289,
+    "question": "In 'The Whirly Dirly Conspiracy', was deutet die erzwungene Zusammenarbeit mit Jerry über die Dysfunktion in Ricks familiären Beziehungen an?",
+    "options": [
+      "Dass familiäre Bindungen immer problematisch sind",
+      "Dass Zusammenarbeit oft unfreiwillig ist",
+      "Dass Isolation vorherrscht",
+      "Dass Konflikte unausweichlich sind"
+    ],
+    "answer": "Dass Zusammenarbeit oft unfreiwillig ist"
+  },
+  {
+    "id": 290,
+    "question": "In 'Close Rick-counters of the Rick Kind', welche philosophische Frage wirft das wiederkehrende Auftauchen nahezu identischer Ricks auf?",
+    "options": [
+      "Was definiert Individualität?",
+      "Ist freier Wille nur eine Illusion?",
+      "Führt Replikation zur Perfektion?",
+      "Bedeuten Ähnlichkeiten ein geteiltes Schicksal?"
+    ],
+    "answer": "Was definiert Individualität?"
+  },
+  {
+    "id": 291,
+    "question": "In 'Rickmancing the Stone', wie spiegelt der Zusammenbruch gesellschaftlicher Strukturen die inneren Konflikte der Charaktere wider?",
+    "options": [
+      "Indem äußere Umstände innere Zustände widerspiegeln",
+      "Indem der Verlust von Ordnung die innere Zerbrechlichkeit offenlegt",
+      "Indem der Konflikt um Freiheit betont wird",
+      "Indem die Charaktere ihre eigenen Dämonen konfrontieren"
+    ],
+    "answer": "Indem äußere Umstände innere Zustände widerspiegeln"
+  },
+  {
+    "id": 292,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks Manipulation von Zeit und Realität über seine Weltanschauung?",
+    "options": [
+      "Dass Zeit ein formbares Konstrukt ist",
+      "Dass er die traditionelle Logik ablehnt",
+      "Dass Kontrolle eine Illusion ist",
+      "Dass sein Genie alle Umstände überwindet"
+    ],
+    "answer": "Dass Zeit ein formbares Konstrukt ist"
+  },
+  {
+    "id": 293,
+    "question": "In 'Morty's Mind Blowers', wie fordert das Zusammenspiel von Erinnerung und Identität traditionelle Erzählweisen heraus?",
+    "options": [
+      "Indem es die subjektive Natur der Wahrheit zeigt",
+      "Indem es widersprüchliche Erinnerungen präsentiert",
+      "Indem es die Komplexität des Gedächtnisses hervorhebt",
+      "Indem es den Unterschied zwischen Vergangenheit und Gegenwart verwischt"
+    ],
+    "answer": "Indem es die subjektive Natur der Wahrheit zeigt"
+  },
+  {
+    "id": 294,
+    "question": "In 'Pickle Rick', was deutet Ricks extreme Verwandlung über seine Perspektive auf körperliche Beschränkungen an?",
+    "options": [
+      "Dass die physische Form nur ein Gefäß ist",
+      "Dass körperliche Begrenzungen überwunden werden können",
+      "Dass Transformation immer mit Schmerz verbunden ist",
+      "Dass wahre Stärke jenseits des Körpers liegt"
+    ],
+    "answer": "Dass die physische Form nur ein Gefäß ist"
+  },
+  {
+    "id": 295,
+    "question": "In 'The Whirly Dirly Conspiracy', wie wird traditioneller Heldentum kritisiert?",
+    "options": [
+      "Indem gezeigt wird, dass heldenhafte Taten sinnlos sind",
+      "Indem die Schwächen der Helden offenbart werden",
+      "Indem konventionelle Moralvorstellungen unterlaufen werden",
+      "Indem das Ideal des Heldentums verspottet wird"
+    ],
+    "answer": "Indem das Ideal des Heldentums verspottet wird"
+  },
+  {
+    "id": 296,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert die Fülle ähnlicher Ricks über die Individualität im Multiversum?",
+    "options": [
+      "Dass Individualität verwässert wird",
+      "Dass jeder Rick einzigartig ist",
+      "Dass Wiederholung unvermeidlich ist",
+      "Dass Identität ein emergentes Phänomen ist"
+    ],
+    "answer": "Dass Individualität verwässert wird"
+  },
+  {
+    "id": 297,
+    "question": "In 'Rickmancing the Stone', wie kommentiert das Fehlen gesellschaftlicher Ordnung die persönliche Freiheit?",
+    "options": [
+      "Indem es den Preis der Freiheit verdeutlicht",
+      "Indem es zeigt, dass Freiheit ohne Ordnung chaotisch ist",
+      "Indem es betont, dass gesellschaftliche Normen lediglich Konstrukte sind",
+      "Indem es persönliche Freiheit als ultimatives Gut darstellt"
+    ],
+    "answer": "Indem es betont, dass gesellschaftliche Normen lediglich Konstrukte sind"
+  },
+  {
+    "id": 298,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks Manipulation von Machtstrukturen über seine Sicht auf Schicksal und Kontrolle?",
+    "options": [
+      "Dass Schicksal und Kontrolle untrennbar sind",
+      "Dass individuelle Genialität über Institutionen triumphiert",
+      "Dass Macht immer korrumpiert",
+      "Dass Freiheit nur ein Trugbild ist"
+    ],
+    "answer": "Dass individuelle Genialität über Institutionen triumphiert"
+  },
+  {
+    "id": 299,
+    "question": "In 'Morty's Mind Blowers', wie fordert das Zusammenspiel von Erinnerung und Identität traditionelle Erzählweisen heraus?",
+    "options": [
+      "Indem es die subjektive Natur der Wahrheit zeigt",
+      "Indem es widersprüchliche Erinnerungen präsentiert",
+      "Indem es die Komplexität des Gedächtnisses hervorhebt",
+      "Indem es den Unterschied zwischen Vergangenheit und Gegenwart verwischt"
+    ],
+    "answer": "Indem es die subjektive Natur der Wahrheit zeigt"
+  },
+  {
+    "id": 300,
+    "question": "In 'Pickle Rick', welche existenzielle Frage wirft Ricks Verwandlung letztlich über den menschlichen Zustand auf?",
+    "options": [
+      "Ist das physische Dasein notwendig für wahre Freiheit?",
+      "Können menschliche Grenzen überwunden werden?",
+      "Ist Identität ausschließlich an die körperliche Form gebunden?",
+      "Enthüllt extreme Transformation tiefere Wahrheiten?"
+    ],
+    "answer": "Ist Identität ausschließlich an die körperliche Form gebunden?"
+  },
+
+
 
 
 

@@ -1,5 +1,9 @@
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
+/* Google Fonts Import (Consider moving to HTML for performance) */
+/* 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+*/
 
 /* CSS-Variablen definieren */
 :root {
@@ -13,8 +17,9 @@
   --bg-body: radial-gradient(circle at 30% 30%, #1a1a1a, #000);
   --bg-light: rgba(255, 255, 255, 0.1);
   --bg-section: rgba(255, 255, 255, 0.05);
-  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.2);
-  --shadow-dark: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
+  --shadow-dark: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3);
+  --transition-duration: 0.3s;
 }
 
 /* Globaler Reset & Basisstyles */
@@ -40,14 +45,14 @@ body {
 
 main {
   flex: 1;
-  padding: 20px;
+  padding: 1.25rem; /* 20px */
 }
 
 /* Header, Navigation & Hamburger */
 .header {
   background: var(--gradient-header);
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 1.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -55,7 +60,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 10px;
+  padding-bottom: 0.625rem; /* 10px */
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -66,7 +71,7 @@ main {
   color: var(--accent-color);
   text-align: center;
   flex: 1;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .coin-display {
@@ -78,20 +83,20 @@ main {
 }
 
 .coin-display span {
-  margin-left: 5px;
+  margin-left: 0.3125rem; /* 5px */
 }
 
 /* Go to Profile Button – zusätzlicher Abstand */
 .go-to-profile {
   display: inline-block;
-  margin-top: 20px; /* Erhöhter Abstand zwischen Coins und "Go to Profile" */
-  padding: 10px 20px;
+  margin-top: 1.25rem; /* 20px */
+  padding: 0.625rem 1.25rem;
   background: var(--gradient-button);
   color: #000;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background var(--transition-duration) ease;
 }
 
 .go-to-profile:hover {
@@ -104,8 +109,8 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 15px;
+  gap: 0.9375rem; /* 15px */
+  margin-top: 0.9375rem;
 }
 
 .nav-list li a,
@@ -113,16 +118,16 @@ main {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  padding: 8px 12px;
+  padding: 0.5rem 0.75rem; /* 8px 12px */
   border: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: all var(--transition-duration) ease;
 }
 
 .nav-list li a:hover,
 .header nav ul li a:hover {
   border-color: var(--accent-color);
   background-color: rgba(240, 225, 48, 0.2);
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 /* Hamburger-Menü */
@@ -135,72 +140,72 @@ main {
 }
 
 .hamburger .bar {
-  width: 25px;
-  height: 3px;
-  margin: 4px 0;
+  width: 1.5625rem; /* 25px */
+  height: 0.1875rem; /* 3px */
+  margin: 0.25rem 0;
   background-color: #fff;
-  transition: all 0.3s ease;
+  transition: all var(--transition-duration) ease;
 }
 
 .hamburger.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(0.5rem) rotate(45deg);
 }
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
 .hamburger.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-0.5rem) rotate(-45deg);
 }
 
 /* Footer */
 .footer {
   background: var(--gradient-header);
   text-align: center;
-  padding: 15px;
+  padding: 0.9375rem; /* 15px */
   font-size: 0.9rem;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 /* Home Page */
 .home-page {
   text-align: center;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
   background: var(--bg-section);
 }
 
 .hero-section {
-  max-width: 800px;
-  margin: 0 auto 30px;
+  max-width: 50rem; /* 800px */
+  margin: 0 auto 1.875rem; /* 0 auto 30px */
 }
 
 .hero-title {
   font-family: var(--font-display);
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   color: var(--accent-color);
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 0.9375rem;
+  margin-bottom: 1.875rem;
 }
 
 .hero-button {
   background: var(--gradient-button);
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  transition: background 0.3s ease;
+  transition: background var(--transition-duration) ease;
 }
 
 .hero-button:hover {
@@ -212,9 +217,9 @@ main {
 .features-section,
 .news-section {
   background: var(--bg-section);
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  margin-bottom: 1.875rem;
 }
 
 .info-section h2,
@@ -222,7 +227,7 @@ main {
 .news-section h2 {
   font-family: var(--font-display);
   color: var(--accent-color);
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .features-section ul {
@@ -233,36 +238,36 @@ main {
 }
 
 .features-section ul li {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .news-section p {
   font-size: 1.1rem;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 /* Characters & Character Cards */
 .characters-page {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 
 .character-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  gap: 1.875rem;
+  margin-top: 1.875rem;
 }
 
 .character-card {
   background: var(--bg-light);
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   overflow: hidden;
   text-align: center;
-  padding: 10px;
+  padding: 0.625rem;
   box-shadow: var(--shadow-light);
-  transition: transform 0.3s ease, border 0.3s ease;
+  transition: transform var(--transition-duration) ease, border var(--transition-duration) ease;
 }
 
 .character-card:hover {
@@ -280,29 +285,29 @@ main {
 .character-card h3 {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 /* Daily Bonus & Bonus Button */
 .daily-bonus {
   background: var(--bg-section);
-  padding: 15px;
-  border-radius: 10px;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
   text-align: center;
-  margin: 20px auto;
-  max-width: 400px;
+  margin: 1.25rem auto;
+  max-width: 25rem;
 }
 
 .bonus-button {
   background: var(--gradient-button);
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3125rem;
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s ease;
+  margin-top: 0.625rem;
+  transition: background var(--transition-duration) ease;
 }
 
 .bonus-button:hover {
@@ -311,41 +316,41 @@ main {
 
 /* Quiz Page */
 .quiz-page {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 
 .question-card {
   background: var(--bg-light);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   width: 90%;
-  max-width: 500px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 31.25rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3);
 }
 
 .question-text {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .options-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 0.9375rem;
+  margin-bottom: 1.25rem;
 }
 
 .option {
-  padding: 12px 15px;
+  padding: 0.75rem;
   border: 2px solid transparent;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: background var(--transition-duration) ease, border-color var(--transition-duration) ease;
 }
 
 .option:hover {
@@ -359,7 +364,7 @@ main {
 
 .feedback {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   font-weight: bold;
   color: var(--accent-color);
 }
@@ -367,12 +372,12 @@ main {
 .submit-button {
   background: var(--gradient-button);
   border: none;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   color: #000;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition-duration) ease;
 }
 
 .submit-button:hover {
@@ -382,12 +387,12 @@ main {
 .restart-button {
   background: var(--gradient-restart);
   border: none;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   color: #fff;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition-duration) ease;
 }
 
 .restart-button:hover {
@@ -396,23 +401,23 @@ main {
 
 /* Missions Page */
 .missions-page {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 
 .missions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .mission-card {
   background: var(--bg-light);
-  border-radius: 10px;
-  padding: 15px;
+  border-radius: 0.625rem;
+  padding: 0.9375rem;
   box-shadow: var(--shadow-dark);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-duration) ease;
 }
 
 .mission-card:hover {
@@ -422,11 +427,11 @@ main {
 .mission-description {
   font-family: var(--font-display);
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .mission-reward {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   font-weight: bold;
   color: var(--accent-color);
 }
@@ -434,11 +439,11 @@ main {
 .mission-button {
   background: var(--gradient-button);
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.3125rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition-duration) ease;
 }
 
 .mission-button:hover {
@@ -453,25 +458,25 @@ main {
 /* Episoden & Locations Pages */
 .episodes-page,
 .locations-page {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 
 .episodes-grid,
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .episode-card,
 .location-card {
   background: var(--bg-light);
-  padding: 15px;
-  border-radius: 10px;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
   box-shadow: var(--shadow-dark);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-duration) ease;
 }
 
 .episode-card:hover,
@@ -481,7 +486,7 @@ main {
 
 .details-link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
@@ -495,19 +500,19 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
 }
 
 .pagination button {
-  padding: 8px 15px;
+  padding: 0.5rem 0.9375rem;
   background: var(--gradient-button);
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition-duration) ease;
 }
 
 .pagination button:hover {
@@ -516,7 +521,7 @@ main {
 
 .back-link {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
@@ -528,23 +533,23 @@ main {
 
 /* Character Details Page */
 .character-details-page {
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .character-card-detail {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.25rem;
   background: var(--bg-light);
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
   box-shadow: var(--shadow-dark);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .detail-image {
-  width: 300px;
-  border-radius: 10px;
+  width: 18.75rem; /* 300px */
+  border-radius: 0.625rem;
 }
 
 .detail-info {
@@ -558,45 +563,45 @@ main {
 }
 
 .episode-list li {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 /* Profil-Seite */
 .profile-page {
-  padding: 20px;
+  padding: 1.25rem;
   text-align: center;
 }
 
 .profile-info {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin: 20px 0;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
 }
 
 .profile-card {
   background: var(--bg-light);
-  padding: 15px;
-  border-radius: 10px;
-  min-width: 120px;
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
+  min-width: 7.5rem;
 }
 
 /* Coin Farm Auswahl */
 .coin-farm-selection {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 0.9375rem;
   flex-wrap: wrap;
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 
 .coin-farm-card {
   background: var(--bg-light);
-  padding: 5px;
-  border-radius: 10px;
+  padding: 0.3125rem;
+  border-radius: 0.625rem;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease, border 0.3s ease;
+  transition: transform var(--transition-duration) ease, border var(--transition-duration) ease;
 }
 
 .coin-farm-card.selected {
@@ -605,7 +610,7 @@ main {
 
 .coin-farm-card img {
   width: auto;
-  max-width: 80px;
+  max-width: 5rem;
   height: auto;
   aspect-ratio: 1 / 1;
   display: block;
@@ -615,21 +620,21 @@ main {
 /* Unlocked Characters Grid */
 .unlocked-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+  gap: 0.9375rem;
+  margin-top: 1.25rem;
 }
 
 .unlocked-card {
   background: var(--bg-light);
-  padding: 5px;
-  border-radius: 10px;
+  padding: 0.3125rem;
+  border-radius: 0.625rem;
   text-align: center;
 }
 
 .unlocked-card img {
   width: auto;
-  max-width: 80px;
+  max-width: 5rem;
   height: auto;
   aspect-ratio: 1 / 1;
   display: block;
@@ -640,13 +645,13 @@ main {
 .upgrade-button {
   background: var(--gradient-button);
   border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3125rem;
   font-weight: bold;
   color: #000;
   cursor: pointer;
-  transition: background 0.3s ease;
-  margin-top: 10px;
+  transition: background var(--transition-duration) ease;
+  margin-top: 0.625rem;
 }
 
 .upgrade-button:hover {
@@ -656,16 +661,16 @@ main {
 /* (Optional) Load More Button */
 .load-more-button {
   display: block;
-  margin: 20px auto;
-  padding: 12px 24px;
+  margin: 1.25rem auto;
+  padding: 0.75rem 1.5rem;
   background: var(--gradient-button);
   color: #000;
   font-size: 1rem;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background var(--transition-duration) ease;
 }
 
 .load-more-button:hover {
@@ -673,16 +678,16 @@ main {
 }
 
 /* Responsive Anpassungen für kleinere Geräte */
-@media (max-width: 480px) {
+@media (max-width: 30rem) { /* 480px */
   .character-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 10px 0;
-    padding: 0 10px;
+    gap: 0.625rem;
+    margin: 0.625rem 0;
+    padding: 0 0.625rem;
   }
   
   .character-card img {
-    max-width: 100px;
+    max-width: 6.25rem; /* 100px */
     width: auto;
     height: auto;
     display: block;
@@ -691,6 +696,6 @@ main {
   
   .character-card h3 {
     font-size: 1.2rem;
-    margin: 5px 0;
+    margin: 0.3125rem 0;
   }
 }

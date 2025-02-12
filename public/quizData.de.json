@@ -548,5 +548,556 @@
       "Lehren"
     ],
     "answer": "Eine Aufgabe erfüllen"
+  },
+ {
+    "id": 51,
+    "question": "Was ist Ricks Schlagwort? (Var 51)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 52,
+    "question": "Was ist Mortys Nachname? (Var 52)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 53,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 53)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 54,
+    "question": "Wer ist Birdperson? (Var 54)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 55,
+    "question": "Was ist das Citadel der Ricks? (Var 55)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 56,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 56)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 57,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 57)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 58,
+    "question": "Wer ist Evil Morty? (Var 58)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 59,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 59)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 60,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 60)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 61,
+    "question": "Was ist Ricks Schlagwort? (Var 61)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 62,
+    "question": "Was ist Mortys Nachname? (Var 62)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 63,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 63)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 64,
+    "question": "Wer ist Birdperson? (Var 64)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 65,
+    "question": "Was ist das Citadel der Ricks? (Var 65)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 66,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 66)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 67,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 67)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 68,
+    "question": "Wer ist Evil Morty? (Var 68)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 69,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 69)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 70,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 70)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 71,
+    "question": "Was ist Ricks Schlagwort? (Var 71)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 72,
+    "question": "Was ist Mortys Nachname? (Var 72)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 73,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 73)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 74,
+    "question": "Wer ist Birdperson? (Var 74)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 75,
+    "question": "Was ist das Citadel der Ricks? (Var 75)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 76,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 76)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 77,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 77)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 78,
+    "question": "Wer ist Evil Morty? (Var 78)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 79,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 79)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 80,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 80)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 81,
+    "question": "Was ist Ricks Schlagwort? (Var 81)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 82,
+    "question": "Was ist Mortys Nachname? (Var 82)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 83,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 83)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 84,
+    "question": "Wer ist Birdperson? (Var 84)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 85,
+    "question": "Was ist das Citadel der Ricks? (Var 85)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 86,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 86)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 87,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 87)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 88,
+    "question": "Wer ist Evil Morty? (Var 88)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 89,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 89)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 90,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 90)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 91,
+    "question": "Was ist Ricks Schlagwort? (Var 91)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 92,
+    "question": "Was ist Mortys Nachname? (Var 92)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 93,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 93)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 94,
+    "question": "Wer ist Birdperson? (Var 94)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 95,
+    "question": "Was ist das Citadel der Ricks? (Var 95)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 96,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 96)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 97,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 97)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 98,
+    "question": "Wer ist Evil Morty? (Var 98)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 99,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 99)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 100,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 100)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
   }
+
 ]

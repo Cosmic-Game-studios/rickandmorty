@@ -12,27 +12,36 @@ import { UserContext } from '../context/UserContext';
 // Lazy-load the DailyBonus component
 const DailyBonus = lazy(() => import('../components/DailyBonus'));
 
-// Custom hook to determine if the screen is mobile
+// Custom hook to determine if the screen is mobile (with debounce)
 const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  
+  // Ensure window exists (for SSR compatibility)
+  const getIsMobile = () => (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
+  const [isMobile, setIsMobile] = useState(getIsMobile);
+
   useEffect(() => {
+    let timeoutId;
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setIsMobile(getIsMobile());
+      }, 150); // Debounce delay
     };
+
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
-  
+
   return isMobile;
 };
 
 const Home = () => {
-  // Extract context values
   const { level, rewardPoints, coins } = useContext(UserContext);
   const isMobile = useIsMobile();
 
-  // Static content for features and news is re-generated only when changes occur
+  // Memoize static content so it's not recalculated on every render
   const features = useMemo(() => (
     <ul>
       <li>Exciting missions and challenging quizzes</li>
@@ -48,17 +57,17 @@ const Home = () => {
       <li>Performance Optimizations</li>
       <li>WIP Fusion Character</li>
       <li>WIP DE</li>
- </ul>
+    </ul>
   ), []);
 
   return (
     <div className={`home-page ${isMobile ? 'mobile' : ''}`}>
-      {/* Daily Bonus is loaded lazily */}
+      {/* Lazy-loaded Daily Bonus */}
       <Suspense fallback={<div className="suspense-fallback">Loading Daily Bonus...</div>}>
         <DailyBonus />
       </Suspense>
 
-      {/* Hero Section as header */}
+      {/* Hero Section */}
       <header className="hero-section">
         <h1 className="hero-title">Rick and Morty Adventure</h1>
         <p className="hero-subtitle">

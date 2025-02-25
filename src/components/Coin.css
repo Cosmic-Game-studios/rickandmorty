@@ -1,26 +1,43 @@
 /* ===================================================================== */
-/* Coin Component Styles                                                 */
+/* Coin Component Styles - Verbesserte Version                                */
 /* ===================================================================== */
 
-/* Zentrale Variablen */
+/* Coin Variables - mit Design-System-Integration */
 :root {
-  --coin-size: 50px;
-  --coin-inner-scale: 0.9; /* innerer Coin = 90% der Gesamtgröße */
-  --coin-gradient-start: #ffcc00;
-  --coin-gradient-end: #ff0066;
-  --coin-inner-gradient-end: #ff9933;
-  --coin-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --coin-animation-duration: 3s;
+  /* Basis-Größen */
+  --coin-size: 30px;
+  --coin-size-large: 50px;
+  --coin-inner-scale: 0.85;
   
+  /* Farben & Verläufe */
+  --coin-gradient-start: #ffcc00;
+  --coin-gradient-end: #ff9933;
+  --coin-inner-gradient-start: #ffcc00;
+  --coin-inner-gradient-end: #ff0066;
+  --coin-text-color: #000;
+  
+  /* Antennen-Styling */
   --coin-antenna-color: #fff;
-  --coin-antenna-width: 3px;
-  --coin-antenna-height: 15px;
-  --coin-antenna-offset-top: -5px;
+  --coin-antenna-width: 2px;
+  --coin-antenna-height: 8px;
+  --coin-antenna-offset-top: -3px;
   --coin-antenna-rotate-left: -20deg;
   --coin-antenna-rotate-right: 20deg;
   
-  --coin-text-color: #000;
-  --coin-text-font-size: 10px;
+  /* Animation & Effekte */
+  --coin-animation-duration: 8s;
+  --coin-hover-animation-duration: 1.5s;
+  --coin-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --coin-hover-box-shadow: 0 4px 8px rgba(255, 204, 0, 0.4);
+  --coin-transition-duration: 0.3s;
+}
+
+/* Coin Container */
+.coin-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 /* Haupt-Coin-Stil */
@@ -34,28 +51,59 @@
   justify-content: center;
   position: relative;
   box-shadow: var(--coin-box-shadow);
-  animation: spin var(--coin-animation-duration) linear infinite;
+  animation: coin-spin var(--coin-animation-duration) linear infinite;
   will-change: transform;
+  transition: box-shadow var(--coin-transition-duration) ease, transform var(--coin-transition-duration) ease;
+  cursor: pointer;
 }
 
-/* Innerer Coin – leichter 3D-Effekt */
+/* Hover-Effekt */
+.coin:hover {
+  box-shadow: var(--coin-hover-box-shadow);
+  animation: coin-spin-hover var(--coin-hover-animation-duration) linear infinite;
+  transform: scale(1.05);
+}
+
+/* Innerer Coin – 3D-Effekt */
 .coin-inner {
   width: calc(var(--coin-size) * var(--coin-inner-scale));
   height: calc(var(--coin-size) * var(--coin-inner-scale));
   border-radius: 50%;
-  background: radial-gradient(circle at center, var(--coin-gradient-start), var(--coin-inner-gradient-end));
+  background: radial-gradient(circle at center, var(--coin-inner-gradient-start), var(--coin-inner-gradient-end));
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glanz-Effekt im Inneren */
+.coin-inner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  transform: rotate(-45deg);
+  animation: coin-shine 4s linear infinite;
+  opacity: 0.7;
 }
 
 /* Text im Coin */
 .coin-text {
   color: var(--coin-text-color);
-  font-family: 'Bangers', cursive;
-  font-size: var(--coin-text-font-size);
+  font-family: var(--font-display, 'Bangers', cursive);
+  font-size: max(8px, calc(var(--coin-size) * 0.2));
   font-weight: bold;
   text-align: center;
+  user-select: none;
 }
 
 /* Pseudo-Elemente für "Antennen" */
@@ -67,25 +115,88 @@
   width: var(--coin-antenna-width);
   height: var(--coin-antenna-height);
   background: var(--coin-antenna-color);
-  border-radius: 3px;
+  border-radius: calc(var(--coin-antenna-width) / 2);
+  z-index: 1;
 }
 
 .coin::before {
-  left: 15px;
+  left: calc(var(--coin-size) * 0.3);
   transform: rotate(var(--coin-antenna-rotate-left));
 }
 
 .coin::after {
-  right: 15px;
+  right: calc(var(--coin-size) * 0.3);
   transform: rotate(var(--coin-antenna-rotate-right));
 }
 
-/* Spin-Animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
+/* Normale Spin-Animation */
+@keyframes coin-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Schnellere Hover-Animation */
+@keyframes coin-spin-hover {
+  0% { transform: rotate(0deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1.05); }
+}
+
+/* Glanz-Animation */
+@keyframes coin-shine {
+  0% { transform: rotate(-45deg) translateY(-120%); }
+  50% { transform: rotate(-45deg) translateY(100%); }
+  100% { transform: rotate(-45deg) translateY(100%); }
+}
+
+/* Pulse-Animation für Münz-Gewinn */
+@keyframes coin-pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.coin.pulse {
+  animation: coin-pulse 0.5s ease;
+}
+
+/* Responsivität */
+@media (min-width: 768px) {
+  .coin {
+    width: var(--coin-size-large);
+    height: var(--coin-size-large);
   }
-  100% {
-    transform: rotate(360deg);
+  
+  .coin-inner {
+    width: calc(var(--coin-size-large) * var(--coin-inner-scale));
+    height: calc(var(--coin-size-large) * var(--coin-inner-scale));
+  }
+  
+  .coin::before,
+  .coin::after {
+    height: calc(var(--coin-antenna-height) * 1.5);
+    width: calc(var(--coin-antenna-width) * 1.5);
+  }
+  
+  .coin::before {
+    left: calc(var(--coin-size-large) * 0.3);
+  }
+  
+  .coin::after {
+    right: calc(var(--coin-size-large) * 0.3);
+  }
+}
+
+/* Barrierefreiheit */
+@media (prefers-reduced-motion: reduce) {
+  .coin {
+    animation: none;
+  }
+  
+  .coin:hover {
+    animation: none;
+  }
+  
+  .coin-inner::before {
+    animation: none;
   }
 }

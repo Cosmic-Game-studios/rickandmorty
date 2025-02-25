@@ -2764,3 +2764,294 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     width: 100%;
   }
 }
+/* Loading Screen Styles */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-body);
+  z-index: 1000;
+}
+
+.loading-container {
+  text-align: center;
+  max-width: 90%;
+}
+
+.loading-container h2 {
+  font-family: var(--font-display);
+  color: var(--accent-color);
+  margin-top: var(--space-lg);
+  animation: fadeInOut 1.5s infinite alternate;
+}
+
+.portal-animation {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.portal-outer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #2ecc71, #3498db, #9b59b6, #f1c40f);
+  animation: rotate 3s linear infinite, glow 2s ease-in-out infinite alternate;
+}
+
+.portal-inner {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #9b59b6, #3498db, #2ecc71, #f1c40f);
+  animation: rotate 2s linear infinite reverse, pulse 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(46, 204, 113, 0.5); }
+  33% { box-shadow: 0 0 15px rgba(52, 152, 219, 0.5); }
+  66% { box-shadow: 0 0 20px rgba(155, 89, 182, 0.5); }
+  100% { box-shadow: 0 0 25px rgba(241, 196, 15, 0.5); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(0.95); }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Error Boundary Styles */
+.error-boundary {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg);
+}
+
+.error-container {
+  background: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-xl);
+  max-width: 800px;
+  text-align: center;
+  box-shadow: var(--shadow-dark);
+  border-left: 4px solid #ff5a5f;
+}
+
+.error-container h2 {
+  font-family: var(--font-display);
+  color: var(--accent-color);
+  margin-bottom: var(--space-md);
+  font-size: 2rem;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.error-details {
+  margin-top: var(--space-xl);
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  padding: var(--space-md);
+  border-radius: var(--border-radius-sm);
+  overflow: auto;
+  max-height: 300px;
+}
+
+.error-details h3 {
+  color: var(--accent-color);
+  margin-bottom: var(--space-sm);
+}
+
+.error-details pre {
+  font-family: monospace;
+  font-size: 0.8rem;
+  margin-top: var(--space-sm);
+  white-space: pre-wrap;
+  color: var(--text-secondary);
+}
+
+/* 404 Not Found Page */
+.not-found-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.not-found-container {
+  max-width: 800px;
+  padding: var(--space-xl);
+}
+
+.not-found-title {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  color: var(--accent-color);
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(240, 225, 48, 0.5);
+  animation: glitch 1s linear infinite alternate;
+}
+
+.not-found-subtitle {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: var(--space-lg);
+}
+
+.not-found-content {
+  margin-bottom: var(--space-xl);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.not-found-content p {
+  margin-bottom: var(--space-md);
+}
+
+.not-found-portal {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: var(--space-xl) auto;
+}
+
+.not-found-actions {
+  margin-top: var(--space-xl);
+}
+
+.portal-button {
+  display: inline-block;
+  background: var(--gradient-button);
+  color: #000;
+  font-weight: bold;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--border-radius-md);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(240, 225, 48, 0.3);
+}
+
+.portal-button:hover {
+  background: var(--gradient-button-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(240, 225, 48, 0.5);
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+                0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                0.05em 0 0 rgba(0, 255, 0, 0.75),
+                0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+                0.05em 0 0 rgba(0, 255, 0, 0.75),
+                0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+                -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+                -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 48rem) {
+  .not-found-title {
+    font-size: 6rem;
+  }
+  
+  .not-found-subtitle {
+    font-size: 2rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .error-actions button,
+  .error-actions a {
+    width: 100%;
+  }
+  
+  .portal-animation,
+  .not-found-portal {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 30rem) {
+  .not-found-title {
+    font-size: 4rem;
+  }
+  
+  .not-found-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .portal-animation,
+  .not-found-portal {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .loading-container h2 {
+    font-size: 1.5rem;
+  }
+}

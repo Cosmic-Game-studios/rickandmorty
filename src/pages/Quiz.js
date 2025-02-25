@@ -25,8 +25,11 @@ function Quiz() {
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [feedback, setFeedback] = useState('');
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [waitingForNext, setWaitingForNext] = useState(false);
 
   // Translation object for basic UI texts
   const t = useMemo(() => {
@@ -43,7 +46,10 @@ function Quiz() {
           `You answered ${score} out of ${total} questions correctly.`,
         submit: "Submit Answer",
         correctFeedback: "Correct answer! +50 points",
-        wrongFeedback: "Wrong answer."
+        wrongFeedback: "Wrong answer.",
+        correctAnswerWas: "The correct answer was:",
+        next: "Next Question",
+        restartQuiz: "Restart Quiz"
       },
       de: {
         selectLanguage: "Wählen Sie Ihre Sprache für das Quiz",
@@ -57,7 +63,10 @@ function Quiz() {
           `Sie haben ${score} von ${total} Fragen richtig beantwortet.`,
         submit: "Antwort absenden",
         correctFeedback: "Richtige Antwort! +50 Punkte",
-        wrongFeedback: "Falsche Antwort."
+        wrongFeedback: "Falsche Antwort.",
+        correctAnswerWas: "Die richtige Antwort war:",
+        next: "Nächste Frage",
+        restartQuiz: "Quiz neu starten"
       }
     };
   }, []);
@@ -111,6 +120,61 @@ function Quiz() {
     localStorage.setItem('dailyQuizData', JSON.stringify(data));
   };
 
+  // Handler for answering a question
+  const handleAnswer = () => {
+    const currentQuiz = quizQuestions[currentQuestion];
+    if (!currentQuiz) return;
+
+    setWaitingForNext(true);
+    
+    if (selected === currentQuiz.answer) {
+      setScore(prev => prev + 1);
+      completeMission(50); // 50 points for a correct answer
+      setFeedback(t[language].correctFeedback);
+      setIsAnswerCorrect(true);
+    } else {
+      setFeedback(t[language].wrongFeedback);
+      setShowCorrectAnswer(true);
+      setIsAnswerCorrect(false);
+    }
+  };
+
+  // Handler for moving to the next question
+  const handleNextQuestion = () => {
+    if (currentQuestion < quizQuestions.length - 1) {
+      setCurrentQuestion(prev => prev + 1);
+      setSelected('');
+      setFeedback('');
+      setShowCorrectAnswer(false);
+      setIsAnswerCorrect(null);
+      setWaitingForNext(false);
+    } else {
+      setQuizCompleted(true);
+      updateDailyQuizCount(); // Update the daily counter when the quiz is completed
+    }
+  };
+
+  // Handler for restarting the quiz
+  const handleRestartQuiz = () => {
+    // Reshuffle questions
+    const shuffledData = shuffleArray(allQuestions);
+    const selectedQuestions = shuffledData.slice(0, 10).map(q => ({
+      ...q,
+      shuffledOptions: shuffleArray(q.options || [])
+    }));
+    
+    // Reset states
+    setQuizQuestions(selectedQuestions);
+    setCurrentQuestion(0);
+    setSelected('');
+    setScore(0);
+    setQuizCompleted(false);
+    setFeedback('');
+    setShowCorrectAnswer(false);
+    setIsAnswerCorrect(null);
+    setWaitingForNext(false);
+  };
+
   // LANGUAGE SELECTION UI
   if (!language) {
     return (
@@ -121,7 +185,7 @@ function Quiz() {
             {t.en.selectLanguage}
           </p>
         </header>
-        <section className="info-section">
+        <section className="language-selection">
           <div className="hero-buttons" style={{ justifyContent: 'center', gap: '1rem' }}>
             <button
               className="hero-button"
@@ -143,41 +207,22 @@ function Quiz() {
     );
   }
 
-  if (loading) return <p>{t[language].loading}</p>;
-  if (error) return <p>{error}</p>;
+  if (loading) return <p className="loading-message">{t[language].loading}</p>;
+  if (error) return <p className="error-message">{error}</p>;
   if (!quizQuestions || quizQuestions.length === 0)
-    return <p>{t[language].noQuestions}</p>;
-
-  // Handler for answering a question
-  const handleAnswer = () => {
-    const currentQuiz = quizQuestions[currentQuestion];
-    if (!currentQuiz) return;
-
-    if (selected === currentQuiz.answer) {
-      setScore(prev => prev + 1);
-      completeMission(50); // 50 points for a correct answer
-      setFeedback(t[language].correctFeedback);
-    } else {
-      setFeedback(t[language].wrongFeedback);
-    }
-
-    setTimeout(() => {
-      if (currentQuestion < quizQuestions.length - 1) {
-        setCurrentQuestion(prev => prev + 1);
-        setSelected('');
-        setFeedback('');
-      } else {
-        setQuizCompleted(true);
-        updateDailyQuizCount(); // Update the daily counter when the quiz is completed
-      }
-    }, 1500);
-  };
+    return <p className="no-questions-message">{t[language].noQuestions}</p>;
 
   if (quizCompleted) {
     return (
-      <div className="quiz-page">
+      <div className="quiz-page quiz-completed">
         <h2>{t[language].quizCompleted}</h2>
-        <p>{t[language].progress(score, quizQuestions.length)}</p>
+        <p className="score-summary">{t[language].progress(score, quizQuestions.length)}</p>
+        <button 
+          className="restart-button" 
+          onClick={handleRestartQuiz}
+        >
+          {t[language].restartQuiz}
+        </button>
       </div>
     );
   }
@@ -186,6 +231,9 @@ function Quiz() {
     <div className="quiz-page">
       <h2>{t[language].quizTitle}</h2>
       <div className="question-card">
+        <div className="question-progress">
+          {currentQuestion + 1}/{quizQuestions.length}
+        </div>
         <p className="question-text">
           {quizQuestions[currentQuestion]?.question}
         </p>
@@ -193,17 +241,45 @@ function Quiz() {
           {(quizQuestions[currentQuestion]?.shuffledOptions || []).map((option, index) => (
             <div
               key={index}
-              className={`option ${selected === option ? 'selected' : ''}`}
-              onClick={() => setSelected(option)}
+              className={`option 
+                ${selected === option ? 'selected' : ''} 
+                ${waitingForNext && option === quizQuestions[currentQuestion].answer ? 'correct-answer' : ''}
+                ${waitingForNext && selected === option && option !== quizQuestions[currentQuestion].answer ? 'wrong-answer' : ''}
+              `}
+              onClick={() => !waitingForNext && setSelected(option)}
             >
               {option}
             </div>
           ))}
         </div>
-        {feedback && <p className="feedback">{feedback}</p>}
-        <button onClick={handleAnswer} disabled={!selected} className="submit-button">
-          {t[language].submit}
-        </button>
+        
+        <div className="feedback-container">
+          {feedback && <p className={`feedback ${isAnswerCorrect ? 'correct' : 'wrong'}`}>{feedback}</p>}
+          
+          {showCorrectAnswer && (
+            <div className="correct-answer-container">
+              <p>{t[language].correctAnswerWas}</p>
+              <p className="correct-answer-text">{quizQuestions[currentQuestion]?.answer}</p>
+            </div>
+          )}
+        </div>
+        
+        {!waitingForNext ? (
+          <button 
+            onClick={handleAnswer} 
+            disabled={!selected} 
+            className="submit-button"
+          >
+            {t[language].submit}
+          </button>
+        ) : (
+          <button 
+            onClick={handleNextQuestion} 
+            className="next-button"
+          >
+            {t[language].next}
+          </button>
+        )}
       </div>
     </div>
   );

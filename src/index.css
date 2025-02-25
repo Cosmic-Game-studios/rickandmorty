@@ -9,108 +9,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 */
 
-/* -----------------------------------------
-   1. CSS-Variablen & Design-System
-   ----------------------------------------- */
+/* CSS-Variablen definieren */
 :root {
-  /* Schriftarten */
   --font-main: 'Roboto', sans-serif;
   --font-display: 'Bangers', cursive;
-  
-  /* Farbverläufe */
   --gradient-header: linear-gradient(90deg, #4b0082, #9400d3);
   --gradient-button: linear-gradient(45deg, #ff0066, #ffcc00);
   --gradient-button-hover: linear-gradient(45deg, #ffcc00, #ff0066);
   --gradient-restart: linear-gradient(45deg, #4b0082, #9400d3);
-  
-  /* Farben */
   --accent-color: #f0e130;
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.8);
-  --text-muted: rgba(255, 255, 255, 0.6);
-  
-  /* Hintergründe */
   --bg-body: radial-gradient(circle at 30% 30%, #1a1a1a, #000);
   --bg-light: rgba(255, 255, 255, 0.1);
   --bg-section: rgba(255, 255, 255, 0.05);
-  --bg-card: rgba(0, 0, 0, 0.2);
-  --bg-card-hover: rgba(0, 0, 0, 0.3);
-  
-  /* Schatten */
   --shadow-light: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
   --shadow-dark: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.3);
-  --shadow-text: 0 1px 3px rgba(0, 0, 0, 0.5);
-  
-  /* Borders */
-  --border-light: 1px solid rgba(255, 255, 255, 0.2);
-  --border-radius-sm: 0.3125rem; /* 5px */
-  --border-radius-md: 0.625rem;  /* 10px */
-  --border-radius-lg: 1rem;      /* 16px */
-  
-  /* Animation */
   --transition-duration: 0.3s;
-  --transition-timing: ease;
   
-  /* Spacing */
+  /* Zusätzliche Spacing-Variablen */
   --space-xs: 0.3125rem;  /* 5px */
   --space-sm: 0.625rem;   /* 10px */
   --space-md: 0.9375rem;  /* 15px */
   --space-lg: 1.25rem;    /* 20px */
   --space-xl: 1.875rem;   /* 30px */
   --space-xxl: 2.5rem;    /* 40px */
-  
-  /* Breakpoints */
-  --breakpoint-mobile: 30rem;    /* 480px */
-  --breakpoint-tablet: 48rem;    /* 768px */
-  --breakpoint-desktop: 64rem;   /* 1024px */
 }
 
-/* -----------------------------------------
-   2. Reset & Basis Styling
-   ----------------------------------------- */
+/* Globaler Reset & Basisstyles */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--font-main);
   background: var(--bg-body);
-  color: var(--text-primary);
+  color: #fff;
   line-height: 1.6;
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-/* -----------------------------------------
-   3. Layout & Gemeinsame Komponenten
-   ----------------------------------------- */
+/* App-Container */
 .app {
   display: flex;
   flex-direction: column;
@@ -119,63 +57,14 @@ button {
 
 main {
   flex: 1;
-  padding: var(--space-lg);
+  padding: 1.25rem; /* 20px */
 }
 
-.content-container {
-  max-width: 75rem; /* 1200px */
-  margin: 0 auto;
-  width: 100%;
-}
-
-.section-title {
-  font-family: var(--font-display);
-  color: var(--accent-color);
-  font-size: 2rem;
-  margin-bottom: var(--space-md);
-  text-shadow: var(--shadow-text);
-}
-
-/* Skeleton Loading */
-.skeleton {
-  background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-light) 50%, var(--bg-card) 75%);
-  background-size: 200% 100%;
-  animation: skeleton-loading 1.5s ease infinite;
-  border-radius: var(--border-radius-md);
-}
-
-@keyframes skeleton-loading {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
-
-.home-skeleton {
-  width: 100%;
-  margin: var(--space-md) 0;
-}
-
-.home-daily-bonus-skeleton {
-  height: 8rem;
-  max-width: 25rem;
-  margin: 0 auto;
-}
-
-/* Error States */
-.home-error {
-  padding: var(--space-lg);
-  background: rgba(255, 0, 0, 0.2);
-  border-left: 4px solid #ff0000;
-  border-radius: var(--border-radius-md);
-  margin: var(--space-md) 0;
-}
-
-/* -----------------------------------------
-   4. Header & Navigation
-   ----------------------------------------- */
+/* Header, Navigation & Hamburger */
 .header {
   background: var(--gradient-header);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-dark);
+  padding: 1.25rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -183,8 +72,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: var(--space-sm);
-  border-bottom: var(--border-light);
+  padding-bottom: 0.625rem; /* 10px */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-title,
@@ -194,8 +83,7 @@ main {
   color: var(--accent-color);
   text-align: center;
   flex: 1;
-  margin-bottom: var(--space-sm);
-  text-shadow: var(--shadow-text);
+  margin-bottom: 0.625rem;
 }
 
 .coin-display {
@@ -207,7 +95,51 @@ main {
 }
 
 .coin-display span {
-  margin-left: var(--space-xs);
+  margin-left: 0.3125rem; /* 5px */
+}
+
+/* Go to Profile Button – zusätzlicher Abstand */
+.go-to-profile {
+  display: inline-block;
+  margin-top: 1.25rem; /* 20px */
+  padding: 0.625rem 1.25rem;
+  background: var(--gradient-button);
+  color: #000;
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  font-weight: bold;
+  transition: background var(--transition-duration) ease;
+}
+
+.go-to-profile:hover {
+  background: var(--gradient-button-hover);
+}
+
+.nav-list,
+.header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.9375rem; /* 15px */
+  margin-top: 0.9375rem;
+}
+
+.nav-list li a,
+.header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem; /* 8px 12px */
+  border: 2px solid transparent;
+  transition: all var(--transition-duration) ease;
+}
+
+.nav-list li a:hover,
+.header nav ul li a:hover {
+  border-color: var(--accent-color);
+  background-color: rgba(240, 225, 48, 0.2);
+  border-radius: 0.3125rem;
 }
 
 /* Hamburger-Menü */
@@ -223,8 +155,8 @@ main {
   width: 1.5625rem; /* 25px */
   height: 0.1875rem; /* 3px */
   margin: 0.25rem 0;
-  background-color: var(--text-primary);
-  transition: all var(--transition-duration) var(--transition-timing);
+  background-color: #fff;
+  transition: all var(--transition-duration) ease;
 }
 
 .hamburger.active .bar:nth-child(1) {
@@ -237,39 +169,20 @@ main {
   transform: translateY(-0.5rem) rotate(-45deg);
 }
 
-.nav-list,
-.header nav ul,
-.home-nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  margin-top: var(--space-md);
+/* Footer */
+.footer {
+  background: var(--gradient-header);
+  text-align: center;
+  padding: 0.9375rem; /* 15px */
+  font-size: 0.9rem;
+  box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
-.nav-list li a,
-.header nav ul li a {
-  text-decoration: none;
-  color: var(--text-primary);
-  font-weight: bold;
-  padding: 0.5rem 0.75rem;
-  border: 2px solid transparent;
-  transition: all var(--transition-duration) var(--transition-timing);
-}
-
-.nav-list li a:hover,
-.header nav ul li a:hover {
-  border-color: var(--accent-color);
-  background-color: rgba(240, 225, 48, 0.2);
-  border-radius: var(--border-radius-sm);
-}
-
-/* -----------------------------------------
-   5. Home Page Styling
-   ----------------------------------------- */
+/* Home Page */
 .home-page {
   text-align: center;
+  padding: 2.5rem 1.25rem; /* 40px 20px */
+  background: var(--bg-section);
   max-width: 75rem; /* 1200px */
   margin: 0 auto;
 }
@@ -280,7 +193,7 @@ main {
 
 .home-page.rick-morty-theme {
   background: var(--bg-section);
-  border-radius: var(--border-radius-md);
+  border-radius: 0.625rem;
   box-shadow: var(--shadow-dark);
 }
 
@@ -289,7 +202,7 @@ main {
   padding: var(--space-xl) var(--space-lg);
   margin-bottom: var(--space-xl);
   background: var(--gradient-header);
-  border-radius: var(--border-radius-md);
+  border-radius: 0.625rem;
   box-shadow: var(--shadow-dark);
 }
 
@@ -298,7 +211,7 @@ main {
   font-size: 3rem;
   margin-bottom: var(--space-md);
   color: var(--accent-color);
-  text-shadow: var(--shadow-text);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .home-hero-subtitle {
@@ -314,22 +227,27 @@ main {
 }
 
 .home-nav-list {
+  list-style: none;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 .home-nav-item {
   margin: 0 var(--space-xs);
 }
 
-/* Buttons */
+/* Home Buttons */
 .home-button {
   display: inline-block;
   padding: var(--space-sm) var(--space-lg);
   border: none;
-  border-radius: var(--border-radius-sm);
+  border-radius: 0.3125rem;
   font-weight: bold;
-  transition: background var(--transition-duration) var(--transition-timing), 
-              transform var(--transition-duration) var(--transition-timing);
+  transition: background var(--transition-duration) ease, 
+              transform var(--transition-duration) ease;
   text-align: center;
 }
 
@@ -344,8 +262,8 @@ main {
 }
 
 .home-button-secondary {
-  background: var(--bg-light);
-  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
   border: 1px solid var(--accent-color);
 }
 
@@ -354,7 +272,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* Home - Content Sections */
+/* Home - Content Section */
 .home-content {
   padding: var(--space-lg);
   display: grid;
@@ -362,8 +280,296 @@ main {
   gap: var(--space-xl);
 }
 
+/* Home - Section Styling */
 .home-section {
   background: var(--bg-section);
   padding: var(--space-xl) var(--space-lg);
-  border-radius: var(--border-radius-md);
+  border-radius: 0.625rem;
   box-shadow: var(--shadow-dark);
+  transition: transform var(--transition-duration) ease;
+}
+
+.home-section:hover {
+  transform: translateY(-5px);
+}
+
+.home-section-title {
+  font-family: var(--font-display);
+  color: var(--accent-color);
+  font-size: 2rem;
+  margin-bottom: var(--space-lg);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Home - Progress Section */
+.home-progress-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.home-progress-stat {
+  text-align: center;
+  min-width: 8rem;
+}
+
+.home-progress-label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: var(--space-xs);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.home-progress-value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+/* Home - Features Section */
+.home-features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.home-feature-item {
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.625rem;
+  transition: transform var(--transition-duration) ease;
+}
+
+.home-feature-item:hover {
+  transform: scale(1.05);
+}
+
+.home-feature-title {
+  color: var(--accent-color);
+  font-family: var(--font-display);
+  margin-bottom: var(--space-sm);
+  font-size: 1.4rem;
+}
+
+.home-feature-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+/* Home - News Section */
+.home-news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-lg);
+}
+
+.home-news-item {
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.625rem;
+  transition: transform var(--transition-duration) ease;
+}
+
+.home-news-item:hover {
+  transform: scale(1.02);
+}
+
+.home-news-title {
+  color: var(--accent-color);
+  font-family: var(--font-display);
+  margin-bottom: var(--space-sm);
+  font-size: 1.2rem;
+}
+
+.home-news-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Home - Daily Bonus Loading */
+.home-daily-bonus-loading {
+  background: var(--bg-section);
+  padding: var(--space-md);
+  border-radius: 0.625rem;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 25rem;
+  border: 2px dashed var(--accent-color);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-family: var(--font-display);
+}
+
+/* Home Footer */
+.home-footer {
+  background: var(--gradient-header);
+  text-align: center;
+  padding: var(--space-md);
+  font-size: 0.9rem;
+  box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+  margin-top: var(--space-xl);
+  border-radius: 0 0 0.625rem 0.625rem;
+}
+
+.home-footer-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Original Code - Daily Bonus */
+.daily-bonus {
+  background: var(--bg-section);
+  padding: 0.9375rem;
+  border-radius: 0.625rem;
+  text-align: center;
+  margin: 1.25rem auto;
+  max-width: 25rem;
+}
+
+.bonus-button {
+  background: var(--gradient-button);
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.3125rem;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.625rem;
+  transition: background var(--transition-duration) ease;
+}
+
+.bonus-button:hover {
+  background: var(--gradient-button-hover);
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 64rem) { /* 1024px */
+  .home-content {
+    padding: var(--space-md);
+  }
+  
+  .home-features-list,
+  .home-news-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .home-hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 48rem) { /* 768px - Tablet */
+  .home-progress-stats {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+  }
+  
+  .home-features-list,
+  .home-news-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-nav-list {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .site-title, 
+  .header h1,
+  .home-hero-title {
+    font-size: 2rem;
+  }
+  
+  .home-section {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
+
+@media (max-width: 30rem) { /* 480px - Mobile */
+  .home-page {
+    padding: var(--space-sm);
+  }
+  
+  .home-content {
+    gap: var(--space-lg);
+    padding: var(--space-sm);
+  }
+  
+  .home-hero {
+    padding: var(--space-lg) var(--space-sm);
+  }
+  
+  .home-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .home-feature-title,
+  .home-news-title {
+    font-size: 1.1rem;
+  }
+  
+  .home-progress-value {
+    font-size: 1.5rem;
+  }
+  
+  .home-hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .home-button {
+    padding: var(--space-xs) var(--space-md);
+    font-size: 0.9rem;
+  }
+}
+
+/* Bestehende Stile beibehalten - Auswahl vom Original-CSS */
+.hero-section {
+  max-width: 50rem; /* 800px */
+  margin: 0 auto 1.875rem; /* 0 auto 30px */
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  margin-bottom: 0.625rem;
+  color: var(--accent-color);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.9375rem;
+  margin-bottom: 1.875rem;
+}
+
+.hero-button {
+  background: var(--gradient-button);
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: background var(--transition-duration) ease;
+}
+
+.hero-button:hover {
+  background: var(--gradient-button-hover);
+}

@@ -275,4 +275,130 @@ function Missions() {
               src={mission.unlock.image} 
               alt={mission.unlock.name} 
               className="character-thumbnail" 
-              loading="lazy"
+              loading="lazy" 
+            />
+            <span className="character-name">{mission.unlock.name}</span>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="mission-reward coin-reward">
+          <div className="reward-amount">{mission.reward} Münzen</div>
+          <div className="coin-icon">💰</div>
+        </div>
+      );
+    }
+  };
+
+  return (
+    <div className={`missions-page ${isMobile ? 'mobile' : ''}`}>
+      <h1 className="missions-title">Missionen</h1>
+      
+      {/* Filter-Leiste */}
+      <div className="mission-filters">
+        <button 
+          className={`filter-button ${filter === 'all' ? 'active' : ''}`}
+          onClick={() => setFilter('all')}
+        >
+          Alle
+        </button>
+        <button 
+          className={`filter-button ${filter === 'character' ? 'active' : ''}`}
+          onClick={() => setFilter('character')}
+        >
+          Charaktere
+        </button>
+        <button 
+          className={`filter-button ${filter === 'coin' ? 'active' : ''}`}
+          onClick={() => setFilter('coin')}
+        >
+          Münzen
+        </button>
+        <button 
+          className={`filter-button ${filter === 'completed' ? 'active' : ''}`}
+          onClick={() => setFilter('completed')}
+        >
+          Abgeschlossen
+        </button>
+        <button 
+          className={`filter-button ${filter === 'available' ? 'active' : ''}`}
+          onClick={() => setFilter('available')}
+        >
+          Verfügbar
+        </button>
+      </div>
+      
+      {/* Missions-Grid */}
+      <div className="missions-grid">
+        {filteredMissions.map(mission => {
+          const isCompleted = isMissionCompleted(mission.id);
+          const isAvailable = isMissionAvailable(mission);
+          const progress = getDailyMissionProgress(mission);
+          
+          return (
+            <div 
+              key={mission.id} 
+              className={`mission-card ${isCompleted ? 'completed' : ''} ${!isAvailable ? 'unavailable' : ''}`}
+            >
+              <div className="mission-header">
+                {mission.daily && <span className="mission-tag daily">Täglich</span>}
+                <span className={`mission-difficulty ${mission.difficulty.toLowerCase()}`}>
+                  {mission.difficulty}
+                </span>
+              </div>
+              
+              <h3 className="mission-description">{mission.description}</h3>
+              
+              <p className="mission-detail">{mission.detailedDescription}</p>
+              
+              <div className="mission-meta">
+                <span className="mission-time">⏱️ {mission.estimatedTime}</span>
+                {mission.requiredLevel && (
+                  <span className={`mission-level ${level < mission.requiredLevel ? 'required' : ''}`}>
+                    Level {mission.requiredLevel}+ benötigt
+                  </span>
+                )}
+              </div>
+              
+              {renderReward(mission)}
+              
+              {progress && (
+                <div className="mission-progress">
+                  <div className="progress-bar">
+                    <div 
+                      className="progress-fill" 
+                      style={{ width: `${Math.min(100, (progress.current / progress.required) * 100)}%` }}
+                    ></div>
+                  </div>
+                  <span className="progress-text">
+                    {progress.current}/{progress.required} Quizze
+                  </span>
+                </div>
+              )}
+              
+              <button 
+                className={`mission-button ${isCompleted ? 'completed' : ''}`}
+                onClick={() => handleComplete(mission)}
+                disabled={isCompleted || !isAvailable}
+              >
+                {isCompleted ? 'Abgeschlossen' : 'Abschließen'}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+      
+      {/* Toast-Benachrichtigung */}
+      {toast.visible && (
+        <Toast 
+          message={toast.message} 
+          type={toast.type} 
+          onClose={closeToast} 
+        />
+      )}
+    </div>
+  );
+}
+
+export default Missions;

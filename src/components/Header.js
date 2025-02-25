@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import Coin from './Coin';
-import './Header.css';
+import './Header.css'; // Stelle sicher, dass diese Datei aktualisiert wird
 
 function Header() {
   const { coins } = useContext(UserContext);

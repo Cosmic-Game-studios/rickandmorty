@@ -1,103 +1,195 @@
 /* ===================================================================== */
-/* Profile Page Styles                                                 */
+/* Profile Page Styles - Verbesserte Version                                   */
 /* ===================================================================== */
 
-/* Central Variables */
-:root {
-  --profile-bg: rgba(255, 255, 255, 0.1);
-  --profile-card-bg: rgba(255, 255, 255, 0.1);
-  --profile-card-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtile, professionelle Schatten */
-  --profile-page-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Größere Unschärfe für einen sanfteren Effekt */
-  --accent-color: #f0e130;
-  --btn-gradient-start: #ff0066;
-  --btn-gradient-end: #ffcc00;
-  --transition-fast: 0.3s ease;
-}
-
-/* Profile Page */
+/* Profile Page Container */
 .profile-page {
-  padding: 30px;
+  padding: var(--space-lg);
   max-width: 1200px;
   margin: 0 auto;
-  color: #fff;
-  background: var(--profile-bg);
-  border-radius: 10px;
-  box-shadow: var(--profile-page-shadow);
+  color: var(--text-primary);
+  background: var(--bg-section);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-dark);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Profile Information Layout */
+.profile-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-header);
+  z-index: 1;
+}
+
+.profile-page h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  text-shadow: var(--shadow-text);
+}
+
+.profile-page h3 {
+  font-family: var(--font-display);
+  color: var(--accent-color);
+  margin: var(--space-xl) 0 var(--space-md);
+  font-size: 1.6rem;
+  text-shadow: var(--shadow-text);
+}
+
+/* Profile Stats Cards */
 .profile-info {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--space-lg);
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-xl);
 }
 
 .profile-card {
-  background: var(--profile-card-bg);
-  padding: 20px;
-  border-radius: 10px;
+  background: var(--bg-light);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-md);
   width: 220px;
   text-align: center;
-  box-shadow: var(--profile-card-shadow);
+  box-shadow: var(--shadow-dark);
+  transition: transform var(--transition-duration) var(--transition-timing);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Horizontal Coin Farm Selection */
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-button);
+}
+
+.profile-card h3 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.3rem;
+}
+
+.profile-card p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* Coin Farm Selection */
 .coin-farm-scroll {
   display: flex;
   overflow-x: auto;
-  gap: 15px;
-  padding: 10px 0;
-  margin-bottom: 30px;
-  scrollbar-color: var(--btn-gradient-end) transparent;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  margin-bottom: var(--space-md);
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) var(--bg-card);
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+.coin-farm-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.coin-farm-scroll::-webkit-scrollbar-track {
+  background: var(--bg-card);
+  border-radius: 10px;
+}
+
+.coin-farm-scroll::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
 }
 
 .coin-farm-card {
   flex: 0 0 auto;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  border-radius: 10px;
+  background: var(--bg-light);
+  padding: var(--space-sm);
+  border-radius: var(--border-radius-md);
   cursor: pointer;
   text-align: center;
-  transition: transform var(--transition-fast);
+  transition: all var(--transition-duration) var(--transition-timing);
+  box-shadow: var(--shadow-light);
+  width: 120px;
+  position: relative;
 }
 
 .coin-farm-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-dark);
 }
 
 .coin-farm-card.selected {
   border: 2px solid var(--accent-color);
+  background: rgba(240, 225, 48, 0.1);
 }
 
-/* Vertical Layout for Unlocked Characters */
+.coin-farm-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--border-radius-sm);
+  object-fit: cover;
+  margin: 0 auto var(--space-xs);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coin-farm-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 var(--space-xs);
+}
+
+/* Unlocked Characters List */
 .unlocked-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-top: 30px;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
 }
 
 .unlocked-card {
   display: flex;
   align-items: center;
-  background: var(--profile-card-bg);
-  padding: 15px;
-  border-radius: 10px;
-  transition: transform var(--transition-fast);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background: var(--bg-light);
+  padding: var(--space-md);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-duration) var(--transition-timing);
+  box-shadow: var(--shadow-light);
+  animation: fadeIn 0.3s ease-out;
 }
 
 .unlocked-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-dark);
 }
 
 .unlocked-card img {
   width: 80px;
-  height: auto;
-  border-radius: 5px;
-  margin-right: 15px;
+  height: 80px;
+  border-radius: var(--border-radius-sm);
+  margin-right: var(--space-md);
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-details {
@@ -105,45 +197,64 @@
   text-align: left;
 }
 
+.card-details p {
+  margin: var(--space-xs) 0;
+}
+
+.card-details p:first-child {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+}
+
 /* Upgrade Button */
 .upgrade-button {
-  background: linear-gradient(45deg, var(--btn-gradient-start), var(--btn-gradient-end));
+  background: var(--gradient-button);
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius-sm);
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: background var(--transition-fast);
-  margin-top: 10px;
+  transition: all var(--transition-duration) var(--transition-timing);
+  white-space: nowrap;
 }
 
 .upgrade-button:hover {
-  background: linear-gradient(45deg, var(--btn-gradient-end), var(--btn-gradient-start));
+  background: var(--gradient-button-hover);
+  transform: translateY(-2px);
 }
 
-/* Pagination Controls for Unlocked Characters */
+/* Pagination Controls */
 .pagination-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin-top: 30px;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
 }
 
 .pagination-controls button {
-  background: linear-gradient(45deg, var(--btn-gradient-start), var(--btn-gradient-end));
+  background: var(--gradient-button);
   border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--border-radius-sm);
   color: #000;
+  font-weight: bold;
   cursor: pointer;
-  transition: background var(--transition-fast);
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background: var(--gradient-button-hover);
+  transform: translateY(-2px);
 }
 
 .pagination-controls button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+  background: var(--bg-light);
+  color: var(--text-secondary);
 }
 
 .pagination-controls span {
@@ -151,30 +262,77 @@
   color: var(--accent-color);
 }
 
-/* Fusion Panel (if integrated) */
+/* Fusion Panel */
 .fusion-panel {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
+  background: var(--bg-light);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-md);
   text-align: center;
-  margin: 20px auto;
+  margin: var(--space-lg) auto;
   max-width: 800px;
+  box-shadow: var(--shadow-dark);
+  position: relative;
+  overflow: hidden;
 }
 
-/* ===================================================================== */
-/* Responsive Adjustments                                              */
-/* ===================================================================== */
+.fusion-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), #9400d3);
+}
 
-/* Für Bildschirme bis 768px */
+/* Empty State */
+.profile-page > p {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  margin: var(--space-md) 0;
+  color: var(--text-secondary);
+}
+
+/* Loading State */
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--space-lg) 0;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid var(--accent-color);
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--space-sm);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .profile-page {
-    padding: 15px;
-    max-width: 100%;
+    padding: var(--space-md);
   }
   
   .profile-info {
     flex-direction: column;
     align-items: center;
+    gap: var(--space-md);
   }
   
   .profile-card {
@@ -182,34 +340,76 @@
     max-width: 300px;
   }
   
-  /* Anpassung der Coin Farm Scroll */
-  .coin-farm-scroll {
-    gap: 10px;
-    padding: 8px 0;
-  }
-}
-
-/* Für sehr kleine Bildschirme bis 480px */
-@media (max-width: 480px) {
-  .profile-page {
-    padding: 10px;
+  .profile-page h2 {
+    font-size: 2rem;
   }
   
-  .profile-info {
-    gap: 10px;
+  .profile-page h3 {
+    font-size: 1.4rem;
   }
   
-  .profile-card {
-    padding: 15px;
-    max-width: 100%;
+  .unlocked-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .unlocked-card img {
+    margin: 0 auto var(--space-sm);
   }
   
   .card-details {
-    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: var(--space-sm);
   }
   
   .upgrade-button {
-    padding: 8px 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-page {
+    padding: var(--space-sm);
+  }
+  
+  .profile-info {
+    gap: var(--space-sm);
+  }
+  
+  .profile-card {
+    padding: var(--space-md);
+    max-width: 100%;
+  }
+  
+  .profile-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .profile-page h3 {
+    font-size: 1.2rem;
+    margin: var(--space-lg) 0 var(--space-sm);
+  }
+  
+  .coin-farm-card {
+    width: 100px;
+  }
+  
+  .coin-farm-card img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .pagination-controls {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+  
+  .card-details p {
     font-size: 0.9rem;
+  }
+  
+  .card-details p:first-child {
+    font-size: 1rem;
   }
 }

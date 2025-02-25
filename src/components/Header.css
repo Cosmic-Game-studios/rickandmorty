@@ -1,63 +1,46 @@
-/* ===================================================================== */
-/* Header & Navigation - Verbesserte Version                                  */
-/* ===================================================================== */
+
+/* ============================= */
+/* Header & Navigation           */
+/* ============================= */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
 
 .header {
-  background: var(--gradient-header);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-dark);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition: padding var(--transition-duration) var(--transition-timing);
+  background: linear-gradient(90deg, #4b0082, #9400d3);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: var(--space-sm);
-  border-bottom: var(--border-light);
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-title,
 .header h1 {
-  font-family: var(--font-display);
+  font-family: 'Bangers', cursive;
   font-size: 3rem;
-  color: var(--accent-color);
-  margin-bottom: var(--space-xs);
+  color: #f0e130;
+  margin-bottom: 10px;
   text-align: center;
   flex: 1;
-  text-shadow: var(--shadow-text);
-  transition: font-size var(--transition-duration) var(--transition-timing);
 }
 
-/* Coin Display mit Animation */
 .coin-display {
   display: flex;
   align-items: center;
-  font-family: var(--font-display);
+  font-family: 'Bangers', cursive;
   font-size: 1.2rem;
-  color: var(--accent-color);
-  background: rgba(0, 0, 0, 0.2);
-  padding: var(--space-xs) var(--space-sm);
-  border-radius: var(--border-radius-sm);
-  box-shadow: var(--shadow-light);
-  transition: transform var(--transition-duration) var(--transition-timing);
-}
-
-.coin-display:hover {
-  transform: translateY(-2px);
+  color: #f0e130;
 }
 
 .coin-display span {
-  margin-left: var(--space-xs);
-}
-
-/* Navigation Styling */
-.nav-container {
-  transition: max-height 0.4s var(--transition-timing);
-  overflow: hidden;
+  margin-left: 5px;
 }
 
 .nav-list,
@@ -66,50 +49,26 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: var(--space-md);
-  margin-top: var(--space-md);
+  gap: 15px;
+  margin-top: 15px;
   padding: 0;
 }
 
 .nav-list li a,
 .header nav ul li a {
   text-decoration: none;
-  color: var(--text-primary);
+  color: #fff;
   font-weight: bold;
-  padding: 0.5rem 0.75rem;
+  padding: 8px 12px;
   border: 2px solid transparent;
-  border-radius: var(--border-radius-sm);
-  transition: all var(--transition-duration) var(--transition-timing);
-  position: relative;
-  overflow: hidden;
-}
-
-.nav-list li a::before,
-.header nav ul li a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.nav-list li a:hover::before,
-.header nav ul li a:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
+  transition: all 0.3s ease;
 }
 
 .nav-list li a:hover,
-.header nav ul li a:hover,
-.nav-list li a.active,
-.header nav ul li a.active {
-  border-color: var(--accent-color);
-  background-color: rgba(240, 225, 48, 0.15);
+.header nav ul li a:hover {
+  border: 2px solid #f0e130;
+  background-color: rgba(240, 225, 48, 0.2);
+  border-radius: 5px;
 }
 
 /* Hamburger-Menü */
@@ -119,14 +78,6 @@
   border: none;
   cursor: pointer;
   outline: none;
-  padding: var(--space-xs);
-  z-index: 101;
-  border-radius: var(--border-radius-sm);
-  transition: background-color var(--transition-duration) var(--transition-timing);
-}
-
-.hamburger:hover {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hamburger .bar {
@@ -134,7 +85,7 @@
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background-color: var(--text-primary);
+  background-color: #fff;
   transition: all 0.3s ease;
 }
 
@@ -154,12 +105,11 @@
 /* Responsive Anpassungen für Header */
 @media (max-width: 768px) {
   .header {
-    padding: var(--space-md) var(--space-sm);
+    padding: 15px;
   }
-  
   .site-title,
   .header h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   
   /* Hamburger wird angezeigt */
@@ -167,80 +117,36 @@
     display: block;
   }
   
-  /* Navigation Container */
-  .nav-container {
+  /* Navigation standardmäßig ausblenden */
+  .header nav {
+    display: none;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
     max-height: 0;
   }
   
   /* Navigation anzeigen, wenn "open" Klasse hinzugefügt wird */
-  .nav-container.open {
+  .header nav.open {
+    display: block;
     max-height: 500px; /* Höhe ausreichend für alle Menüpunkte */
   }
   
-  .nav-list,
-  .header nav ul {
+  .nav-list {
     flex-direction: column;
     align-items: center;
-    gap: var(--space-sm);
-    margin-top: var(--space-md);
-    padding-bottom: var(--space-md);
-  }
-  
-  .nav-list li a,
-  .header nav ul li a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: var(--space-sm) var(--space-md);
+    gap: 10px;
+    margin-top: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .header {
-    padding: var(--space-sm);
-  }
-  
   .site-title,
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
-  
-  .coin-display {
-    font-size: 1rem;
-    padding: var(--space-xs) var(--space-xs);
-  }
-  
   .hamburger .bar {
     width: 20px;
     height: 2.5px;
     margin: 4px auto;
   }
-  
-  .header-top {
-    padding-bottom: var(--space-xs);
-  }
-}
-
-/* Animation für Coin-Anzahl-Änderung */
-@keyframes coinChange {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); color: #ffff00; }
-  100% { transform: scale(1); }
-}
-
-.coin-change {
-  animation: coinChange 0.5s ease-out;
-}
-
-/* Hilfreich für Screenreader */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }

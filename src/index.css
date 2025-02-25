@@ -2582,4 +2582,185 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
     min-width: auto;
     width: 100%;
   }
+}/* Ergänzende Styles für die Quiz-Komponente */
+
+/* Frage-Fortschrittsanzeige */
+.question-progress {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-secondary);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Feedback-Container für mehr Struktur */
+.feedback-container {
+  margin: var(--space-md) 0;
+  min-height: 80px;
+}
+
+/* Verschiedene Feedback-Typen */
+.feedback.correct {
+  color: #55cc44;
+  background: rgba(85, 204, 68, 0.15);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-sm);
+}
+
+.feedback.wrong {
+  color: #ff5a5f;
+  background: rgba(255, 90, 95, 0.15);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-sm);
+}
+
+/* Container für die richtige Antwort */
+.correct-answer-container {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius-sm);
+  border-left: 3px solid var(--accent-color);
+  text-align: left;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.correct-answer-container p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.correct-answer-text {
+  font-weight: bold;
+  color: var(--accent-color) !important;
+  margin-top: var(--space-xs) !important;
+  font-size: 1.1rem;
+}
+
+/* Styling für richtige und falsche Antworten bei Anzeige der Auflösung */
+.option.correct-answer {
+  border-color: #55cc44;
+  background: rgba(85, 204, 68, 0.15);
+  position: relative;
+}
+
+.option.correct-answer::after {
+  content: '✓';
+  position: absolute;
+  right: 15px;
+  color: #55cc44;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.option.wrong-answer {
+  border-color: #ff5a5f;
+  background: rgba(255, 90, 95, 0.15);
+  position: relative;
+}
+
+.option.wrong-answer::after {
+  content: '✗';
+  position: absolute;
+  right: 15px;
+  color: #ff5a5f;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Next Question Button */
+.next-button {
+  background: var(--gradient-button);
+  border: none;
+  padding: var(--space-md) var(--space-xl);
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-duration) var(--transition-timing);
+  min-width: 12rem;
+  box-shadow: var(--shadow-dark);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.next-button:hover {
+  background: var(--gradient-button-hover);
+  transform: translateY(-2px);
+}
+
+/* Quiz Completed Screen */
+.quiz-completed {
+  padding: var(--space-xl);
+  background: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  margin: 0 auto;
+  max-width: 600px;
+  animation: fadeIn 0.5s ease-out;
+  box-shadow: var(--shadow-dark);
+}
+
+.score-summary {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin: var(--space-lg) 0;
+}
+
+/* Restart Button */
+.restart-button {
+  background: var(--gradient-restart);
+  border: none;
+  padding: var(--space-md) var(--space-xl);
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-duration) var(--transition-timing);
+  min-width: 12rem;
+  margin-top: var(--space-lg);
+  box-shadow: var(--shadow-dark);
+}
+
+.restart-button:hover {
+  background: linear-gradient(45deg, #9400d3, #4b0082);
+  transform: translateY(-2px);
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 48rem) {
+  .question-progress {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  
+  .feedback-container {
+    min-height: 60px;
+  }
+  
+  .next-button,
+  .restart-button {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 1rem;
+    min-width: 10rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .feedback-container {
+    min-height: 80px;
+  }
+  
+  .correct-answer-container {
+    padding: var(--space-sm);
+  }
+  
+  .next-button,
+  .restart-button {
+    width: 100%;
+  }
 }

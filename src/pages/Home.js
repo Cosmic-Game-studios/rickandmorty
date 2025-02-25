@@ -4,102 +4,199 @@ import React, {
   lazy,
   Suspense,
   useState,
-  useEffect
+  useEffect,
+  useCallback,
+  Fragment
 } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'; // Hinzugefügt für Prop-Validierung
 import { UserContext } from '../context/UserContext';
+import ErrorBoundary from '../components/ErrorBoundary'; // Annahme, dass diese existiert
+import Skeleton from '../components/Skeleton'; // Annahme, dass diese existiert
 
-// Lazy-load the DailyBonus component
+// Lazy-load Komponenten
 const DailyBonus = lazy(() => import('../components/DailyBonus'));
+const NewsUpdates = lazy(() => import('../components/NewsUpdates'));
 
-// Custom hook to determine if the screen is mobile (with debounce)
-const useIsMobile = () => {
-  // Ensure window exists (for SSR compatibility)
-  const getIsMobile = () => (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
+// Custom hook für responsive Design mit Debounce
+const useIsMobile = (breakpoint = 768, debounceTime = 150) => {
+  // Stellt sicher, dass window existiert (für SSR-Kompatibilität)
+  const getIsMobile = useCallback(() => 
+    typeof window !== 'undefined' ? window.innerWidth < breakpoint : false
+  , [breakpoint]);
+  
   const [isMobile, setIsMobile] = useState(getIsMobile);
 
   useEffect(() => {
     let timeoutId;
+    
     const handleResize = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         setIsMobile(getIsMobile());
-      }, 150); // Debounce delay
+      }, debounceTime);
     };
 
+    // Initial call
+    handleResize();
+    
     window.addEventListener('resize', handleResize);
     return () => {
       clearTimeout(timeoutId);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [getIsMobile, debounceTime]);
 
   return isMobile;
 };
 
-const Home = () => {
-  const { level, rewardPoints, coins } = useContext(UserContext);
-  const isMobile = useIsMobile();
+// Sub-Komponente für Fortschritt
+const ProgressOverview = ({ level, rewardPoints, coins }) => (
+  <section className="home-section home-progress" aria-labelledby="progress-heading">
+    <h2 id="progress-heading" className="home-section-title">Your Progress</h2>
+    <div className="home-progress-stats">
+      <div className="home-progress-stat">
+        <span className="home-progress-label">Level:</span>
+        <span className="home-progress-value">{level}</span>
+      </div>
+      <div className="home-progress-stat">
+        <span className="home-progress-label">Reward Points:</span>
+        <span className="home-progress-value">{rewardPoints}</span>
+      </div>
+      <div className="home-progress-stat">
+        <span className="home-progress-label">Coins:</span>
+        <span className="home-progress-value">{coins}</span>
+      </div>
+    </div>
+    <Link to="/profile" className="home-button home-button-secondary">
+      Go to Profile
+    </Link>
+  </section>
+);
 
-  // Memoize static content so it's not recalculated on every render
-  const features = useMemo(() => (
-    <ul>
-      <li>Exciting missions and challenging quizzes</li>
-      <li>Unlock and upgrade legendary characters</li>
-      <li>Passive coin collection and daily bonus rewards</li>
-      <li>Interdimensional adventures and exclusive events</li>
-    </ul>
-  ), []);
+ProgressOverview.propTypes = {
+  level: PropTypes.number.isRequired,
+  rewardPoints: PropTypes.number.isRequired,
+  coins: PropTypes.number.isRequired
+};
 
-  const newsUpdates = useMemo(() => (
-    <ul>
-      <li>Bug Fixes</li>
-      <li>Performance Optimizations</li>
-      <li>WIP Fusion Character</li>
-      <li>WIP DE</li>
-    </ul>
-  ), []);
+// Sub-Komponente für Features
+const FeaturesList = () => {
+  const features = [
+    {
+      id: 'feature-missions',
+      title: 'Exciting Missions',
+      description: 'Complete challenging quizzes and level up your character'
+    },
+    {
+      id: 'feature-characters',
+      title: 'Legendary Characters',
+      description: 'Unlock and upgrade characters from the multiverse'
+    },
+    {
+      id: 'feature-coins',
+      title: 'Passive Income',
+      description: 'Collect coins and claim daily bonus rewards'
+    },
+    {
+      id: 'feature-events',
+      title: 'Special Events',
+      description: 'Participate in interdimensional adventures and exclusive events'
+    }
+  ];
 
   return (
-    <div className={`home-page ${isMobile ? 'mobile' : ''}`}>
-      {/* Lazy-loaded Daily Bonus */}
-      <Suspense fallback={<div className="suspense-fallback">Loading Daily Bonus...</div>}>
-        <DailyBonus />
-      </Suspense>
+    <section className="home-section home-features" aria-labelledby="features-heading">
+      <h2 id="features-heading" className="home-section-title">Features</h2>
+      <ul className="home-features-list">
+        {features.map(feature => (
+          <li key={feature.id} className="home-feature-item">
+            <h3 className="home-feature-title">{feature.title}</h3>
+            <p className="home-feature-description">{feature.description}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
-      {/* Hero Section */}
-      <header className="hero-section">
-        <h1 className="hero-title">Rick and Morty Adventure</h1>
-        <p className="hero-subtitle">
-          Experience interdimensional adventures, master missions, and solve quizzes to unlock legendary characters!
+const Home = () => {
+  const { level = 1, rewardPoints = 0, coins = 0 } = useContext(UserContext) || {};
+  const isMobile = useIsMobile();
+
+  // News Updates - kann durch echte API-Daten ersetzt werden
+  const newsItems = useMemo(() => [
+    { id: 'news-1', title: 'Bug Fixes', description: 'Fixed portal gun simulation and character teleportation issues' },
+    { id: 'news-2', title: 'Performance Optimizations', description: 'Improved game responsiveness and loading times' },
+    { id: 'news-3', title: 'Coming Soon: Fusion Character', description: 'New character combining traits from multiple dimensions' },
+    { id: 'news-4', title: 'In Development: Dimension Explorer', description: 'Explore new dimensions and collect exclusive rewards' }
+  ], []);
+
+  // Theme-based class für Styling-Konsistenz
+  const themeClass = 'rick-morty-theme';
+  
+  return (
+    <div className={`home-page ${themeClass} ${isMobile ? 'home-page-mobile' : ''}`}>
+      {/* Hero Section mit verbesserten semantischen Elementen */}
+      <header className="home-hero" role="banner">
+        <h1 className="home-hero-title">Rick and Morty Adventure</h1>
+        <p className="home-hero-subtitle">
+          Experience interdimensional adventures, master missions, and solve quizzes 
+          to unlock legendary characters!
         </p>
-        <nav className="hero-buttons" aria-label="Main Navigation">
-          <Link to="/characters" className="hero-button">Characters</Link>
-          <Link to="/missions" className="hero-button">Missions</Link>
-          <Link to="/quiz" className="hero-button">Quiz</Link>
+        
+        <nav className="home-navigation" aria-label="Main Navigation">
+          <ul className="home-nav-list">
+            <li className="home-nav-item">
+              <Link to="/characters" className="home-button home-button-primary">Characters</Link>
+            </li>
+            <li className="home-nav-item">
+              <Link to="/missions" className="home-button home-button-primary">Missions</Link>
+            </li>
+            <li className="home-nav-item">
+              <Link to="/quiz" className="home-button home-button-primary">Quiz</Link>
+            </li>
+          </ul>
         </nav>
       </header>
 
-      {/* Progress Overview */}
-      <section className="info-section">
-        <h2>Your Progress</h2>
-        <p>Level: {level}</p>
-        <p>Reward Points: {rewardPoints}</p>
-        <p>Coins: {coins}</p>
-        <Link to="/profile" className="hero-button">Go to Profile</Link>
-      </section>
+      <main className="home-content">
+        {/* Daily Bonus mit Error Boundary */}
+        <ErrorBoundary fallback={<div className="home-error">Could not load daily bonus</div>}>
+          <Suspense fallback={
+            <div className="home-skeleton home-daily-bonus-skeleton" aria-label="Loading daily bonus">
+              <Skeleton height="120px" width="100%" />
+            </div>
+          }>
+            <DailyBonus />
+          </Suspense>
+        </ErrorBoundary>
 
-      {/* Features */}
-      <section className="features-section">
-        <h2>Features</h2>
-        {features}
-      </section>
+        {/* Progress Component */}
+        <ProgressOverview level={level} rewardPoints={rewardPoints} coins={coins} />
 
-      {/* News & Updates */}
-      <section className="news-section">
-        <h2>News & Updates</h2>
-        {newsUpdates}
-      </section>
+        {/* Features Component */}
+        <FeaturesList />
+
+        {/* News & Updates mit Error Boundary */}
+        <ErrorBoundary fallback={<div className="home-error">Could not load news updates</div>}>
+          <section className="home-section home-news" aria-labelledby="news-heading">
+            <h2 id="news-heading" className="home-section-title">News & Updates</h2>
+            <ul className="home-news-list">
+              {newsItems.map(item => (
+                <li key={item.id} className="home-news-item">
+                  <h3 className="home-news-title">{item.title}</h3>
+                  <p className="home-news-description">{item.description}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </ErrorBoundary>
+      </main>
+
+      <footer className="home-footer">
+        <p className="home-footer-text">© {new Date().getFullYear()} Rick and Morty Adventure Game</p>
+      </footer>
     </div>
   );
 };

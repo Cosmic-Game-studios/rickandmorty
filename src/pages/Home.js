@@ -5,18 +5,13 @@ import React, {
   Suspense,
   useState,
   useEffect,
-  useCallback,
-  Fragment
+  useCallback
 } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types'; // Hinzugefügt für Prop-Validierung
 import { UserContext } from '../context/UserContext';
-import ErrorBoundary from '../components/ErrorBoundary'; // Annahme, dass diese existiert
-import Skeleton from '../components/Skeleton'; // Annahme, dass diese existiert
 
 // Lazy-load Komponenten
 const DailyBonus = lazy(() => import('../components/DailyBonus'));
-const NewsUpdates = lazy(() => import('../components/NewsUpdates'));
 
 // Custom hook für responsive Design mit Debounce
 const useIsMobile = (breakpoint = 768, debounceTime = 150) => {
@@ -73,12 +68,6 @@ const ProgressOverview = ({ level, rewardPoints, coins }) => (
     </Link>
   </section>
 );
-
-ProgressOverview.propTypes = {
-  level: PropTypes.number.isRequired,
-  rewardPoints: PropTypes.number.isRequired,
-  coins: PropTypes.number.isRequired
-};
 
 // Sub-Komponente für Features
 const FeaturesList = () => {
@@ -161,16 +150,14 @@ const Home = () => {
       </header>
 
       <main className="home-content">
-        {/* Daily Bonus mit Error Boundary */}
-        <ErrorBoundary fallback={<div className="home-error">Could not load daily bonus</div>}>
-          <Suspense fallback={
-            <div className="home-skeleton home-daily-bonus-skeleton" aria-label="Loading daily bonus">
-              <Skeleton height="120px" width="100%" />
-            </div>
-          }>
-            <DailyBonus />
-          </Suspense>
-        </ErrorBoundary>
+        {/* Daily Bonus mit einfachem Fallback */}
+        <Suspense fallback={
+          <div className="home-daily-bonus-loading" aria-label="Loading daily bonus">
+            Loading Daily Bonus...
+          </div>
+        }>
+          <DailyBonus />
+        </Suspense>
 
         {/* Progress Component */}
         <ProgressOverview level={level} rewardPoints={rewardPoints} coins={coins} />
@@ -178,20 +165,18 @@ const Home = () => {
         {/* Features Component */}
         <FeaturesList />
 
-        {/* News & Updates mit Error Boundary */}
-        <ErrorBoundary fallback={<div className="home-error">Could not load news updates</div>}>
-          <section className="home-section home-news" aria-labelledby="news-heading">
-            <h2 id="news-heading" className="home-section-title">News & Updates</h2>
-            <ul className="home-news-list">
-              {newsItems.map(item => (
-                <li key={item.id} className="home-news-item">
-                  <h3 className="home-news-title">{item.title}</h3>
-                  <p className="home-news-description">{item.description}</p>
-                </li>
-              ))}
-            </ul>
-          </section>
-        </ErrorBoundary>
+        {/* News & Updates */}
+        <section className="home-section home-news" aria-labelledby="news-heading">
+          <h2 id="news-heading" className="home-section-title">News & Updates</h2>
+          <ul className="home-news-list">
+            {newsItems.map(item => (
+              <li key={item.id} className="home-news-item">
+                <h3 className="home-news-title">{item.title}</h3>
+                <p className="home-news-description">{item.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
       </main>
 
       <footer className="home-footer">

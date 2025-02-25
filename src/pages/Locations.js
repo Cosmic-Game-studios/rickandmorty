@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 
 function Locations() {
   const [locations, setLocations] = useState([]);
@@ -13,29 +12,7 @@ function Locations() {
   const [isSearching, setIsSearching] = useState(false);
   const [filterType, setFilterType] = useState('');
   const [locationTypes, setLocationTypes] = useState([]);
-
-  // Animation Varianten
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  };
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   // Datenabruf-Funktion
   const fetchLocations = useCallback(async (pageNum = 1) => {
@@ -57,6 +34,8 @@ function Locations() {
         const types = [...new Set(data.results.map(loc => loc.type))];
         setLocationTypes(types);
       }
+      
+      setIsInitialLoad(false);
     } catch (err) {
       console.error("Fehler beim Laden der Locations:", err);
       setError('Fehler beim Laden der Standorte. Bitte versuche es später erneut.');
@@ -152,12 +131,7 @@ function Locations() {
       : locations;
 
   return (
-    <motion.div 
-      className="locations-page"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <div className="locations-page fade-in">
       <div className="locations-header">
         <h2 className="locations-title">Locations im Multiversum</h2>
         <p className="locations-subtitle">
@@ -210,7 +184,7 @@ function Locations() {
         </div>
       )}
 
-      {loading ? (
+      {loading && isInitialLoad ? (
         <div className="loading-container">
           <div className="loading-spinner"></div>
           <p>Portale werden geöffnet...</p>
@@ -235,52 +209,45 @@ function Locations() {
             )}
           </div>
 
-          <motion.div 
-            className="locations-grid"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <AnimatePresence>
-              {displayedLocations.map(location => (
-                <motion.div 
-                  key={location.id} 
-                  className="location-card"
-                  variants={cardVariants}
-                  layout
-                  whileHover={{ 
-                    y: -5, 
-                    boxShadow: "0 10px 20px rgba(0,0,0,0.4)"
-                  }}
-                >
-                  <div className="location-card-content">
-                    <h3 className="location-name">{location.name}</h3>
-                    
-                    <div className="location-details">
-                      <div className="location-info">
-                        <span className="info-label">Typ:</span>
-                        <span className="info-value">{location.type}</span>
-                      </div>
-                      
-                      <div className="location-info">
-                        <span className="info-label">Dimension:</span>
-                        <span className="info-value">{location.dimension}</span>
-                      </div>
-                      
-                      <div className="location-info">
-                        <span className="info-label">Bewohner:</span>
-                        <span className="info-value">{location.residents.length}</span>
-                      </div>
+          {loading && !isInitialLoad && (
+            <div className="overlay-loading">
+              <div className="mini-spinner"></div>
+            </div>
+          )}
+
+          <div className="locations-grid">
+            {displayedLocations.map(location => (
+              <div 
+                key={location.id} 
+                className="location-card stagger-in"
+              >
+                <div className="location-card-content">
+                  <h3 className="location-name">{location.name}</h3>
+                  
+                  <div className="location-details">
+                    <div className="location-info">
+                      <span className="info-label">Typ:</span>
+                      <span className="info-value">{location.type}</span>
                     </div>
                     
-                    <Link to={`/location/${location.id}`} className="details-link">
-                      Details ansehen
-                    </Link>
+                    <div className="location-info">
+                      <span className="info-label">Dimension:</span>
+                      <span className="info-value">{location.dimension}</span>
+                    </div>
+                    
+                    <div className="location-info">
+                      <span className="info-label">Bewohner:</span>
+                      <span className="info-value">{location.residents.length}</span>
+                    </div>
                   </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
+                  
+                  <Link to={`/location/${location.id}`} className="details-link">
+                    Details ansehen
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
 
           {!isSearching && !filterType && (
             <div className="pagination">
@@ -307,7 +274,7 @@ function Locations() {
           )}
         </>
       )}
-    </motion.div>
+    </div>
   );
 }
 

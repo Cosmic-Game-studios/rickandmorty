@@ -32,8 +32,8 @@
         "last 1 firefox version",
         "last 1 safari version"
       ],
-    resolutions": {
+    resolutions": [
   "yocto-queue": "^0.1.0"
-}
+]
     }
   }

@@ -49,7 +49,13 @@ function Quiz() {
         wrongFeedback: "Wrong answer.",
         correctAnswerWas: "The correct answer was:",
         next: "Next Question",
-        restartQuiz: "Restart Quiz"
+        restartQuiz: "Restart Quiz",
+        difficulty: "Difficulty",
+        easy: "Easy",
+        medium: "Medium",
+        hard: "Hard",
+        veryHard: "Very Hard",
+        extreme: "Extreme"
       },
       de: {
         selectLanguage: "Wählen Sie Ihre Sprache für das Quiz",
@@ -66,10 +72,54 @@ function Quiz() {
         wrongFeedback: "Falsche Antwort.",
         correctAnswerWas: "Die richtige Antwort war:",
         next: "Nächste Frage",
-        restartQuiz: "Quiz neu starten"
+        restartQuiz: "Quiz neu starten",
+        difficulty: "Schwierigkeit",
+        easy: "Einfach",
+        medium: "Mittel",
+        hard: "Schwer",
+        veryHard: "Sehr Schwer",
+        extreme: "Extrem"
       }
     };
   }, []);
+
+  // Get difficulty label based on the difficulty value
+  const getDifficultyLabel = (difficulty) => {
+    // Convert difficulty to lowercase and handle edge cases
+    const difficultyKey = difficulty ? difficulty.toLowerCase().replace(/\s+/g, '') : 'medium';
+    
+    // Map difficulty values to t keys
+    const difficultyMap = {
+      'easy': 'easy',
+      'einfach': 'easy',
+      'medium': 'medium',
+      'mittel': 'medium',
+      'hard': 'hard',
+      'schwer': 'hard',
+      'veryhard': 'veryHard',
+      'sehr schwer': 'veryHard',
+      'sehrschwer': 'veryHard',
+      'extreme': 'extreme',
+      'extrem': 'extreme'
+    };
+    
+    return t[language][difficultyMap[difficultyKey] || 'medium'];
+  };
+
+  // Get CSS class for difficulty
+  const getDifficultyClass = (difficulty) => {
+    if (!difficulty) return 'medium';
+    
+    const difficultyLower = difficulty.toLowerCase().replace(/\s+/g, '');
+    
+    if (difficultyLower === 'easy' || difficultyLower === 'einfach') return 'easy';
+    if (difficultyLower === 'medium' || difficultyLower === 'mittel') return 'medium';
+    if (difficultyLower === 'hard' || difficultyLower === 'schwer') return 'hard';
+    if (difficultyLower === 'veryhard' || difficultyLower === 'sehrschwer' || difficultyLower === 'sehr schwer') return 'very-hard';
+    if (difficultyLower === 'extreme' || difficultyLower === 'extrem') return 'extreme';
+    
+    return 'medium'; // Default
+  };
 
   // Fetch quiz questions when language is selected
   useEffect(() => {
@@ -86,8 +136,14 @@ function Quiz() {
         return response.json();
       })
       .then(data => {
-        setAllQuestions(data);
-        const shuffledData = shuffleArray(data);
+        // Ensure each question has a difficulty property
+        const dataWithDifficulty = data.map(q => ({
+          ...q,
+          difficulty: q.difficulty || 'Medium' // Default to Medium if not specified
+        }));
+        
+        setAllQuestions(dataWithDifficulty);
+        const shuffledData = shuffleArray(dataWithDifficulty);
         // Select 10 randomly shuffled questions and add a shuffled version of the answer options
         const selectedQuestions = shuffledData.slice(0, 10).map(q => ({
           ...q,
@@ -227,24 +283,34 @@ function Quiz() {
     );
   }
 
+  const currentQuizQuestion = quizQuestions[currentQuestion] || {};
+  const difficultyClass = getDifficultyClass(currentQuizQuestion.difficulty);
+
   return (
     <div className="quiz-page">
       <h2>{t[language].quizTitle}</h2>
       <div className="question-card">
-        <div className="question-progress">
-          {currentQuestion + 1}/{quizQuestions.length}
+        <div className="question-header">
+          <div className="question-progress">
+            {currentQuestion + 1}/{quizQuestions.length}
+          </div>
+          <div className={`difficulty-badge ${difficultyClass}`}>
+            {getDifficultyLabel(currentQuizQuestion.difficulty)}
+          </div>
         </div>
+        
         <p className="question-text">
-          {quizQuestions[currentQuestion]?.question}
+          {currentQuizQuestion.question}
         </p>
+        
         <div className="options-grid">
-          {(quizQuestions[currentQuestion]?.shuffledOptions || []).map((option, index) => (
+          {(currentQuizQuestion.shuffledOptions || []).map((option, index) => (
             <div
               key={index}
               className={`option 
                 ${selected === option ? 'selected' : ''} 
-                ${waitingForNext && option === quizQuestions[currentQuestion].answer ? 'correct-answer' : ''}
-                ${waitingForNext && selected === option && option !== quizQuestions[currentQuestion].answer ? 'wrong-answer' : ''}
+                ${waitingForNext && option === currentQuizQuestion.answer ? 'correct-answer' : ''}
+                ${waitingForNext && selected === option && option !== currentQuizQuestion.answer ? 'wrong-answer' : ''}
               `}
               onClick={() => !waitingForNext && setSelected(option)}
             >
@@ -259,7 +325,7 @@ function Quiz() {
           {showCorrectAnswer && (
             <div className="correct-answer-container">
               <p>{t[language].correctAnswerWas}</p>
-              <p className="correct-answer-text">{quizQuestions[currentQuestion]?.answer}</p>
+              <p className="correct-answer-text">{currentQuizQuestion.answer}</p>
             </div>
           )}
         </div>

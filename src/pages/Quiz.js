@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
 import { UserContext } from '../context/UserContext';
 import useIsMobile from '../hooks/useIsMobile';
 
@@ -12,30 +12,27 @@ function shuffleArray(array) {
   return newArr;
 }
 
-// Helper function: Determine question difficulty based on content and ID
+// Helper function: Determine question difficulty based on ID
 function determineQuestionDifficulty(question) {
   const id = question.id;
   
-  // Assign difficulty based on question ID ranges
-  if (id <= 100) {
-    return "easy"; // Basic facts about characters and universe
-  } else if (id <= 150) {
-    return "medium"; // Episode details and common knowledge
-  } else if (id <= 200) {
-    return "hard"; // More specific details and plot points
-  } else if (id <= 300) {
-    return "very-hard"; // Philosophical themes and complex analysis
-  } else {
-    return "extreme"; // Easter eggs, obscure references, and meta content
-  }
+  if (id <= 100) return "easy"; 
+  if (id <= 150) return "medium"; 
+  if (id <= 200) return "hard"; 
+  if (id <= 300) return "very-hard"; 
+  return "extreme";
 }
 
 function Quiz() {
   const { completeMission } = useContext(UserContext);
   const isMobile = useIsMobile();
 
-  // New state for language selection: "en" or "de"
-  const [language, setLanguage] = useState(null);
+  // State for language selection: "en" or "de"
+  const [language, setLanguage] = useState(() => {
+    // Try to get language preference from localStorage
+    const saved = localStorage.getItem('quizLanguage');
+    return saved || "de"; // Default to German if not set
+  });
 
   // Quiz states
   const [allQuestions, setAllQuestions] = useState([]);
@@ -47,12 +44,18 @@ function Quiz() {
   const [feedback, setFeedback] = useState('');
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [waitingForNext, setWaitingForNext] = useState(false);
-  const [difficultyLevel, setDifficultyLevel] = useState('all'); // Added difficulty filter
+  const [difficultyLevel, setDifficultyLevel] = useState('all');
 
-  // Translation object for basic UI texts
+  // State for tracking overall quiz statistics
+  const [quizStats, setQuizStats] = useState(() => {
+    const saved = localStorage.getItem('quizStatistics');
+    return saved ? JSON.parse(saved) : { totalAnswered: 0, totalCorrect: 0 };
+  });
+
+  // Translation object for UI texts
   const t = useMemo(() => {
     return {
       en: {
@@ -112,9 +115,22 @@ function Quiz() {
     };
   }, []);
 
+  // Calculate points based on difficulty
+  const getPointsForDifficulty = (difficulty) => {
+    const difficultyMap = {
+      'easy': 30,
+      'medium': 50,
+      'hard': 80,
+      'very-hard': 120,
+      'extreme': 200
+    };
+    
+    return difficultyMap[difficulty] || 50;
+  };
+
   // Get difficulty label based on the difficulty value
   const getDifficultyLabel = (difficulty) => {
-    // Convert difficulty to lowercase and handle edge cases
+    // Convert to lowercase and handle edge cases
     const difficultyKey = difficulty ? difficulty.toLowerCase().replace(/\s+/g, '') : 'medium';
     
     // Map difficulty values to t keys
@@ -127,7 +143,6 @@ function Quiz() {
       'schwer': 'hard',
       'veryhard': 'veryHard',
       'very-hard': 'veryHard',
-      'sehr schwer': 'veryHard',
       'sehrschwer': 'veryHard',
       'extreme': 'extreme',
       'extrem': 'extreme'
@@ -145,107 +160,65 @@ function Quiz() {
     if (difficultyLower === 'easy' || difficultyLower === 'einfach') return 'easy';
     if (difficultyLower === 'medium' || difficultyLower === 'mittel') return 'medium';
     if (difficultyLower === 'hard' || difficultyLower === 'schwer') return 'hard';
-    if (difficultyLower === 'veryhard' || difficultyLower === 'very-hard' || difficultyLower === 'sehrschwer' || difficultyLower === 'sehr schwer') return 'very-hard';
+    if (difficultyLower === 'veryhard' || difficultyLower === 'very-hard' || difficultyLower === 'sehrschwer') return 'very-hard';
     if (difficultyLower === 'extreme' || difficultyLower === 'extrem') return 'extreme';
     
     return 'medium'; // Default
   };
 
-  // Calculate points based on difficulty
-  const getPointsForDifficulty = (difficulty) => {
-    const difficultyMap = {
-      'easy': 30,
-      'medium': 50,
-      'hard': 80,
-      'very-hard': 120,
-      'extreme': 200
-    };
-    
-    return difficultyMap[difficulty] || 50;
-  };
-
-  // Fetch quiz questions when language is selected
+  // Fetch quiz questions from JSON file
   useEffect(() => {
     if (!language) return;
+    
     setLoading(true);
     setError('');
-
-    // Mock fetch - in a real app, you would fetch from the server
-    // Here we use the embedded data set instead of fetching
-    try {
-      // This is the embedded Rick and Morty questions dataset
-      const rickAndMortyQuestions = [
-        // Your large dataset of questions would go here
-        // For brevity, I'm not including all 450 questions here
-        {
-          "id": 1,
-          "question": "Was ist Ricks Schlagwort?",
-          "options": [
-            "Wubba Lubba Dub Dub",
-            "Bis zur Unendlichkeit und noch viel weiter",
-            "Bazinga",
-            "Heiliger Strohsack!"
-          ],
-          "answer": "Wubba Lubba Dub Dub"
-        },
-        {
-          "id": 101,
-          "question": "In 'Pickle Rick', warum verwandelt sich Rick in eine Gurke?",
-          "options": [
-            "Um Familientherapie zu vermeiden",
-            "Um eine Wette zu gewinnen",
-            "Um ein gefährliches Experiment durchzuführen",
-            "Um Morty zu beeindrucken"
-          ],
-          "answer": "Um Familientherapie zu vermeiden"
-        },
-        {
-          "id": 201,
-          "question": "In 'The Old Man and the Seat', welches einzigartige Element integriert Rick in sein privates Toilettendesign, um absolute Privatsphäre zu gewährleisten?",
-          "options": [
-            "Ein Quantenverschlüsselungssystem",
-            "Ein dimensionsübergreifender Rissmechanismus",
-            "Ein KI-Überwachungssystem",
-            "Ein Selbstzerstörungsprotokoll"
-          ],
-          "answer": "Ein dimensionsübergreifender Rissmechanismus"
-        },
-        {
-          "id": 301,
-          "question": "In 'The Old Man and the Seat', welches einzigartige Element integriert Rick in sein privates Toilettendesign, um absolute Privatsphäre zu gewährleisten?",
-          "options": [
-            "Ein Quantenverschlüsselungssystem",
-            "Ein dimensionsübergreifender Rissmechanismus",
-            "Ein KI-Überwachungssystem",
-            "Ein Selbstzerstörungsprotokoll"
-          ],
-          "answer": "Ein dimensionsübergreifender Rissmechanismus"
+    
+    // Determine which JSON file to load based on language
+    const quizFile = language === 'en' ? '/quizData.en.json' : '/quizData.de.json';
+    
+    fetch(quizFile)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Failed to fetch questions (${response.status} ${response.statusText})`);
         }
-      ];
-      
-      // Add difficulty to each question
-      const questionsWithDifficulty = rickAndMortyQuestions.map(q => ({
-        ...q,
-        difficulty: determineQuestionDifficulty(q),
-        points: getPointsForDifficulty(determineQuestionDifficulty(q))
-      }));
-      
-      setAllQuestions(questionsWithDifficulty);
-      selectQuizQuestions(questionsWithDifficulty, difficultyLevel);
-      setLoading(false);
-    } catch (err) {
-      setError('Error loading quiz questions: ' + err.message);
-      setLoading(false);
-    }
-  }, [language, difficultyLevel]);
+        return response.json();
+      })
+      .then(data => {
+        // Add difficulty and points properties to each question
+        const processedQuestions = data.map(q => ({
+          ...q,
+          difficulty: determineQuestionDifficulty(q),
+          points: getPointsForDifficulty(determineQuestionDifficulty(q))
+        }));
+        
+        setAllQuestions(processedQuestions);
+        selectQuizQuestions(processedQuestions, difficultyLevel);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Error loading quiz questions:", err);
+        setError(err.message || 'Error loading quiz questions');
+        setLoading(false);
+      });
+  }, [language]);
 
-  // Function to select quiz questions based on difficulty
-  const selectQuizQuestions = (questions, selectedDifficulty) => {
+  // Save language preference to localStorage
+  useEffect(() => {
+    localStorage.setItem('quizLanguage', language);
+  }, [language]);
+
+  // Save quiz statistics to localStorage
+  useEffect(() => {
+    localStorage.setItem('quizStatistics', JSON.stringify(quizStats));
+  }, [quizStats]);
+
+  // Select quiz questions based on difficulty level
+  const selectQuizQuestions = (questions, difficulty) => {
     let filteredQuestions = questions;
     
     // Filter by difficulty if not "all"
-    if (selectedDifficulty !== 'all') {
-      filteredQuestions = questions.filter(q => q.difficulty === selectedDifficulty);
+    if (difficulty !== 'all') {
+      filteredQuestions = questions.filter(q => q.difficulty === difficulty);
     }
     
     // Shuffle the filtered questions
@@ -267,30 +240,37 @@ function Quiz() {
     setQuizCompleted(false);
   };
 
+  // Update quiz when difficulty changes
+  useEffect(() => {
+    if (allQuestions.length > 0) {
+      selectQuizQuestions(allQuestions, difficultyLevel);
+    }
+  }, [difficultyLevel]);
+
   // Handle difficulty change
   const handleDifficultyChange = (newDifficulty) => {
     setDifficultyLevel(newDifficulty);
-    if (allQuestions.length > 0) {
-      selectQuizQuestions(allQuestions, newDifficulty);
-    }
   };
 
-  // Function to update the daily quiz counter in localStorage
+  // Update daily quiz counter in localStorage
   const updateDailyQuizCount = () => {
     const today = new Date().toISOString().slice(0, 10);
     let data = { date: today, count: 0 };
-    const stored = localStorage.getItem('dailyQuizData');
-    if (stored) {
-      const parsed = JSON.parse(stored);
-      // If the stored date is not today, reset the counter
-      if (parsed.date !== today) {
-        data = { date: today, count: 0 };
-      } else {
-        data = parsed;
+    
+    try {
+      const stored = localStorage.getItem('dailyQuizData');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (parsed.date === today) {
+          data = parsed;
+        }
       }
+      
+      data.count = data.count + 1;
+      localStorage.setItem('dailyQuizData', JSON.stringify(data));
+    } catch (error) {
+      console.error('Error updating daily quiz count:', error);
     }
-    data.count = data.count + 1;
-    localStorage.setItem('dailyQuizData', JSON.stringify(data));
   };
 
   // Handler for answering a question
@@ -300,11 +280,23 @@ function Quiz() {
 
     setWaitingForNext(true);
     
+    // Update overall statistics for each answered question
+    setQuizStats(prev => ({
+      ...prev,
+      totalAnswered: prev.totalAnswered + 1
+    }));
+    
     if (selected === currentQuiz.answer) {
       setScore(prev => prev + currentQuiz.points);
       completeMission(currentQuiz.points); // Points based on difficulty
       setFeedback(t[language].correctFeedback);
       setIsAnswerCorrect(true);
+      
+      // Update correct answers count
+      setQuizStats(prev => ({
+        ...prev,
+        totalCorrect: prev.totalCorrect + 1
+      }));
     } else {
       setFeedback(t[language].wrongFeedback);
       setShowCorrectAnswer(true);
@@ -341,23 +333,18 @@ function Quiz() {
       <div className="quiz-page">
         <header className="hero-section">
           <h1 className="hero-title">{t.en.selectLanguage}</h1>
-          <p className="hero-subtitle">
-            {t.en.selectLanguage}
-          </p>
         </header>
         <section className="language-selection">
           <div className="hero-buttons" style={{ justifyContent: 'center', gap: '1rem' }}>
             <button
               className="hero-button"
               onClick={() => setLanguage('en')}
-              style={{ padding: '10px 20px' }}
             >
               {t.en.english}
             </button>
             <button
               className="hero-button"
               onClick={() => setLanguage('de')}
-              style={{ padding: '10px 20px' }}
             >
               {t.en.german}
             </button>
@@ -376,7 +363,19 @@ function Quiz() {
     return (
       <div className="quiz-page quiz-completed">
         <h2>{t[language].quizCompleted}</h2>
-        <p className="score-summary">{t[language].progress(score, quizQuestions.reduce((total, q) => total + q.points, 0))}</p>
+        
+        {/* Show overall statistics */}
+        <p className="score-summary">
+          {language === 'de' 
+            ? `Sie haben ${quizStats.totalCorrect} von ${quizStats.totalAnswered} Fragen richtig beantwortet.`
+            : `You answered ${quizStats.totalCorrect} out of ${quizStats.totalAnswered} questions correctly.`
+          }
+        </p>
+        
+        {/* Current quiz score */}
+        <p className="current-quiz-score">
+          {t[language].progress(score, quizQuestions.reduce((total, q) => total + q.points, 0))}
+        </p>
         
         {/* Difficulty selector for next quiz */}
         <div className="difficulty-selector">
@@ -397,7 +396,7 @@ function Quiz() {
         </div>
         
         <button 
-          className="restart-button" 
+          className="restart-button"
           onClick={handleRestartQuiz}
         >
           {t[language].restartQuiz}

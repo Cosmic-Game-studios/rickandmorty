@@ -4399,8 +4399,1109 @@
       "Time to get schwifty"
     ],
     "answer": "Get Schwifty"
-  }
+  },
 
+
+  {
+    "id": 451,
+    "question": "In 'The Rickshank Rickdemption' gibt es eine versteckte Notiz, in der Rick einen kryptischen Code erwähnt. Welcher Code wird dort angedeutet?",
+    "options": [
+      "R-137",
+      "LMN-42",
+      "XJ9-47",
+      "QW3-19"
+    ],
+    "answer": "LMN-42"
+  },
+  {
+    "id": 452,
+    "question": "Welche mathematische Konstante wird in mehreren Anspielungen als Symbol für die Unendlichkeit des Multiversums verwendet?",
+    "options": [
+      "π (Pi)",
+      "e",
+      "φ (Phi)",
+      "√2"
+    ],
+    "answer": "φ (Phi)"
+  },
+  {
+    "id": 453,
+    "question": "In der Episode 'Anatomy Park' gibt es einen obskuren Hinweis auf eine chemische Verbindung. Welche Verbindung wird subtil erwähnt?",
+    "options": [
+      "Aspirin",
+      "Caffeine",
+      "Acetaminophen",
+      "Serotonin"
+    ],
+    "answer": "Serotonin"
+  },
+  {
+    "id": 454,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen Hinweis auf die Anzahl der parallelen Ricks. Wie viele Ricks werden in einer einzigen Szene als minimale Anzahl gezeigt?",
+    "options": [
+      "13",
+      "27",
+      "42",
+      "101"
+    ],
+    "answer": "27"
+  },
+  {
+    "id": 455,
+    "question": "Welcher obskure philosophische Begriff wird in 'Total Rickall' als subtiler Kommentar zur Erinnerungskultur verwendet?",
+    "options": [
+      "Epistemologie",
+      "Skeptizismus",
+      "Ontologie",
+      "Existenzialismus"
+    ],
+    "answer": "Existenzialismus"
+  },
+  {
+    "id": 456,
+    "question": "In 'Pickle Rick' gibt es eine versteckte Anspielung auf klassische Literatur. Welcher Roman wird durch eine subtile Referenz erwähnt?",
+    "options": [
+      "Moby Dick",
+      "1984",
+      "Ulysses",
+      "Faust"
+    ],
+    "answer": "Faust"
+  },
+  {
+    "id": 457,
+    "question": "In 'The Ricks Must Be Crazy' wird eine Miniaturwelt erschaffen. Welche physikalische Theorie wird implizit als Grundlage für diese Schöpfung genannt?",
+    "options": [
+      "Relativitätstheorie",
+      "Quantenmechanik",
+      "Stringtheorie",
+      "Chaos-Theorie"
+    ],
+    "answer": "Quantenmechanik"
+  },
+  {
+    "id": 458,
+    "question": "Welche obskure wissenschaftliche Disziplin wird in 'Rickmancing the Stone' als Inspiration für Ricks Experimente erwähnt?",
+    "options": [
+      "Astrobiologie",
+      "Neuroinformatik",
+      "Molekulare Gastronomie",
+      "Quantengravitation"
+    ],
+    "answer": "Quantengravitation"
+  },
+  {
+    "id": 459,
+    "question": "In einer versteckten Szene von 'The Rickshank Rickdemption' ist ein Zahlencode zu sehen. Welcher Code taucht dort auf und wird als Hinweis auf die Zeitlichkeit interpretiert?",
+    "options": [
+      "101",
+      "137",
+      "404",
+      "007"
+    ],
+    "answer": "137"
+  },
+  {
+    "id": 460,
+    "question": "Welches seltene literarische Stilmittel wird in 'Morty's Mind Blowers' verwendet, um den fragmentierten Charakter von Erinnerungen darzustellen?",
+    "options": [
+      "Stream of Consciousness",
+      "Metafiktion",
+      "Intertextualität",
+      "Paradoxie"
+    ],
+    "answer": "Stream of Consciousness"
+  },
+  {
+    "id": 461,
+    "question": "In 'Vindicators 3: The Return of Worldender' gibt es eine subtile Anspielung auf klassische Heldengeschichten. Welcher antike Held wird in einem Vergleich erwähnt?",
+    "options": [
+      "Achilles",
+      "Herkules",
+      "Odysseus",
+      "Theseus"
+    ],
+    "answer": "Odysseus"
+  },
+  {
+    "id": 462,
+    "question": "Welches seltene astronomische Phänomen wird in 'Interdimensional Cable 2: Tempting Fate' als Metapher für die unendlichen Möglichkeiten des Multiversums verwendet?",
+    "options": [
+      "Schwarze Löcher",
+      "Supernovae",
+      "Quasare",
+      "Neutronensterne"
+    ],
+    "answer": "Quasare"
+  },
+  {
+    "id": 463,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein verstecktes Gerät erwähnt, das zur Manipulation von Wahrnehmungen dient. Wie heißt dieses Gerät?",
+    "options": [
+      "Perzeptionsmodulator",
+      "Realitätsdistorter",
+      "Sensormischer",
+      "Illusionsgenerator"
+    ],
+    "answer": "Illusionsgenerator"
+  },
+  {
+    "id": 464,
+    "question": "In 'Morty's Mind Blowers' gibt es einen obskuren Hinweis auf einen parallelen Zeitstrang. Welcher Begriff wird verwendet, um diesen Zeitstrang zu beschreiben?",
+    "options": [
+      "Chrono-Divergenz",
+      "Temporal Rift",
+      "Zeitkaskade",
+      "Synchronizitätsbruch"
+    ],
+    "answer": "Chrono-Divergenz"
+  },
+  {
+    "id": 465,
+    "question": "In 'Anatomy Park' wird eine veränderte biologische Struktur dargestellt. Welche ungewöhnliche Funktion wird dieser Struktur zugeschrieben?",
+    "options": [
+      "Nährstoffsynthese",
+      "Gedächtnisspeicherung",
+      "Selbstreparatur",
+      "Energieumwandlung"
+    ],
+    "answer": "Gedächtnisspeicherung"
+  },
+  {
+    "id": 466,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen obskuren mathematischen Hinweis. Welche abstrakte mathematische Struktur wird als Anspielung auf Unendlichkeit genutzt?",
+    "options": [
+      "E=mc²",
+      "Fibonacci-Folge",
+      "Mandelbrot-Menge",
+      "Pythagoras' Theorem"
+    ],
+    "answer": "Mandelbrot-Menge"
+  },
+  {
+    "id": 467,
+    "question": "In 'Total Rickall' wird ein Paradoxon thematisiert. Welcher paradoxe Ausdruck wird verwendet, um die Unmöglichkeit klarer Erinnerungen zu beschreiben?",
+    "options": [
+      "Das Paradoxon des Vergessens",
+      "Das Erinnerungsdilemma",
+      "Der Widerspruch der Erinnerung",
+      "Das unlösbare Gedächtnisparadox"
+    ],
+    "answer": "Das unlösbare Gedächtnisparadox"
+  },
+  {
+    "id": 468,
+    "question": "In 'Pickle Rick' gibt es eine subtile Anspielung auf ein klassisches Science-Fiction-Werk. Welches Werk wird implizit erwähnt?",
+    "options": [
+      "Dune",
+      "Neuromancer",
+      "Solaris",
+      "Foundation"
+    ],
+    "answer": "Dune"
+  },
+  {
+    "id": 469,
+    "question": "In 'The Rickchurian Mortydate' wird ein komplexer politischer Konflikt angedeutet. Welcher politische Begriff wird dabei in einem obskuren Dialog verwendet?",
+    "options": [
+      "Anarchie",
+      "Plutokratie",
+      "Oligarchie",
+      "Technokratie"
+    ],
+    "answer": "Technokratie"
+  },
+  {
+    "id": 470,
+    "question": "Welche seltene, interdisziplinäre Wissenschaft wird in 'Meeseeks and Destroy' als Grundlage für Ricks Experimente erwähnt?",
+    "options": [
+      "Neurophilosophie",
+      "Biokomplexität",
+      "Kognitionswissenschaft",
+      "Quantenpsychologie"
+    ],
+    "answer": "Quantenpsychologie"
+  },
+  {
+    "id": 471,
+    "question": "In 'Rickmancing the Stone' wird ein obskurer geologischer Begriff als Metapher verwendet. Welcher Begriff wird dafür genutzt?",
+    "options": [
+      "Metamorphose",
+      "Verwerfung",
+      "Erosion",
+      "Subduktion"
+    ],
+    "answer": "Subduktion"
+  },
+  {
+    "id": 472,
+    "question": "In 'The Rickshank Rickdemption' wird ein kryptischer Name für eine geheime Organisation erwähnt. Wie lautet dieser Name?",
+    "options": [
+      "Die Schattenricks",
+      "Das Multiversum-Konsortium",
+      "Die unendliche Verschwörung",
+      "Die Nexus-Allianz"
+    ],
+    "answer": "Die Nexus-Allianz"
+  },
+  {
+    "id": 473,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen subtilen Hinweis auf einen berühmten Künstler. Welcher Künstler wird implizit referenziert?",
+    "options": [
+      "Picasso",
+      "Dali",
+      "Van Gogh",
+      "Warhol"
+    ],
+    "answer": "Dali"
+  },
+  {
+    "id": 474,
+    "question": "In 'Morty's Mind Blowers' wird ein abstraktes Konzept der Identität erörtert. Welcher Begriff wird verwendet, um die fluiden Grenzen des Selbst zu beschreiben?",
+    "options": [
+      "Metamorphose",
+      "Transzendenz",
+      "Ambiguität",
+      "Inkonstanz"
+    ],
+    "answer": "Ambiguität"
+  },
+  {
+    "id": 475,
+    "question": "In 'Vindicators 3: The Return of Worldender' wird ein obskurer Hinweis auf klassische Mythologie gegeben. Welcher mythologische Held wird in einem Vergleich erwähnt?",
+    "options": [
+      "Herakles",
+      "Perseus",
+      "Jason",
+      "Theseus"
+    ],
+    "answer": "Jason"
+  },
+  {
+    "id": 476,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein kryptischer Kanalname gezeigt. Welcher dieser Namen taucht in einem kurzen Blick auf?",
+    "options": [
+      "Xenon TV",
+      "Nebula Network",
+      "Cosmic Relay",
+      "Quantum Broadcast"
+    ],
+    "answer": "Quantum Broadcast"
+  },
+  {
+    "id": 477,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein selten verwendeter Begriff zur Beschreibung von Raum-Zeit-Krümmung genutzt. Welcher Begriff ist das?",
+    "options": [
+      "Graviton",
+      "Singularität",
+      "Hyperboloid",
+      "Geodäsie"
+    ],
+    "answer": "Singularität"
+  },
+  {
+    "id": 478,
+    "question": "In 'Pickle Rick' gibt es eine subtile Anspielung auf eine antike Philosophie. Welche Philosophie wird implizit erwähnt?",
+    "options": [
+      "Stoizismus",
+      "Epikureismus",
+      "Skeptizismus",
+      "Existenzialismus"
+    ],
+    "answer": "Stoizismus"
+  },
+  {
+    "id": 479,
+    "question": "In 'Total Rickall' wird ein komplexer Begriff für Wahrnehmungsverzerrung verwendet. Welcher Begriff beschreibt dieses Phänomen?",
+    "options": [
+      "Kognitive Dissonanz",
+      "Illusion der Kontrolle",
+      "Perzeptuelle Verzerrung",
+      "Subjektive Realität"
+    ],
+    "answer": "Kognitive Dissonanz"
+  },
+  {
+    "id": 480,
+    "question": "In 'Anatomy Park' wird eine ungewöhnliche biologische Struktur als Analogie verwendet. Welche Struktur wird als Metapher für das menschliche Nervensystem dargestellt?",
+    "options": [
+      "Ein Netzwerk von Wurzeln",
+      "Ein Spinnennetz",
+      "Ein neuronales Labyrinth",
+      "Ein Geflecht aus Seidenfäden"
+    ],
+    "answer": "Ein neuronales Labyrinth"
+  },
+  {
+    "id": 481,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen Hinweis auf mathematische Unendlichkeit. Welcher Begriff wird verwendet, um diesen Zustand zu beschreiben?",
+    "options": [
+      "Aleph-Null",
+      "Unendlichkeit",
+      "Transfinite Zahlen",
+      "Cantor's Diagonal"
+    ],
+    "answer": "Aleph-Null"
+  },
+  {
+    "id": 482,
+    "question": "In 'The Rickchurian Mortydate' wird ein obskurer Begriff für interstellare Kommunikation erwähnt. Welcher Begriff wird verwendet?",
+    "options": [
+      "Quantenkollaboration",
+      "Telepathische Synchronisation",
+      "Dimensionales Flüstern",
+      "Kosmische Resonanz"
+    ],
+    "answer": "Kosmische Resonanz"
+  },
+  {
+    "id": 483,
+    "question": "In 'Rickmancing the Stone' wird ein obskurer, veralteter wissenschaftlicher Begriff als Metapher verwendet. Welcher Begriff ist das?",
+    "options": [
+      "Phlogiston",
+      "Aether",
+      "Caloric",
+      "Vitalismus"
+    ],
+    "answer": "Aether"
+  },
+  {
+    "id": 484,
+    "question": "In 'The Rickshank Rickdemption' gibt es eine obskure Anspielung auf ein historisches Ereignis. Welches Ereignis wird subtil referenziert?",
+    "options": [
+      "Die Französische Revolution",
+      "Der Fall der Berliner Mauer",
+      "Die Mondlandung",
+      "Die Industrielle Revolution"
+    ],
+    "answer": "Die Mondlandung"
+  },
+  {
+    "id": 485,
+    "question": "In 'Morty's Mind Blowers' wird ein psychologisches Konzept zur Fragmentierung des Gedächtnisses thematisiert. Welcher Begriff wird genutzt?",
+    "options": [
+      "Dissoziation",
+      "Repression",
+      "Regression",
+      "Projektion"
+    ],
+    "answer": "Dissoziation"
+  },
+  {
+    "id": 486,
+    "question": "In 'Vindicators 3: The Return of Worldender' wird ein obskurer Begriff für heldenhafte Selbstaufopferung verwendet. Welcher Begriff wird erwähnt?",
+    "options": [
+      "Altruismus",
+      "Selbstmarter",
+      "Eid der Helden",
+      "Opfermut"
+    ],
+    "answer": "Altruismus"
+  },
+  {
+    "id": 487,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver Artikel erwähnt, der eine interstellare Währung beschreibt. Wie heißt diese Währung?",
+    "options": [
+      "Galaktische Credits",
+      "Dimensional Coins",
+      "Cosmic Tokens",
+      "Quantum Quids"
+    ],
+    "answer": "Quantum Quids"
+  },
+  {
+    "id": 488,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein naturwissenschaftliches Phänomen als Metapher genutzt. Welches Phänomen wird beschrieben?",
+    "options": [
+      "Polarlichter",
+      "Aurora Borealis",
+      "Biolumineszenz",
+      "Corona-Entladung"
+    ],
+    "answer": "Biolumineszenz"
+  },
+  {
+    "id": 489,
+    "question": "In 'Pickle Rick' gibt es eine subtile Andeutung auf ein philosophisches Dilemma. Welcher Begriff wird verwendet, um Ricks innere Zerrissenheit zu beschreiben?",
+    "options": [
+      "Zerrissenheit",
+      "Dualismus",
+      "Dichotomie",
+      "Paradoxie"
+    ],
+    "answer": "Dualismus"
+  },
+  {
+    "id": 490,
+    "question": "In 'Total Rickall' wird ein obskurer Begriff zur Unterscheidung von Realität und Fiktion verwendet. Welcher Begriff ist das?",
+    "options": [
+      "Hyperrealität",
+      "Simulakrum",
+      "Fiktionalität",
+      "Meta-Ebene"
+    ],
+    "answer": "Hyperrealität"
+  },
+  {
+    "id": 491,
+    "question": "In 'Anatomy Park' wird ein ungewöhnlicher biologischer Prozess als Analogie verwendet. Welche Funktion wird als Metapher genannt?",
+    "options": [
+      "Zellteilung",
+      "Photosynthese",
+      "Apoptose",
+      "Proteinbiosynthese"
+    ],
+    "answer": "Apoptose"
+  },
+  {
+    "id": 492,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine kryptische Anspielung auf einen bekannten Philosophen. Welcher Philosoph wird indirekt erwähnt?",
+    "options": [
+      "Nietzsche",
+      "Kant",
+      "Descartes",
+      "Sartre"
+    ],
+    "answer": "Nietzsche"
+  },
+  {
+    "id": 493,
+    "question": "In 'The Rickchurian Mortydate' wird ein obskurer Begriff für politische Infiltration verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Subversion",
+      "Infiltration",
+      "Sabotage",
+      "Putsch"
+    ],
+    "answer": "Subversion"
+  },
+  {
+    "id": 494,
+    "question": "In 'Rickmancing the Stone' wird ein altes philosophisches Konzept als Grundlage für den Überlebenskampf genannt. Welcher Begriff wird erwähnt?",
+    "options": [
+      "Der Wille zum Leben",
+      "Existenz",
+      "Sisyphos",
+      "Hedonismus"
+    ],
+    "answer": "Der Wille zum Leben"
+  },
+  {
+    "id": 495,
+    "question": "In 'The Rickshank Rickdemption' wird eine obskure numerologische Theorie angedeutet. Welche Zahl wird als Symbol für das Schicksal hervorgehoben?",
+    "options": [
+      "7",
+      "13",
+      "42",
+      "101"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": 496,
+    "question": "In 'Morty's Mind Blowers' wird ein psychologischer Mechanismus zur selektiven Erinnerung thematisiert. Welcher Begriff wird verwendet?",
+    "options": [
+      "Memory Pruning",
+      "Selective Amnesia",
+      "Cognitive Filtering",
+      "Repressed Recall"
+    ],
+    "answer": "Cognitive Filtering"
+  },
+  {
+    "id": 497,
+    "question": "In 'Vindicators 3: The Return of Worldender' wird ein literarischer Verweis genutzt, um den Heldenmut zu kommentieren. Welcher Schriftsteller wird indirekt genannt?",
+    "options": [
+      "Hemingway",
+      "Faulkner",
+      "Kerouac",
+      "Salinger"
+    ],
+    "answer": "Kerouac"
+  },
+  {
+    "id": 498,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver physikalischer Prozess als Metapher genutzt. Wie lautet dieser Prozess?",
+    "options": [
+      "Dimensional Decay",
+      "Quantum Entanglement",
+      "Spatial Fracturing",
+      "Temporal Flux"
+    ],
+    "answer": "Temporal Flux"
+  },
+  {
+    "id": 499,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein Begriff aus der Thermodynamik als Metapher genutzt. Welcher Begriff wird genannt?",
+    "options": [
+      "Entropie",
+      "Enthalpie",
+      "Isothermie",
+      "Adiabatik"
+    ],
+    "answer": "Entropie"
+  },
+  {
+    "id": 500,
+    "question": "In 'Pickle Rick' wird ein Hinweis auf ein philosophisches Paradoxon gegeben. Welcher Begriff beschreibt dieses Paradoxon am besten?",
+    "options": [
+      "Zerrissenheit",
+      "Selbstbezüglichkeit",
+      "Paradoxie",
+      "Inkonsequenz"
+    ],
+    "answer": "Selbstbezüglichkeit"
+  },
+  {
+    "id": 501,
+    "question": "In 'The Rickshank Rickdemption' wird ein wissenschaftlicher Begriff verwendet, um Ricks Wahrnehmung der Realität zu beschreiben. Welcher Begriff ist das?",
+    "options": [
+      "Subjektivität",
+      "Relativismus",
+      "Konstruktivismus",
+      "Perzeptuelle Variabilität"
+    ],
+    "answer": "Konstruktivismus"
+  },
+  {
+    "id": 502,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen versteckten Hinweis auf ein mathematisches Konzept. Welcher Begriff wird verwendet?",
+    "options": [
+      "Fraktal",
+      "Chaos",
+      "Algorithmus",
+      "Topologie"
+    ],
+    "answer": "Fraktal"
+  },
+  {
+    "id": 503,
+    "question": "In 'Morty's Mind Blowers' wird ein seltener psychologischer Mechanismus erwähnt. Welcher Mechanismus wird thematisiert?",
+    "options": [
+      "Verdrängung",
+      "Repression",
+      "Projektion",
+      "Rationalisierung"
+    ],
+    "answer": "Verdrängung"
+  },
+  {
+    "id": 504,
+    "question": "In 'Total Rickall' wird ein Begriff verwendet, um die Instabilität von Erinnerungen zu beschreiben. Welcher Begriff ist das?",
+    "options": [
+      "Memorielle Instabilität",
+      "Erinnerungsfluktuation",
+      "Gedächtniszerfall",
+      "Neuronale Dysfunktion"
+    ],
+    "answer": "Erinnerungsfluktuation"
+  },
+  {
+    "id": 505,
+    "question": "In 'Anatomy Park' wird ein biologischer Prozess als Analogie für städtische Dynamik verwendet. Welcher Prozess wird genannt?",
+    "options": [
+      "Zellteilung",
+      "Wundheilung",
+      "Metabolismus",
+      "Osmose"
+    ],
+    "answer": "Metabolismus"
+  },
+  {
+    "id": 506,
+    "question": "In 'Rickmancing the Stone' wird ein archaischer Begriff genutzt, um den Kampf ums Überleben zu beschreiben. Welcher Begriff wird genannt?",
+    "options": [
+      "Kampfgeist",
+      "Überlebenswille",
+      "Bitterkeit",
+      "Lebensdurst"
+    ],
+    "answer": "Überlebenswille"
+  },
+  {
+    "id": 507,
+    "question": "In 'The Rickchurian Mortydate' gibt es eine subtile Anspielung auf einen historischen Staatsstreich. Welcher Staatsstreich wird indirekt erwähnt?",
+    "options": [
+      "Der Putsch von 1964",
+      "Der Chile-Putsch 1973",
+      "Der Putsch in der Türkei 1980",
+      "Der Umsturz in Iran 1979"
+    ],
+    "answer": "Der Chile-Putsch 1973"
+  },
+  {
+    "id": 508,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver wissenschaftlicher Artikel erwähnt. Welcher Titel wird als Referenz genannt?",
+    "options": [
+      "Die Quantendynamik des Chaos",
+      "Interdimensionale Ströme und ihre Konsequenzen",
+      "Das Paradox der Parallelwelten",
+      "Die Synthese von Raum und Zeit"
+    ],
+    "answer": "Das Paradox der Parallelwelten"
+  },
+  {
+    "id": 509,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein Begriff für temporäre Raum-Anomalien genutzt. Welcher Begriff wird verwendet?",
+    "options": [
+      "Spatiotemporale Lücken",
+      "Räumliche Diskontinuität",
+      "Temporal Rift",
+      "Schnittstellenanomalie"
+    ],
+    "answer": "Temporal Rift"
+  },
+  {
+    "id": 510,
+    "question": "In 'Pickle Rick' wird ein subtiler Hinweis auf ein antikes philosophisches Konzept gegeben. Welcher Begriff wird genannt?",
+    "options": [
+      "Sophrologie",
+      "Logos",
+      "Telos",
+      "Eudaimonia"
+    ],
+    "answer": "Telos"
+  },
+  {
+    "id": 511,
+    "question": "In 'Total Rickall' gibt es eine kryptische Anspielung auf die Unstetigkeit der Zeit. Welcher Begriff wird verwendet?",
+    "options": [
+      "Zeitdilatation",
+      "Chrono-Fluidität",
+      "Temporal Instabilität",
+      "Ewige Gegenwart"
+    ],
+    "answer": "Temporal Instabilität"
+  },
+  {
+    "id": 512,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen Hinweis auf die Dualität von Licht und Dunkelheit. Welcher Begriff fasst dieses Konzept zusammen?",
+    "options": [
+      "Dichotomie",
+      "Polarität",
+      "Dualismus",
+      "Ambivalenz"
+    ],
+    "answer": "Polarität"
+  },
+  {
+    "id": 513,
+    "question": "In 'Morty's Mind Blowers' wird ein seltener Begriff für die selektive Wahrnehmung von Informationen erwähnt. Welcher Begriff ist das?",
+    "options": [
+      "Selektive Wahrnehmung",
+      "Informationsfilterung",
+      "Perzeptuelle Selektion",
+      "Kognitive Auswahl"
+    ],
+    "answer": "Informationsfilterung"
+  },
+  {
+    "id": 514,
+    "question": "In 'The Rickshank Rickdemption' wird ein abstrakter Begriff genutzt, um den Zerfall gesellschaftlicher Strukturen zu beschreiben. Welcher Begriff wird verwendet?",
+    "options": [
+      "Dekonstruktion",
+      "Erosion",
+      "Dekomposition",
+      "Desintegration"
+    ],
+    "answer": "Desintegration"
+  },
+  {
+    "id": 515,
+    "question": "In 'Anatomy Park' wird ein Vergleich zwischen biologischen Systemen und städtischen Strukturen gezogen. Welcher Begriff wird verwendet?",
+    "options": [
+      "Metropolis",
+      "Urbanität",
+      "Stadtorganismus",
+      "Soziale Matrix"
+    ],
+    "answer": "Stadtorganismus"
+  },
+  {
+    "id": 516,
+    "question": "In 'Rickmancing the Stone' wird ein literarischer Bezug hergestellt. Welcher klassische Schriftsteller wird in einem Dialog indirekt erwähnt?",
+    "options": [
+      "Kafka",
+      "Orwell",
+      "Huxley",
+      "Shakespeare"
+    ],
+    "answer": "Kafka"
+  },
+  {
+    "id": 517,
+    "question": "In 'The Rickchurian Mortydate' wird ein Begriff zur Beschreibung emotionaler Isolation verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Apathie",
+      "Emotionales Vakuum",
+      "Gefühllosigkeit",
+      "Innere Leere"
+    ],
+    "answer": "Emotionales Vakuum"
+  },
+  {
+    "id": 518,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein Begriff aus der Quantenphysik als Metapher genutzt. Welcher Begriff ist das?",
+    "options": [
+      "Superposition",
+      "Verschränkung",
+      "Quantenfluktuation",
+      "Wellenfunktion"
+    ],
+    "answer": "Verschränkung"
+  },
+  {
+    "id": 519,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein archaischer Begriff zur Beschreibung von Schicksal verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Fatum",
+      "Moira",
+      "Destiny",
+      "Providenz"
+    ],
+    "answer": "Providenz"
+  },
+  {
+    "id": 520,
+    "question": "In 'Pickle Rick' wird ein subtiler Hinweis auf ein philosophisches Paradoxon gegeben. Welcher Ausdruck wird verwendet?",
+    "options": [
+      "Cogito ergo sum",
+      "Was ist der Sinn des Lebens?",
+      "Die Frage nach der Existenz",
+      "Sein oder Nichtsein"
+    ],
+    "answer": "Was ist der Sinn des Lebens?"
+  },
+  {
+    "id": 521,
+    "question": "In 'Total Rickall' wird ein Begriff verwendet, um die Relativität von Wahrheit zu hinterfragen. Welcher Begriff wird genutzt?",
+    "options": [
+      "Relativismus",
+      "Subjektivismus",
+      "Konstruktivismus",
+      "Postmodernismus"
+    ],
+    "answer": "Postmodernismus"
+  },
+  {
+    "id": 522,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine subtile Anspielung auf ein philosophisches Paradoxon. Welcher Begriff wird verwendet?",
+    "options": [
+      "Zenos Paradoxon",
+      "Das Henne-Ei-Problem",
+      "Das Paradoxon der Wahl",
+      "Das Paradox der Selbstbezüglichkeit"
+    ],
+    "answer": "Das Paradox der Selbstbezüglichkeit"
+  },
+  {
+    "id": 523,
+    "question": "In 'Morty's Mind Blowers' wird ein Begriff verwendet, um die Fragmentierung der Erinnerungen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Gedächtnis-Kollage",
+      "Erinnerungsfraktal",
+      "Memorielle Dekonstruktion",
+      "Neuronale Fragmentierung"
+    ],
+    "answer": "Memorielle Dekonstruktion"
+  },
+  {
+    "id": 524,
+    "question": "In 'The Rickshank Rickdemption' wird ein kryptischer Code gezeigt, der als Hinweis auf Ricks Vergangenheit dient. Welche Zahl erscheint dabei regelmäßig?",
+    "options": [
+      "7",
+      "13",
+      "42",
+      "137"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 525,
+    "question": "In 'Anatomy Park' wird ein ungewöhnlicher Vergleich gezogen. Welcher organische Prozess wird als Metapher für städtische Dynamik verwendet?",
+    "options": [
+      "Zellteilung",
+      "Wundheilung",
+      "Metabolismus",
+      "Osmose"
+    ],
+    "answer": "Metabolismus"
+  },
+  {
+    "id": 526,
+    "question": "In 'Rickmancing the Stone' wird ein literarischer Vergleich gezogen. Welcher Begriff beschreibt den Zusammenbruch sozialer Strukturen am treffendsten?",
+    "options": [
+      "Kollaps",
+      "Dekadenz",
+      "Desintegration",
+      "Zerfall"
+    ],
+    "answer": "Dekadenz"
+  },
+  {
+    "id": 527,
+    "question": "In 'The Rickchurian Mortydate' wird ein Begriff zur Beschreibung innerer Verzweiflung verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Melancholie",
+      "Verzweiflung",
+      "Nihilismus",
+      "Depression"
+    ],
+    "answer": "Nihilismus"
+  },
+  {
+    "id": 528,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver Begriff als Metapher für den Zerfall von Raum-Zeit-Strukturen genutzt. Welcher Begriff wird verwendet?",
+    "options": [
+      "Singularität",
+      "Ruptur",
+      "Fraktur",
+      "Dissonanz"
+    ],
+    "answer": "Ruptur"
+  },
+  {
+    "id": 529,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein musikalischer Hinweis eingebaut. Welcher Musikstil wird subtil angedeutet, um Ricks Stimmung zu spiegeln?",
+    "options": [
+      "Jazz",
+      "Klassik",
+      "Blues",
+      "Progressive Rock"
+    ],
+    "answer": "Jazz"
+  },
+  {
+    "id": 530,
+    "question": "In 'Pickle Rick' gibt es eine kryptische Andeutung auf eine historische Erfindung. Auf welche Erfindung wird dabei subtil Bezug genommen?",
+    "options": [
+      "Dampfmaschine",
+      "Glühbirne",
+      "Telefon",
+      "Lokomotive"
+    ],
+    "answer": "Lokomotive"
+  },
+  {
+    "id": 531,
+    "question": "In 'Total Rickall' wird ein Begriff für die Manipulation von Erinnerungen verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Erinnerungsmanipulation",
+      "Memorielle Reprogrammierung",
+      "Gedächtnisüberarbeitung",
+      "Neuro-Rekalibrierung"
+    ],
+    "answer": "Memorielle Reprogrammierung"
+  },
+  {
+    "id": 532,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine subtile Anspielung auf ein klassisches philosophisches Werk. Welches Werk wird angedeutet?",
+    "options": [
+      "Die Republik",
+      "Die Nikomachische Ethik",
+      "Kritik der reinen Vernunft",
+      "Also sprach Zarathustra"
+    ],
+    "answer": "Also sprach Zarathustra"
+  },
+  {
+    "id": 533,
+    "question": "In 'Morty's Mind Blowers' wird ein Begriff verwendet, um die Zerbrechlichkeit von Erinnerungen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Fragilität",
+      "Empfindlichkeit",
+      "Zerbrechlichkeit",
+      "Verwundbarkeit"
+    ],
+    "answer": "Fragilität"
+  },
+  {
+    "id": 534,
+    "question": "In 'The Rickshank Rickdemption' wird ein kryptischer Name für eine geheime Technologie erwähnt. Wie lautet dieser Name?",
+    "options": [
+      "NeuroSync",
+      "QuantumCore",
+      "MetaDrive",
+      "HyperLink"
+    ],
+    "answer": "QuantumCore"
+  },
+  {
+    "id": 535,
+    "question": "In 'Anatomy Park' wird ein biologischer Mechanismus als Analogie verwendet. Welcher Mechanismus wird genannt?",
+    "options": [
+      "Osmose",
+      "Diffusion",
+      "Endozytose",
+      "Exozytose"
+    ],
+    "answer": "Endozytose"
+  },
+  {
+    "id": 536,
+    "question": "In 'Rickmancing the Stone' wird ein Begriff verwendet, um den Verlust von Hoffnung zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Verzweiflung",
+      "Hopplosigkeit",
+      "Nihilismus",
+      "Resignation"
+    ],
+    "answer": "Resignation"
+  },
+  {
+    "id": 537,
+    "question": "In 'The Rickchurian Mortydate' gibt es eine subtile Anspielung auf einen verkannten Künstler. Welcher Künstler wird erwähnt?",
+    "options": [
+      "Basquiat",
+      "Warhol",
+      "Pollock",
+      "Kandinsky"
+    ],
+    "answer": "Basquiat"
+  },
+  {
+    "id": 538,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein physikalischer Begriff genutzt, um den Zerfall von Raum und Zeit zu beschreiben. Welcher Begriff wird verwendet?",
+    "options": [
+      "Zeitkrümmung",
+      "Raumkontraktion",
+      "Dimensionale Dekonstruktion",
+      "Kosmische Dislokation"
+    ],
+    "answer": "Dimensionale Dekonstruktion"
+  },
+  {
+    "id": 539,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein archaischer Begriff für natürlichen Zerfall verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Verfall",
+      "Verwitterung",
+      "Erosion",
+      "Dekadenz"
+    ],
+    "answer": "Verwitterung"
+  },
+  {
+    "id": 540,
+    "question": "In 'Pickle Rick' gibt es eine subtile Anspielung auf einen berühmten mathematischen Satz. Welcher Satz wird indirekt referenziert?",
+    "options": [
+      "Pythagoras' Theorem",
+      "Fermats letzter Satz",
+      "Eulers Identität",
+      "Satz des Pythagoras"
+    ],
+    "answer": "Eulers Identität"
+  },
+  {
+    "id": 541,
+    "question": "In 'Total Rickall' wird ein Begriff verwendet, um die Unstetigkeit der Realität zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Fluktuation",
+      "Instabilität",
+      "Variabilität",
+      "Diskontinuität"
+    ],
+    "answer": "Diskontinuität"
+  },
+  {
+    "id": 542,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine kryptische Anspielung auf ein literarisches Werk der Postmoderne. Welches Werk wird angedeutet?",
+    "options": [
+      "Infinite Jest",
+      "Gravity's Rainbow",
+      "White Noise",
+      "Pale Fire"
+    ],
+    "answer": "Gravity's Rainbow"
+  },
+  {
+    "id": 543,
+    "question": "In 'Morty's Mind Blowers' wird ein psychologischer Begriff verwendet, um die Repression von Erinnerungen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Suppressive Mechanismen",
+      "Erinnerungsverdrängung",
+      "Kognitive Blockade",
+      "Subjektive Amnesie"
+    ],
+    "answer": "Erinnerungsverdrängung"
+  },
+  {
+    "id": 544,
+    "question": "In 'The Rickshank Rickdemption' wird ein technologischer Begriff als Metapher für Ricks intellektuelle Überlegenheit verwendet. Welcher Begriff ist das?",
+    "options": [
+      "Nano-Intelligenz",
+      "Cybergenese",
+      "Hyperintelligenz",
+      "Techno-Suprematie"
+    ],
+    "answer": "Hyperintelligenz"
+  },
+  {
+    "id": 545,
+    "question": "In 'Anatomy Park' wird ein Begriff verwendet, um den dynamischen Fluss biologischer Prozesse zu beschreiben. Welcher Begriff wird verwendet?",
+    "options": [
+      "Biologische Fluidität",
+      "Organische Strömung",
+      "Lebensdynamik",
+      "Cellulärer Fluss"
+    ],
+    "answer": "Biologische Fluidität"
+  },
+  {
+    "id": 546,
+    "question": "In 'Rickmancing the Stone' gibt es eine subtile Anspielung auf einen historischen Philosophen. Welcher Philosoph wird indirekt erwähnt?",
+    "options": [
+      "Platon",
+      "Aristoteles",
+      "Heraklit",
+      "Sokrates"
+    ],
+    "answer": "Heraklit"
+  },
+  {
+    "id": 547,
+    "question": "In 'The Rickchurian Mortydate' wird ein Begriff zur Beschreibung von Machtstrukturen verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Hierarchie",
+      "Oligarchie",
+      "Hegemonie",
+      "Dominanz"
+    ],
+    "answer": "Hegemonie"
+  },
+  {
+    "id": 548,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver Begriff als Metapher für das Verschwinden von Informationen verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Informationsverlust",
+      "Daten-Decay",
+      "Bit-Desintegration",
+      "Signal-Dämpfung"
+    ],
+    "answer": "Daten-Decay"
+  },
+  {
+    "id": 549,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein Begriff verwendet, um den Zerfall sozialer Strukturen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Dekadenz",
+      "Disintegration",
+      "Zerfall",
+      "Auflösung"
+    ],
+    "answer": "Auflösung"
+  },
+  {
+    "id": 550,
+    "question": "In 'Pickle Rick' wird ein seltener philosophischer Begriff verwendet, um Ricks existenzielle Krise zu beschreiben. Welcher Begriff wird erwähnt?",
+    "options": [
+      "Existenzialismus",
+      "Nihilismus",
+      "Absurdismus",
+      "Pessimismus"
+    ],
+    "answer": "Absurdismus"
+  }
 
 
 

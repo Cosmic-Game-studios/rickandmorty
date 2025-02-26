@@ -1,6 +1,22 @@
 import React, { useState, useEffect, useContext, useMemo } from 'react';
-import { UserContext } from '../context/UserContext';
-import useIsMobile from '../hooks/useIsMobile';
+import { UserContext } from './context/UserContext';
+
+// Beispiel-Hook, falls du es verwenden möchtest.
+// Wenn du diesen Hook nicht hast, entferne ihn einfach.
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  return isMobile;
+}
 
 // Helper function: Shuffle an array (Fisher-Yates Shuffle)
 function shuffleArray(array) {
@@ -29,9 +45,8 @@ function Quiz() {
 
   // State for language selection: "en" or "de"
   const [language, setLanguage] = useState(() => {
-    // Try to get language preference from localStorage
     const saved = localStorage.getItem('quizLanguage');
-    return saved || "de"; // Default to German if not set
+    return saved || "de"; // Standard auf Deutsch
   });
 
   // Quiz states
@@ -115,7 +130,7 @@ function Quiz() {
     };
   }, []);
 
-  // Calculate points based on difficulty
+  // Punkte pro Schwierigkeitsgrad
   const getPointsForDifficulty = (difficulty) => {
     const difficultyMap = {
       'easy': 30,
@@ -124,16 +139,12 @@ function Quiz() {
       'very-hard': 120,
       'extreme': 200
     };
-    
     return difficultyMap[difficulty] || 50;
   };
 
-  // Get difficulty label based on the difficulty value
+  // Diff-Label (für Anzeige)
   const getDifficultyLabel = (difficulty) => {
-    // Convert to lowercase and handle edge cases
     const difficultyKey = difficulty ? difficulty.toLowerCase().replace(/\s+/g, '') : 'medium';
-    
-    // Map difficulty values to t keys
     const difficultyMap = {
       'easy': 'easy',
       'einfach': 'easy',
@@ -147,23 +158,19 @@ function Quiz() {
       'extreme': 'extreme',
       'extrem': 'extreme'
     };
-    
     return t[language][difficultyMap[difficultyKey] || 'medium'];
   };
 
-  // Get CSS class for difficulty
+  // CSS-Klasse basierend auf Schwierigkeitsgrad
   const getDifficultyClass = (difficulty) => {
     if (!difficulty) return 'medium';
-    
-    const difficultyLower = difficulty.toLowerCase().replace(/\s+/g, '');
-    
-    if (difficultyLower === 'easy' || difficultyLower === 'einfach') return 'easy';
-    if (difficultyLower === 'medium' || difficultyLower === 'mittel') return 'medium';
-    if (difficultyLower === 'hard' || difficultyLower === 'schwer') return 'hard';
-    if (difficultyLower === 'veryhard' || difficultyLower === 'very-hard' || difficultyLower === 'sehrschwer') return 'very-hard';
-    if (difficultyLower === 'extreme' || difficultyLower === 'extrem') return 'extreme';
-    
-    return 'medium'; // Default
+    const diff = difficulty.toLowerCase().replace(/\s+/g, '');
+    if (diff === 'easy' || diff === 'einfach') return 'easy';
+    if (diff === 'medium' || diff === 'mittel') return 'medium';
+    if (diff === 'hard' || diff === 'schwer') return 'hard';
+    if (diff === 'veryhard' || diff === 'very-hard' || diff === 'sehrschwer') return 'very-hard';
+    if (diff === 'extreme' || diff === 'extrem') return 'extreme';
+    return 'medium';
   };
 
   // Fetch quiz questions from JSON file
@@ -173,7 +180,7 @@ function Quiz() {
     setLoading(true);
     setError('');
     
-    // Determine which JSON file to load based on language
+    // Wähle die passende JSON-Datei (im public-Ordner)
     const quizFile = language === 'en' ? '/quizData.en.json' : '/quizData.de.json';
     
     fetch(quizFile)
@@ -184,7 +191,7 @@ function Quiz() {
         return response.json();
       })
       .then(data => {
-        // Add difficulty and points properties to each question
+        // Frage-Daten anreichern (difficulty + points)
         const processedQuestions = data.map(q => ({
           ...q,
           difficulty: determineQuestionDifficulty(q),
@@ -202,29 +209,26 @@ function Quiz() {
       });
   }, [language]);
 
-  // Save language preference to localStorage
+  // Sprache speichern
   useEffect(() => {
     localStorage.setItem('quizLanguage', language);
   }, [language]);
 
-  // Save quiz statistics to localStorage
+  // Statistik speichern
   useEffect(() => {
     localStorage.setItem('quizStatistics', JSON.stringify(quizStats));
   }, [quizStats]);
 
-  // Select quiz questions based on difficulty level
+  // Quiz-Fragen anhand difficulty auswählen
   const selectQuizQuestions = (questions, difficulty) => {
     let filteredQuestions = questions;
     
-    // Filter by difficulty if not "all"
     if (difficulty !== 'all') {
       filteredQuestions = questions.filter(q => q.difficulty === difficulty);
     }
     
-    // Shuffle the filtered questions
     const shuffledQuestions = shuffleArray(filteredQuestions);
-    
-    // Take 10 questions or fewer if not enough available
+    // 10 Fragen, falls verfügbar
     const selectedQuestions = shuffledQuestions.slice(0, 10).map(q => ({
       ...q,
       shuffledOptions: shuffleArray(q.options || [])
@@ -240,19 +244,19 @@ function Quiz() {
     setQuizCompleted(false);
   };
 
-  // Update quiz when difficulty changes
+  // Neu filtern, wenn difficulty wechselt
   useEffect(() => {
     if (allQuestions.length > 0) {
       selectQuizQuestions(allQuestions, difficultyLevel);
     }
   }, [difficultyLevel]);
 
-  // Handle difficulty change
+  // Difficulty-Wechsel
   const handleDifficultyChange = (newDifficulty) => {
     setDifficultyLevel(newDifficulty);
   };
 
-  // Update daily quiz counter in localStorage
+  // Offline: Tägliche Quiz-Zählung oder Ähnliches
   const updateDailyQuizCount = () => {
     const today = new Date().toISOString().slice(0, 10);
     let data = { date: today, count: 0 };
@@ -265,7 +269,6 @@ function Quiz() {
           data = parsed;
         }
       }
-      
       data.count = data.count + 1;
       localStorage.setItem('dailyQuizData', JSON.stringify(data));
     } catch (error) {
@@ -273,14 +276,14 @@ function Quiz() {
     }
   };
 
-  // Handler for answering a question
+  // Antwort auswerten
   const handleAnswer = () => {
     const currentQuiz = quizQuestions[currentQuestion];
     if (!currentQuiz) return;
 
     setWaitingForNext(true);
     
-    // Update overall statistics for each answered question
+    // Statistik – beantwortete Fragen
     setQuizStats(prev => ({
       ...prev,
       totalAnswered: prev.totalAnswered + 1
@@ -288,11 +291,12 @@ function Quiz() {
     
     if (selected === currentQuiz.answer) {
       setScore(prev => prev + currentQuiz.points);
-      completeMission(currentQuiz.points); // Points based on difficulty
+      // Punkte basieren auf difficulty
+      completeMission(currentQuiz.points);
       setFeedback(t[language].correctFeedback);
       setIsAnswerCorrect(true);
       
-      // Update correct answers count
+      // Statistik – richtige Antworten
       setQuizStats(prev => ({
         ...prev,
         totalCorrect: prev.totalCorrect + 1
@@ -304,7 +308,7 @@ function Quiz() {
     }
   };
 
-  // Handler for moving to the next question
+  // Nächste Frage
   const handleNextQuestion = () => {
     if (currentQuestion < quizQuestions.length - 1) {
       setCurrentQuestion(prev => prev + 1);
@@ -315,19 +319,18 @@ function Quiz() {
       setWaitingForNext(false);
     } else {
       setQuizCompleted(true);
-      updateDailyQuizCount(); // Update the daily counter when the quiz is completed
+      updateDailyQuizCount();
     }
   };
 
-  // Handler for restarting the quiz
+  // Quiz neu starten
   const handleRestartQuiz = () => {
-    // Reshuffle questions with the current difficulty
     if (allQuestions.length > 0) {
       selectQuizQuestions(allQuestions, difficultyLevel);
     }
   };
 
-  // LANGUAGE SELECTION UI
+  // Falls noch keine Sprache ausgewählt ist
   if (!language) {
     return (
       <div className="quiz-page">
@@ -354,17 +357,21 @@ function Quiz() {
     );
   }
 
+  // Ladezustand
   if (loading) return <p className="loading-message">{t[language].loading}</p>;
+  // Fehlerzustand
   if (error) return <p className="error-message">{error}</p>;
+  // Keine Fragen
   if (!quizQuestions || quizQuestions.length === 0)
     return <p className="no-questions-message">{t[language].noQuestions}</p>;
 
+  // Quiz ist vorbei
   if (quizCompleted) {
     return (
       <div className="quiz-page quiz-completed">
         <h2>{t[language].quizCompleted}</h2>
         
-        {/* Show overall statistics */}
+        {/* Gesamtstatistik */}
         <p className="score-summary">
           {language === 'de' 
             ? `Sie haben ${quizStats.totalCorrect} von ${quizStats.totalAnswered} Fragen richtig beantwortet.`
@@ -372,12 +379,15 @@ function Quiz() {
           }
         </p>
         
-        {/* Current quiz score */}
+        {/* Punkte nur für dieses Quiz */}
         <p className="current-quiz-score">
-          {t[language].progress(score, quizQuestions.reduce((total, q) => total + q.points, 0))}
+          {t[language].progress(
+            score, 
+            quizQuestions.reduce((total, q) => total + q.points, 0)
+          )}
         </p>
         
-        {/* Difficulty selector for next quiz */}
+        {/* Schwierigkeit-Auswahl für neues Quiz */}
         <div className="difficulty-selector">
           <label htmlFor="difficulty-select">{t[language].selectDifficulty}:</label>
           <select 
@@ -405,6 +415,7 @@ function Quiz() {
     );
   }
 
+  // Während des Quiz
   const currentQuizQuestion = quizQuestions[currentQuestion] || {};
   const difficultyClass = getDifficultyClass(currentQuizQuestion.difficulty);
 
@@ -467,7 +478,11 @@ function Quiz() {
         </div>
         
         <div className="feedback-container">
-          {feedback && <p className={`feedback ${isAnswerCorrect ? 'correct' : 'wrong'}`}>{feedback}</p>}
+          {feedback && (
+            <p className={`feedback ${isAnswerCorrect ? 'correct' : 'wrong'}`}>
+              {feedback}
+            </p>
+          )}
           
           {showCorrectAnswer && (
             <div className="correct-answer-container">
@@ -495,12 +510,17 @@ function Quiz() {
         )}
       </div>
       
-      {/* Current Score Display */}
+      {/* Aktueller Score in diesem Quiz */}
       <div className="current-score">
-        {t[language].progress(score, quizQuestions.slice(0, currentQuestion + 1).reduce((total, q) => {
-          // Only count points for answered questions and the current one
-          return total + (waitingForNext || currentQuestion > quizQuestions.indexOf(q) ? q.points : 0);
-        }, 0))}
+        {t[language].progress(
+          score, 
+          quizQuestions
+            .slice(0, currentQuestion + 1)
+            .reduce((total, q) => {
+              // Nur Punkte für bereits beantwortete Fragen zählen
+              return total + (waitingForNext ? q.points : 0);
+            }, 0)
+        )}
       </div>
     </div>
   );

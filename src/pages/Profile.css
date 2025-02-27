@@ -1,23 +1,23 @@
 /* ===================================================================== */
-/* Profile Page Styles - Merged and Optimized Version                        */
+/* Profile Page Styles - Verbesserte Version mit dunklem Farbschema       */
 /* ===================================================================== */
 
 :root {
-  /* Color Variables */
+  /* Farb-Variablen */
   --accent-color: #4caf50;
-  --bg-section: #ffffff;
-  --bg-light: #f8f9fa;
-  --bg-card: #f0f0f0;
-  --text-primary: #333333;
-  --text-secondary: #666666;
-  --text-tertiary: #888888;
+  --bg-section: #1e1e2f;
+  --bg-light: #2a2a40;
+  --bg-card: #252538;
+  --text-primary: #ffffff;
+  --text-secondary: #b4b4cc;
+  --text-tertiary: #8888a5;
   
-  /* Gradients */
+  /* Verläufe */
   --gradient-header: linear-gradient(90deg, var(--accent-color), #8bc34a);
   --gradient-button: linear-gradient(90deg, #f0c014, #ffeb3b);
   --gradient-button-hover: linear-gradient(90deg, #ffeb3b, #f0c014);
   
-  /* Spacing */
+  /* Abstände */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -28,16 +28,16 @@
   --border-radius-sm: 6px;
   --border-radius-md: 12px;
   
-  /* Shadows */
-  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-text: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* Schatten */
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-text: 0 1px 2px rgba(0, 0, 0, 0.5);
   
-  /* Transitions */
+  /* Übergänge */
   --transition-duration: 0.3s;
   --transition-timing: ease-out;
   
-  /* Fonts */
+  /* Schriften */
   --font-display: 'Poppins', sans-serif;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .settings-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .profile-page h3 {
@@ -141,7 +141,7 @@
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background-color: var(--bg-card);
+  background-color: rgba(255, 255, 255, 0.1);
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -150,7 +150,7 @@
 }
 
 .help-button:hover {
-  background-color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .collection-count {
@@ -200,6 +200,16 @@
   position: relative;
   box-shadow: var(--shadow-light);
   transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-button);
 }
 
 .profile-card:hover {
@@ -288,8 +298,8 @@
 }
 
 .coin-farm-card.selected {
-  border-color: var(--accent-color);
-  background-color: rgba(76, 175, 80, 0.1);
+  border: 2px solid var(--accent-color);
+  background: rgba(76, 175, 80, 0.2);
 }
 
 .character-image-container {
@@ -299,7 +309,7 @@
   margin: 0 auto var(--space-sm);
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #e0e0e0;
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .coin-farm-card.selected .character-image-container {
@@ -385,12 +395,12 @@
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: var(--text-primary);
-  color: white;
+  background-color: var(--accent-color);
+  color: black;
   border-radius: 10px;
   font-size: 0.7rem;
   padding: 0.1rem 0.4rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .card-details {
@@ -495,6 +505,8 @@
   text-align: center;
   padding: var(--space-xl) var(--space-md);
   color: var(--text-secondary);
+  background: var(--bg-light);
+  border-radius: var(--border-radius-md);
 }
 
 .cta-button {
@@ -527,7 +539,7 @@
 .loading-spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid rgba(0, 0, 0, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   border-top-color: var(--accent-color);
   animation: spin 1s linear infinite;
@@ -542,7 +554,9 @@
 .error-state {
   text-align: center;
   padding: var(--space-xl) var(--space-xl);
-  color: #d32f2f;
+  color: #f44336;
+  background: var(--bg-light);
+  border-radius: var(--border-radius-md);
 }
 
 .retry-button {

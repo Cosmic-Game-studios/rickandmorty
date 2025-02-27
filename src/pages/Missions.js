@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useContext, useMemo, useCallback, useRef } from 'react';
 import { UserContext } from '../context/UserContext';
 import useIsMobile from '../hooks/useIsMobile';
 
@@ -367,11 +367,160 @@ const Toast = ({ message, type, onClose }) => {
   );
 };
 
+// Mission Card Komponente mit Animation
+const MissionCard = ({ mission, isCompleted, isAvailable, progress, handleComplete, showCompleted, animationDelay = 0 }) => {
+  const cardRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [animationClass, setAnimationClass] = useState('');
+
+  // Animation beim Abschließen einer Mission
+  useEffect(() => {
+    if (isCompleted && !showCompleted) {
+      // Verzögerung vor dem Start der Ausblend-Animation
+      const timeout = setTimeout(() => {
+        setAnimationClass('fade-out');
+      }, 1000);
+      
+      return () => clearTimeout(timeout);
+    }
+  }, [isCompleted, showCompleted]);
+
+  // Höre auf das Ende der Animation und verstecke die Karte
+  const handleAnimationEnd = (e) => {
+    if (e.animationName.includes('fadeOut') && isCompleted && !showCompleted) {
+      setIsVisible(false);
+    }
+  };
+
+  // Wenn die Mission nicht sichtbar sein soll, rendere nichts
+  if (!isVisible) {
+    return null;
+  }
+
+  // Rendert einen Belohnungsindikator basierend auf dem Missionstyp
+  const renderReward = () => {
+    if (mission.type === MISSION_TYPES.CHARACTER) {
+      return (
+        <div className="mission-reward character-reward">
+          <div className="reward-amount">{mission.reward} Punkte</div>
+          <div className="character-unlock">
+            <img 
+              src={mission.unlock.image} 
+              alt={mission.unlock.name} 
+              className="character-thumbnail" 
+              loading="lazy" 
+            />
+            <span className="character-name">{mission.unlock.name}</span>
+          </div>
+        </div>
+      );
+    } else if (mission.type === MISSION_TYPES.COIN) {
+      return (
+        <div className="mission-reward coin-reward">
+          <div className="reward-amount">{mission.reward} Münzen</div>
+          <div className="coin-icon">💰</div>
+        </div>
+      );
+    } else if (mission.type === MISSION_TYPES.SPECIAL) {
+      return (
+        <div className="mission-reward special-reward">
+          {mission.rewards.coins && (
+            <div className="coin-reward">
+              <div className="reward-amount">{mission.rewards.coins} Münzen</div>
+              <div className="coin-icon">💰</div>
+            </div>
+          )}
+          {mission.rewards.character && (
+            <div className="character-unlock">
+              <img 
+                src={mission.rewards.character.image} 
+                alt={mission.rewards.character.name} 
+                className="character-thumbnail" 
+                loading="lazy" 
+              />
+              <span className="character-name">{mission.rewards.character.name}</span>
+            </div>
+          )}
+        </div>
+      );
+    }
+  };
+  
+  // Rendert einen Badge für spezielle Missionen
+  const renderSpecialBadge = () => {
+    if (mission.type === MISSION_TYPES.SPECIAL) {
+      return <div className="special-badge">⭐ SPECIAL MISSION ⭐</div>;
+    }
+    return null;
+  };
+
+  return (
+    <div 
+      ref={cardRef}
+      className={`mission-card 
+        ${isCompleted ? 'completed' : ''} 
+        ${!isAvailable ? 'unavailable' : ''} 
+        ${mission.type === MISSION_TYPES.SPECIAL ? 'special-mission' : ''}
+        ${animationClass}`}
+      style={{ animationDelay: `${animationDelay}ms` }}
+      onAnimationEnd={handleAnimationEnd}
+    >
+      {renderSpecialBadge()}
+      
+      <div className="mission-header">
+        {mission.daily && <span className="mission-tag daily">Täglich</span>}
+        <span className={`mission-difficulty ${mission.difficulty.toLowerCase()}`}>
+          {mission.difficulty}
+        </span>
+      </div>
+      
+      <h3 className="mission-description">{mission.description}</h3>
+      
+      <p className="mission-detail">{mission.detailedDescription}</p>
+      
+      <div className="mission-meta">
+        <span className="mission-time">⏱️ {mission.estimatedTime}</span>
+        {mission.requiredLevel && (
+          <span className={`mission-level ${level < mission.requiredLevel ? 'required' : ''}`}>
+            Level {mission.requiredLevel}+ benötigt
+          </span>
+        )}
+      </div>
+      
+      {renderReward()}
+      
+      {progress && (
+        <div className="mission-progress">
+          <div className="progress-bar">
+            <div 
+              className="progress-fill" 
+              style={{ width: `${Math.min(100, (progress.current / progress.required) * 100)}%` }}
+            ></div>
+          </div>
+          <span className="progress-text">
+            {progress.current}/{progress.required} Quizze
+          </span>
+        </div>
+      )}
+      
+      <button 
+        className={`mission-button ${isCompleted ? 'completed' : ''} ${mission.type === MISSION_TYPES.SPECIAL ? 'special-button' : ''}`}
+        onClick={() => handleComplete(mission)}
+        disabled={isCompleted || !isAvailable}
+      >
+        {isCompleted ? 'Abgeschlossen' : 'Abschließen'}
+      </button>
+    </div>
+  );
+};
+
 function Missions() {
   const isMobile = useIsMobile();
   const { completeMission, unlockCharacter, addCoins, level, coins } = useContext(UserContext);
   const [filter, setFilter] = useState('all');
   const [toast, setToast] = useState({ visible: false, message: '', type: 'success' });
+  const [showLastCompleted, setShowLastCompleted] = useState({});
+  const [sortOrder, setSortOrder] = useState('default'); // 'default', 'level', 'rewards'
   
   // Lade abgeschlossene Missionen aus dem lokalen Speicher
   const [completedMissions, setCompletedMissions] = useState(() => {
@@ -426,9 +575,40 @@ function Missions() {
     return 0;
   }, []);
 
-  // Filtere Missionen basierend auf der aktuellen Filterauswahl
-  const filteredMissions = useMemo(() => {
-    return MISSIONS_DATA.filter(mission => {
+  // Sortiere und filtere Missionen
+  const processedMissions = useMemo(() => {
+    let missions = [...MISSIONS_DATA];
+    
+    // Sortierung anwenden
+    if (sortOrder === 'level') {
+      missions = missions.sort((a, b) => {
+        const levelA = a.requiredLevel || 0;
+        const levelB = b.requiredLevel || 0;
+        return levelA - levelB;
+      });
+    } else if (sortOrder === 'rewards') {
+      missions = missions.sort((a, b) => {
+        const rewardA = a.type === MISSION_TYPES.SPECIAL ? (a.rewards.coins || 0) : (a.reward || 0);
+        const rewardB = b.type === MISSION_TYPES.SPECIAL ? (b.rewards.coins || 0) : (b.reward || 0);
+        return rewardB - rewardA; // absteigend
+      });
+    } else if (sortOrder === 'difficulty') {
+      const difficultyOrder = {
+        'Very Easy': 1,
+        'Easy': 2,
+        'Medium': 3,
+        'Hard': 4,
+        'Very Hard': 5,
+        'Extreme': 6,
+        'Legendary': 7
+      };
+      missions = missions.sort((a, b) => {
+        return difficultyOrder[a.difficulty] - difficultyOrder[b.difficulty];
+      });
+    }
+    
+    // Filtere Missionen basierend auf der aktuellen Filterauswahl
+    return missions.filter(mission => {
       // Prüfe, ob die Mission dem ausgewählten Filter entspricht
       if (filter === 'character' && mission.type !== MISSION_TYPES.CHARACTER && mission.type !== MISSION_TYPES.SPECIAL) {
         return false;
@@ -443,9 +623,14 @@ function Missions() {
         return false;
       }
       
+      // Verstecke abgeschlossene Missionen, außer im "completed" Filter
+      if (isMissionCompleted(mission.id) && filter !== 'completed' && filter !== 'all' && !showLastCompleted[mission.id]) {
+        return false;
+      }
+      
       return true;
     });
-  }, [filter, level, completedMissions, dailyMissionsData]);
+  }, [filter, level, completedMissions, dailyMissionsData, sortOrder, showLastCompleted]);
 
   // Überprüft, ob eine Mission abgeschlossen ist
   function isMissionCompleted(missionId) {
@@ -535,182 +720,5 @@ function Missions() {
     } else {
       setCompletedMissions(prev => [...prev, mission.id]);
     }
-  };
-
-  // Rendert einen Belohnungsindikator basierend auf dem Missionstyp
-  const renderReward = (mission) => {
-    if (mission.type === MISSION_TYPES.CHARACTER) {
-      return (
-        <div className="mission-reward character-reward">
-          <div className="reward-amount">{mission.reward} Punkte</div>
-          <div className="character-unlock">
-            <img 
-              src={mission.unlock.image} 
-              alt={mission.unlock.name} 
-              className="character-thumbnail" 
-              loading="lazy" 
-            />
-            <span className="character-name">{mission.unlock.name}</span>
-          </div>
-        </div>
-      );
-    } else if (mission.type === MISSION_TYPES.COIN) {
-      return (
-        <div className="mission-reward coin-reward">
-          <div className="reward-amount">{mission.reward} Münzen</div>
-          <div className="coin-icon">💰</div>
-        </div>
-      );
-    } else if (mission.type === MISSION_TYPES.SPECIAL) {
-      return (
-        <div className="mission-reward special-reward">
-          {mission.rewards.coins && (
-            <div className="coin-reward">
-              <div className="reward-amount">{mission.rewards.coins} Münzen</div>
-              <div className="coin-icon">💰</div>
-            </div>
-          )}
-          {mission.rewards.character && (
-            <div className="character-unlock">
-              <img 
-                src={mission.rewards.character.image} 
-                alt={mission.rewards.character.name} 
-                className="character-thumbnail" 
-                loading="lazy" 
-              />
-              <span className="character-name">{mission.rewards.character.name}</span>
-            </div>
-          )}
-        </div>
-      );
-    }
-  };
-  
-  // Rendert einen Badge für spezielle Missionen
-  const renderSpecialBadge = (mission) => {
-    if (mission.type === MISSION_TYPES.SPECIAL) {
-      return <div className="special-badge">⭐ SPECIAL MISSION ⭐</div>;
-    }
-    return null;
-  };
-
-  return (
-    <div className={`missions-page ${isMobile ? 'mobile' : ''}`}>
-      <h1 className="missions-title">Missionen</h1>
-      
-      {/* Filter-Leiste */}
-      <div className="mission-filters">
-        <button 
-          className={`filter-button ${filter === 'all' ? 'active' : ''}`}
-          onClick={() => setFilter('all')}
-        >
-          Alle
-        </button>
-        <button 
-          className={`filter-button ${filter === 'character' ? 'active' : ''}`}
-          onClick={() => setFilter('character')}
-        >
-          Charaktere
-        </button>
-        <button 
-          className={`filter-button ${filter === 'coin' ? 'active' : ''}`}
-          onClick={() => setFilter('coin')}
-        >
-          Münzen
-        </button>
-        <button 
-          className={`filter-button ${filter === 'completed' ? 'active' : ''}`}
-          onClick={() => setFilter('completed')}
-        >
-          Abgeschlossen
-        </button>
-        <button 
-          className={`filter-button ${filter === 'available' ? 'active' : ''}`}
-          onClick={() => setFilter('available')}
-        >
-          Verfügbar
-        </button>
-      </div>
-      
-      {/* Missions-Grid */}
-      <div className="missions-grid">
-        {filteredMissions.map(mission => {
-          const isCompleted = isMissionCompleted(mission.id);
-          const isAvailable = isMissionAvailable(mission);
-          const progress = getDailyMissionProgress(mission);
-          
-          return (
-            <div 
-              key={mission.id} 
-              className={`mission-card ${isCompleted ? 'completed' : ''} ${!isAvailable ? 'unavailable' : ''} ${mission.type === MISSION_TYPES.SPECIAL ? 'special-mission' : ''}`}
-            >
-              {renderSpecialBadge(mission)}
-              
-              <div className="mission-header">
-                {mission.daily && <span className="mission-tag daily">Täglich</span>}
-                <span className={`mission-difficulty ${mission.difficulty.toLowerCase()}`}>
-                  {mission.difficulty}
-                </span>
-              </div>
-              
-              <h3 className="mission-description">{mission.description}</h3>
-              
-              <p className="mission-detail">{mission.detailedDescription}</p>
-              
-              <div className="mission-meta">
-                <span className="mission-time">⏱️ {mission.estimatedTime}</span>
-                {mission.requiredLevel && (
-                  <span className={`mission-level ${level < mission.requiredLevel ? 'required' : ''}`}>
-                    Level {mission.requiredLevel}+ benötigt
-                  </span>
-                )}
-              </div>
-              
-              {renderReward(mission)}
-              
-              {progress && (
-                <div className="mission-progress">
-                  <div className="progress-bar">
-                    <div 
-                      className="progress-fill" 
-                      style={{ width: `${Math.min(100, (progress.current / progress.required) * 100)}%` }}
-                    ></div>
-                  </div>
-                  <span className="progress-text">
-                    {progress.current}/{progress.required} Quizze
-                  </span>
-                </div>
-              )}
-              
-              <button 
-                className={`mission-button ${isCompleted ? 'completed' : ''} ${mission.type === MISSION_TYPES.SPECIAL ? 'special-button' : ''}`}
-                onClick={() => handleComplete(mission)}
-                disabled={isCompleted || !isAvailable}
-              >
-                {isCompleted ? 'Abgeschlossen' : 'Abschließen'}
-              </button>
-            </div>
-          );
-        })}
-      </div>
-      
-      {/* Leere Mitteilung, wenn keine Missionen dem Filter entsprechen */}
-      {filteredMissions.length === 0 && (
-        <div className="no-missions-message">
-          Keine Missionen gefunden, die deinen Filterkriterien entsprechen.
-        </div>
-      )}
-      
-      {/* Toast-Benachrichtigung */}
-      {toast.visible && (
-        <Toast 
-          message={toast.message} 
-          type={toast.type} 
-          onClose={closeToast} 
-        />
-      )}
-    </div>
-  );
-}
-
-export default Missions;
+    
+    // Zeige die gerade abgeschlossene Mission für einige Sekunden

@@ -413,3 +413,477 @@
     font-size: 1rem;
   }
 }
+/* Profile.css - Improved styling for the Profile component */
+
+.profile-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.settings-link {
+  font-size: 1.5rem;
+  color: #666;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.settings-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Section styling */
+.section {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.section-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.help-button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555;
+}
+
+.help-button:hover {
+  background-color: #e0e0e0;
+}
+
+.collection-count {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Status cards styling */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.profile-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  position: relative;
+}
+
+.card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #333;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Level progress bar */
+.level-progress-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 1rem;
+}
+
+.level-progress-container {
+  flex-grow: 1;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.level-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Coin Farm styling */
+.coin-farm-scroll {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.coin-farm-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.coin-farm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.coin-farm-card.selected {
+  border-color: #4caf50;
+  background-color: #f1f8e9;
+}
+
+.character-image-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e0e0e0;
+}
+
+.coin-farm-card.selected .character-image-container {
+  border-color: #4caf50;
+}
+
+.character-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.selected-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #4caf50;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-farm-card p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.character-speed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.speed-icon {
+  color: #ffc107;
+}
+
+/* Character collection styling */
+.unlocked-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.unlocked-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.unlocked-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.unlocked-card .character-image-container {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.character-level {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  font-weight: 500;
+}
+
+.card-details {
+  flex-grow: 1;
+}
+
+.card-details h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.character-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.character-stats p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.stat-label {
+  font-weight: 500;
+  margin-right: 0.3rem;
+}
+
+.upgrade-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.upgrade-button:hover {
+  background-color: #388e3c;
+}
+
+.upgrade-button.disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.coin-cost {
+  font-weight: 500;
+  margin-left: 0.3rem;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pagination-button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Empty states */
+.empty-state, .empty-collection {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #666;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #2196f3;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #1976d2;
+}
+
+/* Loading state */
+.loading-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  color: #666;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #2196f3;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error state */
+.error-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #d32f2f;
+}
+
+.retry-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .profile-info {
+    gap: 1.5rem;
+  }
+  
+  .unlocked-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .coin-farm-scroll {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .card-details h4 {
+    font-size: 1rem;
+  }
+  
+  .upgrade-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

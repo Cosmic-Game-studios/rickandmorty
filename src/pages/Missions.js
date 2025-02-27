@@ -6,7 +6,7 @@ import useIsMobile from '../hooks/useIsMobile';
 const MISSION_TYPES = {
   CHARACTER: 'character',
   COIN: 'coin',
-  SPECIAL: 'special' // Neuer Typ für spezielle Missionen mit mehreren Belohnungen
+  SPECIAL: 'special' // Für Missionen mit mehreren Belohnungen
 };
 
 // Konstanten für Seltenheitsstufen
@@ -18,9 +18,29 @@ const RARITY = {
   LEGENDARY: 'legendary'
 };
 
-// Hier fügst du deine vorhandenen MISSIONS_DATA ein
-// Füge am Ende folgende neue tägliche Charaktermissionen hinzu:
+// Toast Benachrichtigungskomponente
+const Toast = ({ message, type, onClose }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onClose();
+    }, 5000);
+    
+    return () => clearTimeout(timer);
+  }, [onClose]);
+  
+  return (
+    <div className={`mission-toast ${type}`}>
+      <div className="mission-toast-content">{message}</div>
+      <button className="mission-toast-close" onClick={onClose}>×</button>
+    </div>
+  );
+};
 
+// Definiere die MISSIONS_DATA Variable - Du musst sie durch deine eigene ersetzen!
+// Dies ist nur ein Platzhalter, um den ESLint-Fehler zu beheben
+const MISSIONS_DATA = [];
+
+// Füge diese täglichen Missionen zu deiner bestehenden MISSIONS_DATA hinzu
 const DAILY_CHARACTER_MISSIONS = [
   {
     id: 101,
@@ -107,11 +127,6 @@ const DAILY_CHARACTER_MISSIONS = [
   }
 ];
 
-// Füge diese neue Missionen zur MISSIONS_DATA hinzu
-// MISSIONS_DATA = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
-
-// Toast Benachrichtigungskomponente bleibt gleich
-
 function Missions() {
   const isMobile = useIsMobile();
   const { completeMission, unlockCharacter, addCoins, level, coins } = useContext(UserContext);
@@ -192,7 +207,7 @@ function Missions() {
 
   // Filtere Missionen basierend auf der aktuellen Filterauswahl
   const filteredMissions = useMemo(() => {
-    // Kombinierte Missionen (vorhandene + tägliche Charaktermissionen)
+    // Kombiniere die Standard- und täglichen Missionen
     const allMissions = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
     
     return allMissions.filter(mission => {
@@ -225,7 +240,9 @@ function Missions() {
 
   // Überprüft, ob eine Mission abgeschlossen ist
   function isMissionCompleted(missionId) {
-    const mission = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS].find(m => m.id === missionId);
+    // Kombiniere die Arrays für die Suche
+    const allMissions = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
+    const mission = allMissions.find(m => m.id === missionId);
     
     if (mission && mission.daily) {
       return dailyMissionsData.completed.includes(missionId);

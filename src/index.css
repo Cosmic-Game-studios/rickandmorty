@@ -3344,7 +3344,13 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
 }
 
-/* Rarity Styling */
+/* Character Image Container */
+.character-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Rarity Badges */
 .rarity-badge {
   position: absolute;
   top: -5px;
@@ -3358,12 +3364,27 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   z-index: 2;
 }
 
-.character-image-container {
-  position: relative;
-  display: inline-block;
+.rarity-badge.common {
+  background-color: #9e9e9e;
 }
 
-/* Rarity Colors */
+.rarity-badge.uncommon {
+  background-color: #4caf50;
+}
+
+.rarity-badge.rare {
+  background-color: #2196f3;
+}
+
+.rarity-badge.epic {
+  background-color: #9c27b0;
+}
+
+.rarity-badge.legendary {
+  background-color: #ff9800;
+}
+
+/* Rarity Card Styling */
 .rarity-common {
   border: 2px solid #9e9e9e;
 }
@@ -3385,36 +3406,6 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
 .rarity-legendary {
   border: 2px solid #ff9800;
   animation: glow 2s infinite;
-}
-
-.rarity-mythic {
-  border: 3px solid #f44336;
-  animation: glow 1.5s infinite;
-}
-
-/* Rarity Badges */
-.rarity-badge.common {
-  background-color: #9e9e9e;
-}
-
-.rarity-badge.uncommon {
-  background-color: #4caf50;
-}
-
-.rarity-badge.rare {
-  background-color: #2196f3;
-}
-
-.rarity-badge.epic {
-  background-color: #9c27b0;
-}
-
-.rarity-badge.legendary {
-  background-color: #ff9800;
-}
-
-.rarity-badge.mythic {
-  background-color: #f44336;
 }
 
 /* Special Mission Badges */
@@ -3446,15 +3437,9 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   background: linear-gradient(45deg, #2196f3, #03a9f4);
 }
 
-/* Mission Buttons */
-.mission-button {
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  color: black;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 15px;
-}
+/* Toast Notifications */
+.mission-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding:

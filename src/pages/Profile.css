@@ -1,47 +1,6 @@
 /* ===================================================================== */
-/* Profile Page Styles - Optimierte Version                              */
+/* Profile Page Styles - Verbesserte Version                                   */
 /* ===================================================================== */
-
-/* CSS Variablen für konsistentes Design */
-:root {
-  /* Farb-Variablen */
-  --accent-color: #f0c014;
-  --bg-section: #1e1e2f;
-  --bg-light: #2a2a40;
-  --bg-card: #252538;
-  --text-primary: #ffffff;
-  --text-secondary: #b4b4cc;
-  --text-tertiary: #8888a5;
-  
-  /* Verläufe */
-  --gradient-header: linear-gradient(90deg, #f0c014, #ffeb3b);
-  --gradient-button: linear-gradient(90deg, #f0c014, #ffeb3b);
-  --gradient-button-hover: linear-gradient(90deg, #ffeb3b, #f0c014);
-  --gradient-fusion: linear-gradient(90deg, #f0c014, #9400d3);
-  
-  /* Abstände */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
-  
-  /* Border Radius */
-  --border-radius-sm: 6px;
-  --border-radius-md: 12px;
-  
-  /* Schatten */
-  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-text: 0 1px 2px rgba(0, 0, 0, 0.5);
-  
-  /* Übergänge */
-  --transition-duration: 0.3s;
-  --transition-timing: ease-out;
-  
-  /* Schriften */
-  --font-display: 'Poppins', sans-serif;
-}
 
 /* Profile Page Container */
 .profile-page {
@@ -67,8 +26,14 @@
   z-index: 1;
 }
 
-.profile-header {
+/* Anpassung für profile-header in der neuen Komponente */
+.profile-header h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent-color);
   margin-bottom: var(--space-lg);
+  text-align: center;
+  text-shadow: var(--shadow-text);
 }
 
 .profile-page h2 {
@@ -88,16 +53,27 @@
   text-shadow: var(--shadow-text);
 }
 
-/* Section Description */
+/* Anpassung für section-header in der neuen Komponente */
+.section-header h3 {
+  font-family: var(--font-display);
+  color: var(--accent-color);
+  margin: 0;
+  font-size: 1.6rem;
+  text-shadow: var(--shadow-text);
+}
+
+/* Anpassung für section-description in der neuen Komponente */
 .section-description {
   color: var(--text-secondary);
   margin-bottom: var(--space-md);
-  text-align: center;
   font-size: 0.95rem;
   line-height: 1.5;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+/* Anpassung für section in der neuen Komponente */
+.section {
+  background: var(--bg-section);
+  margin-bottom: var(--space-md);
 }
 
 /* Profile Stats Cards */
@@ -116,15 +92,13 @@
   width: 220px;
   text-align: center;
   box-shadow: var(--shadow-dark);
-  transition: transform var(--transition-duration) var(--transition-timing), 
-              box-shadow var(--transition-duration) var(--transition-timing);
+  transition: transform var(--transition-duration) var(--transition-timing);
   position: relative;
   overflow: hidden;
 }
 
 .profile-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
 }
 
 .profile-card::before {
@@ -149,36 +123,68 @@
   color: var(--text-primary);
 }
 
+/* Anpassung für card-value in der neuen Komponente */
+.card-value {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* Anpassung für card-subtitle in der neuen Komponente */
 .card-subtitle {
   font-size: 0.85rem;
-  color: var(--text-tertiary);
-  margin-top: var(--space-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
 }
 
-/* Level Progress Bar */
+/* Anpassung für stats-row in der neuen Komponente */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  width: 100%;
+}
+
+/* Anpassung für card-icon in der neuen Komponente */
+.card-icon {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-bottom: var(--space-xs);
+}
+
+/* Anpassung für level-progress-wrapper in der neuen Komponente */
 .level-progress-wrapper {
+  display: flex;
+  align-items: center;
   margin-top: var(--space-sm);
   width: 100%;
-  background: var(--bg-card);
-  height: 8px;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
+  gap: var(--space-sm);
 }
 
+/* Anpassung für level-progress-container in der neuen Komponente */
+.level-progress-container {
+  flex-grow: 1;
+  height: 8px;
+  background: var(--bg-card);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Anpassung für level-progress-bar in der neuen Komponente */
 .level-progress-bar {
   height: 100%;
   background: var(--gradient-header);
   border-radius: 4px;
-  transition: width var(--transition-duration) ease;
+  transition: width 0.3s ease;
 }
 
+/* Anpassung für progress-text in der neuen Komponente */
 .progress-text {
-  position: absolute;
-  right: -24px;
-  top: -18px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
+  width: 40px;
+  text-align: right;
 }
 
 /* Coin Farm Selection */
@@ -192,6 +198,7 @@
   scrollbar-color: var(--accent-color) var(--bg-card);
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 .coin-farm-scroll::-webkit-scrollbar {
@@ -219,7 +226,6 @@
   box-shadow: var(--shadow-light);
   width: 120px;
   position: relative;
-  border: 2px solid transparent;
 }
 
 .coin-farm-card:hover {
@@ -228,8 +234,19 @@
 }
 
 .coin-farm-card.selected {
-  border-color: var(--accent-color);
+  border: 2px solid var(--accent-color);
   background: rgba(240, 225, 48, 0.1);
+}
+
+/* Anpassung für character-image-container in der neuen Komponente */
+.character-image-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-xs);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .coin-farm-card img {
@@ -241,6 +258,12 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.character-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .coin-farm-card p {
   margin: 0;
   font-size: 0.9rem;
@@ -250,6 +273,7 @@
   padding: 0 var(--space-xs);
 }
 
+/* Anpassung für character-speed in der neuen Komponente */
 .character-speed {
   display: flex;
   align-items: center;
@@ -257,27 +281,28 @@
   gap: var(--space-xs);
   font-size: 0.85rem;
   color: var(--text-secondary);
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
+/* Anpassung für speed-icon in der neuen Komponente */
 .speed-icon {
   color: var(--accent-color);
 }
 
+/* Anpassung für selected-indicator in der neuen Komponente */
 .selected-indicator {
   position: absolute;
-  bottom: 3px;
-  right: 3px;
+  bottom: 0;
+  right: 0;
   background-color: var(--accent-color);
   color: black;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
 }
 
 /* Unlocked Characters List */
@@ -297,18 +322,6 @@
   transition: all var(--transition-duration) var(--transition-timing);
   box-shadow: var(--shadow-light);
   animation: fadeIn 0.3s ease-out;
-  position: relative;
-  overflow: hidden;
-}
-
-.unlocked-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: var(--gradient-button);
 }
 
 .unlocked-card:hover {
@@ -316,28 +329,33 @@
   box-shadow: var(--shadow-dark);
 }
 
-.unlocked-card img,
-.character-image-container {
+.unlocked-card img {
   width: 80px;
   height: 80px;
   border-radius: var(--border-radius-sm);
   margin-right: var(--space-md);
   object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
 }
 
+.unlocked-card .character-image-container {
+  width: 80px;
+  height: 80px;
+  margin-right: var(--space-md);
+  flex-shrink: 0;
+}
+
+/* Anpassung für character-level in der neuen Komponente */
 .character-level {
   position: absolute;
-  top: -5px;
-  right: -5px;
-  background-color: var(--accent-color);
-  color: black;
+  top: -8px;
+  right: -8px;
+  background-color: #333;
+  color: white;
   border-radius: 10px;
   font-size: 0.7rem;
   padding: 0.1rem 0.4rem;
-  font-weight: 700;
-  z-index: 2;
+  font-weight: 500;
 }
 
 .card-details {
@@ -355,18 +373,34 @@
   color: var(--accent-color);
 }
 
+/* Anpassung für card-details h4 in der neuen Komponente */
+.card-details h4 {
+  margin: 0 0 var(--space-xs) 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* Anpassung für character-stats in der neuen Komponente */
 .character-stats {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: var(--space-xs);
 }
 
+.character-stats p {
+  margin: var(--space-xs) 0;
+  font-size: 0.85rem;
+}
+
+/* Anpassung für stat-label in der neuen Komponente */
 .stat-label {
   font-weight: 500;
   margin-right: var(--space-xs);
   color: var(--text-secondary);
 }
 
+/* Anpassung für stat-value in der neuen Komponente */
 .stat-value {
   color: var(--text-primary);
 }
@@ -384,18 +418,20 @@
   white-space: nowrap;
 }
 
-.upgrade-button:hover:not(.disabled) {
+.upgrade-button:hover {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Anpassung für upgrade-button.disabled in der neuen Komponente */
 .upgrade-button.disabled {
-  background-color: var(--bg-card);
-  color: var(--text-tertiary);
+  opacity: 0.5;
   cursor: not-allowed;
+  background: var(--bg-light);
+  color: var(--text-secondary);
 }
 
+/* Anpassung für coin-cost in der neuen Komponente */
 .coin-cost {
   font-weight: 500;
   margin-left: var(--space-xs);
@@ -410,7 +446,35 @@
   margin: var(--space-md) 0;
 }
 
-.pagination-controls button,
+.pagination-controls button {
+  background: var(--gradient-button);
+  border: none;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--border-radius-sm);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background: var(--gradient-button-hover);
+  transform: translateY(-2px);
+}
+
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-light);
+  color: var(--text-secondary);
+}
+
+.pagination-controls span {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* Anpassung für pagination-button in der neuen Komponente */
 .pagination-button {
   background: var(--gradient-button);
   border: none;
@@ -422,14 +486,11 @@
   transition: all var(--transition-duration) var(--transition-timing);
 }
 
-.pagination-controls button:hover:not(:disabled),
 .pagination-button:hover:not(:disabled) {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.pagination-controls button:disabled,
 .pagination-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -437,7 +498,7 @@
   color: var(--text-secondary);
 }
 
-.pagination-controls span,
+/* Anpassung für page-indicator in der neuen Komponente */
 .page-indicator {
   font-weight: bold;
   color: var(--accent-color);
@@ -463,24 +524,21 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: var(--gradient-fusion);
+  background: linear-gradient(90deg, var(--accent-color), #9400d3);
 }
 
-/* Empty States */
-.empty-state, 
-.empty-collection,
-.profile-page > p {
+/* Anpassung für empty-state in der neuen Komponente */
+.empty-state, .empty-collection {
   text-align: center;
   padding: var(--space-lg);
   background: var(--bg-light);
   border-radius: var(--border-radius-md);
   margin: var(--space-md) 0;
   color: var(--text-secondary);
-  box-shadow: var(--shadow-light);
 }
 
-.cta-button,
-.hero-button {
+/* Anpassung für cta-button in der neuen Komponente */
+.cta-button, .hero-button {
   display: inline-block;
   background: var(--gradient-button);
   color: #000;
@@ -492,11 +550,19 @@
   transition: all var(--transition-duration) var(--transition-timing);
 }
 
-.cta-button:hover,
-.hero-button:hover {
+.cta-button:hover, .hero-button:hover {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Empty State */
+.profile-page > p {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--bg-light);
+  border-radius: var(--border-radius-md);
+  margin: var(--space-md) 0;
+  color: var(--text-secondary);
 }
 
 /* Loading State */
@@ -504,12 +570,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: var(--space-lg) auto;
-  max-width: 300px;
-  padding: var(--space-lg);
-  background: var(--bg-light);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-light);
+  margin: var(--space-lg) 0;
 }
 
 .loading-spinner {
@@ -522,26 +583,15 @@
   margin-bottom: var(--space-sm);
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Error State */
+/* Anpassung für error-state in der neuen Komponente */
 .error-state {
   text-align: center;
-  padding: var(--space-xl);
+  padding: var(--space-lg);
   color: #f44336;
-  background: var(--bg-light);
-  border-radius: var(--border-radius-md);
-  margin: var(--space-md) 0;
+  margin: var(--space-lg) 0;
 }
 
+/* Anpassung für retry-button in der neuen Komponente */
 .retry-button {
   background: linear-gradient(90deg, #f44336, #e57373);
   color: white;
@@ -558,7 +608,16 @@
 .retry-button:hover {
   background: linear-gradient(90deg, #e57373, #f44336);
   transform: translateY(-2px);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Adjustments */
@@ -591,18 +650,17 @@
     text-align: center;
   }
   
-  .unlocked-card img,
-  .character-image-container {
+  .unlocked-card img {
+    margin: 0 auto var(--space-sm);
+  }
+  
+  .unlocked-card .character-image-container {
     margin: 0 auto var(--space-sm);
   }
   
   .card-details {
     text-align: center;
     margin-bottom: var(--space-sm);
-  }
-  
-  .character-stats {
-    align-items: center;
   }
   
   .upgrade-button {

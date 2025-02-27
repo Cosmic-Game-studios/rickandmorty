@@ -1,8 +1,8 @@
 /* ===================================================================== */
-/* Profile Page Styles - Verbesserte Version                                   */
+/* Profile Page Styles - Mit Scoping auf die Profile-Komponente           */
 /* ===================================================================== */
 
-/* Profile Page Container */
+/* Profile Page Container - Hauptcontainer, der alle anderen Elemente umschließt */
 .profile-page {
   padding: var(--space-lg);
   max-width: 1200px;
@@ -26,8 +26,38 @@
   z-index: 1;
 }
 
-/* Anpassung für profile-header in der neuen Komponente */
-.profile-header h2 {
+/* Profile Header - speziell für die Profilseite */
+.profile-page .profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.profile-page .profile-header h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin: 0;
+  text-align: center;
+  text-shadow: var(--shadow-text);
+}
+
+.profile-page .settings-link {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: var(--space-sm);
+  border-radius: 50%;
+  transition: background-color var(--transition-duration);
+}
+
+.profile-page .settings-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Legacy h2 für Abwärtskompatibilität */
+.profile-page > h2 {
   font-family: var(--font-display);
   font-size: 2.5rem;
   color: var(--accent-color);
@@ -36,15 +66,7 @@
   text-shadow: var(--shadow-text);
 }
 
-.profile-page h2 {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: var(--accent-color);
-  margin-bottom: var(--space-lg);
-  text-align: center;
-  text-shadow: var(--shadow-text);
-}
-
+/* Abschnittsüberschriften */
 .profile-page h3 {
   font-family: var(--font-display);
   color: var(--accent-color);
@@ -53,8 +75,21 @@
   text-shadow: var(--shadow-text);
 }
 
-/* Anpassung für section-header in der neuen Komponente */
-.section-header h3 {
+/* Section Container und Header */
+.profile-page .section {
+  background: var(--bg-section);
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+.profile-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.profile-page .section-header h3 {
   font-family: var(--font-display);
   color: var(--accent-color);
   margin: 0;
@@ -62,22 +97,35 @@
   text-shadow: var(--shadow-text);
 }
 
-/* Anpassung für section-description in der neuen Komponente */
-.section-description {
+.profile-page .section-description {
   color: var(--text-secondary);
   margin-bottom: var(--space-md);
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
-/* Anpassung für section in der neuen Komponente */
-.section {
-  background: var(--bg-section);
-  margin-bottom: var(--space-md);
+.profile-page .help-button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.profile-page .collection-count {
+  background-color: var(--bg-card);
+  color: var(--text-secondary);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* Profile Stats Cards */
-.profile-info {
+.profile-page .profile-info {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-lg);
@@ -85,7 +133,7 @@
   margin-bottom: var(--space-xl);
 }
 
-.profile-card {
+.profile-page .profile-card {
   background: var(--bg-light);
   padding: var(--space-lg);
   border-radius: var(--border-radius-md);
@@ -97,11 +145,11 @@
   overflow: hidden;
 }
 
-.profile-card:hover {
+.profile-page .profile-card:hover {
   transform: translateY(-5px);
 }
 
-.profile-card::before {
+.profile-page .profile-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -111,50 +159,40 @@
   background: var(--gradient-button);
 }
 
-.profile-card h3 {
+.profile-page .profile-card h3 {
   margin: 0 0 var(--space-sm);
   font-size: 1.3rem;
 }
 
-.profile-card p {
+.profile-page .profile-card p,
+.profile-page .card-value {
   font-size: 1.6rem;
   font-weight: bold;
   margin: 0;
   color: var(--text-primary);
 }
 
-/* Anpassung für card-value in der neuen Komponente */
-.card-value {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin: 0;
-  color: var(--text-primary);
-}
-
-/* Anpassung für card-subtitle in der neuen Komponente */
-.card-subtitle {
+.profile-page .card-subtitle {
   font-size: 0.85rem;
   color: var(--text-secondary);
   margin-top: var(--space-xs);
 }
 
-/* Anpassung für stats-row in der neuen Komponente */
-.stats-row {
+.profile-page .stats-row {
   display: flex;
   justify-content: center;
   gap: var(--space-lg);
   width: 100%;
 }
 
-/* Anpassung für card-icon in der neuen Komponente */
-.card-icon {
+.profile-page .card-icon {
   font-size: 1.2rem;
   color: var(--accent-color);
   margin-bottom: var(--space-xs);
 }
 
-/* Anpassung für level-progress-wrapper in der neuen Komponente */
-.level-progress-wrapper {
+/* Level Progress Bar */
+.profile-page .level-progress-wrapper {
   display: flex;
   align-items: center;
   margin-top: var(--space-sm);
@@ -162,8 +200,7 @@
   gap: var(--space-sm);
 }
 
-/* Anpassung für level-progress-container in der neuen Komponente */
-.level-progress-container {
+.profile-page .level-progress-container {
   flex-grow: 1;
   height: 8px;
   background: var(--bg-card);
@@ -171,16 +208,14 @@
   overflow: hidden;
 }
 
-/* Anpassung für level-progress-bar in der neuen Komponente */
-.level-progress-bar {
+.profile-page .level-progress-bar {
   height: 100%;
   background: var(--gradient-header);
   border-radius: 4px;
   transition: width 0.3s ease;
 }
 
-/* Anpassung für progress-text in der neuen Komponente */
-.progress-text {
+.profile-page .progress-text {
   font-size: 0.9rem;
   color: var(--text-secondary);
   width: 40px;
@@ -188,7 +223,7 @@
 }
 
 /* Coin Farm Selection */
-.coin-farm-scroll {
+.profile-page .coin-farm-scroll {
   display: flex;
   overflow-x: auto;
   gap: var(--space-md);
@@ -201,21 +236,21 @@
   scrollbar-width: thin;
 }
 
-.coin-farm-scroll::-webkit-scrollbar {
+.profile-page .coin-farm-scroll::-webkit-scrollbar {
   height: 8px;
 }
 
-.coin-farm-scroll::-webkit-scrollbar-track {
+.profile-page .coin-farm-scroll::-webkit-scrollbar-track {
   background: var(--bg-card);
   border-radius: 10px;
 }
 
-.coin-farm-scroll::-webkit-scrollbar-thumb {
+.profile-page .coin-farm-scroll::-webkit-scrollbar-thumb {
   background: var(--accent-color);
   border-radius: 10px;
 }
 
-.coin-farm-card {
+.profile-page .coin-farm-card {
   flex: 0 0 auto;
   background: var(--bg-light);
   padding: var(--space-sm);
@@ -228,18 +263,17 @@
   position: relative;
 }
 
-.coin-farm-card:hover {
+.profile-page .coin-farm-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-dark);
 }
 
-.coin-farm-card.selected {
+.profile-page .coin-farm-card.selected {
   border: 2px solid var(--accent-color);
   background: rgba(240, 225, 48, 0.1);
 }
 
-/* Anpassung für character-image-container in der neuen Komponente */
-.character-image-container {
+.profile-page .character-image-container {
   position: relative;
   width: 80px;
   height: 80px;
@@ -249,7 +283,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.coin-farm-card img {
+.profile-page .coin-farm-card img {
   width: 80px;
   height: 80px;
   border-radius: var(--border-radius-sm);
@@ -258,13 +292,13 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.character-image-container img {
+.profile-page .character-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.coin-farm-card p {
+.profile-page .coin-farm-card p {
   margin: 0;
   font-size: 0.9rem;
   white-space: nowrap;
@@ -273,8 +307,7 @@
   padding: 0 var(--space-xs);
 }
 
-/* Anpassung für character-speed in der neuen Komponente */
-.character-speed {
+.profile-page .character-speed {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,13 +317,11 @@
   margin-top: 2px;
 }
 
-/* Anpassung für speed-icon in der neuen Komponente */
-.speed-icon {
+.profile-page .speed-icon {
   color: var(--accent-color);
 }
 
-/* Anpassung für selected-indicator in der neuen Komponente */
-.selected-indicator {
+.profile-page .selected-indicator {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -306,14 +337,14 @@
 }
 
 /* Unlocked Characters List */
-.unlocked-list {
+.profile-page .unlocked-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
   margin-top: var(--space-md);
 }
 
-.unlocked-card {
+.profile-page .unlocked-card {
   display: flex;
   align-items: center;
   background: var(--bg-light);
@@ -324,12 +355,12 @@
   animation: fadeIn 0.3s ease-out;
 }
 
-.unlocked-card:hover {
+.profile-page .unlocked-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-dark);
 }
 
-.unlocked-card img {
+.profile-page .unlocked-card img {
   width: 80px;
   height: 80px;
   border-radius: var(--border-radius-sm);
@@ -338,15 +369,14 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.unlocked-card .character-image-container {
+.profile-page .unlocked-card .character-image-container {
   width: 80px;
   height: 80px;
   margin-right: var(--space-md);
   flex-shrink: 0;
 }
 
-/* Anpassung für character-level in der neuen Komponente */
-.character-level {
+.profile-page .character-level {
   position: absolute;
   top: -8px;
   right: -8px;
@@ -358,55 +388,53 @@
   font-weight: 500;
 }
 
-.card-details {
+.profile-page .card-details {
   flex: 1;
   text-align: left;
 }
 
-.card-details p {
+.profile-page .card-details p {
   margin: var(--space-xs) 0;
+  font-size: inherit;
+  font-weight: normal;
 }
 
-.card-details p:first-child {
+.profile-page .card-details p:first-child {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--accent-color);
 }
 
-/* Anpassung für card-details h4 in der neuen Komponente */
-.card-details h4 {
+.profile-page .card-details h4 {
   margin: 0 0 var(--space-xs) 0;
   font-size: 1.1rem;
   font-weight: bold;
   color: var(--accent-color);
 }
 
-/* Anpassung für character-stats in der neuen Komponente */
-.character-stats {
+.profile-page .character-stats {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
 }
 
-.character-stats p {
+.profile-page .character-stats p {
   margin: var(--space-xs) 0;
   font-size: 0.85rem;
 }
 
-/* Anpassung für stat-label in der neuen Komponente */
-.stat-label {
+.profile-page .stat-label {
   font-weight: 500;
   margin-right: var(--space-xs);
   color: var(--text-secondary);
 }
 
-/* Anpassung für stat-value in der neuen Komponente */
-.stat-value {
+.profile-page .stat-value {
   color: var(--text-primary);
 }
 
 /* Upgrade Button */
-.upgrade-button {
+.profile-page .upgrade-button {
   background: var(--gradient-button);
   border: none;
   padding: var(--space-sm) var(--space-md);
@@ -418,27 +446,25 @@
   white-space: nowrap;
 }
 
-.upgrade-button:hover {
+.profile-page .upgrade-button:hover:not(.disabled) {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
 }
 
-/* Anpassung für upgrade-button.disabled in der neuen Komponente */
-.upgrade-button.disabled {
+.profile-page .upgrade-button.disabled {
   opacity: 0.5;
   cursor: not-allowed;
   background: var(--bg-light);
   color: var(--text-secondary);
 }
 
-/* Anpassung für coin-cost in der neuen Komponente */
-.coin-cost {
+.profile-page .coin-cost {
   font-weight: 500;
   margin-left: var(--space-xs);
 }
 
 /* Pagination Controls */
-.pagination-controls {
+.profile-page .pagination-controls {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -446,7 +472,8 @@
   margin: var(--space-md) 0;
 }
 
-.pagination-controls button {
+.profile-page .pagination-controls button,
+.profile-page .pagination-button {
   background: var(--gradient-button);
   border: none;
   padding: var(--space-xs) var(--space-md);
@@ -457,55 +484,28 @@
   transition: all var(--transition-duration) var(--transition-timing);
 }
 
-.pagination-controls button:hover:not(:disabled) {
+.profile-page .pagination-controls button:hover:not(:disabled),
+.profile-page .pagination-button:hover:not(:disabled) {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
 }
 
-.pagination-controls button:disabled {
+.profile-page .pagination-controls button:disabled,
+.profile-page .pagination-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   background: var(--bg-light);
   color: var(--text-secondary);
 }
 
-.pagination-controls span {
-  font-weight: bold;
-  color: var(--accent-color);
-}
-
-/* Anpassung für pagination-button in der neuen Komponente */
-.pagination-button {
-  background: var(--gradient-button);
-  border: none;
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--border-radius-sm);
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all var(--transition-duration) var(--transition-timing);
-}
-
-.pagination-button:hover:not(:disabled) {
-  background: var(--gradient-button-hover);
-  transform: translateY(-2px);
-}
-
-.pagination-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  background: var(--bg-light);
-  color: var(--text-secondary);
-}
-
-/* Anpassung für page-indicator in der neuen Komponente */
-.page-indicator {
+.profile-page .pagination-controls span,
+.profile-page .page-indicator {
   font-weight: bold;
   color: var(--accent-color);
 }
 
 /* Fusion Panel */
-.fusion-panel {
+.profile-page .fusion-panel {
   background: var(--bg-light);
   padding: var(--space-lg);
   border-radius: var(--border-radius-md);
@@ -517,7 +517,7 @@
   overflow: hidden;
 }
 
-.fusion-panel::before {
+.profile-page .fusion-panel::before {
   content: '';
   position: absolute;
   top: 0;
@@ -527,8 +527,10 @@
   background: linear-gradient(90deg, var(--accent-color), #9400d3);
 }
 
-/* Anpassung für empty-state in der neuen Komponente */
-.empty-state, .empty-collection {
+/* Empty States */
+.profile-page .empty-state, 
+.profile-page .empty-collection,
+.profile-page > p {
   text-align: center;
   padding: var(--space-lg);
   background: var(--bg-light);
@@ -537,8 +539,8 @@
   color: var(--text-secondary);
 }
 
-/* Anpassung für cta-button in der neuen Komponente */
-.cta-button, .hero-button {
+.profile-page .cta-button,
+.profile-page .hero-button {
   display: inline-block;
   background: var(--gradient-button);
   color: #000;
@@ -550,30 +552,21 @@
   transition: all var(--transition-duration) var(--transition-timing);
 }
 
-.cta-button:hover, .hero-button:hover {
+.profile-page .cta-button:hover,
+.profile-page .hero-button:hover {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
 }
 
-/* Empty State */
-.profile-page > p {
-  text-align: center;
-  padding: var(--space-lg);
-  background: var(--bg-light);
-  border-radius: var(--border-radius-md);
-  margin: var(--space-md) 0;
-  color: var(--text-secondary);
-}
-
 /* Loading State */
-.loading-indicator {
+.profile-page .loading-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: var(--space-lg) 0;
 }
 
-.loading-spinner {
+.profile-page .loading-spinner {
   width: 40px;
   height: 40px;
   border: 4px solid rgba(255, 255, 255, 0.3);
@@ -583,16 +576,15 @@
   margin-bottom: var(--space-sm);
 }
 
-/* Anpassung für error-state in der neuen Komponente */
-.error-state {
+/* Error State */
+.profile-page .error-state {
   text-align: center;
   padding: var(--space-lg);
   color: #f44336;
   margin: var(--space-lg) 0;
 }
 
-/* Anpassung für retry-button in der neuen Komponente */
-.retry-button {
+.profile-page .retry-button {
   background: linear-gradient(90deg, #f44336, #e57373);
   color: white;
   border: none;
@@ -605,11 +597,12 @@
   transition: all var(--transition-duration) var(--transition-timing);
 }
 
-.retry-button:hover {
+.profile-page .retry-button:hover {
   background: linear-gradient(90deg, #e57373, #f44336);
   transform: translateY(-2px);
 }
 
+/* Animationen - beschränkt auf die Profile-Seite */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -620,50 +613,49 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments - beschränkt auf die Profile-Seite */
 @media (max-width: 768px) {
   .profile-page {
     padding: var(--space-md);
   }
   
-  .profile-info {
+  .profile-page .profile-info {
     flex-direction: column;
     align-items: center;
     gap: var(--space-md);
   }
   
-  .profile-card {
+  .profile-page .profile-card {
     width: 100%;
     max-width: 300px;
   }
   
-  .profile-page h2 {
+  .profile-page h2,
+  .profile-page .profile-header h2 {
     font-size: 2rem;
   }
   
-  .profile-page h3 {
+  .profile-page h3,
+  .profile-page .section-header h3 {
     font-size: 1.4rem;
   }
   
-  .unlocked-card {
+  .profile-page .unlocked-card {
     flex-direction: column;
     text-align: center;
   }
   
-  .unlocked-card img {
+  .profile-page .unlocked-card img,
+  .profile-page .unlocked-card .character-image-container {
     margin: 0 auto var(--space-sm);
   }
   
-  .unlocked-card .character-image-container {
-    margin: 0 auto var(--space-sm);
-  }
-  
-  .card-details {
+  .profile-page .card-details {
     text-align: center;
     margin-bottom: var(--space-sm);
   }
   
-  .upgrade-button {
+  .profile-page .upgrade-button {
     width: 100%;
   }
 }
@@ -673,44 +665,48 @@
     padding: var(--space-sm);
   }
   
-  .profile-info {
+  .profile-page .profile-info {
     gap: var(--space-sm);
   }
   
-  .profile-card {
+  .profile-page .profile-card {
     padding: var(--space-md);
     max-width: 100%;
   }
   
-  .profile-page h2 {
+  .profile-page h2,
+  .profile-page .profile-header h2 {
     font-size: 1.8rem;
     margin-bottom: var(--space-md);
   }
   
-  .profile-page h3 {
+  .profile-page h3,
+  .profile-page .section-header h3 {
     font-size: 1.2rem;
     margin: var(--space-lg) 0 var(--space-sm);
   }
   
-  .coin-farm-card {
+  .profile-page .coin-farm-card {
     width: 100px;
   }
   
-  .coin-farm-card img {
+  .profile-page .coin-farm-card img,
+  .profile-page .coin-farm-card .character-image-container {
     width: 70px;
     height: 70px;
   }
   
-  .pagination-controls {
+  .profile-page .pagination-controls {
     flex-direction: column;
     gap: var(--space-sm);
   }
   
-  .card-details p {
+  .profile-page .card-details p {
     font-size: 0.9rem;
   }
   
-  .card-details p:first-child {
+  .profile-page .card-details p:first-child,
+  .profile-page .card-details h4 {
     font-size: 1rem;
   }
 }

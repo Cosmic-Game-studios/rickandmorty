@@ -3284,18 +3284,6 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   100% { opacity: 0; transform: scale(0.95); height: 0; margin: 0; padding: 0; overflow: hidden; }
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes glow {
-  0% { box-shadow: 0 0 5px rgba(240, 225, 48, 0.7); }
-  50% { box-shadow: 0 0 20px rgba(240, 225, 48, 0.9); }
-  100% { box-shadow: 0 0 5px rgba(240, 225, 48, 0.7); }
-}
-
 /* Auto-Hide Toggle */
 .auto-hide-toggle {
   display: flex;
@@ -3322,12 +3310,56 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   margin-right: 10px;
 }
 
-/* Mission Cards */
-.mission-card-fading {
-  transition: opacity 5s ease, transform 5s ease, height 5s ease, margin 5s ease, padding 5s ease;
+/* Toast Notifications */
+.mission-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-out;
+  max-width: 350px;
 }
 
-/* Daily Mission */
+.mission-toast.success {
+  background-color: #4caf50;
+}
+
+.mission-toast.error {
+  background-color: #f44336;
+}
+
+.mission-toast.warning {
+  background-color: #ff9800;
+}
+
+.mission-toast-content {
+  margin-right: 15px;
+}
+
+.mission-toast-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.mission-toast-close:hover {
+  opacity: 1;
+}
+
+/* Daily Mission Styling */
 .daily-mission {
   position: relative;
   overflow: hidden;
@@ -3343,103 +3375,3 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
   pointer-events: none;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%);
 }
-
-/* Character Image Container */
-.character-image-container {
-  position: relative;
-  display: inline-block;
-}
-
-/* Rarity Badges */
-.rarity-badge {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  padding: 3px 6px;
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: white;
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  z-index: 2;
-}
-
-.rarity-badge.common {
-  background-color: #9e9e9e;
-}
-
-.rarity-badge.uncommon {
-  background-color: #4caf50;
-}
-
-.rarity-badge.rare {
-  background-color: #2196f3;
-}
-
-.rarity-badge.epic {
-  background-color: #9c27b0;
-}
-
-.rarity-badge.legendary {
-  background-color: #ff9800;
-}
-
-/* Rarity Card Styling */
-.rarity-common {
-  border: 2px solid #9e9e9e;
-}
-
-.rarity-uncommon {
-  border: 2px solid #4caf50;
-}
-
-.rarity-rare {
-  border: 2px solid #2196f3;
-  animation: pulse 2s infinite;
-}
-
-.rarity-epic {
-  border: 2px solid #9c27b0;
-  animation: pulse 2s infinite;
-}
-
-.rarity-legendary {
-  border: 2px solid #ff9800;
-  animation: glow 2s infinite;
-}
-
-/* Special Mission Badges */
-.special-badge {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(45deg, #ff0066, #ffcc00);
-  color: black;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 15px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-  z-index: 3;
-  white-space: nowrap;
-}
-
-.legendary-badge {
-  background: linear-gradient(45deg, #ff9800, #ff5722);
-}
-
-.epic-badge {
-  background: linear-gradient(45deg, #9c27b0, #673ab7);
-}
-
-.rare-badge {
-  background: linear-gradient(45deg, #2196f3, #03a9f4);
-}
-
-/* Toast Notifications */
-.mission-toast {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding:

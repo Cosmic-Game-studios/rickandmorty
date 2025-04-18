@@ -30,7 +30,7 @@ export const RARITY = Object.freeze({
 const todayString = () => new Date().toISOString().slice(0, 10);
 
 /* -------------------------------------------------------------------------- */
-/*                              LOCAL‑STORAGE HOOK                            */
+/*                       LOCAL‑STORAGE STATE HELPER HOOK                       */
 /* -------------------------------------------------------------------------- */
 
 function useLocalStorage(key, initialValue) {
@@ -51,18 +51,17 @@ function useLocalStorage(key, initialValue) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                              PLACEHOLDER DATA                              */
+/*                        PLACEHOLDER MISSION DATASETS                         */
 /* -------------------------------------------------------------------------- */
 
-// ⚠️  REPLACE WITH YOUR REAL STATIC / API DATA
+// ⚠️  REPLACE WITH REAL DATA / API FETCH
 export const MISSIONS_DATA = [];
-
 export const DAILY_CHARACTER_MISSIONS = [
-  // … identical to your original daily‑mission objects …
+  // … keep your original daily missions here …
 ];
 
 /* -------------------------------------------------------------------------- */
-/*                                   TOAST                                    */
+/*                                    TOAST                                   */
 /* -------------------------------------------------------------------------- */
 
 const Toast = memo(({ message, type = 'success', onClose }) => {
@@ -71,14 +70,14 @@ const Toast = memo(({ message, type = 'success', onClose }) => {
     return () => clearTimeout(id);
   }, [onClose]);
 
-  const colors = {
+  const border = {
     success: 'border-green-500',
     warning: 'border-yellow-500',
     error: 'border-red-500'
-  };
+  }[type];
 
   return (
-    <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 rounded-xl bg-gray-800/80 px-4 py-3 backdrop-blur border ${colors[type]} text-sm shadow-lg`}>
+    <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 rounded-xl bg-gray-800/80 px-4 py-3 backdrop-blur-md shadow-lg border ${border}`}>
       <span>{message}</span>
       <button onClick={onClose} className="text-lg leading-none hover:text-red-400">&times;</button>
     </div>
@@ -86,50 +85,49 @@ const Toast = memo(({ message, type = 'success', onClose }) => {
 });
 
 /* -------------------------------------------------------------------------- */
-/*                           UTILITY & HELPER FUNCS                           */
+/*                            INTERNAL HELPER FUNCS                           */
 /* -------------------------------------------------------------------------- */
 
 const mergeMissions = () => [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
 
 /* -------------------------------------------------------------------------- */
-/*                                MAIN COMPONENT                              */
+/*                               MAIN COMPONENT                               */
 /* -------------------------------------------------------------------------- */
 
 export default function Missions() {
   const isMobile = useIsMobile();
-  const { completeMission, unlockCharacter, addCoins, level, coins } = useContext(UserContext);
+  const { completeMission, unlockCharacter, addCoins, level } = useContext(UserContext);
 
-  /* ------------------------------- UI STATE ------------------------------- */
+  /* --------------------------------- UI STATE ----------------------------- */
   const [filter, setFilter] = useState('all');
   const [toast, setToast] = useState(null);
   const [autoHideCompleted, setAutoHideCompleted] = useState(true);
   const [recentlyCompleted, setRecentlyCompleted] = useState([]);
 
-  /* --------------------------- PERSISTED STATE ---------------------------- */
+  /* ------------------------------ PERSISTED STATE ------------------------- */
   const [completedMissions, setCompletedMissions] = useLocalStorage('completedMissions', []);
   const [dailyMissionsData, setDailyMissionsData] = useLocalStorage('dailyMissionsData', {
     date: todayString(),
     completed: []
   });
 
-  /* ------------------------------ DAILY RESET ----------------------------- */
+  /* ----------------------------- DAILY RESET LOGIC ------------------------ */
   useEffect(() => {
     const today = todayString();
     if (dailyMissionsData.date !== today) {
       setDailyMissionsData({ date: today, completed: [] });
-      // remove daily IDs from permanent list
       setCompletedMissions(prev => prev.filter(id => {
-        const mission = MISSIONS_DATA.find(m => m.id === id);
-        return mission && !mission.daily;
+        const m = MISSIONS_DATA.find(x => x.id === id);
+        return m && !m.daily;
       }));
     }
   }, [dailyMissionsData.date, setDailyMissionsData, setCompletedMissions]);
 
-  /* -------------------------- QUIZ‑COUNTER HELPER ------------------------- */
+  /* ---------------------------- QUIZ COUNT HELPER ------------------------- */
   const getDailyQuizCount = useCallback(() => {
     try {
-      const stored = JSON.parse(localStorage.getItem('dailyQuizData'));
-      return stored?.date === todayString() ? stored.count : 0;
+      const data = JSON.parse(localStorage.getItem('dailyQuizData'));
+      return data?.date === todayString() ? data.count : 0;
     } catch {
       return 0;
     }
@@ -143,7 +141,7 @@ export default function Missions() {
 
   const isMissionAvailable = useCallback(m => !m.requiredLevel || level >= m.requiredLevel, [level]);
 
-  /* ------------------------------ TOAST HELPER ---------------------------- */
+  /* ------------------------------ TOAST HELPER ---------------------------- */
   const showToast = (msg, type = 'success') => setToast({ message: msg, type });
 
   /* --------------------------- COMPLETE HANDLER --------------------------- */
@@ -160,16 +158,15 @@ export default function Missions() {
       return;
     }
 
-    // reward logic
     switch (mission.type) {
       case MISSION_TYPES.CHARACTER:
         completeMission(mission.reward);
         unlockCharacter(mission.unlock);
-        showToast(`${mission.unlock.name} +${mission.reward} Punkte`, 'success');
+        showToast(`${mission.unlock.name} +${mission.reward} Punkte`, 'success');
         break;
       case MISSION_TYPES.COIN:
         addCoins(mission.reward);
-        showToast(`+${mission.reward} Münzen`, 'success');
+        showToast(`+${mission.reward} Münzen`, 'success');
         break;
       case MISSION_TYPES.SPECIAL:
         mission.rewards.coins && addCoins(mission.rewards.coins);
@@ -180,7 +177,6 @@ export default function Missions() {
         break;
     }
 
-    // mark complete
     mission.daily
       ? setDailyMissionsData(prev => ({ ...prev, completed: [...prev.completed, mission.id] }))
       : setCompletedMissions(prev => [...prev, mission.id]);
@@ -188,14 +184,14 @@ export default function Missions() {
     setRecentlyCompleted(prev => [...prev, mission.id]);
   }, [isMissionCompleted, isMissionAvailable, completeMission, unlockCharacter, addCoins, getDailyQuizCount, setDailyMissionsData, setCompletedMissions]);
 
-  /* ------------------------ CLEANUP RECENT LIST --------------------------- */
+  /* --------------------------- CLEANUP RECENTLY --------------------------- */
   useEffect(() => {
     if (!recentlyCompleted.length) return;
-    const tids = recentlyCompleted.map(id => setTimeout(() => setRecentlyCompleted(prev => prev.filter(x => x !== id)), 5000));
+    const tids = recentlyCompleted.map(id => setTimeout(() => setRecentlyCompleted(p => p.filter(x => x !== id)), 5000));
     return () => tids.forEach(clearTimeout);
   }, [recentlyCompleted]);
 
-  /* ------------------------------ FILTERING ------------------------------- */
+  /* ------------------------------ FILTER LOGIC ---------------------------- */
   const filteredMissions = useMemo(() => {
     return mergeMissions().filter(m => {
       if (filter === 'character' && ![MISSION_TYPES.CHARACTER, MISSION_TYPES.SPECIAL].includes(m.type)) return false;
@@ -205,10 +201,10 @@ export default function Missions() {
       if (autoHideCompleted && isMissionCompleted(m.id) && filter !== 'completed' && !recentlyCompleted.includes(m.id)) return false;
       return true;
     });
-  }, [filter, autoHideCompleted, isMissionCompleted, isMissionAvailable, recentlyCompleted]);
+  }, [filter, autoHideCompleted, recentlyCompleted, isMissionCompleted, isMissionAvailable]);
 
   /* ------------------------------------------------------------------------ */
-  /*                                   RENDER                                 */
+  /*                                  RENDER                                  */
   /* ------------------------------------------------------------------------ */
 
   return (
@@ -217,22 +213,22 @@ export default function Missions() {
         <h1 className="text-4xl font-extrabold tracking-widest text-purple-400 drop-shadow">Missionen</h1>
       </header>
 
-      {/* FILTER BUTTONS */}
+      {/* FILTERS */}
       <div className="flex flex-wrap justify-center gap-2 mb-6 select-none">
-        {['all', 'character', 'coin', 'completed', 'available'].map(key => (
+        {['all', 'character', 'coin', 'completed', 'available'].map(k => (
           <button
-            key={key}
-            onClick={() => setFilter(key)}
-            className={`px-4 py-1.5 rounded-full uppercase text-xs font-semibold tracking-wider transition-colors ${filter === key ? 'bg-purple-600 text-white' : 'bg-gray-800 hover:bg-purple-700'}`}
+            key={k}
+            onClick={() => setFilter(k)}
+            className={`px-4 py-1.5 rounded-full uppercase text-xs font-semibold tracking-wider transition-colors ${filter === k ? 'bg-purple-600 text-white' : 'bg-gray-800 hover:bg-purple-700'}`}
           >
-            {key[0].toUpperCase() + key.slice(1)}
+            {k[0].toUpperCase() + k.slice(1)}
           </button>
         ))}
       </div>
 
-      {/* AUTO‑HIDE TOGGLE */}
+      {/* AUTO‑HIDE */}
       <label className="flex items-center justify-center gap-2 mb-8 text-sm">
-        <input type="checkbox" checked={autoHideCompleted} onChange={() => setAutoHideCompleted(!autoHideCompleted)} className="accent-purple-600 w-4 h-4" />
+        <input type="checkbox" className="accent-purple-600 w-4 h-4" checked={autoHideCompleted} onChange={() => setAutoHideCompleted(!autoHideCompleted)} />
         Abgeschlossene Missionen automatisch ausblenden
       </label>
 
@@ -260,11 +256,11 @@ export default function Missions() {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                               CARD COMPONENT                               */
+/*                              MISSION CARD                                  */
 /* -------------------------------------------------------------------------- */
 
 const MissionCard = memo(({ mission, level, isCompleted, isAvailable, recentlyCompleted, onComplete, getDailyQuizCount }) => {
-  const rarityColor = {
+  const borderColor = {
     [RARITY.RARE]: 'border-yellow-500',
     [RARITY.EPIC]: 'border-pink-500',
     [RARITY.LEGENDARY]: 'border-red-600'
@@ -274,14 +270,13 @@ const MissionCard = memo(({ mission, level, isCompleted, isAvailable, recentlyCo
 
   return (
     <div
-      className={`relative flex flex-col bg-gray-800 rounded-2xl p-4 shadow-lg border-2 ${rarityColor} transition-transform ${isCompleted ? 'opacity-60 hover:opacity-90' : 'hover:-translate-y-1'}`}>
-
+      className={`relative flex flex-col bg-gray-800 rounded-2xl p-4 shadow-lg border-2 ${borderColor} transition-transform ${isCompleted ? 'opacity-60 hover:opacity-90' : 'hover:-translate-y-1'}`}>
       {/* BADGES */}
       {mission.type === MISSION_TYPES.SPECIAL && (
         <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-3 py-0.5 rounded-full shadow">SPECIAL</span>
       )}
       {mission.unlock?.rarity && mission.unlock.rarity !== RARITY.COMMON && (
-        <span className="absolute -top-3 right-3 bg-gray-900 px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider shadow border border-current" style={{ borderColor: 'currentColor' }}>
+        <span className="absolute -top-3 right-3 bg-gray-900 px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider shadow border border-current">
           {mission.unlock.rarity}
         </span>
       )}
@@ -313,7 +308,9 @@ const MissionCard = memo(({ mission, level, isCompleted, isAvailable, recentlyCo
           <div className="relative w-full h-2 bg-gray-700 rounded-full overflow-hidden my-3">
             <div className="absolute top-0 left-0 h-full bg-purple-600" style={{ width: `${(progress.current / progress.required) * 100}%` }} />
           </div>
-          <p className="text-center text-xs text-gray-400 mb-1">{progress.current}/{progress.required} Quizze</p>
+          <p className="text-center text-xs text-gray-400 mb-1">
+            {progress.current}/{progress.required} Quizze
+          </p>
         </>
       )}
 
@@ -326,3 +323,71 @@ const MissionCard = memo(({ mission, level, isCompleted, isAvailable, recentlyCo
         {isCompleted ? 'Abgeschlossen' : 'Abschließen'}
       </button>
     </div>
+  );
+});
+
+/* -------------------------------------------------------------------------- */
+/*                               REWARD COMPONENT                             */
+/* -------------------------------------------------------------------------- */
+
+const Reward = memo(({ mission }) => {
+  if (mission.type === MISSION_TYPES.CHARACTER) {
+    const rarity = mission.unlock.rarity;
+    return (
+      <div className="flex flex-col items-center gap-1 mb-4">
+        <img
+          src={mission.unlock.image}
+          alt={mission.unlock.name}
+          className="w-24 h-24 rounded-lg object-cover border border-gray-700"
+          loading="lazy"
+        />
+        <span className="text-sm font-bold tracking-wide text-gray-200 uppercase drop-shadow">
+          {mission.unlock.name}
+        </span>
+        <span className="text-xs text-gray-400">+{mission.reward} Punkte</span>
+        {rarity !== RARITY.COMMON && (
+          <span className="text-xs font-semibold uppercase tracking-widest mt-1">
+            {rarity}
+          </span>
+        )}
+      </div>
+    );
+  }
+
+  if (mission.type === MISSION_TYPES.COIN) {
+    return (
+      <div className="flex flex-col items-center gap-1 mb-4 text-yellow-400">
+        <span className="text-4xl" role="img" aria-label="coins">💰</span>
+        <span className="text-sm font-bold">+{mission.reward} Münzen</span>
+      </div>
+    );
+  }
+
+  if (mission.type === MISSION_TYPES.SPECIAL) {
+    return (
+      <div className="flex flex-col items-center gap-2 mb-4">
+        {mission.rewards.character && (
+          <div className="flex flex-col items-center gap-1">
+            <img
+              src={mission.rewards.character.image}
+              alt={mission.rewards.character.name}
+              className="w-20 h-20 rounded-lg object-cover border border-gray-700"
+              loading="lazy"
+            />
+            <span className="text-sm font-bold tracking-wide text-gray-200">
+              {mission.rewards.character.name}
+            </span>
+          </div>
+        )}
+        {mission.rewards.coins && (
+          <div className="flex flex-col items-center text-yellow-400">
+            <span className="text-3xl" role="img" aria-label="coins">💰</span>
+            <span className="text-sm font-bold">+{mission.rewards.coins} Münzen</span>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return null;
+});

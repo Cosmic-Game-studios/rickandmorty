@@ -571,5 +571,3 @@ function Missions() {
 }
 
 export default Missions;
-
-Verbesser denn code

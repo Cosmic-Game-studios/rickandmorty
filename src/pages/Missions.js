@@ -571,5 +571,3 @@ function Missions() {
 }
 
 export default Missions;
-
-Verbesser dass code und dass aussehen	von den page aber sonst soll alles gleich blieben was die Funktion betrifft 

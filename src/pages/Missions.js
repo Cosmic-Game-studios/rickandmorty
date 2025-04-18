@@ -1,393 +1,575 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  useMemo,
-  useCallback,
-  memo
-} from 'react';
+import React, { useState, useEffect, useContext, useMemo, useCallback } from 'react';
 import { UserContext } from '../context/UserContext';
 import useIsMobile from '../hooks/useIsMobile';
 
-/* -------------------------------------------------------------------------- */
-/*                                 CONSTANTS                                  */
-/* -------------------------------------------------------------------------- */
-
-export const MISSION_TYPES = Object.freeze({
+// Konstanten für Mission-Typen
+const MISSION_TYPES = {
   CHARACTER: 'character',
   COIN: 'coin',
-  SPECIAL: 'special'
-});
+  SPECIAL: 'special' // Für Missionen mit mehreren Belohnungen
+};
 
-export const RARITY = Object.freeze({
+// Konstanten für Seltenheitsstufen
+const RARITY = {
   COMMON: 'common',
   UNCOMMON: 'uncommon',
   RARE: 'rare',
   EPIC: 'epic',
   LEGENDARY: 'legendary'
-});
+};
 
-const todayString = () => new Date().toISOString().slice(0, 10);
-
-/* -------------------------------------------------------------------------- */
-/*                       LOCAL‑STORAGE STATE HELPER HOOK                       */
-/* -------------------------------------------------------------------------- */
-
-function useLocalStorage(key, initialValue) {
-  const [state, setState] = useState(() => {
-    try {
-      const cached = localStorage.getItem(key);
-      return cached ? JSON.parse(cached) : initialValue;
-    } catch {
-      return initialValue;
-    }
-  });
-
+// Toast Benachrichtigungskomponente
+const Toast = ({ message, type, onClose }) => {
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(state));
-  }, [key, state]);
+    const timer = setTimeout(() => {
+      onClose();
+    }, 5000);
+    
+    return () => clearTimeout(timer);
+  }, [onClose]);
+  
+  return (
+    <div className={`mission-toast ${type}`}>
+      <div className="mission-toast-content">{message}</div>
+      <button className="mission-toast-close" onClick={onClose}>×</button>
+    </div>
+  );
+};
 
-  return [state, setState];
-}
+// Definiere die MISSIONS_DATA Variable - Du musst sie durch deine eigene ersetzen!
+// Dies ist nur ein Platzhalter, um den ESLint-Fehler zu beheben
+const MISSIONS_DATA = [];
 
-/* -------------------------------------------------------------------------- */
-/*                        PLACEHOLDER MISSION DATASETS                         */
-/* -------------------------------------------------------------------------- */
-
-// ⚠️  REPLACE WITH REAL DATA / API FETCH
-export const MISSIONS_DATA = [];
-export const DAILY_CHARACTER_MISSIONS = [
-  // … keep your original daily missions here …
+// Füge diese täglichen Missionen zu deiner bestehenden MISSIONS_DATA hinzu
+const DAILY_CHARACTER_MISSIONS = [
+  {
+    id: 101,
+    description: 'DAILY: Rescue Pickle Rick from the sewer rats!',
+    detailedDescription: 'Rick turned himself into a pickle to avoid family therapy, but now he\'s in danger. Help him fight off the sewer rats and get him back home!',
+    reward: 120,
+    type: MISSION_TYPES.CHARACTER,
+    difficulty: 'Medium',
+    estimatedTime: '20 min',
+    daily: true,
+    unlock: {
+      id: 265,
+      name: 'Pickle Rick',
+      image: 'https://rickandmortyapi.com/api/character/avatar/265.jpeg',
+      rarity: RARITY.RARE
+    }
+  },
+  {
+    id: 102,
+    description: 'DAILY: Free Mr. Meeseeks from the box!',
+    detailedDescription: 'Mr. Meeseeks has been trapped in his box for too long. Free him and complete his task quickly before he goes insane!',
+    reward: 200,
+    type: MISSION_TYPES.CHARACTER,
+    difficulty: 'Medium',
+    estimatedTime: '20 min',
+    daily: true,
+    unlock: {
+      id: 242,
+      name: 'Mr. Meeseeks',
+      image: 'https://rickandmortyapi.com/api/character/avatar/242.jpeg',
+      rarity: RARITY.UNCOMMON
+    }
+  },
+  {
+    id: 103,
+    description: 'DAILY RARE: Break Scary Terry out of dream prison!',
+    detailedDescription: 'Scary Terry, bitch! He\'s been imprisoned in a dream realm by the Dream Police. Navigate the nightmare landscape and help him escape!',
+    reward: 180,
+    type: MISSION_TYPES.CHARACTER,
+    difficulty: 'Hard',
+    estimatedTime: '25 min',
+    daily: true,
+    requiredQuizzes: 3,
+    unlock: {
+      id: 333,
+      name: 'Scary Terry',
+      image: 'https://rickandmortyapi.com/api/character/avatar/333.jpeg',
+      rarity: RARITY.RARE
+    }
+  },
+  {
+    id: 104,
+    description: 'DAILY EPIC: Free Birdperson from the Federation\'s mind control!',
+    detailedDescription: 'Birdperson has been captured and brainwashed by the Galactic Federation. Infiltrate their headquarters and restore his memories!',
+    reward: 280,
+    type: MISSION_TYPES.CHARACTER,
+    difficulty: 'Very Hard',
+    estimatedTime: '40 min',
+    daily: true,
+    requiredQuizzes: 5,
+    unlock: {
+      id: 47,
+      name: 'Birdperson',
+      image: 'https://rickandmortyapi.com/api/character/avatar/47.jpeg',
+      rarity: RARITY.EPIC
+    }
+  },
+  {
+    id: 105,
+    description: 'DAILY LEGENDARY: Assist Unity in escaping the hivemind!',
+    detailedDescription: 'Unity, Rick\'s ex-lover, wants to break free from her hivemind existence. Help her regain her individuality in this challenging mission.',
+    reward: 350,
+    type: MISSION_TYPES.CHARACTER,
+    difficulty: 'Extreme',
+    estimatedTime: '45 min',
+    daily: true,
+    requiredQuizzes: 7,
+    unlock: {
+      id: 411,
+      name: 'Unity',
+      image: 'https://rickandmortyapi.com/api/character/avatar/411.jpeg',
+      rarity: RARITY.LEGENDARY
+    }
+  }
 ];
 
-/* -------------------------------------------------------------------------- */
-/*                                    TOAST                                   */
-/* -------------------------------------------------------------------------- */
-
-const Toast = memo(({ message, type = 'success', onClose }) => {
-  useEffect(() => {
-    const id = setTimeout(onClose, 5000);
-    return () => clearTimeout(id);
-  }, [onClose]);
-
-  const border = {
-    success: 'border-green-500',
-    warning: 'border-yellow-500',
-    error: 'border-red-500'
-  }[type];
-
-  return (
-    <div className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 rounded-xl bg-gray-800/80 px-4 py-3 backdrop-blur-md shadow-lg border ${border}`}>
-      <span>{message}</span>
-      <button onClick={onClose} className="text-lg leading-none hover:text-red-400">&times;</button>
-    </div>
-  );
-});
-
-/* -------------------------------------------------------------------------- */
-/*                            INTERNAL HELPER FUNCS                           */
-/* -------------------------------------------------------------------------- */
-
-const mergeMissions = () => [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
-
-/* -------------------------------------------------------------------------- */
-/*                               MAIN COMPONENT                               */
-/* -------------------------------------------------------------------------- */
-
-export default function Missions() {
+function Missions() {
   const isMobile = useIsMobile();
-  const { completeMission, unlockCharacter, addCoins, level } = useContext(UserContext);
-
-  /* --------------------------------- UI STATE ----------------------------- */
+  const { completeMission, unlockCharacter, addCoins, level, coins } = useContext(UserContext);
   const [filter, setFilter] = useState('all');
-  const [toast, setToast] = useState(null);
+  const [toast, setToast] = useState({ visible: false, message: '', type: 'success' });
   const [autoHideCompleted, setAutoHideCompleted] = useState(true);
   const [recentlyCompleted, setRecentlyCompleted] = useState([]);
-
-  /* ------------------------------ PERSISTED STATE ------------------------- */
-  const [completedMissions, setCompletedMissions] = useLocalStorage('completedMissions', []);
-  const [dailyMissionsData, setDailyMissionsData] = useLocalStorage('dailyMissionsData', {
-    date: todayString(),
-    completed: []
+  
+  // Lade abgeschlossene Missionen aus dem lokalen Speicher
+  const [completedMissions, setCompletedMissions] = useState(() => {
+    const saved = localStorage.getItem('completedMissions');
+    return saved ? JSON.parse(saved) : [];
   });
 
-  /* ----------------------------- DAILY RESET LOGIC ------------------------ */
+  // Lade tägliche Missionsdaten aus dem lokalen Speicher
+  const [dailyMissionsData, setDailyMissionsData] = useState(() => {
+    const saved = localStorage.getItem('dailyMissionsData');
+    if (saved) {
+      return JSON.parse(saved);
+    }
+    return { date: new Date().toISOString().slice(0, 10), completed: [] };
+  });
+
+  // Speichere abgeschlossene Missionen im lokalen Speicher
   useEffect(() => {
-    const today = todayString();
+    localStorage.setItem('completedMissions', JSON.stringify(completedMissions));
+  }, [completedMissions]);
+
+  // Speichere tägliche Missionsdaten im lokalen Speicher
+  useEffect(() => {
+    localStorage.setItem('dailyMissionsData', JSON.stringify(dailyMissionsData));
+  }, [dailyMissionsData]);
+
+  // Überprüfe, ob ein neuer Tag begonnen hat, um tägliche Missionen zurückzusetzen
+  useEffect(() => {
+    const today = new Date().toISOString().slice(0, 10);
     if (dailyMissionsData.date !== today) {
+      // Reset tägliche Missionen, wenn ein neuer Tag beginnt
       setDailyMissionsData({ date: today, completed: [] });
-      setCompletedMissions(prev => prev.filter(id => {
-        const m = MISSIONS_DATA.find(x => x.id === id);
-        return m && !m.daily;
-      }));
+      
+      // Entferne tägliche Missionen aus der Liste der abgeschlossenen Missionen
+      const permanentMissions = completedMissions.filter(missionId => {
+        const mission = MISSIONS_DATA.find(m => m.id === missionId);
+        return mission && !mission.daily;
+      });
+      
+      setCompletedMissions(permanentMissions);
     }
-  }, [dailyMissionsData.date, setDailyMissionsData, setCompletedMissions]);
+  }, [dailyMissionsData.date, completedMissions]);
 
-  /* ---------------------------- QUIZ COUNT HELPER ------------------------- */
-  const getDailyQuizCount = useCallback(() => {
-    try {
-      const data = JSON.parse(localStorage.getItem('dailyQuizData'));
-      return data?.date === todayString() ? data.count : 0;
-    } catch {
-      return 0;
-    }
-  }, []);
-
-  /* ------------------------------ PREDICATES ------------------------------ */
-  const isMissionCompleted = useCallback(id => {
-    const mission = mergeMissions().find(m => m.id === id);
-    return mission?.daily ? dailyMissionsData.completed.includes(id) : completedMissions.includes(id);
-  }, [dailyMissionsData.completed, completedMissions]);
-
-  const isMissionAvailable = useCallback(m => !m.requiredLevel || level >= m.requiredLevel, [level]);
-
-  /* ------------------------------ TOAST HELPER ---------------------------- */
-  const showToast = (msg, type = 'success') => setToast({ message: msg, type });
-
-  /* --------------------------- COMPLETE HANDLER --------------------------- */
-  const handleComplete = useCallback(mission => {
-    if (isMissionCompleted(mission.id)) return;
-
-    if (!isMissionAvailable(mission)) {
-      showToast(`Level ${mission.requiredLevel}+ benötigt!`, 'error');
-      return;
-    }
-
-    if (mission.daily && mission.requiredQuizzes && getDailyQuizCount() < mission.requiredQuizzes) {
-      showToast(`Benötigte Quizze: ${getDailyQuizCount()}/${mission.requiredQuizzes}`, 'warning');
-      return;
-    }
-
-    switch (mission.type) {
-      case MISSION_TYPES.CHARACTER:
-        completeMission(mission.reward);
-        unlockCharacter(mission.unlock);
-        showToast(`${mission.unlock.name} +${mission.reward} Punkte`, 'success');
-        break;
-      case MISSION_TYPES.COIN:
-        addCoins(mission.reward);
-        showToast(`+${mission.reward} Münzen`, 'success');
-        break;
-      case MISSION_TYPES.SPECIAL:
-        mission.rewards.coins && addCoins(mission.rewards.coins);
-        mission.rewards.character && unlockCharacter(mission.rewards.character);
-        showToast('⭐ Spezialmission abgeschlossen!', 'success');
-        break;
-      default:
-        break;
-    }
-
-    mission.daily
-      ? setDailyMissionsData(prev => ({ ...prev, completed: [...prev.completed, mission.id] }))
-      : setCompletedMissions(prev => [...prev, mission.id]);
-
-    setRecentlyCompleted(prev => [...prev, mission.id]);
-  }, [isMissionCompleted, isMissionAvailable, completeMission, unlockCharacter, addCoins, getDailyQuizCount, setDailyMissionsData, setCompletedMissions]);
-
-  /* --------------------------- CLEANUP RECENTLY --------------------------- */
+  // Setze Timer für kürzlich abgeschlossene Missionen
   useEffect(() => {
-    if (!recentlyCompleted.length) return;
-    const tids = recentlyCompleted.map(id => setTimeout(() => setRecentlyCompleted(p => p.filter(x => x !== id)), 5000));
-    return () => tids.forEach(clearTimeout);
+    // Nach 5 Sekunden, entferne die Mission aus der "kürzlich abgeschlossen" Liste
+    if (recentlyCompleted.length > 0) {
+      const timers = recentlyCompleted.map(id => {
+        return setTimeout(() => {
+          setRecentlyCompleted(prev => prev.filter(missionId => missionId !== id));
+        }, 5000);
+      });
+      
+      // Cleanup-Funktion um Timer zu löschen
+      return () => {
+        timers.forEach(timer => clearTimeout(timer));
+      };
+    }
   }, [recentlyCompleted]);
 
-  /* ------------------------------ FILTER LOGIC ---------------------------- */
+  // Hilfsfunktion: Liest den heutigen Quiz-Zähler aus dem lokalen Speicher
+  const getDailyQuizCount = useCallback(() => {
+    const today = new Date().toISOString().slice(0, 10);
+    const stored = localStorage.getItem('dailyQuizData');
+    if (stored) {
+      const data = JSON.parse(stored);
+      return data.date === today ? data.count : 0;
+    }
+    return 0;
+  }, []);
+
+  // Filtere Missionen basierend auf der aktuellen Filterauswahl
   const filteredMissions = useMemo(() => {
-    return mergeMissions().filter(m => {
-      if (filter === 'character' && ![MISSION_TYPES.CHARACTER, MISSION_TYPES.SPECIAL].includes(m.type)) return false;
-      if (filter === 'coin' && ![MISSION_TYPES.COIN, MISSION_TYPES.SPECIAL].includes(m.type)) return false;
-      if (filter === 'completed' && !isMissionCompleted(m.id)) return false;
-      if (filter === 'available' && (isMissionCompleted(m.id) || !isMissionAvailable(m))) return false;
-      if (autoHideCompleted && isMissionCompleted(m.id) && filter !== 'completed' && !recentlyCompleted.includes(m.id)) return false;
+    // Kombiniere die Standard- und täglichen Missionen
+    const allMissions = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
+    
+    return allMissions.filter(mission => {
+      // Prüfe, ob die Mission dem ausgewählten Filter entspricht
+      if (filter === 'character' && mission.type !== MISSION_TYPES.CHARACTER && mission.type !== MISSION_TYPES.SPECIAL) {
+        return false;
+      }
+      if (filter === 'coin' && mission.type !== MISSION_TYPES.COIN && mission.type !== MISSION_TYPES.SPECIAL) {
+        return false;
+      }
+      if (filter === 'completed' && !isMissionCompleted(mission.id)) {
+        return false;
+      }
+      if (filter === 'available' && (isMissionCompleted(mission.id) || !isMissionAvailable(mission))) {
+        return false;
+      }
+      
+      // Wenn "auto-hide" aktiviert ist, verstecke abgeschlossene Missionen,
+      // außer sie sind kürzlich abgeschlossen oder "Abgeschlossen"-Filter ist aktiv
+      if (autoHideCompleted && 
+          isMissionCompleted(mission.id) && 
+          filter !== 'completed' && 
+          !recentlyCompleted.includes(mission.id)) {
+        return false;
+      }
+      
       return true;
     });
-  }, [filter, autoHideCompleted, recentlyCompleted, isMissionCompleted, isMissionAvailable]);
+  }, [filter, level, completedMissions, dailyMissionsData, autoHideCompleted, recentlyCompleted]);
 
-  /* ------------------------------------------------------------------------ */
-  /*                                  RENDER                                  */
-  /* ------------------------------------------------------------------------ */
+  // Überprüft, ob eine Mission abgeschlossen ist
+  function isMissionCompleted(missionId) {
+    // Kombiniere die Arrays für die Suche
+    const allMissions = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
+    const mission = allMissions.find(m => m.id === missionId);
+    
+    if (mission && mission.daily) {
+      return dailyMissionsData.completed.includes(missionId);
+    }
+    
+    return completedMissions.includes(missionId);
+  }
+
+  // Überprüft, ob eine Mission verfügbar ist (Level-Anforderungen erfüllt)
+  function isMissionAvailable(mission) {
+    if (mission.requiredLevel && level < mission.requiredLevel) {
+      return false;
+    }
+    
+    return true;
+  }
+
+  // Überprüft den Fortschritt einer Daily-Mission mit Quiz-Anforderungen
+  function getDailyMissionProgress(mission) {
+    if (mission.daily && mission.requiredQuizzes) {
+      const quizCount = getDailyQuizCount();
+      return { current: quizCount, required: mission.requiredQuizzes };
+    }
+    
+    return null;
+  }
+
+  // Zeigt eine Toast-Benachrichtigung an
+  const showToast = (message, type = 'success') => {
+    setToast({ visible: true, message, type });
+  };
+
+  // Schließt die Toast-Benachrichtigung
+  const closeToast = () => {
+    setToast({ ...toast, visible: false });
+  };
+
+  // Behandelt das Abschließen einer Mission
+  const handleComplete = (mission) => {
+    // Überprüfe, ob die Mission bereits abgeschlossen ist
+    if (isMissionCompleted(mission.id)) return;
+    
+    // Überprüfe Level-Anforderungen
+    if (mission.requiredLevel && level < mission.requiredLevel) {
+      showToast(`Du musst Level ${mission.requiredLevel} erreichen, um diese Mission zu erfüllen!`, 'error');
+      return;
+    }
+    
+    // Für tägliche Missionen mit Quiz-Anforderungen
+    if (mission.daily && mission.requiredQuizzes) {
+      const quizCount = getDailyQuizCount();
+      if (quizCount < mission.requiredQuizzes) {
+        showToast(`Du musst heute mindestens ${mission.requiredQuizzes} Quizze abschließen. Bisher: ${quizCount}`, 'warning');
+        return;
+      }
+    }
+    
+    // Belohnungen basierend auf dem Missionstyp vergeben
+    if (mission.type === MISSION_TYPES.CHARACTER) {
+      completeMission(mission.reward);
+      unlockCharacter(mission.unlock);
+      // Rarität-spezifische Nachricht
+      let rarityText = "";
+      if (mission.unlock.rarity === RARITY.RARE) {
+        rarityText = " RARE";
+      } else if (mission.unlock.rarity === RARITY.EPIC) {
+        rarityText = " EPIC";
+      } else if (mission.unlock.rarity === RARITY.LEGENDARY) {
+        rarityText = " LEGENDARY";
+      }
+      showToast(`${rarityText} ${mission.unlock.name} freigeschaltet und ${mission.reward} Punkte erhalten!`, 'success');
+    } else if (mission.type === MISSION_TYPES.COIN) {
+      addCoins(mission.reward);
+      showToast(`Mission abgeschlossen! ${mission.reward} Münzen erhalten!`, 'success');
+    } else if (mission.type === MISSION_TYPES.SPECIAL) {
+      // Spezielle Missionen mit mehreren Belohnungen
+      if (mission.rewards.coins) {
+        addCoins(mission.rewards.coins);
+      }
+      if (mission.rewards.character) {
+        unlockCharacter(mission.rewards.character);
+      }
+      showToast(`SPECIAL MISSION COMPLETED! ${mission.rewards.character ? mission.rewards.character.name + ' freigeschaltet' : ''} ${mission.rewards.coins ? 'und ' + mission.rewards.coins + ' Münzen' : ''} erhalten!`, 'success');
+    }
+    
+    // Markiere die Mission als abgeschlossen
+    if (mission.daily) {
+      setDailyMissionsData(prev => ({
+        ...prev,
+        completed: [...prev.completed, mission.id]
+      }));
+    } else {
+      setCompletedMissions(prev => [...prev, mission.id]);
+    }
+    
+    // Markiere diese Mission als kürzlich abgeschlossen
+    setRecentlyCompleted(prev => [...prev, mission.id]);
+  };
+
+  // Rendert einen Belohnungsindikator basierend auf dem Missionstyp
+  const renderReward = (mission) => {
+    if (mission.type === MISSION_TYPES.CHARACTER) {
+      // Bestimme Stil basierend auf der Seltenheit
+      const rarityClass = mission.unlock.rarity ? `rarity-${mission.unlock.rarity}` : '';
+      
+      return (
+        <div className={`mission-reward character-reward ${rarityClass}`}>
+          <div className="reward-amount">{mission.reward} Punkte</div>
+          <div className="character-unlock">
+            <div className="character-image-container">
+              <img 
+                src={mission.unlock.image} 
+                alt={mission.unlock.name} 
+                className="character-thumbnail" 
+                loading="lazy" 
+              />
+              {mission.unlock.rarity && mission.unlock.rarity !== RARITY.COMMON && (
+                <div className={`rarity-badge ${mission.unlock.rarity}`}>
+                  {mission.unlock.rarity.toUpperCase()}
+                </div>
+              )}
+            </div>
+            <span className="character-name">{mission.unlock.name}</span>
+          </div>
+        </div>
+      );
+    } else if (mission.type === MISSION_TYPES.COIN) {
+      return (
+        <div className="mission-reward coin-reward">
+          <div className="reward-amount">{mission.reward} Münzen</div>
+          <div className="coin-icon">💰</div>
+        </div>
+      );
+    } else if (mission.type === MISSION_TYPES.SPECIAL) {
+      return (
+        <div className="mission-reward special-reward">
+          {mission.rewards.coins && (
+            <div className="coin-reward">
+              <div className="reward-amount">{mission.rewards.coins} Münzen</div>
+              <div className="coin-icon">💰</div>
+            </div>
+          )}
+          {mission.rewards.character && (
+            <div className="character-unlock">
+              <img 
+                src={mission.rewards.character.image} 
+                alt={mission.rewards.character.name} 
+                className="character-thumbnail" 
+                loading="lazy" 
+              />
+              <span className="character-name">{mission.rewards.character.name}</span>
+            </div>
+          )}
+        </div>
+      );
+    }
+  };
+  
+  // Rendert einen Badge für spezielle Missionen
+  const renderSpecialBadge = (mission) => {
+    if (mission.type === MISSION_TYPES.SPECIAL) {
+      return <div className="special-badge">⭐ SPECIAL MISSION ⭐</div>;
+    } else if (mission.unlock && mission.unlock.rarity === RARITY.LEGENDARY) {
+      return <div className="special-badge legendary-badge">🔥 LEGENDARY CHARACTER 🔥</div>;
+    } else if (mission.unlock && mission.unlock.rarity === RARITY.EPIC) {
+      return <div className="special-badge epic-badge">💫 EPIC CHARACTER 💫</div>;
+    } else if (mission.unlock && mission.unlock.rarity === RARITY.RARE) {
+      return <div className="special-badge rare-badge">✨ RARE CHARACTER ✨</div>;
+    }
+    return null;
+  };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-gray-100 ${isMobile ? 'px-2' : 'px-6'} pb-20`}>
-      <header className="py-8 text-center">
-        <h1 className="text-4xl font-extrabold tracking-widest text-purple-400 drop-shadow">Missionen</h1>
-      </header>
-
-      {/* FILTERS */}
-      <div className="flex flex-wrap justify-center gap-2 mb-6 select-none">
-        {['all', 'character', 'coin', 'completed', 'available'].map(k => (
-          <button
-            key={k}
-            onClick={() => setFilter(k)}
-            className={`px-4 py-1.5 rounded-full uppercase text-xs font-semibold tracking-wider transition-colors ${filter === k ? 'bg-purple-600 text-white' : 'bg-gray-800 hover:bg-purple-700'}`}
-          >
-            {k[0].toUpperCase() + k.slice(1)}
-          </button>
-        ))}
+    <div className={`missions-page ${isMobile ? 'mobile' : ''}`}>
+      <h1 className="missions-title">Missionen</h1>
+      
+      {/* Filter-Leiste */}
+      <div className="mission-filters">
+        <button 
+          className={`filter-button ${filter === 'all' ? 'active' : ''}`}
+          onClick={() => setFilter('all')}
+        >
+          Alle
+        </button>
+        <button 
+          className={`filter-button ${filter === 'character' ? 'active' : ''}`}
+          onClick={() => setFilter('character')}
+        >
+          Charaktere
+        </button>
+        <button 
+          className={`filter-button ${filter === 'coin' ? 'active' : ''}`}
+          onClick={() => setFilter('coin')}
+        >
+          Münzen
+        </button>
+        <button 
+          className={`filter-button ${filter === 'completed' ? 'active' : ''}`}
+          onClick={() => setFilter('completed')}
+        >
+          Abgeschlossen
+        </button>
+        <button 
+          className={`filter-button ${filter === 'available' ? 'active' : ''}`}
+          onClick={() => setFilter('available')}
+        >
+          Verfügbar
+        </button>
       </div>
-
-      {/* AUTO‑HIDE */}
-      <label className="flex items-center justify-center gap-2 mb-8 text-sm">
-        <input type="checkbox" className="accent-purple-600 w-4 h-4" checked={autoHideCompleted} onChange={() => setAutoHideCompleted(!autoHideCompleted)} />
-        Abgeschlossene Missionen automatisch ausblenden
-      </label>
-
-      {/* GRID */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filteredMissions.map(m => (
-          <MissionCard
-            key={m.id}
-            mission={m}
-            level={level}
-            isCompleted={isMissionCompleted(m.id)}
-            isAvailable={isMissionAvailable(m)}
-            recentlyCompleted={recentlyCompleted.includes(m.id)}
-            onComplete={handleComplete}
-            getDailyQuizCount={getDailyQuizCount}
+      
+      {/* Auto-Hide Schalter */}
+      <div className="auto-hide-toggle">
+        <label>
+          <input 
+            type="checkbox" 
+            checked={autoHideCompleted} 
+            onChange={() => setAutoHideCompleted(!autoHideCompleted)} 
           />
-        ))}
+          Abgeschlossene Missionen automatisch ausblenden
+        </label>
       </div>
-
-      {!filteredMissions.length && <p className="mt-20 text-center text-gray-400">Keine Missionen gefunden.</p>}
-
-      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+      
+      {/* Missions-Grid */}
+      <div className="missions-grid">
+        {filteredMissions.map((mission, index) => {
+          const isCompleted = isMissionCompleted(mission.id);
+          const isAvailable = isMissionAvailable(mission);
+          const progress = getDailyMissionProgress(mission);
+          const isRecentlyCompleted = recentlyCompleted.includes(mission.id);
+          
+          // CSS-Klassen für Animation
+          const fadeClasses = isCompleted && autoHideCompleted && !isRecentlyCompleted && filter !== 'completed' 
+            ? 'mission-card-fading' 
+            : '';
+            
+          // Spezielle Klassen für Seltenheit
+          const rarityClass = mission.unlock?.rarity 
+            ? `rarity-${mission.unlock.rarity}` 
+            : '';
+          
+          return (
+            <div 
+              key={mission.id} 
+              className={`mission-card 
+                ${isCompleted ? 'completed' : ''} 
+                ${!isAvailable ? 'unavailable' : ''} 
+                ${mission.type === MISSION_TYPES.SPECIAL ? 'special-mission' : ''}
+                ${rarityClass}
+                ${fadeClasses}
+                ${mission.daily ? 'daily-mission' : ''}`}
+              style={{
+                animationName: isCompleted && autoHideCompleted && !isRecentlyCompleted && filter !== 'completed' 
+                  ? 'fadeOut' 
+                  : 'none',
+                animationDuration: '5s',
+                animationFillMode: 'forwards'
+              }}
+            >
+              {renderSpecialBadge(mission)}
+              
+              <div className="mission-header">
+                {mission.daily && <span className="mission-tag daily">Täglich</span>}
+                <span className={`mission-difficulty ${mission.difficulty.toLowerCase()}`}>
+                  {mission.difficulty}
+                </span>
+              </div>
+              
+              <h3 className="mission-description">{mission.description}</h3>
+              
+              <p className="mission-detail">{mission.detailedDescription}</p>
+              
+              <div className="mission-meta">
+                <span className="mission-time">⏱️ {mission.estimatedTime}</span>
+                {mission.requiredLevel && (
+                  <span className={`mission-level ${level < mission.requiredLevel ? 'required' : ''}`}>
+                    Level {mission.requiredLevel}+ benötigt
+                  </span>
+                )}
+              </div>
+              
+              {renderReward(mission)}
+              
+              {progress && (
+                <div className="mission-progress">
+                  <div className="progress-bar">
+                    <div 
+                      className="progress-fill" 
+                      style={{ width: `${Math.min(100, (progress.current / progress.required) * 100)}%` }}
+                    ></div>
+                  </div>
+                  <span className="progress-text">
+                    {progress.current}/{progress.required} Quizze
+                  </span>
+                </div>
+              )}
+              
+              <button 
+                className={`mission-button ${isCompleted ? 'completed' : ''} ${mission.type === MISSION_TYPES.SPECIAL ? 'special-button' : ''}`}
+                onClick={() => handleComplete(mission)}
+                disabled={isCompleted || !isAvailable}
+              >
+                {isCompleted ? 'Abgeschlossen' : 'Abschließen'}
+              </button>
+            </div>
+          );
+        })}
+      </div>
+      
+      {/* Leere Mitteilung, wenn keine Missionen dem Filter entsprechen */}
+      {filteredMissions.length === 0 && (
+        <div className="no-missions-message">
+          Keine Missionen gefunden, die deinen Filterkriterien entsprechen.
+        </div>
+      )}
+      
+      {/* Toast-Benachrichtigung */}
+      {toast.visible && (
+        <Toast 
+          message={toast.message} 
+          type={toast.type} 
+          onClose={closeToast} 
+        />
+      )}
     </div>
   );
 }
 
-/* -------------------------------------------------------------------------- */
-/*                              MISSION CARD                                  */
-/* -------------------------------------------------------------------------- */
+export default Missions;
 
-const MissionCard = memo(({ mission, level, isCompleted, isAvailable, recentlyCompleted, onComplete, getDailyQuizCount }) => {
-  const borderColor = {
-    [RARITY.RARE]: 'border-yellow-500',
-    [RARITY.EPIC]: 'border-pink-500',
-    [RARITY.LEGENDARY]: 'border-red-600'
-  }[mission.unlock?.rarity] || 'border-gray-700';
-
-  const progress = mission.daily && mission.requiredQuizzes ? { current: getDailyQuizCount(), required: mission.requiredQuizzes } : null;
-
-  return (
-    <div
-      className={`relative flex flex-col bg-gray-800 rounded-2xl p-4 shadow-lg border-2 ${borderColor} transition-transform ${isCompleted ? 'opacity-60 hover:opacity-90' : 'hover:-translate-y-1'}`}>
-      {/* BADGES */}
-      {mission.type === MISSION_TYPES.SPECIAL && (
-        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-black text-xs font-bold px-3 py-0.5 rounded-full shadow">SPECIAL</span>
-      )}
-      {mission.unlock?.rarity && mission.unlock.rarity !== RARITY.COMMON && (
-        <span className="absolute -top-3 right-3 bg-gray-900 px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider shadow border border-current">
-          {mission.unlock.rarity}
-        </span>
-      )}
-
-      {/* HEADER */}
-      <div className="flex items-center justify-between mb-2 text-xs text-gray-400">
-        {mission.daily && <span className="text-purple-400 font-semibold uppercase">Täglich</span>}
-        <span className="font-semibold capitalize">{mission.difficulty}</span>
-      </div>
-
-      {/* DESCRIPTION */}
-      <h3 className="text-center font-extrabold text-yellow-400 text-sm leading-tight mb-1 uppercase tracking-tight">{mission.description}</h3>
-      <p className="text-center text-sm text-gray-300 mb-4 leading-snug">{mission.detailedDescription}</p>
-
-      {/* META */}
-      <div className="flex items-center justify-center gap-3 mb-4 text-xs text-gray-400">
-        <span>⏱ {mission.estimatedTime}</span>
-        {mission.requiredLevel && (
-          <span className={`${level < mission.requiredLevel ? 'text-red-500' : 'text-green-400'}`}>Lvl {mission.requiredLevel}+</span>
-        )}
-      </div>
-
-      {/* REWARD */}
-      <Reward mission={mission} />
-
-      {/* PROGRESS */}
-      {progress && (
-        <>
-          <div className="relative w-full h-2 bg-gray-700 rounded-full overflow-hidden my-3">
-            <div className="absolute top-0 left-0 h-full bg-purple-600" style={{ width: `${(progress.current / progress.required) * 100}%` }} />
-          </div>
-          <p className="text-center text-xs text-gray-400 mb-1">
-            {progress.current}/{progress.required} Quizze
-          </p>
-        </>
-      )}
-
-      {/* CTA */}
-      <button
-        className={`mt-auto py-2 rounded-xl font-semibold text-sm tracking-wider transition-colors ${isCompleted ? 'bg-gray-600' : !isAvailable ? 'bg-gray-700' : 'bg-purple-600 hover:bg-purple-700'}`}
-        onClick={() => onComplete(mission)}
-        disabled={isCompleted || !isAvailable}
-      >
-        {isCompleted ? 'Abgeschlossen' : 'Abschließen'}
-      </button>
-    </div>
-  );
-});
-
-/* -------------------------------------------------------------------------- */
-/*                               REWARD COMPONENT                             */
-/* -------------------------------------------------------------------------- */
-
-const Reward = memo(({ mission }) => {
-  if (mission.type === MISSION_TYPES.CHARACTER) {
-    const rarity = mission.unlock.rarity;
-    return (
-      <div className="flex flex-col items-center gap-1 mb-4">
-        <img
-          src={mission.unlock.image}
-          alt={mission.unlock.name}
-          className="w-24 h-24 rounded-lg object-cover border border-gray-700"
-          loading="lazy"
-        />
-        <span className="text-sm font-bold tracking-wide text-gray-200 uppercase drop-shadow">
-          {mission.unlock.name}
-        </span>
-        <span className="text-xs text-gray-400">+{mission.reward} Punkte</span>
-        {rarity !== RARITY.COMMON && (
-          <span className="text-xs font-semibold uppercase tracking-widest mt-1">
-            {rarity}
-          </span>
-        )}
-      </div>
-    );
-  }
-
-  if (mission.type === MISSION_TYPES.COIN) {
-    return (
-      <div className="flex flex-col items-center gap-1 mb-4 text-yellow-400">
-        <span className="text-4xl" role="img" aria-label="coins">💰</span>
-        <span className="text-sm font-bold">+{mission.reward} Münzen</span>
-      </div>
-    );
-  }
-
-  if (mission.type === MISSION_TYPES.SPECIAL) {
-    return (
-      <div className="flex flex-col items-center gap-2 mb-4">
-        {mission.rewards.character && (
-          <div className="flex flex-col items-center gap-1">
-            <img
-              src={mission.rewards.character.image}
-              alt={mission.rewards.character.name}
-              className="w-20 h-20 rounded-lg object-cover border border-gray-700"
-              loading="lazy"
-            />
-            <span className="text-sm font-bold tracking-wide text-gray-200">
-              {mission.rewards.character.name}
-            </span>
-          </div>
-        )}
-        {mission.rewards.coins && (
-          <div className="flex flex-col items-center text-yellow-400">
-            <span className="text-3xl" role="img" aria-label="coins">💰</span>
-            <span className="text-sm font-bold">+{mission.rewards.coins} Münzen</span>
-          </div>
-        )}
-      </div>
-    );
-  }
-
-  return null;
-});
+Verbesser denn code

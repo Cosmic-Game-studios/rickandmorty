@@ -3,70 +3,60 @@ import React, {
   useMemo,
   lazy,
   Suspense,
-  useState,
-  useEffect,
-  useCallback
+  // useState, // No longer directly needed for isMobile state here
+  // useEffect, // No longer directly needed for isMobile effect here
+  // useCallback // No longer directly needed for isMobile callback here
 } from 'react';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
+
+// MUI Components
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress'; // For Suspense fallback
+import { useTheme } from '@mui/material/styles'; // To access theme breakpoints
+import useMediaQuery from '@mui/material/useMediaQuery'; // For responsive design
 
 // Lazy-load Komponenten
 const DailyBonus = lazy(() => import('../components/DailyBonus'));
 
-// Custom hook für responsive Design mit Debounce
-const useIsMobile = (breakpoint = 768, debounceTime = 150) => {
-  // Stellt sicher, dass window existiert (für SSR-Kompatibilität)
-  const getIsMobile = useCallback(() => 
-    typeof window !== 'undefined' ? window.innerWidth < breakpoint : false
-  , [breakpoint]);
-  
-  const [isMobile, setIsMobile] = useState(getIsMobile);
-
-  useEffect(() => {
-    let timeoutId;
-    
-    const handleResize = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setIsMobile(getIsMobile());
-      }, debounceTime);
-    };
-
-    // Initial call
-    handleResize();
-    
-    window.addEventListener('resize', handleResize);
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [getIsMobile, debounceTime]);
-
-  return isMobile;
-};
+// Custom hook useIsMobile can be replaced or augmented by MUI's useMediaQuery
+// For this refactor, we'll use useMediaQuery directly.
 
 // Sub-Komponente für Fortschritt
 const ProgressOverview = ({ level, rewardPoints, coins }) => (
-  <section className="home-section home-progress" aria-labelledby="progress-heading">
-    <h2 id="progress-heading" className="home-section-title">Your Progress</h2>
-    <div className="home-progress-stats">
-      <div className="home-progress-stat">
-        <span className="home-progress-label">Level:</span>
-        <span className="home-progress-value">{level}</span>
-      </div>
-      <div className="home-progress-stat">
-        <span className="home-progress-label">Reward Points:</span>
-        <span className="home-progress-value">{rewardPoints}</span>
-      </div>
-      <div className="home-progress-stat">
-        <span className="home-progress-label">Coins:</span>
-        <span className="home-progress-value">{coins}</span>
-      </div>
-    </div>
-    <Link to="/profile" className="home-button home-button-secondary">
+  <Paper elevation={3} sx={{ p: { xs: 2, sm: 3 }, textAlign: 'center', mb: 3 }}>
+    <Typography variant="h5" component="h2" gutterBottom id="progress-heading">
+      Your Progress
+    </Typography>
+    <Grid container spacing={2} justifyContent="center">
+      <Grid item xs={12} sm={4}>
+        <Typography variant="subtitle1" color="text.secondary">Level:</Typography>
+        <Typography variant="h6" component="p">{level}</Typography>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Typography variant="subtitle1" color="text.secondary">Reward Points:</Typography>
+        <Typography variant="h6" component="p">{rewardPoints}</Typography>
+      </Grid>
+      <Grid item xs={12} sm={4}>
+        <Typography variant="subtitle1" color="text.secondary">Coins:</Typography>
+        <Typography variant="h6" component="p">{coins}</Typography>
+      </Grid>
+    </Grid>
+    <Button
+      component={RouterLink}
+      to="/profile"
+      variant="contained"
+      color="secondary"
+      sx={{ mt: 2 }}
+    >
       Go to Profile
-    </Link>
-  </section>
+    </Button>
+  </Paper>
 );
 
 // Sub-Komponente für Features
@@ -95,25 +85,30 @@ const FeaturesList = () => {
   ];
 
   return (
-    <section className="home-section home-features" aria-labelledby="features-heading">
-      <h2 id="features-heading" className="home-section-title">Features</h2>
-      <ul className="home-features-list">
+    <Paper elevation={3} sx={{ p: { xs: 2, sm: 3 }, mb: 3 }}>
+      <Typography variant="h5" component="h2" gutterBottom id="features-heading" textAlign="center">
+        Features
+      </Typography>
+      <Grid container spacing={2}>
         {features.map(feature => (
-          <li key={feature.id} className="home-feature-item">
-            <h3 className="home-feature-title">{feature.title}</h3>
-            <p className="home-feature-description">{feature.description}</p>
-          </li>
+          <Grid item xs={12} sm={6} md={3} key={feature.id}>
+            <Box sx={{ textAlign: 'center', p: 1 }}>
+              <Typography variant="h6" component="h3" gutterBottom>{feature.title}</Typography>
+              <Typography variant="body2" color="text.secondary">{feature.description}</Typography>
+            </Box>
+          </Grid>
         ))}
-      </ul>
-    </section>
+      </Grid>
+    </Paper>
   );
 };
 
 const Home = () => {
   const { level = 1, rewardPoints = 0, coins = 0 } = useContext(UserContext) || {};
-  const isMobile = useIsMobile();
+  const theme = useTheme();
+  // Using MUI's useMediaQuery for responsiveness, replacing useIsMobile
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // 'sm' is 600px, adjust as needed
 
-  // News Updates - kann durch echte API-Daten ersetzt werden
   const newsItems = useMemo(() => [
     { id: 'news-1', title: 'Bug Fixes', description: 'Fixed portal gun simulation and character teleportation issues' },
     { id: 'news-2', title: 'Performance Optimizations', description: 'Improved game responsiveness and loading times' },
@@ -121,42 +116,64 @@ const Home = () => {
     { id: 'news-4', title: 'In Development: Dimension Explorer', description: 'Explore new dimensions and collect exclusive rewards' }
   ], []);
 
-  // Theme-based class für Styling-Konsistenz
-  const themeClass = 'rick-morty-theme';
+  // The 'rick-morty-theme' class might be less relevant if MUI theme is comprehensive.
+  // sx prop will be used for specific styling.
   
   return (
-    <div className={`home-page ${themeClass} ${isMobile ? 'home-page-mobile' : ''}`}>
-      {/* Hero Section mit verbesserten semantischen Elementen */}
-      <header className="home-hero" role="banner">
-        <h1 className="home-hero-title">Rick and Morty Adventure</h1>
-        <p className="home-hero-subtitle">
+    <Container maxWidth="lg" sx={{ py: 3, // Padding top and bottom
+        // Example of using isMobile for conditional styling with sx prop if needed:
+        // backgroundColor: isMobile ? 'lightblue' : 'white',
+      }}>
+      {/* Hero Section */}
+      <Box
+        component="header"
+        sx={{
+          textAlign: 'center',
+          py: { xs: 3, sm: 5 },
+          mb: 3,
+          // background: 'linear-gradient(to bottom, #f0f4f8, #d9e2ec)', // Example gradient
+          borderRadius: theme.shape.borderRadius,
+          // boxShadow: theme.shadows[3],
+        }}
+      >
+        <Typography variant={isMobile ? "h3" : "h2"} component="h1" gutterBottom sx={{ fontFamily: "'Bangers', cursive", color: 'primary.main' }}>
+          Rick and Morty Adventure
+        </Typography>
+        <Typography variant={isMobile ? "subtitle1" : "h6"} color="text.secondary" sx={{ mb: 3, maxWidth: '700px', marginX: 'auto' }}>
           Experience interdimensional adventures, master missions, and solve quizzes 
           to unlock legendary characters!
-        </p>
+        </Typography>
         
-        <nav className="home-navigation" aria-label="Main Navigation">
-          <ul className="home-nav-list">
-            <li className="home-nav-item">
-              <Link to="/characters" className="home-button home-button-primary">Characters</Link>
-            </li>
-            <li className="home-nav-item">
-              <Link to="/missions" className="home-button home-button-primary">Missions</Link>
-            </li>
-            <li className="home-nav-item">
-              <Link to="/quiz" className="home-button home-button-primary">Quiz</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+        <Grid container spacing={2} justifyContent="center" component="nav" aria-label="Main Navigation">
+          <Grid item>
+            <Button component={RouterLink} to="/characters" variant="contained" color="primary" size={isMobile ? "medium" : "large"}>
+              Characters
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button component={RouterLink} to="/missions" variant="contained" color="primary" size={isMobile ? "medium" : "large"}>
+              Missions
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button component={RouterLink} to="/quiz" variant="contained" color="primary" size={isMobile ? "medium" : "large"}>
+              Quiz
+            </Button>
+          </Grid>
+        </Grid>
+      </Box>
 
-      <main className="home-content">
-        {/* Daily Bonus mit einfachem Fallback */}
+      <Box component="main">
+        {/* Daily Bonus with MUI Suspense fallback */}
         <Suspense fallback={
-          <div className="home-daily-bonus-loading" aria-label="Loading daily bonus">
-            Loading Daily Bonus...
-          </div>
+          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', p: 3, mb: 3, border: `1px dashed ${theme.palette.divider}`, borderRadius: theme.shape.borderRadius }}>
+            <CircularProgress sx={{mr: 2}} />
+            <Typography variant="subtitle1" color="text.secondary">Loading Daily Bonus...</Typography>
+          </Box>
         }>
-          <DailyBonus />
+          <Box sx={{ mb: 3 }}> {/* Add margin bottom to DailyBonus container */}
+            <DailyBonus />
+          </Box>
         </Suspense>
 
         {/* Progress Component */}
@@ -166,23 +183,29 @@ const Home = () => {
         <FeaturesList />
 
         {/* News & Updates */}
-        <section className="home-section home-news" aria-labelledby="news-heading">
-          <h2 id="news-heading" className="home-section-title">News & Updates</h2>
-          <ul className="home-news-list">
+        <Paper elevation={3} component="section" sx={{ p: { xs: 2, sm: 3 }, mb: 3 }} aria-labelledby="news-heading">
+          <Typography variant="h5" component="h2" gutterBottom id="news-heading" textAlign="center">
+            News & Updates
+          </Typography>
+          <Grid container spacing={2}>
             {newsItems.map(item => (
-              <li key={item.id} className="home-news-item">
-                <h3 className="home-news-title">{item.title}</h3>
-                <p className="home-news-description">{item.description}</p>
-              </li>
+              <Grid item xs={12} sm={6} key={item.id}>
+                <Box sx={{p:1}}>
+                  <Typography variant="h6" component="h3" gutterBottom>{item.title}</Typography>
+                  <Typography variant="body2" color="text.secondary">{item.description}</Typography>
+                </Box>
+              </Grid>
             ))}
-          </ul>
-        </section>
-      </main>
+          </Grid>
+        </Paper>
+      </Box>
 
-      <footer className="home-footer">
-        <p className="home-footer-text">© {new Date().getFullYear()} Rick and Morty Adventure Game</p>
-      </footer>
-    </div>
+      <Box component="footer" sx={{ textAlign: 'center', py: 2, borderTop: `1px solid ${theme.palette.divider}`, mt: 4}}>
+        <Typography variant="body2" color="text.secondary">
+          © {new Date().getFullYear()} Rick and Morty Adventure Game
+        </Typography>
+      </Box>
+    </Container>
   );
 };
 

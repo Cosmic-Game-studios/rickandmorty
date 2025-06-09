@@ -4,15 +4,15 @@
    RICK AND MORTY ADVENTURE - MAIN STYLESHEET
    ========================================= */
 
-/* Google Fonts Import (Consider moving to HTML for performance) */
 /* 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  Google Fonts (Roboto, Bangers) are typically linked in public/index.html
+  or imported via a JS entry point (e.g., using Fontsource).
+  MUI's CssBaseline will set the body font family based on the theme.
 */
 
 /* -----------------------------------------
    1. CSS-Variablen & Design-System
+   (Many of these may become redundant as MUI theme is fully adopted)
    ----------------------------------------- */
 :root {
   /* Schriftarten */
@@ -64,25 +64,39 @@
 
 /* -----------------------------------------
    2. Reset & Basis Styling
+   MUI's <CssBaseline /> component handles many of these resets (e.g., box-sizing, body margin/padding).
    ----------------------------------------- */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/*
+  CssBaseline handles:
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0; // Though MUI sets default padding for some components
+    font-family: (from theme);
+    background-color: (from theme);
+    color: (from theme);
+  }
+*/
 
 html {
-  font-size: 16px;
+  font-size: 16px; /* Keep to maintain rem unit consistency if desired */
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-main);
-  background: var(--bg-body);
-  color: var(--text-primary);
-  line-height: 1.6;
+  /* font-family is set by CssBaseline from MUI theme */
+  /* background is set by CssBaseline from MUI theme (theme.palette.background.default) */
+  /* color is set by CssBaseline from MUI theme (theme.palette.text.primary) */
+  /* line-height is often managed by MUI Typography or can be set here if a global default is strongly needed */
+  line-height: 1.6; /* MUI default is 1.5 for body1, this is slightly more spacious */
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+
+  /* These custom variables will apply if not overridden by MUI theme's background */
+  background: var(--bg-body); /* This will likely be overridden by CssBaseline if theme.palette.background.default is set */
+  color: var(--text-primary); /* This will likely be overridden by CssBaseline if theme.palette.text.primary is set */
 }
 
 img {

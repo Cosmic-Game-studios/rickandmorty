@@ -1,4 +1,7 @@
 import React from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import theme from './theme'; // Adjust path if needed
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Characters from './pages/Characters';
@@ -26,39 +29,42 @@ import { UserProvider } from './context/UserContext';
  */
 function App() {
   return (
-    <UserProvider>
-      <div className="app">
-        <Header />
-        <main>
-          <Routes>
-            {/* Hauptseiten */}
-            <Route path="/" element={<Home />} />
-            
-            {/* Charakter-Routen */}
-            <Route path="/characters" element={<Characters />} />
-            <Route path="/character/:id" element={<CharacterDetails />} />
-            
-            {/* Episoden-Routen */}
-            <Route path="/episodes" element={<Episodes />} />
-            <Route path="/episode/:id" element={<EpisodeDetails />} />
-            
-            {/* Locations-Routen */}
-            <Route path="/locations" element={<Locations />} />
-            <Route path="/location/:id" element={<LocationDetails />} />
-            
-            {/* Weitere Seiten */}
-            <Route path="/missions" element={<Missions />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/shop" element={<Shop />} />
-            
-            {/* Für alle nicht gefundenen Routen - Fallback auf Home */}
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </UserProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <UserProvider>
+        <div className="app">
+          <Header />
+          <main>
+            <Routes>
+              {/* Hauptseiten */}
+              <Route path="/" element={<Home />} />
+
+              {/* Charakter-Routen */}
+              <Route path="/characters" element={<Characters />} />
+              <Route path="/character/:id" element={<CharacterDetails />} />
+
+              {/* Episoden-Routen */}
+              <Route path="/episodes" element={<Episodes />} />
+              <Route path="/episode/:id" element={<EpisodeDetails />} />
+
+              {/* Locations-Routen */}
+              <Route path="/locations" element={<Locations />} />
+              <Route path="/location/:id" element={<LocationDetails />} />
+
+              {/* Weitere Seiten */}
+              <Route path="/missions" element={<Missions />} />
+              <Route path="/quiz" element={<Quiz />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/shop" element={<Shop />} />
+
+              {/* Für alle nicht gefundenen Routen - Fallback auf Home */}
+              <Route path="*" element={<Home />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </UserProvider>
+    </ThemeProvider>
   );
 }
 

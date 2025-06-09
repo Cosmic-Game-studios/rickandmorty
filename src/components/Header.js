@@ -1,92 +1,161 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
-import Coin from './Coin';
-import './Header.css'; // Stelle sicher, dass diese Datei aktualisiert wird
+import Coin from './Coin'; // Assuming Coin is MUI compatible or will be styled separately
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Box from '@mui/material/Box';
+import MenuIcon from '@mui/icons-material/Menu';
+
+const navLinks = [
+  { title: 'Home', path: '/' },
+  { title: 'Characters', path: '/characters' },
+  { title: 'Episodes', path: '/episodes' },
+  { title: 'Locations', path: '/locations' },
+  { title: 'Missions', path: '/missions' },
+  { title: 'Quiz', path: '/quiz' },
+  { title: 'Profile', path: '/profile' },
+  { title: 'Shop', path: '/shop' },
+];
 
 function Header() {
   const { coins } = useContext(UserContext);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [anchorElNav, setAnchorElNav] = useState(null);
   const location = useLocation();
-  const navRef = useRef(null);
 
-  // Schließe das Menü beim Standortwechsel (Navigationswechsel)
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location.pathname]);
-
-  // Schließe das Menü, wenn außerhalb des Menüs geklickt wird
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (navRef.current && !navRef.current.contains(event.target) && 
-          !event.target.classList.contains('hamburger') && menuOpen) {
-        setMenuOpen(false);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [menuOpen]);
-
-  // Animation für den Hamburger-Button und Navigation-Toggle
-  const toggleMenu = () => {
-    setMenuOpen(prevState => !prevState);
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
   };
 
-  // Berechne, ob der aktuelle Pfad dem Link entspricht
-  const isActive = (path) => {
-    return location.pathname === path;
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <header className="header">
-      <div className="header-container">
-        <div className="header-top">
-          <div className="logo-container">
-            <h1 className="site-title">
-              <Link to="/">
-                Rick and Morty Adventure
-              </Link>
-            </h1>
-          </div>
-          
-          <div className="coin-display">
-            <Coin size="medium" />
-            <span className="coin-count">{coins}</span>
-          </div>
-          
-          <button 
-            className={`hamburger ${menuOpen ? 'active' : ''}`} 
-            onClick={toggleMenu} 
-            aria-label="Toggle navigation"
-            aria-expanded={menuOpen}
-          >
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </button>
-        </div>
-        
-        <nav 
-          className={`main-nav ${menuOpen ? 'open' : ''}`}
-          ref={navRef}
-          aria-hidden={!menuOpen}
+    <AppBar position="sticky" sx={{ background: 'linear-gradient(90deg, #4b0082, #9400d3)' }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingY: { xs: 1, sm: 0 } }}>
+        {/* Site Title */}
+        <Typography
+          variant="h6"
+          component={RouterLink}
+          to="/"
+          sx={{
+            fontFamily: "'Bangers', cursive",
+            fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem' },
+            color: '#f0e130',
+            textDecoration: 'none',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+            '&:hover': {
+              color: '#fff',
+              textShadow: '0 0 10px #f0e130',
+            },
+          }}
         >
-          <ul className="nav-list">
-            <li><Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link></li>
-            <li><Link to="/characters" className={isActive('/characters') ? 'active' : ''}>Characters</Link></li>
-            <li><Link to="/episodes" className={isActive('/episodes') ? 'active' : ''}>Episodes</Link></li>
-            <li><Link to="/locations" className={isActive('/locations') ? 'active' : ''}>Locations</Link></li>
-            <li><Link to="/missions" className={isActive('/missions') ? 'active' : ''}>Missions</Link></li>
-            <li><Link to="/quiz" className={isActive('/quiz') ? 'active' : ''}>Quiz</Link></li>
-            <li><Link to="/profile" className={isActive('/profile') ? 'active' : ''}>Profile</Link></li>
-            <li><Link to="/shop" className={isActive('/shop') ? 'active' : ''}>Shop</Link></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+          Rick and Morty Adventure
+        </Typography>
+
+        {/* Desktop Navigation */}
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
+          {navLinks.map((link) => (
+            <Button
+              key={link.title}
+              component={RouterLink}
+              to={link.path}
+              onClick={handleCloseNavMenu}
+              sx={{
+                color: 'white',
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 'bold',
+                border: isActive(link.path) ? '2px solid #f0e130' : '2px solid transparent',
+                backgroundColor: isActive(link.path) ? 'rgba(240, 225, 48, 0.3)' : 'transparent',
+                '&:hover': {
+                  borderColor: '#f0e130',
+                  backgroundColor: 'rgba(240, 225, 48, 0.2)',
+                },
+                marginLeft: 1,
+              }}
+            >
+              {link.title}
+            </Button>
+          ))}
+        </Box>
+
+        {/* Coin Display */}
+        <Box sx={{ display: 'flex', alignItems: 'center', background: 'rgba(0,0,0,0.2)', padding: '5px 12px', borderRadius: '20px', boxShadow: 'inset 0 0 5px rgba(0,0,0,0.3)', marginLeft: { xs: 'auto', md: 2 } }}>
+          <Coin size="medium" /> {/* Ensure Coin component is compatible */}
+          <Typography sx={{ marginLeft: 1, fontFamily: "'Bangers', cursive", fontSize: '1.4rem', color: '#f0e130' }}>
+            {coins}
+          </Typography>
+        </Box>
+
+        {/* Mobile Navigation (Hamburger Menu) */}
+        <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', marginLeft: 1 }}>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+          >
+            <MenuIcon sx={{ color: '#fff' }}/>
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+            sx={{
+              '& .MuiPaper-root': {
+                background: 'linear-gradient(180deg, #4b0082, #9400d3)',
+                boxShadow: '0 8px 10px rgba(0,0,0,0.3)',
+              },
+            }}
+          >
+            {navLinks.map((link) => (
+              <MenuItem
+                key={link.title}
+                onClick={handleCloseNavMenu}
+                component={RouterLink}
+                to={link.path}
+                sx={{
+                  justifyContent: 'center',
+                  color: isActive(link.path) ? '#f0e130' : '#fff',
+                  fontFamily: "'Roboto', sans-serif",
+                  fontWeight: 'bold',
+                  backgroundColor: isActive(link.path) ? 'rgba(240, 225, 48, 0.3)' : 'transparent',
+                  '&:hover': {
+                    backgroundColor: 'rgba(240, 225, 48, 0.2)',
+                  },
+                  margin: '5px 10px',
+                  borderRadius: '5px',
+                  border: isActive(link.path) ? '2px solid #f0e130' : '2px solid transparent',
+
+                }}
+              >
+                {link.title}
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }
 

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty Icon Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #0a0e27;
+            color: white;
+        }
+        canvas {
+            border: 2px solid #00b8d4;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            background: linear-gradient(135deg, #00b8d4 0%, #0088a3 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #62efff 0%, #00b8d4 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rick & Morty PWA Icon Generator</h1>
+        <p>Klicke auf die Buttons, um die Icons herunterzuladen:</p>
+
+        <canvas id="icon192" width="192" height="192"></canvas>
+        <canvas id="icon512" width="512" height="512"></canvas>
+        <canvas id="iconApple" width="180" height="180"></canvas>
+
+        <div>
+            <button onclick="downloadIcon('icon192', 'icon-192.png')">Download 192x192</button>
+            <button onclick="downloadIcon('icon512', 'icon-512.png')">Download 512x512</button>
+            <button onclick="downloadIcon('iconApple', 'apple-touch-icon.png')">Download Apple Icon</button>
+        </div>
+    </div>
+
+    <script>
+        function createIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+
+            // Background - Cosmic gradient
+            const gradient = ctx.createRadialGradient(size/2, size/2, 0, size/2, size/2, size/2);
+            gradient.addColorStop(0, '#1a2a6c');
+            gradient.addColorStop(0.5, '#0a0e27');
+            gradient.addColorStop(1, '#000000');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+
+            // Portal effect
+            const portalGradient = ctx.createRadialGradient(size/2, size/2, size*0.2, size/2, size/2, size*0.4);
+            portalGradient.addColorStop(0, 'rgba(0, 255, 136, 0.8)');
+            portalGradient.addColorStop(0.5, 'rgba(0, 184, 212, 0.6)');
+            portalGradient.addColorStop(1, 'rgba(0, 184, 212, 0)');
+            ctx.fillStyle = portalGradient;
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size*0.4, 0, Math.PI * 2);
+            ctx.fill();
+
+            // R&M Text
+            ctx.font = `bold ${size*0.25}px 'Arial Black', sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // Text shadow/glow
+            ctx.shadowColor = '#00b8d4';
+            ctx.shadowBlur = size*0.05;
+            ctx.fillStyle = '#00ff88';
+            ctx.fillText('R&M', size/2, size/2);
+
+            // Reset shadow
+            ctx.shadowBlur = 0;
+
+            // Add some stars
+            ctx.fillStyle = 'white';
+            for (let i = 0; i < 20; i++) {
+                const x = Math.random() * size;
+                const y = Math.random() * size;
+                const radius = Math.random() * 2 + 1;
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function downloadIcon(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Generate icons on load
+        window.onload = function() {
+            createIcon('icon192', 192);
+            createIcon('icon512', 512);
+            createIcon('iconApple', 180);
+        };
+    </script>
+</body>
+</html>

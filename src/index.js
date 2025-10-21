@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import './index.css';
+import './mobile-optimizations.css';
 
 // Lazy Loading: Die App wird erst geladen, wenn sie benötigt wird
 const App = React.lazy(() => import('./App'));

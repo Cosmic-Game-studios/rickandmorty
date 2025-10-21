@@ -1,0 +1,345 @@
+/* =========================================
+   RICK AND MORTY - MOBILE OPTIMIZATIONS
+   PWA & Touch-Optimierte Styles
+   ========================================= */
+
+/* iOS Safari spezifische Anpassungen */
+@supports (-webkit-touch-callout: none) {
+  /* Safe area für iPhone Notch */
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Verhindere bounce scrolling auf iOS */
+  html,
+  body {
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Touch-optimierte Buttons und interaktive Elemente */
+button,
+a,
+.clickable,
+[role="button"] {
+  /* Mindestgröße für Touch-Targets (44x44px ist Apple's Empfehlung) */
+  min-height: 44px;
+  min-width: 44px;
+
+  /* Besseres Touch-Feedback */
+  -webkit-tap-highlight-color: rgba(0, 184, 212, 0.3);
+  touch-action: manipulation;
+
+  /* Verhindere Text-Selektion beim Tippen */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Entferne iOS Stil-Overrides */
+input,
+textarea,
+select,
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: var(--border-radius-sm, 8px);
+}
+
+/* Verhindere Zoom bei Input-Focus auf iOS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  font-size: 16px; /* Verhindert Auto-Zoom auf iOS */
+}
+
+/* Mobile-optimierte Container */
+@media (max-width: 768px) {
+  /* Reduziere Padding für mehr Platz */
+  .MuiContainer-root {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Optimiere Card-Abstände */
+  .MuiCard-root,
+  .MuiPaper-root {
+    margin-bottom: 12px;
+  }
+
+  /* Optimiere Grid-Spacing */
+  .MuiGrid-container {
+    margin: -8px !important;
+  }
+
+  .MuiGrid-item {
+    padding: 8px !important;
+  }
+
+  /* Kleinere Schriftgrößen für mobile */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Optimiere Button-Größen */
+  .MuiButton-root {
+    min-width: 88px;
+    padding: 8px 16px;
+  }
+
+  /* Fullwidth Buttons auf sehr kleinen Screens */
+  .MuiButton-fullWidth {
+    width: 100%;
+  }
+}
+
+/* Extra small devices (phones, less than 480px) */
+@media (max-width: 480px) {
+  .MuiContainer-root {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* Noch kompaktere Buttons */
+  .MuiButton-root {
+    font-size: 0.875rem;
+    padding: 6px 12px;
+  }
+
+  /* Reduziere Dialog Padding */
+  .MuiDialog-paper {
+    margin: 16px;
+    max-width: calc(100% - 32px);
+  }
+
+  /* Optimiere AppBar für kleine Screens */
+  .MuiAppBar-root {
+    padding: 8px;
+  }
+
+  /* Kompaktere Tabellen */
+  .MuiTable-root {
+    font-size: 0.875rem;
+  }
+
+  .MuiTableCell-root {
+    padding: 8px 4px;
+  }
+}
+
+/* Landscape Modus auf Smartphones */
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Reduziere vertikale Abstände im Landscape */
+  .MuiAppBar-root {
+    min-height: 48px;
+  }
+
+  h1, h2, h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .MuiPaper-root {
+    padding: 8px !important;
+  }
+}
+
+/* Touch-Gesten Optimierungen */
+@media (hover: none) and (pointer: coarse) {
+  /* Größere Touch-Targets */
+  .MuiIconButton-root {
+    padding: 12px;
+  }
+
+  /* Besseres visuelles Feedback */
+  .MuiButton-root:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .MuiCard-root:active {
+    transform: scale(0.99);
+    transition: transform 0.1s ease;
+  }
+
+  /* Entferne Hover-Effekte auf Touch-Geräten */
+  .MuiButton-root:hover,
+  .MuiCard-root:hover {
+    background-color: inherit;
+  }
+}
+
+/* Pull-to-Refresh Prevention */
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* Scrollbar-Styling für mobile */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 184, 212, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 184, 212, 0.7);
+}
+
+/* PWA Installation Banner anpassen */
+.ios-install-prompt {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #1a2a6c 0%, #0a0e27 100%);
+  padding: 16px;
+  border-top: 2px solid #00b8d4;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.ios-install-prompt .close-button {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Loading States für PWA */
+.pwa-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Offline Indicator */
+.offline-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f44336;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  z-index: 9999;
+  font-size: 14px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Optimierte Performance für Animationen auf mobile */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  /* Bereits dunkel, aber stelle sicher dass alles optimal ist */
+  body {
+    background: #0a0e27;
+  }
+}
+
+/* Hochauflösende Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Schärfere Ränder und Schatten */
+  .MuiCard-root,
+  .MuiPaper-root {
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Tablet-spezifische Optimierungen */
+@media (min-width: 481px) and (max-width: 768px) {
+  .MuiContainer-root {
+    max-width: 100%;
+  }
+
+  .MuiGrid-container {
+    justify-content: center;
+  }
+}
+
+/* Verbesserte Touch-Scroll Performance */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent zoom on double-tap */
+* {
+  touch-action: manipulation;
+}
+
+/* iOS PWA Status Bar Spacing */
+@media (display-mode: standalone) {
+  body {
+    padding-top: max(env(safe-area-inset-top), 20px);
+  }
+
+  /* Anpassung der AppBar im Standalone Modus */
+  .MuiAppBar-root {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Android PWA Optimierungen */
+@media (display-mode: standalone) and (orientation: portrait) {
+  /* Nutze mehr Bildschirmfläche */
+  .MuiContainer-root {
+    max-width: 100% !important;
+  }
+}

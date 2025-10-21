@@ -1,18 +1,24 @@
 /* ============================= */
 /* Header & Navigation           */
+/* Optimized for MUI Integration */
 /* ============================= */
 
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
+/* Note: Fonts are now loaded globally in public/index.html for better performance */
 
 .header {
-  background: linear-gradient(90deg, #4b0082, #9400d3);
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  background: var(--gradient-header);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-dark);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: var(--z-index-sticky);
   width: 100%;
+  transition: box-shadow var(--transition-base) var(--transition-timing);
+}
+
+/* Enhance shadow on scroll */
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .header-container {
@@ -34,22 +40,27 @@
 }
 
 .site-title {
-  font-family: 'Bangers', cursive;
-  font-size: 3rem;
-  color: #f0e130;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--accent-color);
   margin: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--shadow-text);
+  transition: transform var(--transition-base) var(--transition-timing);
+}
+
+.site-title:hover {
+  transform: scale(1.05);
 }
 
 .site-title a {
-  color: #f0e130;
+  color: var(--accent-color);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all var(--transition-base) var(--transition-timing);
 }
 
 .site-title a:hover {
   color: #fff;
-  text-shadow: 0 0 10px #f0e130;
+  text-shadow: 0 0 15px var(--accent-color);
 }
 
 .coin-display {

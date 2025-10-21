@@ -1,6 +1,28 @@
 {
   "name": "rick-and-morty-adventure",
   "version": "0.1.0",
+  "description": "An interactive idle/incremental game built with React that lets you explore the Rick and Morty universe, collect characters, complete missions, and participate in quizzes!",
+  "keywords": [
+    "rick-and-morty",
+    "react",
+    "game",
+    "idle-game",
+    "incremental-game",
+    "material-ui",
+    "quiz",
+    "adventure",
+    "character-collection",
+    "react-game"
+  ],
+  "author": "Cosmic Game Studios",
+  "homepage": "https://rickandmorty-khaki-nine.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cosmic-Game-studios/rickandmorty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cosmic-Game-studios/rickandmorty/issues"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",

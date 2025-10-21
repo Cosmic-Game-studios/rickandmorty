@@ -1,0 +1,69 @@
+{
+  "short_name": "Rick & Morty",
+  "name": "Rick and Morty Adventure",
+  "description": "An interactive idle/incremental game built with React that lets you explore the Rick and Morty universe, collect characters, complete missions, and participate in quizzes!",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00b8d4",
+  "background_color": "#0a0e27",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["games", "entertainment"],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshot-desktop.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Characters",
+      "short_name": "Characters",
+      "description": "View all Rick and Morty characters",
+      "url": "/characters",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Missions",
+      "short_name": "Missions",
+      "description": "Start a new mission",
+      "url": "/missions",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Quiz",
+      "short_name": "Quiz",
+      "description": "Take a Rick and Morty quiz",
+      "url": "/quiz",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

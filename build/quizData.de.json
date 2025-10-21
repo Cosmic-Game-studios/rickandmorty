@@ -1,0 +1,5512 @@
+[
+  {
+    "id": 1,
+    "question": "Was ist Ricks Schlagwort? (Var 1)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 2,
+    "question": "Was ist Mortys Nachname? (Var 2)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 3,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 3)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 4,
+    "question": "Wer ist Birdperson? (Var 4)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 5,
+    "question": "Was ist das Citadel der Ricks? (Var 5)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 6,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 6)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 7,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 7)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 8,
+    "question": "Wer ist Evil Morty? (Var 8)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 9,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 9)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 10,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 10)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 11,
+    "question": "Was ist Ricks Schlagwort? (Var 11)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 12,
+    "question": "Was ist Mortys Nachname? (Var 12)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 13,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 13)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 14,
+    "question": "Wer ist Birdperson? (Var 14)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 15,
+    "question": "Was ist das Citadel der Ricks? (Var 15)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 16,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 16)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 17,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 17)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 18,
+    "question": "Wer ist Evil Morty? (Var 18)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 19,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 19)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 20,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 20)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 21,
+    "question": "Was ist Ricks Schlagwort? (Var 21)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 22,
+    "question": "Was ist Mortys Nachname? (Var 22)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 23,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 23)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 24,
+    "question": "Wer ist Birdperson? (Var 24)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 25,
+    "question": "Was ist das Citadel der Ricks? (Var 25)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 26,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 26)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 27,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 27)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 28,
+    "question": "Wer ist Evil Morty? (Var 28)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 29,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 29)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 30,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 30)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 31,
+    "question": "Was ist Ricks Schlagwort? (Var 31)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 32,
+    "question": "Was ist Mortys Nachname? (Var 32)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 33,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 33)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 34,
+    "question": "Wer ist Birdperson? (Var 34)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 35,
+    "question": "Was ist das Citadel der Ricks? (Var 35)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 36,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 36)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 37,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 37)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 38,
+    "question": "Wer ist Evil Morty? (Var 38)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 39,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 39)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 40,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 40)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 41,
+    "question": "Was ist Ricks Schlagwort? (Var 41)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 42,
+    "question": "Was ist Mortys Nachname? (Var 42)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 43,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 43)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 44,
+    "question": "Wer ist Birdperson? (Var 44)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 45,
+    "question": "Was ist das Citadel der Ricks? (Var 45)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 46,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 46)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 47,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 47)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 48,
+    "question": "Wer ist Evil Morty? (Var 48)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 49,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 49)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 50,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 50)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+ {
+    "id": 51,
+    "question": "Was ist Ricks Schlagwort? (Var 51)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 52,
+    "question": "Was ist Mortys Nachname? (Var 52)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 53,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 53)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 54,
+    "question": "Wer ist Birdperson? (Var 54)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 55,
+    "question": "Was ist das Citadel der Ricks? (Var 55)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 56,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 56)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 57,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 57)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 58,
+    "question": "Wer ist Evil Morty? (Var 58)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 59,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 59)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 60,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 60)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 61,
+    "question": "Was ist Ricks Schlagwort? (Var 61)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 62,
+    "question": "Was ist Mortys Nachname? (Var 62)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 63,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 63)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 64,
+    "question": "Wer ist Birdperson? (Var 64)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 65,
+    "question": "Was ist das Citadel der Ricks? (Var 65)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 66,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 66)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 67,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 67)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 68,
+    "question": "Wer ist Evil Morty? (Var 68)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 69,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 69)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 70,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 70)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 71,
+    "question": "Was ist Ricks Schlagwort? (Var 71)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 72,
+    "question": "Was ist Mortys Nachname? (Var 72)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 73,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 73)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 74,
+    "question": "Wer ist Birdperson? (Var 74)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 75,
+    "question": "Was ist das Citadel der Ricks? (Var 75)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 76,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 76)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 77,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 77)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 78,
+    "question": "Wer ist Evil Morty? (Var 78)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 79,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 79)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 80,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 80)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 81,
+    "question": "Was ist Ricks Schlagwort? (Var 81)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 82,
+    "question": "Was ist Mortys Nachname? (Var 82)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 83,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 83)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 84,
+    "question": "Wer ist Birdperson? (Var 84)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 85,
+    "question": "Was ist das Citadel der Ricks? (Var 85)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 86,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 86)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 87,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 87)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 88,
+    "question": "Wer ist Evil Morty? (Var 88)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 89,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 89)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 90,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 90)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 91,
+    "question": "Was ist Ricks Schlagwort? (Var 91)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 92,
+    "question": "Was ist Mortys Nachname? (Var 92)",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 93,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen? (Var 93)",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 94,
+    "question": "Wer ist Birdperson? (Var 94)",
+    "options": [
+      "Ein enger Freund von Rick",
+      "Mortys Feind",
+      "Somers Freund",
+      "Jerrys Cousin"
+    ],
+    "answer": "Ein enger Freund von Rick"
+  },
+  {
+    "id": 95,
+    "question": "Was ist das Citadel der Ricks? (Var 95)",
+    "options": [
+      "Eine Raumstation, die ausschließlich von Ricks bewohnt wird",
+      "Ricks geheime Basis",
+      "Eine Regierungsbehörde",
+      "Ein militärischer Außenposten"
+    ],
+    "answer": "Eine Raumstation, die ausschließlich von Ricks bewohnt wird"
+  },
+  {
+    "id": 96,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke? (Var 96)",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 97,
+    "question": "Welche Bedeutung hat die Szechuan Sauce in der Serie? (Var 97)",
+    "options": [
+      "Eine limitierte Sauce",
+      "Ricks Lieblingsessen",
+      "Eine außerirdische Technologie",
+      "Ein Portaltreibstoff"
+    ],
+    "answer": "Eine limitierte Sauce"
+  },
+  {
+    "id": 98,
+    "question": "Wer ist Evil Morty? (Var 98)",
+    "options": [
+      "Ein mysteriöser Antagonist",
+      "Ricks Klon",
+      "Somers Freund",
+      "Ein Regierungsagent"
+    ],
+    "answer": "Ein mysteriöser Antagonist"
+  },
+  {
+    "id": 99,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich? (Var 99)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 100,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks? (Var 100)",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+
+  {
+    "id": 101,
+    "question": "In 'Pickle Rick', warum verwandelt sich Rick in eine Gurke? (Var 101)",
+    "options": [
+      "Um Familientherapie zu vermeiden",
+      "Um eine Wette zu gewinnen",
+      "Um ein gefährliches Experiment durchzuführen",
+      "Um Morty zu beeindrucken"
+    ],
+    "answer": "Um Familientherapie zu vermeiden"
+  },
+  {
+    "id": 102,
+    "question": "In 'The Ricks Must Be Crazy', was ist die primäre Energiequelle für Ricks Autobatterie? (Var 102)",
+    "options": [
+      "Ein mini Universum",
+      "Ein Plutoniumreaktor",
+      "Dunkle Materie",
+      "Interdimensionale Kristalle"
+    ],
+    "answer": "Ein mini Universum"
+  },
+  {
+    "id": 103,
+    "question": "In 'Pickle Rick', welches unkonventionelle Material benutzt Rick, um sein Exoskelett zu konstruieren? (Var 103)",
+    "options": [
+      "Rattenkadaver",
+      "Alte Reifen",
+      "Schrottmetall",
+      "Plankton"
+    ],
+    "answer": "Rattenkadaver"
+  },
+  {
+    "id": 104,
+    "question": "In 'Meeseeks and Destroy', welche existenzielle Krise erleben die Mr. Meeseeks? (Var 104)",
+    "options": [
+      "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen",
+      "Ihr schwindendes Dasein",
+      "Gefangen in einer Zeitschleife",
+      "Mangel an Sinn nach Aufgabenerfüllung"
+    ],
+    "answer": "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen"
+  },
+  {
+    "id": 105,
+    "question": "In 'The Rickshank Rickdemption', wie heißt der hybrid Charakter, der aus Abraham Lincoln und Adolf Hitler erschaffen wurde? (Var 105)",
+    "options": [
+      "Abradolf Lincler",
+      "Adolibrahm",
+      "Lincoltpig",
+      "Adolfbrad"
+    ],
+    "answer": "Abradolf Lincler"
+  },
+  {
+    "id": 106,
+    "question": "In welcher Episode verwandelt sich Birdperson in Phoenixperson? (Var 106)",
+    "options": [
+      "The Wedding Squanchers",
+      "Pickle Rick",
+      "Total Rickall",
+      "Rickmancing the Stone"
+    ],
+    "answer": "The Wedding Squanchers"
+  },
+  {
+    "id": 107,
+    "question": "In 'Mortynight Run', welchen Beruf hat Krombopulos Michael? (Var 107)",
+    "options": [
+      "Auftragsmörder",
+      "Kopfgeldjäger",
+      "Händler",
+      "Wissenschaftler"
+    ],
+    "answer": "Auftragsmörder"
+  },
+  {
+    "id": 108,
+    "question": "In 'The Ricks Must Be Crazy', welches ethische Dilemma wird durch Ricks Einsatz eines Miniaturuniversums hervorgehoben? (Var 108)",
+    "options": [
+      "Die Ausbeutung empfindungsfähigen Lebens",
+      "Die Gefahren unkontrollierter Macht",
+      "Die Konsequenzen von Zeitreisen",
+      "Das Scheitern der Existenz"
+    ],
+    "answer": "Die Ausbeutung empfindungsfähigen Lebens"
+  },
+  {
+    "id": 109,
+    "question": "Wie lautet der offizielle Name der Regierungsbehörde, die ausschließlich aus Ricks besteht? (Var 109)",
+    "options": [
+      "Council of Ricks",
+      "Rick Tribunal",
+      "Multiverse Assembly",
+      "Rick Collective"
+    ],
+    "answer": "Council of Ricks"
+  },
+  {
+    "id": 110,
+    "question": "In 'Total Rickall', wie unterscheiden die Charaktere anfangs zwischen echten Erinnerungen und eingepflanzten? (Var 110)",
+    "options": [
+      "Durch Überprüfung der Plausibilität jeder Erinnerung",
+      "Mit einem Erinnerungserkenner",
+      "Durch eine Gruppenabstimmung",
+      "Indem sie Mortys Erinnerungen konsultieren"
+    ],
+    "answer": "Durch Überprüfung der Plausibilität jeder Erinnerung"
+  },
+  {
+    "id": 111,
+    "question": "Welcher der folgenden Charaktere wurde in 'Total Rickall' als real bestätigt? (Var 111)",
+    "options": [
+      "Mr. Poopybutthole",
+      "Snuffles",
+      "Garblov",
+      "Butter Robot"
+    ],
+    "answer": "Mr. Poopybutthole"
+  },
+  {
+    "id": 112,
+    "question": "In 'Rickmancing the Stone', welche Emotion wird hauptsächlich von den Charakteren erkundet? (Var 112)",
+    "options": [
+      "Trauer",
+      "Wut",
+      "Eifersucht",
+      "Angst"
+    ],
+    "answer": "Trauer"
+  },
+  {
+    "id": 113,
+    "question": "In 'The ABC's of Beth', wie heißt die imaginäre Welt, die Beth besucht? (Var 113)",
+    "options": [
+      "Froopyland",
+      "Wonderland",
+      "Beths Traum",
+      "Monsterland"
+    ],
+    "answer": "Froopyland"
+  },
+  {
+    "id": 114,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches Objekt steht im Mittelpunkt der Handlung mit alternativen Zeitlinien? (Var 114)",
+    "options": [
+      "Todeskristalle",
+      "Ein magisches Amulett",
+      "Zeitgranaten",
+      "Eine Paradox-Maschine"
+    ],
+    "answer": "Todeskristalle"
+  },
+  {
+    "id": 115,
+    "question": "In 'Get Schwifty', welche kosmische Entität überwacht den Wettbewerb, an dem die Erdbewohner teilnehmen müssen? (Var 115)",
+    "options": [
+      "Die Cromulons",
+      "Die Celestials",
+      "Die Ahnen",
+      "Die Void Lords"
+    ],
+    "answer": "Die Cromulons"
+  },
+  {
+    "id": 116,
+    "question": "In 'Rixty Minutes', welches zugrunde liegende Konzept suggeriert das bizarre interdimensionale Kabel hauptsächlich? (Var 116)",
+    "options": [
+      "Unendliche Möglichkeiten",
+      "Vorhersehbares Chaos",
+      "Einheitlichkeit in der Vielfalt",
+      "Der Zusammenbruch der Zeit"
+    ],
+    "answer": "Unendliche Möglichkeiten"
+  },
+  {
+    "id": 117,
+    "question": "Wessen existenzielle Ideen spiegeln sich häufig in Ricks Dialog wider? (Var 117)",
+    "options": [
+      "Friedrich Nietzsche",
+      "Immanuel Kant",
+      "Jean-Paul Sartre",
+      "Platon"
+    ],
+    "answer": "Friedrich Nietzsche"
+  },
+  {
+    "id": 118,
+    "question": "In 'Vindicators 3: The Return of Worldender', was ist der Hauptfehler im Ansatz der Vindicators zum Heldentum? (Var 118)",
+    "options": [
+      "Ihre Arroganz und mangelnde Selbstwahrnehmung",
+      "Ihre Abhängigkeit von Technologie",
+      "Ihre Unfähigkeit, als Team zu arbeiten",
+      "Ihr Mangel an Rücksichtnahme auf Zivilisten"
+    ],
+    "answer": "Ihre Arroganz und mangelnde Selbstwahrnehmung"
+  },
+  {
+    "id": 119,
+    "question": "In 'The Ricklantis Mixup', welches soziale Thema wird im Citadel am deutlichsten thematisiert? (Var 119)",
+    "options": [
+      "Klassenungleichheit unter Ricks und Mortys",
+      "Die Korruption der Macht",
+      "Die Folgen von Kriegen",
+      "Der Zusammenbruch gesellschaftlicher Normen"
+    ],
+    "answer": "Klassenungleichheit unter Ricks und Mortys"
+  },
+  {
+    "id": 120,
+    "question": "In 'The Ricklantis Mixup', was geschieht mit Evil Morty? (Var 120)",
+    "options": [
+      "Er steigt zur Macht auf",
+      "Er wird verbannt",
+      "Er wird getötet",
+      "Er bleibt im Verborgenen"
+    ],
+    "answer": "Er steigt zur Macht auf"
+  },
+  {
+    "id": 121,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches Element zwingt Morty, sich mehreren möglichen Zukünften zu stellen? (Var 121)",
+    "options": [
+      "Todeskristalle",
+      "Zeitschleifen",
+      "Alternative Mortys",
+      "Eine prophetische Vision"
+    ],
+    "answer": "Todeskristalle"
+  },
+  {
+    "id": 122,
+    "question": "In 'Rick Potion #9', welcher Begriff wird von Fans verwendet, um die Erde nach der Transformation zu beschreiben? (Var 122)",
+    "options": [
+      "Cronenberg Earth",
+      "Mutation Earth",
+      "Altered Earth",
+      "New Earth"
+    ],
+    "answer": "Cronenberg Earth"
+  },
+  {
+    "id": 123,
+    "question": "In 'Close Rick-counters of the Rick Kind', welcher Rick wird für die Serienmorde verantwortlich gemacht? (Var 123)",
+    "options": [
+      "Rick C-137",
+      "Rick D-99",
+      "Rick J-19",
+      "Rick K-22"
+    ],
+    "answer": "Rick C-137"
+  },
+  {
+    "id": 124,
+    "question": "Welcher Aspekt von Ricks Charakter wird in seinen Konfrontationen mit der Galactic Federation am stärksten betont? (Var 124)",
+    "options": [
+      "Seine Verachtung vor Autoritäten",
+      "Seine wissenschaftliche Neugier",
+      "Seine väterlichen Instinkte",
+      "Seine romantischen Ambitionen"
+    ],
+    "answer": "Seine Verachtung vor Autoritäten"
+  },
+  {
+    "id": 125,
+    "question": "In 'Something Ricked This Way Comes', was ist die Natur der verfluchten Gegenstände, die im Antiquitätengeschäft verkauft werden? (Var 125)",
+    "options": [
+      "Sie haben einen versteckten Preis",
+      "Sie verursachen zeitliche Anomalien",
+      "Sie verwandeln den Besitzer",
+      "Sie fangen die Seele ein"
+    ],
+    "answer": "Sie haben einen versteckten Preis"
+  },
+  {
+    "id": 126,
+    "question": "Welches der folgenden ist KEINE bekannte Dimensionsbezeichnung in der Serie? (Var 126)",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension 7-13",
+      "Dimension J-19"
+    ],
+    "answer": "Dimension 7-13"
+  },
+  {
+    "id": 127,
+    "question": "In 'Rattlestar Ricklactica', welche Spezies fordert Mortys Zeitwahrnehmung heraus? (Var 127)",
+    "options": [
+      "Empfindungsfähige Schlangen",
+      "Zeitreisende Vögel",
+      "Quantenfische",
+      "Dimensionale Insekten"
+    ],
+    "answer": "Empfindungsfähige Schlangen"
+  },
+  {
+    "id": 128,
+    "question": "In 'The Vat of Acid Episode', was benutzt Rick, um die Nutzlosigkeit von Abkürzungen zu demonstrieren? (Var 128)",
+    "options": [
+      "Ein falscher Säurebehälter",
+      "Eine Zeitschleifenmaschine",
+      "Eine simulierte Umgebung",
+      "Ein Lockvogel-Plan"
+    ],
+    "answer": "Ein falscher Säurebehälter"
+  },
+  {
+    "id": 129,
+    "question": "In 'Never Ricking Morty', welches narrative Mittel stellt das traditionelle Erzählen in Frage? (Var 129)",
+    "options": [
+      "Meta-Erzählung",
+      "Nicht-lineare Erzählung",
+      "Rückblenden",
+      "Traumsequenzen"
+    ],
+    "answer": "Meta-Erzählung"
+  },
+  {
+    "id": 130,
+    "question": "Welche Episode führt den Charakter Noob-Noob ein? (Var 130)",
+    "options": [
+      "Rattlestar Ricklactica",
+      "Look Who's Purging Now",
+      "Morty's Mind Blowers",
+      "Never Ricking Morty"
+    ],
+    "answer": "Rattlestar Ricklactica"
+  },
+  {
+    "id": 131,
+    "question": "In 'Morty's Mind Blowers', was geschieht mit den traumatischen Erinnerungen, die Rick als zu gefährlich erachtet? (Var 131)",
+    "options": [
+      "Sie werden gelöscht",
+      "Sie werden weggeschlossen",
+      "Sie werden in einem Erinnerungsarchiv gespeichert",
+      "Sie werden an Sammler verkauft"
+    ],
+    "answer": "Sie werden gelöscht"
+  },
+  {
+    "id": 132,
+    "question": "Welches wiederkehrende Thema wird durch das Auftauchen mehrerer alternativer Versionen von Rick und Morty hervorgehoben? (Var 132)",
+    "options": [
+      "Unendliche Möglichkeiten",
+      "Verschworenes Schicksal",
+      "Das Scheitern an Verzweiflung",
+      "Zufälligkeit"
+    ],
+    "answer": "Unendliche Möglichkeiten"
+  },
+  {
+    "id": 133,
+    "question": "In 'The Old Man and the Seat', welchen geheimen Ort benutzt Rick für sein privates Badezimmer? (Var 133)",
+    "options": [
+      "Eine versteckte Dimension",
+      "Ein befestigter Bunker",
+      "Ein entfernter Asteroid",
+      "Eine verlassene Raumstation"
+    ],
+    "answer": "Eine versteckte Dimension"
+  },
+  {
+    "id": 134,
+    "question": "Welche Charaktergeschichte thematisiert am eindrucksvollsten Identität und Selbstwert? (Var 134)",
+    "options": [
+      "Jerry",
+      "Beth",
+      "Summer",
+      "Morty"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 135,
+    "question": "In 'Rest and Ricklaxation', was ist der Zweck des Entgiftungsprozesses von Rick und Morty? (Var 135)",
+    "options": [
+      "Um ihre negativen Eigenschaften zu trennen",
+      "Um ihre Zellen zu verjüngen",
+      "Um interdimensionale Harmonie zu erreichen",
+      "Um einer Virusinfektion zu entkommen"
+    ],
+    "answer": "Um ihre negativen Eigenschaften zu trennen"
+  },
+  {
+    "id": 136,
+    "question": "Welches Schlagwort, das Rick berühmt äußert, wird später mit einer versteckten Bedeutung enthüllt? (Var 136)",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Bis zur Unendlichkeit und noch viel weiter",
+      "Bazinga",
+      "Heiliger Strohsack!; es bedeutet 'Ich habe große Schmerzen, bitte hilf mir'"
+    ],
+    "answer": "Wubba Lubba Dub Dub; es bedeutet 'Ich habe große Schmerzen, bitte hilf mir'"
+  },
+  {
+    "id": 137,
+    "question": "In 'The Whirly Dirly Conspiracy', welche extreme Anziehungskraft besitzt Rick, die den Handlungsverlauf antreibt? (Var 137)",
+    "options": [
+      "Mitfahren auf einer gefährlichen Themenparkfahrt",
+      "Eine Falle konstruieren",
+      "Einen Kopfgeldjäger anheuern",
+      "Sich in einer parallelen Dimension verstecken"
+    ],
+    "answer": "Mitfahren auf einer gefährlichen Themenparkfahrt"
+  },
+  {
+    "id": 138,
+    "question": "In 'The Whirly Dirly Conspiracy', was ist Ricks zugrunde liegender Beweggrund, Jerry auf das Abenteuer einzuladen? (Var 138)",
+    "options": [
+      "Um ihre angespannte Beziehung zu klären",
+      "Um eine neue Erfindung zu testen",
+      "Um die Galactic Federation abzulenken",
+      "Um das Familiengeschäft zu retten"
+    ],
+    "answer": "Um ihre angespannte Beziehung zu klären"
+  },
+  {
+    "id": 139,
+    "question": "Welche Episode enthüllt subtil Ricks verborgene Verletzlichkeit durch seine familiären Interaktionen? (Var 139)",
+    "options": [
+      "Pickle Rick",
+      "The Whirly Dirly Conspiracy",
+      "The Old Man and the Seat",
+      "Ricksy Business"
+    ],
+    "answer": "Pickle Rick"
+  },
+  {
+    "id": 140,
+    "question": "In 'Look Who's Purging Now', welches gesellschaftliche Konzept wird durch das jährliche Säuberungsereignis parodiert? (Var 140)",
+    "options": [
+      "Sozialdarwinismus",
+      "Kapitalistischer Konsumismus",
+      "Politische Korruption",
+      "Kulturelle Assimilation"
+    ],
+    "answer": "Sozialdarwinismus"
+  },
+  {
+    "id": 141,
+    "question": "In 'One Crew Over the Crewcoo's Morty', welche Filmgenre-Tropen werden überwiegend parodiert? (Var 141)",
+    "options": [
+      "Heist-Filme",
+      "Dokumentarfilme",
+      "Mockumentaries",
+      "Musicals"
+    ],
+    "answer": "Heist-Filme"
+  },
+  {
+    "id": 142,
+    "question": "In 'The Rickchurian Mortydate', was ist der zentrale Konflikt zwischen Rick und dem Präsidenten? (Var 142)",
+    "options": [
+      "Ideologische Unterschiede in der Regierungsführung",
+      "Ein persönlicher Rachefeldzug",
+      "Ressourcenzuteilung im Multiversum",
+      "Missverständnisse"
+    ],
+    "answer": "Ideologische Unterschiede in der Regierungsführung"
+  },
+  {
+    "id": 143,
+    "question": "In 'Anatomy Park', wo befindet sich der bizarre Freizeitpark? (Var 143)",
+    "options": [
+      "In einem Obdachlosen",
+      "In Ricks Raumschiff",
+      "In einem Labor",
+      "In einem Mikrouniversum"
+    ],
+    "answer": "In einem Obdachlosen"
+  },
+  {
+    "id": 144,
+    "question": "In 'The Whirly Dirly Conspiracy', wie heißt das Resort, in dem die tödliche Fahrt stattfindet? (Var 144)",
+    "options": [
+      "The Whirly Dirly Resort",
+      "Gravity Falls",
+      "Die Plutonian Gardens",
+      "Dimension X Adventure Park"
+    ],
+    "answer": "The Whirly Dirly Resort"
+  },
+  {
+    "id": 145,
+    "question": "In 'Raising Gazorpazorp', mit welchem gesellschaftlichen Problem konfrontiert sich Morty im Umgang mit seinem Nachwuchs? (Var 145)",
+    "options": [
+      "Geschlechtsidentität und elterliche Verantwortung",
+      "Interdimensionale Gesetze",
+      "Wirtschaftliche Ungleichheit",
+      "Die Ethik von Zeitreisen"
+    ],
+    "answer": "Geschlechtsidentität und elterliche Verantwortung"
+  },
+  {
+    "id": 146,
+    "question": "Welche Episode zeigt, dass Ricks Technologie unbeabsichtigt ein gefährliches Paralleluniversum erschafft? (Var 146)",
+    "options": [
+      "The Ricks Must Be Crazy",
+      "Close Rick-counters of the Rick Kind",
+      "Vindicators 3: The Return of Worldender",
+      "The Rickshank Rickdemption"
+    ],
+    "answer": "The Ricks Must Be Crazy"
+  },
+  {
+    "id": 147,
+    "question": "In 'Big Trouble in Little Sanchez', welche Verwandlung durchläuft Rick? (Var 147)",
+    "options": [
+      "Er wird zu einem Teenager-Klon",
+      "Er verwandelt sich in eine Gurke",
+      "Er wird zu einem Superschurken",
+      "Er verschmilzt mit Morty"
+    ],
+    "answer": "Er wird zu einem Teenager-Klon"
+  },
+  {
+    "id": 148,
+    "question": "In 'Big Trouble in Little Sanchez', welches ist der primäre innere Konflikt von Tiny Rick? (Var 148)",
+    "options": [
+      "Der Kampf mit der Identität eines Jugendlichen",
+      "Umgang mit Schulmobbing",
+      "Rebellion gegen Autoritäten",
+      "Eine Identitätskrise der Unsterblichkeit"
+    ],
+    "answer": "Der Kampf mit der Identität eines Jugendlichen"
+  },
+  {
+    "id": 149,
+    "question": "Welches zentrale Thema wird in 'Morty's Mind Blowers' erforscht? (Var 149)",
+    "options": [
+      "Der Verlust von Erinnerung und Identität",
+      "Das Chaos der Zeitreisen",
+      "Die Last des Wissens",
+      "Die Dualität der menschlichen Natur"
+    ],
+    "answer": "Der Verlust von Erinnerung und Identität"
+  },
+  {
+    "id": 150,
+    "question": "In 'A Rickle in Time', welcher wissenschaftliche Grundsatz wird manipuliert, was zu zersplitterten Zeitlinien führt? (Var 150)",
+    "options": [
+      "Quantenunsicherheit",
+      "Relativitätstheorie",
+      "Zeitdilatation",
+      "Paralleluniversen"
+    ],
+    "answer": "Quantenunsicherheit"
+  },
+{
+    "id": 151,
+    "question": "In 'Pickle Rick', warum verwandelt sich Rick in eine Gurke? (Var 101)",
+    "options": [
+      "Um Familientherapie zu vermeiden",
+      "Um eine Wette zu gewinnen",
+      "Um ein gefährliches Experiment durchzuführen",
+      "Um Morty zu beeindrucken"
+    ],
+    "answer": "Um Familientherapie zu vermeiden"
+  },
+  {
+    "id": 152,
+    "question": "In 'The Ricks Must Be Crazy', was ist die primäre Energiequelle für Ricks Autobatterie? (Var 102)",
+    "options": [
+      "Ein mini Universum",
+      "Ein Plutoniumreaktor",
+      "Dunkle Materie",
+      "Interdimensionale Kristalle"
+    ],
+    "answer": "Ein mini Universum"
+  },
+  {
+    "id": 153,
+    "question": "In 'Pickle Rick', welches unkonventionelle Material verwendet Rick, um sein Exoskelett zu konstruieren? (Var 103)",
+    "options": [
+      "Rattenkadaver",
+      "Alte Reifen",
+      "Schrottmetall",
+      "Plankton"
+    ],
+    "answer": "Rattenkadaver"
+  },
+  {
+    "id": 154,
+    "question": "In 'Meeseeks and Destroy', welche existenzielle Krise erleben die Mr. Meeseeks? (Var 104)",
+    "options": [
+      "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen",
+      "Ihr schwindendes Dasein",
+      "Gefangen in einer Zeitschleife",
+      "Mangel an Sinn nach Aufgabenabschluss"
+    ],
+    "answer": "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen"
+  },
+  {
+    "id": 155,
+    "question": "In 'The Rickshank Rickdemption', wie heißt der hybride Charakter, der aus Abraham Lincoln und Adolf Hitler erschaffen wurde? (Var 105)",
+    "options": [
+      "Abradolf Lincler",
+      "Adolibrahm",
+      "Lincoltpig",
+      "Adolfbrad"
+    ],
+    "answer": "Abradolf Lincler"
+  },
+  {
+    "id": 156,
+    "question": "In 'The Ricks Must Be Crazy', welches ethische Dilemma hebt Ricks Einsatz eines Miniaturuniversums hervor? (Var 108)",
+    "options": [
+      "Die Ausbeutung empfindungsfähigen Lebens",
+      "Die Gefahren unkontrollierter Macht",
+      "Die Konsequenzen von Zeitreisen",
+      "Das Scheitern der Existenz"
+    ],
+    "answer": "Die Ausbeutung empfindungsfähigen Lebens"
+  },
+  {
+    "id": 157,
+    "question": "In 'Total Rickall', wie unterscheiden die Charaktere zunächst zwischen echten Erinnerungen und eingepflanzten? (Var 110)",
+    "options": [
+      "Durch Überprüfung der Plausibilität jeder Erinnerung",
+      "Mit einem Erinnerungserkenner",
+      "Durch eine Gruppenabstimmung",
+      "Indem sie Mortys Erinnerungen konsultieren"
+    ],
+    "answer": "Durch Überprüfung der Plausibilität jeder Erinnerung"
+  },
+  {
+    "id": 158,
+    "question": "In 'Rickmancing the Stone', welche Emotion wird hauptsächlich von den Charakteren erkundet? (Var 112)",
+    "options": [
+      "Trauer",
+      "Freude",
+      "Angst",
+      "Wut"
+    ],
+    "answer": "Trauer"
+  },
+  {
+    "id": 159,
+    "question": "In 'The ABC's of Beth', wie heißt die imaginäre Welt, die Beth besucht? (Var 113)",
+    "options": [
+      "Froopyland",
+      "Wonderland",
+      "Beths Traum",
+      "Monsterland"
+    ],
+    "answer": "Froopyland"
+  },
+  {
+    "id": 160,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches Objekt steht im Mittelpunkt der Handlung mit alternativen Zeitlinien? (Var 114)",
+    "options": [
+      "Todeskristalle",
+      "Ein magisches Amulett",
+      "Zeitgranaten",
+      "Eine Paradox-Maschine"
+    ],
+    "answer": "Todeskristalle"
+  },
+  {
+    "id": 161,
+    "question": "In 'Get Schwifty', welche kosmische Entität leitet den Wettbewerb, an dem die Erdbewohner teilnehmen müssen? (Var 115)",
+    "options": [
+      "Die Cromulons",
+      "Die Celestials",
+      "Die Ahnen",
+      "Die Void Lords"
+    ],
+    "answer": "Die Cromulons"
+  },
+  {
+    "id": 162,
+    "question": "In 'Rixty Minutes', welches zugrunde liegende Konzept suggeriert das bizarre interdimensionale Kabel hauptsächlich? (Var 116)",
+    "options": [
+      "Unendliche Möglichkeiten",
+      "Vorhersehbares Chaos",
+      "Einheitlichkeit in der Vielfalt",
+      "Der Zusammenbruch der Zeit"
+    ],
+    "answer": "Unendliche Möglichkeiten"
+  },
+  {
+    "id": 163,
+    "question": "Welche existenziellen Ideen eines Philosophen spiegeln sich häufig in Ricks Dialog wider? (Var 117)",
+    "options": [
+      "Friedrich Nietzsche",
+      "Immanuel Kant",
+      "Jean-Paul Sartre",
+      "Platon"
+    ],
+    "answer": "Friedrich Nietzsche"
+  },
+  {
+    "id": 164,
+    "question": "In 'Vindicators 3: The Return of Worldender', was ist der größte Fehler im Ansatz der Vindicators zum Heldentum? (Var 118)",
+    "options": [
+      "Ihre Arroganz und mangelnde Selbstwahrnehmung",
+      "Ihre Abhängigkeit von Technologie",
+      "Ihre Unfähigkeit, als Team zu arbeiten",
+      "Ihr Mangel an Rücksichtnahme auf Zivilisten"
+    ],
+    "answer": "Ihre Arroganz und mangelnde Selbstwahrnehmung"
+  },
+  {
+    "id": 165,
+    "question": "Welches Gerät benutzt Rick in ausgewählten Episoden, um seine eigenen Erinnerungen zu verändern? (Var 165)",
+    "options": [
+      "Ein Erinnerungslöschgerät",
+      "Ein neuraler Destabilisator",
+      "Ein Gedankentauscher",
+      "Ein Erinnerungs-Extraktor"
+    ],
+    "answer": "Ein Gedankentauscher"
+  },
+  {
+    "id": 166,
+    "question": "Im Kontext von Rick and Morty, was impliziert der Begriff 'Schwifty' am genauesten? (Var 166)",
+    "options": [
+      "Das Umarmen des Chaos",
+      "Coolness zeigen",
+      "Gesellschaftliche Normen ablehnen",
+      "Das Akzeptieren des eigenen Schicksals"
+    ],
+    "answer": "Das Umarmen des Chaos"
+  },
+  {
+    "id": 167,
+    "question": "Welcher Episodentitel ist ein Kofferwort, das auf einen berühmten Heist-Film anspielt, und worauf bezieht sich der Witz? (Var 167)",
+    "options": [
+      "One Crew Over the Crewcoo's Morty; es parodiert Heist-Filme",
+      "The Rickchurian Mortydate; es bezieht sich auf politische Thriller",
+      "Rickmancing the Stone; es deutet auf Abenteuerfilme hin",
+      "Pickle Rick; es verdreht Überlebensgeschichten"
+    ],
+    "answer": "One Crew Over the Crewcoo's Morty; es parodiert Heist-Filme"
+  },
+  {
+    "id": 168,
+    "question": "In 'Morty's Mind Blowers', welches thematische Element wird durch die systematische Entfernung unerwünschter Erinnerungen hervorgehoben? (Var 168)",
+    "options": [
+      "Der Preis der Unwissenheit ist hoch",
+      "Dass Wissen unweigerlich zu Isolation führt",
+      "Dass Erinnerungen das Wesen der Identität ausmachen",
+      "Dass Vergessen als Abwehrmechanismus dienen kann"
+    ],
+    "answer": "Dass Vergessen als Abwehrmechanismus dienen kann"
+  },
+  {
+    "id": 169,
+    "question": "Welcher Nebencharakter taucht später in der Serie wieder auf und enthüllt unerwartete Tiefe sowie eine Verbindung zum Multiversum? (Var 169)",
+    "options": [
+      "Noob-Noob",
+      "Scary Terry",
+      "Tiny Rick",
+      "Abradolf Lincler"
+    ],
+    "answer": "Noob-Noob"
+  },
+  {
+    "id": 170,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate', welches Fernsehgenre wird am häufigsten parodiert? (Var 170)",
+    "options": [
+      "Infomercials",
+      "Reality-TV",
+      "Seifenopern",
+      "Nachrichtensendungen"
+    ],
+    "answer": "Infomercials"
+  },
+  {
+    "id": 171,
+    "question": "Welche Episode zeigt eine Handlung, in der ein misslungenes Genmanipulationsexperiment zu unerwarteten Konsequenzen führt? (Var 171)",
+    "options": [
+      "Big Trouble in Little Sanchez",
+      "Anatomy Park",
+      "Raising Gazorpazorp",
+      "Rick Potion #9"
+    ],
+    "answer": "Big Trouble in Little Sanchez"
+  },
+  {
+    "id": 172,
+    "question": "In 'Raising Gazorpazorp', welchen Aspekt der Gazorpazorp-Gesellschaft entdeckt Morty? (Var 172)",
+    "options": [
+      "Es ist matriarchal",
+      "Es basiert auf körperlicher Stärke",
+      "Es ist technologisch fortschrittlich",
+      "Es ist chaotisch"
+    ],
+    "answer": "Es ist matriarchal"
+  },
+  {
+    "id": 173,
+    "question": "Welche Episode führt das Konzept einer 'Erinnerungsbank' ein, in der gelöschte Erinnerungen gespeichert werden? (Var 173)",
+    "options": [
+      "Morty's Mind Blowers",
+      "The Vat of Acid Episode",
+      "Never Ricking Morty",
+      "Pickle Rick"
+    ],
+    "answer": "Morty's Mind Blowers"
+  },
+  {
+    "id": 174,
+    "question": "In 'The ABC's of Beth', was symbolisiert Froopyland in Beths persönlicher Reise? (Var 174)",
+    "options": [
+      "Ein Rückzugsort der Unschuld",
+      "Die Kosten der Schöpfung",
+      "Die Flucht vor der Realität",
+      "Eine Manifestation innerer Unruhe"
+    ],
+    "answer": "Eine Manifestation innerer Unruhe"
+  },
+  {
+    "id": 175,
+    "question": "In 'Something Ricked This Way Comes', was ist die Natur der verfluchten Gegenstände, die die Grenze zwischen Handel und Horror verwischen? (Var 175)",
+    "options": [
+      "Sie haben einen versteckten Preis",
+      "Sie verursachen zeitliche Anomalien",
+      "Sie verändern das Schicksal des Besitzers",
+      "Sie fangen die Seele ein"
+    ],
+    "answer": "Sie verändern das Schicksal des Besitzers"
+  },
+  {
+    "id": 176,
+    "question": "In 'Ricksy Business', welche bedeutende Entscheidung trifft die Familie am Ende der Episode? (Var 176)",
+    "options": [
+      "Verbannung aus ihrer Heimatdimension",
+      "Annahme einer neuen Identität",
+      "Konfrontation mit der Galactic Federation",
+      "Ablehnung ihrer Vergangenheit"
+    ],
+    "answer": "Verbannung aus ihrer Heimatdimension"
+  },
+  {
+    "id": 177,
+    "question": "Welche Episode bietet den detailliertesten Einblick in die Hintergrundgeschichte der Citadel der Ricks? (Var 177)",
+    "options": [
+      "The Ricklantis Mixup",
+      "Close Rick-counters of the Rick Kind",
+      "The Ricks Must Be Crazy",
+      "Vindicators 3: The Return of Worldender"
+    ],
+    "answer": "The Ricklantis Mixup"
+  },
+  {
+    "id": 178,
+    "question": "In 'Vindicators 3: The Return of Worldender', welcher persönliche Makel von Rick wird am deutlichsten kritisiert? (Var 178)",
+    "options": [
+      "Seine Unfähigkeit, echte Beziehungen aufzubauen",
+      "Sein rücksichtsloses Verhalten",
+      "Seine ständige Selbstzerstörung",
+      "Seine nihilistische Haltung"
+    ],
+    "answer": "Seine Unfähigkeit, echte Beziehungen aufzubauen"
+  },
+  {
+    "id": 179,
+    "question": "Welche Episode untersucht die Auswirkungen interdimensionaler Reisen auf das Realitätsempfinden eines Charakters? (Var 179)",
+    "options": [
+      "A Rickle in Time",
+      "Morty's Mind Blowers",
+      "The Old Man and the Seat",
+      "Never Ricking Morty"
+    ],
+    "answer": "A Rickle in Time"
+  },
+  {
+    "id": 180,
+    "question": "Welcher wissenschaftliche Grundsatz wird von Rick häufig falsch dargestellt, um seine unvorsichtigen Experimente zu rechtfertigen? (Var 180)",
+    "options": [
+      "Quantenmechanik",
+      "Relativitätstheorie",
+      "Thermodynamik",
+      "Evolution"
+    ],
+    "answer": "Quantenmechanik"
+  },
+  {
+    "id": 181,
+    "question": "Was bedeutet die Zahl '137' im Rick and Morty Universum? (Var 181)",
+    "options": [
+      "Sie bezeichnet Ricks Heimatdimension",
+      "Die Anzahl der Universen im Multiversum",
+      "Mortys Glückszahl",
+      "Ein geheimer Code"
+    ],
+    "answer": "Sie bezeichnet Ricks Heimatdimension"
+  },
+  {
+    "id": 182,
+    "question": "In 'Pickle Rick', was symbolisiert Ricks Verwandlung in eine Gurke im Hinblick auf seine familiären Beziehungen? (Var 182)",
+    "options": [
+      "Sein Wunsch, emotionale Verletzlichkeit zu vermeiden",
+      "Seine Ablehnung menschlicher Schwächen",
+      "Sein Streben nach Unabhängigkeit",
+      "Sein Drang nach Freiheit"
+    ],
+    "answer": "Sein Wunsch, emotionale Verletzlichkeit zu vermeiden"
+  },
+  {
+    "id": 183,
+    "question": "Welche Episode zeigt die Konsequenzen, wenn emotionale Verantwortlichkeiten zugunsten wissenschaftlicher Experimente vernachlässigt werden? (Var 183)",
+    "options": [
+      "The Old Man and the Seat",
+      "Pickle Rick",
+      "Rickmancing the Stone",
+      "Morty's Mind Blowers"
+    ],
+    "answer": "The Old Man and the Seat"
+  },
+  {
+    "id": 184,
+    "question": "In 'Big Trouble in Little Sanchez', wie spiegelt sich Ricks Vergangenheit durch die Figur des Tiny Rick wider? (Var 184)",
+    "options": [
+      "Als verlorene Chance zur Erlösung",
+      "Als Spiegelbild seines jetzigen Selbst",
+      "Als Warnung",
+      "Als humorvolles Missgeschick"
+    ],
+    "answer": "Als Spiegelbild seines jetzigen Selbst"
+  },
+  {
+    "id": 185,
+    "question": "Welches zentrale Thema wird in 'Morty's Mind Blowers' behandelt? (Var 185)",
+    "options": [
+      "Der Verlust von Erinnerung und Identität",
+      "Das Chaos der Zeitreisen",
+      "Die Last des Wissens",
+      "Die Dualität der menschlichen Natur"
+    ],
+    "answer": "Der Verlust von Erinnerung und Identität"
+  },
+  {
+    "id": 186,
+    "question": "In 'The Whirly Dirly Conspiracy', welche unerwartete Lektion erteilt Rick bezüglich Vertrauen und Kameradschaft? (Var 186)",
+    "options": [
+      "Dass Verletzlichkeit eine Stärke sein kann",
+      "Dass Vertrauen ein gefährlicher Luxus ist",
+      "Dass Loyalität überbewertet wird",
+      "Dass Isolation der Schlüssel zum Erfolg ist"
+    ],
+    "answer": "Dass Verletzlichkeit eine Stärke sein kann"
+  },
+  {
+    "id": 187,
+    "question": "Welche Episode kritisiert die Kommerzialisierung persönlicher Erfahrungen durch die Darstellung einer wilden Party? (Var 187)",
+    "options": [
+      "Ricksy Business",
+      "Morty's Mind Blowers",
+      "Interdimensional Cable 2",
+      "Big Trouble in Little Sanchez"
+    ],
+    "answer": "Ricksy Business"
+  },
+  {
+    "id": 188,
+    "question": "Welche Rolle spielt das Konzept der unendlichen Universen in der philosophischen Ausrichtung der Serie? (Var 188)",
+    "options": [
+      "Es unterstreicht die Bedeutungslosigkeit individueller Handlungen",
+      "Es garantiert unendliche Erlösungsmöglichkeiten",
+      "Es vereinfacht komplexe moralische Entscheidungen",
+      "Es schränkt die Konsequenzen ein"
+    ],
+    "answer": "Es unterstreicht die Bedeutungslosigkeit individueller Handlungen"
+  },
+  {
+    "id": 189,
+    "question": "In 'Vindicators 3: The Return of Worldender', welche narrative Technik wird verwendet, um Superheldentropen zu persiflieren? (Var 189)",
+    "options": [
+      "Übertriebene Charakterfehler",
+      "Das Durchbrechen der vierten Wand",
+      "Nicht-lineares Erzählen",
+      "Zwischendurch musikalische Einlagen"
+    ],
+    "answer": "Übertriebene Charakterfehler"
+  },
+  {
+    "id": 190,
+    "question": "Welche Episode untersucht die Idee der Selbstzerstörung als Form existenzieller Befreiung? (Var 190)",
+    "options": [
+      "Pickle Rick",
+      "Morty's Mind Blowers",
+      "Close Rick-counters of the Rick Kind",
+      "A Rickle in Time"
+    ],
+    "answer": "Pickle Rick"
+  },
+  {
+    "id": 191,
+    "question": "Welche Episode zeigt die Konsequenzen, wenn emotionale Verantwortlichkeiten zugunsten wissenschaftlicher Experimente vernachlässigt werden? (Var 191)",
+    "options": [
+      "The Old Man and the Seat",
+      "Pickle Rick",
+      "Rickmancing the Stone",
+      "Morty's Mind Blowers"
+    ],
+    "answer": "The Old Man and the Seat"
+  },
+  {
+    "id": 192,
+    "question": "In 'Close Rick-counters of the Rick Kind', welcher narrative Twist fordert die Wahrnehmung der Realität heraus? (Var 192)",
+    "options": [
+      "Die Enthüllung mehrfach ähnlicher Ricks",
+      "Ein plötzlicher Wechsel des Animationsstils",
+      "Das Vermischen verschiedener Zeiträume",
+      "Das Auftauchen eines wiederkehrenden symbolischen Objekts"
+    ],
+    "answer": "Die Enthüllung mehrfach ähnlicher Ricks"
+  },
+  {
+    "id": 193,
+    "question": "Was symbolisiert die wiederholte Verwendung alternativer Dimensionen in der Serie hauptsächlich? (Var 193)",
+    "options": [
+      "Die Komplexität von Wahl und Konsequenz",
+      "Die Einfachheit des Schicksals",
+      "Die Redundanz der Existenz",
+      "Die Unvorhersehbarkeit der Wissenschaft"
+    ],
+    "answer": "Die Komplexität von Wahl und Konsequenz"
+  },
+  {
+    "id": 194,
+    "question": "Welche Episode bietet einen Meta-Kommentar über Fernsehen und Erzählkunst durch ihr Anthologieformat? (Var 194)",
+    "options": [
+      "Never Ricking Morty",
+      "Interdimensional Cable 2: Tempting Fate",
+      "Morty's Mind Blowers",
+      "A Rickle in Time"
+    ],
+    "answer": "Never Ricking Morty"
+  },
+  {
+    "id": 195,
+    "question": "In 'Pickle Rick', welche weiterreichende philosophische Implikation wird durch Ricks Ablehnung menschlicher Verletzlichkeit angedeutet? (Var 195)",
+    "options": [
+      "Das Unvermeidliche der Isolation",
+      "Die Absurdität der Existenz",
+      "Das Scheitern emotionaler Bindungen",
+      "Der Triumph der Intellektualität über Emotionen"
+    ],
+    "answer": "Das Scheitern emotionaler Bindungen"
+  },
+  {
+    "id": 196,
+    "question": "In 'The Rickchurian Mortydate', welches Machtverhältnis wird am kritischsten untersucht? (Var 196)",
+    "options": [
+      "Das Ungleichgewicht zwischen politischer Autorität und individueller Freiheit",
+      "Die Diskrepanz zwischen intellektueller und emotionaler Arbeit",
+      "Der Konflikt zwischen Tradition und Innovation",
+      "Die Spannung zwischen familiärer Loyalität und Eigeninteresse"
+    ],
+    "answer": "Das Ungleichgewicht zwischen politischer Autorität und individueller Freiheit"
+  },
+  {
+    "id": 197,
+    "question": "Welcher Episodentitel ist ein Kofferwort, das die Verschmelzung zweier scheinbar gegensätzlicher Konzepte widerspiegelt? (Var 197)",
+    "options": [
+      "Rickmancing the Stone",
+      "Pickle Rick",
+      "Mortynight Run",
+      "The Rickchurian Mortydate"
+    ],
+    "answer": "Rickmancing the Stone"
+  },
+  {
+    "id": 198,
+    "question": "In 'Total Rickall', welches psychologische Konzept nutzen die Parasiten, um in die Familie einzudringen? (Var 198)",
+    "options": [
+      "Die schnelle Replikation",
+      "Die Manipulation gemeinsamer Erinnerungen",
+      "Die nahtlose Integration ins Familienleben",
+      "Das selektive Löschen traumatischer Ereignisse"
+    ],
+    "answer": "Die Manipulation gemeinsamer Erinnerungen"
+  },
+  {
+    "id": 199,
+    "question": "Welches wiederkehrende Motiv fasst die Absurdität des Lebens aus Ricks Perspektive am besten zusammen? (Var 199)",
+    "options": [
+      "Interdimensionale Reisen",
+      "Existentieller Nihilismus",
+      "Zufällige Schlagworte",
+      "Kosmische Bedeutungslosigkeit"
+    ],
+    "answer": "Existentieller Nihilismus"
+  },
+  {
+    "id": 200,
+    "question": "In der übergreifenden Erzählung von Rick and Morty, welchen Kommentar gibt es über die Natur wissenschaftlichen Fortschritts? (Var 200)",
+    "options": [
+      "Er ist von Natur aus selbstzerstörerisch",
+      "Er führt zu unbeabsichtigten Konsequenzen",
+      "Er ist ein Werkzeug zur Befreiung",
+      "Er überbrückt die Kluft zwischen Realität und Fiktion"
+    ],
+    "answer": "Er führt zu unbeabsichtigten Konsequenzen"
+  },
+ {
+    "id": 201,
+    "question": "In 'The Old Man and the Seat', welches einzigartige Element integriert Rick in sein privates Toilettendesign, um absolute Privatsphäre zu gewährleisten?",
+    "options": [
+      "Ein Quantenverschlüsselungssystem",
+      "Ein dimensionsübergreifender Rissmechanismus",
+      "Ein KI-Überwachungssystem",
+      "Ein Selbstzerstörungsprotokoll"
+    ],
+    "answer": "Ein dimensionsübergreifender Rissmechanismus"
+  },
+  {
+    "id": 202,
+    "question": "In 'The ABC's of Beth', welche metaphorische Rolle spielt Froopyland im Hinblick auf Beths innere Konflikte?",
+    "options": [
+      "Es repräsentiert ihre verlorene kindliche Unschuld",
+      "Es symbolisiert chaotische Kreativität",
+      "Es spiegelt ihren Kampf mit Identität und Kontrolle wider",
+      "Es ist eine Utopie, die sie zu erschaffen versucht"
+    ],
+    "answer": "Es spiegelt ihren Kampf mit Identität und Kontrolle wider"
+  },
+  {
+    "id": 203,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches Paradoxon wird durch Mortys wiederholte Versuche, seine Zukunft zu ändern, hervorgehoben?",
+    "options": [
+      "Zeitliche Trägheit",
+      "Bootstrap-Paradoxon",
+      "Unendliche Rekursion",
+      "Prädestinationsparadoxon"
+    ],
+    "answer": "Prädestinationsparadoxon"
+  },
+  {
+    "id": 204,
+    "question": "In 'Vindicators 3: The Return of Worldender', welche zugrunde liegende Botschaft vermittelt Rick über Heldentum?",
+    "options": [
+      "Es ist von Natur aus selbstzerstörerisch",
+      "Es führt zu unbeabsichtigten Konsequenzen",
+      "Es ist ein von gesellschaftlichen Normen konstruiertes Schauspiel",
+      "Es überbrückt die Kluft zwischen Realität und Fiktion"
+    ],
+    "answer": "Es ist von Natur aus selbstzerstörerisch"
+  },
+  {
+    "id": 205,
+    "question": "In 'The Rickshank Rickdemption', welche philosophische Haltung drückt Rick in Bezug auf Realität und Freiheit aus?",
+    "options": [
+      "Realität ist eine Illusion und Freiheit ein Geisteszustand",
+      "Alle Realitäten sind gleichermaßen gültig und Freiheit ist relativ",
+      "Wahre Freiheit ist das Fehlen von Konsequenzen",
+      "Existenz ist bedeutungslos ohne persönliche Verantwortung"
+    ],
+    "answer": "Alle Realitäten sind gleichermaßen gültig und Freiheit ist relativ"
+  },
+  {
+    "id": 206,
+    "question": "In 'Rickmancing the Stone', welches zugrunde liegende Thema wird durch die Darstellung einer postapokalyptischen Gesellschaft vermittelt?",
+    "options": [
+      "Die Härte des Überlebens",
+      "Die Widerstandsfähigkeit des menschlichen Geistes",
+      "Die Unvermeidlichkeit des gesellschaftlichen Zusammenbruchs",
+      "Die Rückgewinnung verlorener Identität"
+    ],
+    "answer": "Die Härte des Überlebens"
+  },
+  {
+    "id": 207,
+    "question": "In 'Pickle Rick', was symbolisiert Ricks Verwandlung über die oberflächliche Absurdität hinaus am kritischsten in Bezug auf seine familiären Beziehungen?",
+    "options": [
+      "Ein verzweifelter Versuch, unabhängig zu werden",
+      "Seine Weigerung, sich emotional zu öffnen",
+      "Eine Erkundung von Selbstzerstörung",
+      "Eine Manifestation versteckter Verletzlichkeit"
+    ],
+    "answer": "Seine Weigerung, sich emotional zu öffnen"
+  },
+  {
+    "id": 208,
+    "question": "In 'The Whirly Dirly Conspiracy', was enthüllt Ricks Entscheidung, Jerry in das Abenteuer einzubeziehen, letztlich über seinen Charakter?",
+    "options": [
+      "Seine zugrunde liegende Unsicherheit",
+      "Seinen Bedarf an Bestätigung",
+      "Sein Streben nach echter Verbindung",
+      "Seine Gleichgültigkeit gegenüber der Familie"
+    ],
+    "answer": "Seine zugrunde liegende Unsicherheit"
+  },
+  {
+    "id": 209,
+    "question": "In 'Close Rick-counters of the Rick Kind', was ist der primäre philosophische Konflikt zwischen den verschiedenen Ricks?",
+    "options": [
+      "Der Kampf zwischen Identitätssuche und Konformität",
+      "Die Natur des freien Willens in einem unendlichen Multiversum",
+      "Das Gleichgewicht zwischen Chaos und Ordnung",
+      "Die Isolation, die mit Genialität einhergeht"
+    ],
+    "answer": "Die Natur des freien Willens in einem unendlichen Multiversum"
+  },
+  {
+    "id": 210,
+    "question": "In 'Morty's Mind Blowers', welche thematische Botschaft wird durch das selektive Löschen von Erinnerungen vermittelt?",
+    "options": [
+      "Erinnerungen definieren die persönliche Identität",
+      "Der Preis der Unwissenheit ist hoch",
+      "Das Unterdrücken von Traumata führt zu Freiheit",
+      "Die zyklische Natur von Schmerz und Erleichterung"
+    ],
+    "answer": "Erinnerungen definieren die persönliche Identität"
+  },
+  {
+    "id": 211,
+    "question": "In 'The Old Man and the Seat', was ist der Hauptgrund, weshalb sich Rick in seiner privaten Toilette isoliert?",
+    "options": [
+      "Um absolute Privatsphäre zu erreichen",
+      "Um über die Natur der Existenz nachzudenken",
+      "Um familiären Verpflichtungen zu entkommen",
+      "Um sich vor der Galactic Federation zu verstecken"
+    ],
+    "answer": "Um absolute Privatsphäre zu erreichen"
+  },
+  {
+    "id": 212,
+    "question": "In 'The Rickshank Rickdemption', welche Strategie verwendet Rick primär, um die Galactic Federation zu täuschen?",
+    "options": [
+      "Einen gut organisierten Lockvogel-Plan",
+      "Einen direkten Angriff auf ihr Hauptquartier",
+      "Technologischen Sabotageakte",
+      "Ein Gedankenkontrollgerät"
+    ],
+    "answer": "Einen gut organisierten Lockvogel-Plan"
+  },
+  {
+    "id": 213,
+    "question": "In 'Pickle Rick', welches zugrunde liegende persönliche Konflikt symbolisiert Ricks Verwandlung in eine Gurke am stärksten?",
+    "options": [
+      "Seine Angst vor Verletzlichkeit",
+      "Sein Kampf mit der eigenen Identität",
+      "Sein Wunsch, von Verantwortung befreit zu sein",
+      "Seine Ablehnung emotionaler Intimität"
+    ],
+    "answer": "Seine Angst vor Verletzlichkeit"
+  },
+  {
+    "id": 214,
+    "question": "In 'Total Rickall', welches narrative Mittel verwischt hauptsächlich die Grenze zwischen echten und eingepflanzten Erinnerungen?",
+    "options": [
+      "Falsche Erinnerungseinpflanzung durch Parasiten",
+      "Nicht-lineares Erzählen",
+      "Surreale visuelle Effekte",
+      "Fragmentierte Charakterperspektiven"
+    ],
+    "answer": "Falsche Erinnerungseinpflanzung durch Parasiten"
+  },
+  {
+    "id": 215,
+    "question": "In 'Rickmancing the Stone', was symbolisiert das postapokalyptische Setting hauptsächlich?",
+    "options": [
+      "Der Zerfall der Gesellschaft",
+      "Ein Neuanfang",
+      "Der Zusammenbruch der sozialen Ordnung",
+      "Umweltvernachlässigung"
+    ],
+    "answer": "Der Zusammenbruch der sozialen Ordnung"
+  },
+  {
+    "id": 216,
+    "question": "In 'The Ricks Must Be Crazy', welches ethische Dilemma ist zentral in Ricks Schaffung eines Miniaturuniversums?",
+    "options": [
+      "Die Ausbeutung empfindungsfähigen Lebens",
+      "Die Störung der natürlichen Ordnung",
+      "Die Untergrabung des freien Willens",
+      "Ressourcenverknappung"
+    ],
+    "answer": "Die Ausbeutung empfindungsfähigen Lebens"
+  },
+  {
+    "id": 217,
+    "question": "In 'Vindicators 3: The Return of Worldender', wie charakterisiert Rick letztlich das Konzept des Heldentums?",
+    "options": [
+      "Als von gesellschaftlichen Normen konstruierten Schwindel",
+      "Als selbstzerstörerische Unternehmung",
+      "Als Form von Eskapismus",
+      "Als essentielles, wenn auch fehlerhaftes Ideal"
+    ],
+    "answer": "Als selbstzerstörerische Unternehmung"
+  },
+  {
+    "id": 218,
+    "question": "In 'The Ricklantis Mixup', welche narrative Technik wird verwendet, um die Komplexität des Multiversums zu beleuchten?",
+    "options": [
+      "Paralleles Erzählen",
+      "Wechselseitiges Ausschneiden zwischen verschiedenen Universen",
+      "Nicht-lineare Rückblenden",
+      "Gleichzeitige Charakterhandlungen"
+    ],
+    "answer": "Wechselseitiges Ausschneiden zwischen verschiedenen Universen"
+  },
+  {
+    "id": 219,
+    "question": "In 'Morty's Mind Blowers', was ist Ricks zugrunde liegende Motivation für das systematische Löschen traumatischer Erinnerungen?",
+    "options": [
+      "Um Morty vor überwältigenden Wahrheiten zu schützen",
+      "Um seine eigene emotionale Last zu verringern",
+      "Um die Kontrolle über seine Abenteuer zu behalten",
+      "Um gefährliche Informationen zu unterdrücken"
+    ],
+    "answer": "Um seine eigene emotionale Last zu verringern"
+  },
+  {
+    "id": 220,
+    "question": "In 'Pickle Rick', welcher Familienangehörige wird am stärksten von Ricks Verwandlung beeinflusst, wodurch zugrunde liegende familiäre Spannungen offengelegt werden?",
+    "options": [
+      "Morty",
+      "Summer",
+      "Beth",
+      "Jerry"
+    ],
+    "answer": "Beth"
+  },
+  {
+    "id": 221,
+    "question": "In 'The Whirly Dirly Conspiracy', was enthüllt das Resort-Setting über Ricks Charakterentwicklung?",
+    "options": [
+      "Eine Konfrontation mit der eigenen Sterblichkeit",
+      "Die Verletzlichkeit seiner persönlichen Beziehungen",
+      "Ein neutraler Ort der Versöhnung",
+      "Eine temporäre Flucht vor der Verantwortung"
+    ],
+    "answer": "Die Verletzlichkeit seiner persönlichen Beziehungen"
+  },
+  {
+    "id": 222,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie wird das Konzept der 'Familie' unter den Ricks dargestellt?",
+    "options": [
+      "Als irrelevant für ihre Existenz",
+      "Als kollektive Identität",
+      "Als Quelle ständiger Konflikte",
+      "Als Rechtfertigung ihres Handelns"
+    ],
+    "answer": "Als kollektive Identität"
+  },
+  {
+    "id": 223,
+    "question": "In 'The ABC's of Beth', welcher innere Konflikt wird symbolisch durch Beths Reise nach Froopyland dargestellt?",
+    "options": [
+      "Ihre Angst vor Verlassenheit",
+      "Ihr Streben nach Unabhängigkeit",
+      "Der Konflikt zwischen Realität und Fantasie",
+      "Ihre Unfähigkeit, ihre eigene Kreativität zu akzeptieren"
+    ],
+    "answer": "Der Konflikt zwischen Realität und Fantasie"
+  },
+  {
+    "id": 224,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches philosophische Konzept wird durch Mortys Begegnungen mit alternativen Zukünften erforscht?",
+    "options": [
+      "Die Unvermeidlichkeit des Schicksals",
+      "Die Zerbrechlichkeit der Wahl",
+      "Die Illusion der Kontrolle",
+      "Die Last des Wissens"
+    ],
+    "answer": "Die Illusion der Kontrolle"
+  },
+  {
+    "id": 225,
+    "question": "In 'Rickmancing the Stone', welches narrative Element dient als Kritik an der modernen Gesellschaft?",
+    "options": [
+      "Es spiegelt den Zusammenbruch moderner Institutionen wider",
+      "Es symbolisiert Umweltschutz",
+      "Es hebt den Mangel an bedeutungsvollen Beziehungen hervor",
+      "Es betont die Hoffnung trotz des Ruins"
+    ],
+    "answer": "Es spiegelt den Zusammenbruch moderner Institutionen wider"
+  },
+  {
+    "id": 226,
+    "question": "In 'The Ricks Must Be Crazy', welches zugrunde liegende Thema wird bezüglich Ricks technologischem Hochmut behandelt?",
+    "options": [
+      "Der Verlust des freien Willens",
+      "Das Opfer unschuldiger Leben",
+      "Die Korruption seiner eigenen Moral",
+      "Die Untergrabung der natürlichen Ordnung"
+    ],
+    "answer": "Das Opfer unschuldiger Leben"
+  },
+  {
+    "id": 227,
+    "question": "In 'Total Rickall', welches Verhalten der Parasiten kommentiert am kritischsten die Natur des kollektiven Gedächtnisses?",
+    "options": [
+      "Ihre schnelle Replikation",
+      "Ihre Manipulation geteilten Erinnerns",
+      "Ihre nahtlose Integration in die Familie",
+      "Das selektive Löschen traumatischer Ereignisse"
+    ],
+    "answer": "Ihre Manipulation geteilten Erinnerns"
+  },
+  {
+    "id": 228,
+    "question": "In 'Pickle Rick', wie fordert Ricks Verwandlung herkömmliche Vorstellungen von Identität heraus?",
+    "options": [
+      "Es verwischt die Grenze zwischen Mensch und Objekt",
+      "Es bestärkt die Vorstellung eines unveränderlichen Selbst",
+      "Es schafft eine Dichotomie zwischen physischem und mentalem Zustand",
+      "Es macht Identität in einem chaotischen Universum irrelevant"
+    ],
+    "answer": "Es verwischt die Grenze zwischen Mensch und Objekt"
+  },
+  {
+    "id": 229,
+    "question": "In 'The Rickchurian Mortydate', welches zugrunde liegende Thema wird im Machtkampf zwischen Rick und dem Präsidenten am deutlichsten dargestellt?",
+    "options": [
+      "Die Vergeblichkeit politischer Autorität",
+      "Der korrumpierende Einfluss von Macht",
+      "Der Zusammenbruch familiärer Loyalität",
+      "Der Konflikt zwischen Genie und Bürokratie"
+    ],
+    "answer": "Der Konflikt zwischen Genie und Bürokratie"
+  },
+  {
+    "id": 230,
+    "question": "In 'Rickmancing the Stone', wie wird das postapokalyptische Setting genutzt, um das Thema der Selbstzerstörung zu illustrieren?",
+    "options": [
+      "Es wird als Symbol für den Zusammenbruch der Gesellschaft dargestellt",
+      "Es zeigt den Zusammenbruch von Familienwerten",
+      "Es steht für den brutalen Überlebenskampf",
+      "Es spiegelt den inneren Kampf um Hoffnung wider"
+    ],
+    "answer": "Es wird als Symbol für den Zusammenbruch der Gesellschaft dargestellt"
+  },
+  {
+    "id": 231,
+    "question": "In 'The Rickshank Rickdemption', welches narrative Element enthüllt Ricks Manipulation von Machtstrukturen am eindrucksvollsten?",
+    "options": [
+      "Seine komplizierte Fluchtstrategie",
+      "Sein Einsatz von Zeit- und Realitätsmanipulation",
+      "Sein strategischer Einsatz von Täuschung",
+      "Seine emotionale Kälte"
+    ],
+    "answer": "Sein strategischer Einsatz von Täuschung"
+  },
+  {
+    "id": 232,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert die Existenz nahezu identischer Ricks über das Thema Individualität?",
+    "options": [
+      "Dass Individualität eine Illusion ist",
+      "Dass Wiederholung die Norm ist",
+      "Dass das Multiversum die Einzigartigkeit aufhebt",
+      "Dass sich Wiederholungsmuster der Vorstellung von Fortschritt widersetzen"
+    ],
+    "answer": "Dass Individualität eine Illusion ist"
+  },
+  {
+    "id": 233,
+    "question": "In 'Morty's Mind Blowers', welche Aussage wird durch die selektive Beibehaltung bestimmter Erinnerungen gemacht?",
+    "options": [
+      "Dass einige Wahrheiten zu schmerzhaft sind",
+      "Dass Erinnerungen das Wesen der Identität ausmachen",
+      "Dass die Vergangenheit unausweichlich ist",
+      "Dass Vergessen befreiend sein kann"
+    ],
+    "answer": "Dass einige Wahrheiten zu schmerzhaft sind"
+  },
+  {
+    "id": 234,
+    "question": "In 'The Rickshank Rickdemption', wie spiegelt Ricks Manipulation seiner Gefangenen seine Weltanschauung wider?",
+    "options": [
+      "Er zeigt seine Verachtung vor Autoritäten",
+      "Er demonstriert seinen Glauben an das Chaos",
+      "Er unterstreicht seinen Einsatz für individuelle Freiheit",
+      "Er reflektiert seine zynische Sicht auf gesellschaftliche Strukturen"
+    ],
+    "answer": "Er reflektiert seine zynische Sicht auf gesellschaftliche Strukturen"
+  },
+  {
+    "id": 235,
+    "question": "In 'Pickle Rick', welches Element der Episode unterstreicht am effektivsten die Absurdität von Ricks wissenschaftlichen Unternehmungen?",
+    "options": [
+      "Die extremen Maßnahmen, die er ergreift, um zu überleben",
+      "Die bizarre Natur seiner Verwandlung",
+      "Die Reaktionen seiner Familie",
+      "Die Gegenüberstellung von Gewalt und Humor"
+    ],
+    "answer": "Die Gegenüberstellung von Gewalt und Humor"
+  },
+  {
+    "id": 236,
+    "question": "In 'The Whirly Dirly Conspiracy', welche Rolle spielt Jerry hauptsächlich?",
+    "options": [
+      "Comic Relief",
+      "Ein Kontrast zu Ricks Zynismus",
+      "Ein Symbol für familiäre Mittelmäßigkeit",
+      "Ein Agent des Wandels"
+    ],
+    "answer": "Ein Symbol für familiäre Mittelmäßigkeit"
+  },
+  {
+    "id": 237,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert das Auftauchen nahezu identischer Ricks über die Selbstuntersuchung?",
+    "options": [
+      "Dass Selbstuntersuchung vergeblich ist",
+      "Dass sie zu einem tieferen Verständnis der eigenen Fehler führt",
+      "Dass sie eine existentielle Krise auslöst",
+      "Dass sie das Unvermeidliche verstärkt"
+    ],
+    "answer": "Dass sie zu einem tieferen Verständnis der eigenen Fehler führt"
+  },
+  {
+    "id": 238,
+    "question": "In 'Rickmancing the Stone', welche Bedeutung hat die Darstellung einer gesetzlosen Umgebung in Bezug auf den menschlichen Zustand?",
+    "options": [
+      "Sie zeigt, dass Chaos der natürliche Zustand der Gesellschaft ist",
+      "Sie deutet darauf hin, dass Ordnung nur eine menschliche Konstruktion ist",
+      "Sie betont, dass Überleben moralische Kompromisse erfordert",
+      "Sie vermittelt, dass Hoffnung selbst in Ruinen existieren kann"
+    ],
+    "answer": "Sie deutet darauf hin, dass Ordnung nur eine menschliche Konstruktion ist"
+  },
+  {
+    "id": 239,
+    "question": "In 'The Rickshank Rickdemption', welche Rolle spielt Humor im Kontext der dunkleren Themen der Episode?",
+    "options": [
+      "Er verharmlost die Konsequenzen",
+      "Er dient als Bewältigungsmechanismus",
+      "Er unterminiert die Ernsthaftigkeit der Erzählung",
+      "Er schafft einen Kontrast, der die Wirkung der dunkleren Themen verstärkt"
+    ],
+    "answer": "Er schafft einen Kontrast, der die Wirkung der dunkleren Themen verstärkt"
+  },
+  {
+    "id": 240,
+    "question": "In 'Morty's Mind Blowers', was deutet die selektive Bewahrung bestimmter Erinnerungen über die Natur von Trauma an?",
+    "options": [
+      "Dass Trauma zyklisch ist",
+      "Dass nur bedeutende Erinnerungen die Identität formen",
+      "Dass das Vergessen als Abwehrmechanismus dient",
+      "Dass das Gehirn instinktiv Schmerz filtert"
+    ],
+    "answer": "Dass das Vergessen als Abwehrmechanismus dient"
+  },
+  {
+    "id": 241,
+    "question": "In 'The Old Man and the Seat', welchen Kommentar liefert die Serie über Technologie und Privatsphäre?",
+    "options": [
+      "Dass Technologie uns weiter isoliert",
+      "Dass Privatsphäre ein Luxus der Vergangenheit ist",
+      "Dass übermäßige Abhängigkeit von Technologie zum gesellschaftlichen Verfall führt",
+      "Dass selbst Genies Zuflucht vor digitaler Überwachung suchen"
+    ],
+    "answer": "Dass selbst Genies Zuflucht vor digitaler Überwachung suchen"
+  },
+  {
+    "id": 242,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', wie wird durch den zyklischen Verlauf von Ereignissen die traditionelle Vorstellung linearer Zeit in Frage gestellt?",
+    "options": [
+      "Es erzeugt ein Gefühl der Vergeblichkeit",
+      "Es betont die Zufälligkeit des Universums",
+      "Es zwingt die Charaktere, sich ihrem Schicksal zu stellen",
+      "Es verwischt den Unterschied zwischen Ursache und Wirkung"
+    ],
+    "answer": "Es verwischt den Unterschied zwischen Ursache und Wirkung"
+  },
+  {
+    "id": 243,
+    "question": "In 'Rickmancing the Stone', welches narrative Element dient als Kritik an der modernen Gesellschaft? (Var 243)",
+    "options": [
+      "Es wirkt als Kritik am modernen Kapitalismus",
+      "Es spiegelt das interne Chaos der Charaktere wider",
+      "Es dient als Metapher für gescheiterte Regierungsführung",
+      "Es illustriert die Unvermeidlichkeit der Zerstörung"
+    ],
+    "answer": "Es spiegelt das interne Chaos der Charaktere wider"
+  },
+  {
+    "id": 244,
+    "question": "In 'The Rickshank Rickdemption', welches Element von Ricks Dialog fasst seine Weltsicht am effektivsten zusammen? (Var 244)",
+    "options": [
+      "Sein häufiger Einsatz nihilistischer Witze",
+      "Seine Verachtung vor Autoritäten",
+      "Seine ausgeklügelten Rationalisierungen",
+      "Seine paradoxe Selbstwahrnehmung"
+    ],
+    "answer": "Seine paradoxe Selbstwahrnehmung"
+  },
+  {
+    "id": 245,
+    "question": "In 'Morty's Mind Blowers', was deutet die Enthüllung unterdrückter Erinnerungen über die Natur der Realität an? (Var 245)",
+    "options": [
+      "Dass Realität veränderlich ist",
+      "Dass Erinnerungen unzuverlässig sind",
+      "Dass die Vergangenheit unausweichlich ist",
+      "Dass Wahrheit subjektiv ist"
+    ],
+    "answer": "Dass Erinnerungen unzuverlässig sind"
+  },
+  {
+    "id": 246,
+    "question": "In 'Pickle Rick', welches thematische Element wird durch die Gegenüberstellung von Ricks Verwandlung und der Krise seiner Familie verstärkt? (Var 246)",
+    "options": [
+      "Der Zusammenbruch familiärer Bindungen",
+      "Die Absurdität des Eskapismus",
+      "Der Konflikt zwischen Intellekt und Emotion",
+      "Die Unvermeidlichkeit der Selbstzerstörung"
+    ],
+    "answer": "Der Konflikt zwischen Intellekt und Emotion"
+  },
+  {
+    "id": 247,
+    "question": "In 'The Whirly Dirly Conspiracy', welche narrative Funktion erfüllt das Resort-Setting hauptsächlich?",
+    "options": [
+      "Es bietet einen Rahmen für Selbstreflexion",
+      "Es schafft einen Raum zur Konfliktlösung",
+      "Es legt zugrunde liegende Unsicherheiten offen",
+      "Es dient als temporäre Flucht vor der Realität"
+    ],
+    "answer": "Es bietet einen Rahmen für Selbstreflexion"
+  },
+  {
+    "id": 248,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert die wiederkehrende Präsenz nahezu identischer Ricks über das Thema Selbstreplikation?",
+    "options": [
+      "Dass alle Ricks im Grunde identisch sind",
+      "Dass Individualität ein Konstrukt ist",
+      "Dass Selbstreplikation die Evolution vorantreibt",
+      "Dass Variation im unendlichen Multiversum unvermeidlich ist"
+    ],
+    "answer": "Dass Individualität ein Konstrukt ist"
+  },
+  {
+    "id": 249,
+    "question": "In 'Rickmancing the Stone', was spiegelt die Darstellung der verwesenden Landschaft hauptsächlich über den menschlichen Zustand wider?",
+    "options": [
+      "Sie spiegelt die emotionale Verödung der Charaktere wider",
+      "Sie symbolisiert den Zusammenbruch der sozialen Ordnung",
+      "Sie reflektiert die Brutalität des Überlebenskampfes",
+      "Sie steht im Kontrast zu einer unterschwelligen Hoffnung"
+    ],
+    "answer": "Sie symbolisiert den Zusammenbruch der sozialen Ordnung"
+  },
+  {
+    "id": 250,
+    "question": "In 'The Ricks Must Be Crazy', welches zugrunde liegende Thema wird durch das Miniaturuniversum-Experiment thematisiert?",
+    "options": [
+      "Die moralische Zweideutigkeit des wissenschaftlichen Fortschritts",
+      "Die Verletzlichkeit empfindungsfähigen Lebens",
+      "Die Unvorhersehbarkeit der Innovation",
+      "Die ethischen Implikationen von Technologie"
+    ],
+    "answer": "Die moralische Zweideutigkeit des wissenschaftlichen Fortschritts"
+  },
+{
+    "id": 251,
+    "question": "In 'Total Rickall', wie wird die Wahrnehmung von Erinnerung und Identität des Zuschauers in Frage gestellt?",
+    "options": [
+      "Indem widersprüchliche Erinnerungen präsentiert werden",
+      "Durch den Aufbau einer nicht-linearen Erzählung",
+      "Indem die Grenzen zwischen Wahrheit und Fiktion verwischt werden",
+      "Indem die selektive Natur der Erinnerung offenbart wird"
+    ],
+    "answer": "Indem die selektive Natur der Erinnerung offenbart wird"
+  },
+  {
+    "id": 252,
+    "question": "In 'Pickle Rick', was symbolisiert Ricks Verwandlung vor allem in Bezug auf die menschlichen Begrenzungen?",
+    "options": [
+      "Den Triumph über körperliche Beschränkungen",
+      "Die Ablehnung gesellschaftlicher Normen",
+      "Die Entmenschlichung des Genies",
+      "Die Absurdität, Schmerz zu entkommen"
+    ],
+    "answer": "Die Entmenschlichung des Genies"
+  },
+  {
+    "id": 253,
+    "question": "In 'The Whirly Dirly Conspiracy', welches narrative Element offenbart am besten die Dysfunktion in Ricks familiären Beziehungen?",
+    "options": [
+      "Die erzwungene Zusammenarbeit mit Jerry",
+      "Der Einsatz von Sarkasmus",
+      "Die Darstellung von Familienstreitigkeiten",
+      "Der Fokus auf individuelle Isolation"
+    ],
+    "answer": "Die erzwungene Zusammenarbeit mit Jerry"
+  },
+  {
+    "id": 254,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert das wiederkehrende Muster nahezu identischer Ricks?",
+    "options": [
+      "Dass Individualität eine Illusion ist",
+      "Dass Wiederholung die Norm ist",
+      "Dass das Multiversum die Einzigartigkeit aufhebt",
+      "Dass sich Wiederholungsmuster der Vorstellung von Fortschritt widersetzen"
+    ],
+    "answer": "Dass Individualität eine Illusion ist"
+  },
+  {
+    "id": 255,
+    "question": "In 'Rickmancing the Stone', was spiegelt die trostlose Umgebung hauptsächlich über die menschliche Natur wider?",
+    "options": [
+      "Die Brutalität des Überlebenskampfes",
+      "Die Hoffnungslosigkeit des Daseins",
+      "Der Zusammenbruch der sozialen Ordnung",
+      "Die Unbeständigkeit des Selbst"
+    ],
+    "answer": "Der Zusammenbruch der sozialen Ordnung"
+  },
+  {
+    "id": 256,
+    "question": "In 'The Rickshank Rickdemption', welche rhetorische Strategie fasst Ricks Verachtung gegenüber institutioneller Autorität am besten zusammen?",
+    "options": [
+      "Satirischer Spott",
+      "Logische Argumentation",
+      "Emotionaler Appell",
+      "Ironische Selbstabwertung"
+    ],
+    "answer": "Satirischer Spott"
+  },
+  {
+    "id": 257,
+    "question": "In 'Morty's Mind Blowers', wie wird die Zuverlässigkeit der Erinnerung grundlegend in Frage gestellt?",
+    "options": [
+      "Indem gezeigt wird, dass Erinnerungen willkürlich manipuliert werden können",
+      "Durch den Aufbau einer nicht-linearen Erzählstruktur",
+      "Durch den Einsatz surrealer visueller Effekte",
+      "Durch den Vergleich von Erinnerungen verschiedener Charaktere"
+    ],
+    "answer": "Indem gezeigt wird, dass Erinnerungen willkürlich manipuliert werden können"
+  },
+  {
+    "id": 258,
+    "question": "In 'Pickle Rick', welche tiefere metaphorische Implikation wird durch Ricks extreme Verwandlung angedeutet?",
+    "options": [
+      "Dass Identität an körperliche Form gebunden ist",
+      "Dass das Selbst über die physische Form hinausgeht",
+      "Dass menschliche Begrenzungen überwunden werden können",
+      "Dass Transformation immer schmerzhaft ist"
+    ],
+    "answer": "Dass das Selbst über die physische Form hinausgeht"
+  },
+  {
+    "id": 259,
+    "question": "In 'The Whirly Dirly Conspiracy', was suggeriert die erzwungene Zusammenarbeit mit Jerry über menschliche Verbindungen?",
+    "options": [
+      "Dass menschliche Verbindung oberflächlich ist",
+      "Dass Zusammenarbeit notwendig, aber oft unfreiwillig ist",
+      "Dass Menschen trotz aller Unterschiede verbunden sind",
+      "Dass familiäre Bindungen immer problematisch sind"
+    ],
+    "answer": "Dass Zusammenarbeit notwendig, aber oft unfreiwillig ist"
+  },
+  {
+    "id": 260,
+    "question": "In 'Close Rick-counters of the Rick Kind', welche philosophische Frage wirft das wiederkehrende Auftauchen nahezu identischer Ricks auf?",
+    "options": [
+      "Was definiert Individualität?",
+      "Ist freier Wille nur eine Illusion?",
+      "Führt Replikation zur Perfektion?",
+      "Bedeuten Ähnlichkeiten ein geteiltes Schicksal?"
+    ],
+    "answer": "Was definiert Individualität?"
+  },
+  {
+    "id": 261,
+    "question": "In 'Rickmancing the Stone', wie spiegelt der Zusammenbruch gesellschaftlicher Strukturen die inneren Konflikte der Charaktere wider?",
+    "options": [
+      "Indem äußere Umstände innere Zustände widerspiegeln",
+      "Indem der Verlust von Ordnung die innere Zerbrechlichkeit offenlegt",
+      "Indem der Konflikt um Freiheit betont wird",
+      "Indem die Charaktere ihre eigenen Dämonen konfrontieren"
+    ],
+    "answer": "Indem äußere Umstände innere Zustände widerspiegeln"
+  },
+  {
+    "id": 262,
+    "question": "In 'The Rickshank Rickdemption', welches Element von Ricks Fluchtplan spiegelt am besten seine Sicht auf Schicksal und Kontrolle wider?",
+    "options": [
+      "Sein Einsatz von Täuschung",
+      "Seine nonchalante Haltung gegenüber den Gefangenen",
+      "Die Komplexität des Plans",
+      "Sein Vertrauen in die eigene Genialität"
+    ],
+    "answer": "Sein Einsatz von Täuschung"
+  },
+  {
+    "id": 263,
+    "question": "In 'Morty's Mind Blowers', welche methodische Herangehensweise wird genutzt, um die Zuverlässigkeit der Erinnerung in Frage zu stellen?",
+    "options": [
+      "Die willkürliche Manipulation von Erinnerungen",
+      "Der Aufbau einer nicht-linearen Erzählstruktur",
+      "Der Einsatz surrealer visueller Effekte",
+      "Der Vergleich von Erinnerungen verschiedener Charaktere"
+    ],
+    "answer": "Die willkürliche Manipulation von Erinnerungen"
+  },
+  {
+    "id": 264,
+    "question": "In 'Pickle Rick', welche tiefere Bedeutung wird Ricks Findigkeit während seiner Verwandlung zugeschrieben?",
+    "options": [
+      "Sie demonstriert seinen Überlebensinstinkt",
+      "Sie unterstreicht seine Fähigkeit, über körperliche Grenzen hinauszugehen",
+      "Sie symbolisiert die Dualität von Genie und Wahnsinn",
+      "Sie zeigt, dass konventionelle Lösungen ineffektiv sind"
+    ],
+    "answer": "Sie symbolisiert die Dualität von Genie und Wahnsinn"
+  },
+  {
+    "id": 265,
+    "question": "In 'The Whirly Dirly Conspiracy', welche Rolle spielt das Resort-Setting bei der Erkundung des Themas Freiheit?",
+    "options": [
+      "Es dient als Symbol für Fluchtmöglichkeiten",
+      "Es zeigt, dass Freiheit oft erzwungen wird",
+      "Es betont, dass echte Freiheit durch die Umgebung eingeschränkt ist",
+      "Es unterstreicht, dass die Suche nach Freiheit auch Opfer erfordert"
+    ],
+    "answer": "Es zeigt, dass Freiheit oft erzwungen wird"
+  },
+  {
+    "id": 266,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie wird das Konzept der Sterblichkeit unter den verschiedenen Ricks dargestellt?",
+    "options": [
+      "Als unvermeidliches Schicksal",
+      "Als unwichtiger Faktor",
+      "Als Katalysator für Rebellion",
+      "Als verbindendes Element"
+    ],
+    "answer": "Als unvermeidliches Schicksal"
+  },
+  {
+    "id": 267,
+    "question": "In 'Rickmancing the Stone', welchem narrativen Zweck dient die Darstellung der Einöde hauptsächlich?",
+    "options": [
+      "Sie symbolisiert den Zusammenbruch der gesellschaftlichen Ordnung",
+      "Sie steht als Metapher für den Überlebenskampf",
+      "Sie verdeutlicht den Verlust von Hoffnung",
+      "Sie spiegelt die innere Zerrissenheit der Charaktere wider"
+    ],
+    "answer": "Sie symbolisiert den Zusammenbruch der gesellschaftlichen Ordnung"
+  },
+  {
+    "id": 268,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks kalkulierte Gleichgültigkeit gegenüber seinen Gefängniswärtern am meisten über seinen Charakter?",
+    "options": [
+      "Sein fehlendes Mitgefühl",
+      "Seine Überlegenheit in Intellekt und Strategie",
+      "Seine zynische Einstellung gegenüber Autoritäten",
+      "Sein Desinteresse an seinen Mitgefangenen"
+    ],
+    "answer": "Seine zynische Einstellung gegenüber Autoritäten"
+  },
+  {
+    "id": 269,
+    "question": "In 'Morty's Mind Blowers', welche methodische Herangehensweise wird genutzt, um die Zuverlässigkeit der Erinnerung in Frage zu stellen?",
+    "options": [
+      "Die willkürliche Manipulation von Erinnerungen",
+      "Der Aufbau einer nicht-linearen Erzählstruktur",
+      "Der Einsatz surrealer visueller Effekte",
+      "Der Vergleich von Erinnerungen verschiedener Charaktere"
+    ],
+    "answer": "Die willkürliche Manipulation von Erinnerungen"
+  },
+  {
+    "id": 270,
+    "question": "In 'Pickle Rick', welche philosophische Frage wirft Ricks Weigerung, sich mit seiner Familie auseinanderzusetzen, auf?",
+    "options": [
+      "Ob Isolation Freiheit bedeutet",
+      "Ob Vernachlässigung zu Erlösung führt",
+      "Ob das Vermeiden von emotionaler Nähe eine Strategie ist",
+      "Ob familiäre Bindungen überbewertet werden"
+    ],
+    "answer": "Ob das Vermeiden von emotionaler Nähe eine Strategie ist"
+  },
+  {
+    "id": 271,
+    "question": "In 'The Whirly Dirly Conspiracy', was deutet die erzwungene Kameradschaft zwischen Rick und Jerry über menschliche Verbindungen an?",
+    "options": [
+      "Dass Zusammenarbeit oft unfreiwillig ist",
+      "Dass Familienbande immer stark sind",
+      "Dass Isolation unvermeidlich ist",
+      "Dass echte Verbindung nur in Krisenzeiten entsteht"
+    ],
+    "answer": "Dass Zusammenarbeit oft unfreiwillig ist"
+  },
+  {
+    "id": 272,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie wird das Thema Selbstreflexion durch die Spiegelbilder von Rick erforscht?",
+    "options": [
+      "Durch die Betonung der Wiederholung",
+      "Durch das Aufzeigen der inneren Zerrissenheit",
+      "Durch den Vergleich zwischen verschiedenen Versionen",
+      "Durch das Hervorheben des Mangels an Individualität"
+    ],
+    "answer": "Durch das Aufzeigen der inneren Zerrissenheit"
+  },
+  {
+    "id": 273,
+    "question": "In 'Rickmancing the Stone', welches narrative Element fasst das Thema Überleben in einer postapokalyptischen Welt am besten zusammen?",
+    "options": [
+      "Das rohe, ungefilterte Verhalten der Überlebenden",
+      "Die Darstellung von Ressourcenknappheit",
+      "Die symbolische Bedeutung der Einöde",
+      "Der Kampf um persönliche Würde"
+    ],
+    "answer": "Das rohe, ungefilterte Verhalten der Überlebenden"
+  },
+  {
+    "id": 274,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks Manipulation des Gefängnisumfelds über seine Wahrnehmung der Realität?",
+    "options": [
+      "Dass Realität formbar ist",
+      "Dass er die traditionelle Logik ablehnt",
+      "Dass Kontrolle eine Illusion ist",
+      "Dass sein Genie über alle Umstände triumphiert"
+    ],
+    "answer": "Dass Realität formbar ist"
+  },
+  {
+    "id": 275,
+    "question": "In 'Morty's Mind Blowers', was impliziert das selektive Entfernen von Erinnerungen über die Natur von Trauma?",
+    "options": [
+      "Dass Trauma immer wiederkehrt",
+      "Dass Erinnerungen das Wesen der Identität ausmachen",
+      "Dass das Vergessen als Abwehrmechanismus dient",
+      "Dass das Gehirn Schmerz instinktiv filtert"
+    ],
+    "answer": "Dass das Vergessen als Abwehrmechanismus dient"
+  },
+  {
+    "id": 276,
+    "question": "In 'Pickle Rick', was zeigt Ricks extreme Verwandlung über seine Einstellung zu konventionellen Lösungen?",
+    "options": [
+      "Dass er radikale, unorthodoxe Methoden bevorzugt",
+      "Dass er Einfachheit verabscheut",
+      "Dass er Chaos als Strategie ansieht",
+      "Dass er Erwartungen trotzt"
+    ],
+    "answer": "Dass er radikale, unorthodoxe Methoden bevorzugt"
+  },
+  {
+    "id": 277,
+    "question": "In 'The Whirly Dirly Conspiracy', was enthüllt Ricks Bereitschaft, andere in seine Pläne einzubeziehen, über seinen Charakter?",
+    "options": [
+      "Dass er verzweifelt nach Verbindung sucht",
+      "Dass er pragmatisch ist",
+      "Dass er arrogant ist",
+      "Dass er allein nicht funktionieren kann"
+    ],
+    "answer": "Dass er pragmatisch ist"
+  },
+  {
+    "id": 278,
+    "question": "In 'Close Rick-counters of the Rick Kind', wie dient das Konzept der gespiegelten Identitäten als Kritik an der Selbstreplikation?",
+    "options": [
+      "Dass Replikation zur Stagnation führt",
+      "Dass die Originalität in Frage gestellt wird",
+      "Dass Selbstreplikation die Einzigartigkeit untergräbt",
+      "Dass Wiederholungen unvermeidlich sind"
+    ],
+    "answer": "Dass Selbstreplikation die Einzigartigkeit untergräbt"
+  },
+  {
+    "id": 279,
+    "question": "In 'Rickmancing the Stone', welche symbolische Bedeutung hat der Kampf der Überlebenden in der kargen Einöde?",
+    "options": [
+      "Er steht für den Verlust von Würde",
+      "Er symbolisiert die Härte des Überlebenskampfes",
+      "Er spiegelt den Zusammenbruch der sozialen Ordnung wider",
+      "Er deutet auf eine unterdrückte Hoffnung hin"
+    ],
+    "answer": "Er spiegelt den Zusammenbruch der sozialen Ordnung wider"
+  },
+  {
+    "id": 280,
+    "question": "In 'The Rickshank Rickdemption', wie spiegelt Ricks Manipulation von Machtstrukturen primär seine Ideologie wider?",
+    "options": [
+      "Indem er zeigt, dass individuelle Genialität Institutionen übertrumpft",
+      "Indem er die Unwichtigkeit von Macht demonstriert",
+      "Indem er das Konzept von Kontrolle in Frage stellt",
+      "Indem er betont, dass Macht immer korrumpiert"
+    ],
+    "answer": "Indem er zeigt, dass individuelle Genialität Institutionen übertrumpft"
+  },
+  {
+    "id": 281,
+    "question": "In 'Morty's Mind Blowers', wie stellt das selektive Entfernen von Erinnerungen die Natur von Trauma in Frage?",
+    "options": [
+      "Dass Trauma immer wiederkehrt",
+      "Dass Erinnerungen das Wesen der Identität ausmachen",
+      "Dass das Vergessen als Abwehrmechanismus dient",
+      "Dass das Gehirn Schmerz instinktiv filtert"
+    ],
+    "answer": "Dass das Vergessen als Abwehrmechanismus dient"
+  },
+  {
+    "id": 282,
+    "question": "In 'Pickle Rick', welche zugrunde liegende philosophische Frage wirft die Absurdität von Ricks Verwandlung auf?",
+    "options": [
+      "Ist Identität ausschließlich an die Form gebunden?",
+      "Kann man sich jenseits der physischen Form definieren?",
+      "Sind Transformationen immer schmerzhaft?",
+      "Befreit Absurdität den Menschen?"
+    ],
+    "answer": "Kann man sich jenseits der physischen Form definieren?"
+  },
+  {
+    "id": 283,
+    "question": "In 'The Whirly Dirly Conspiracy', wie wird Humor mit Tragödie kontrastiert, um komplexe Beziehungen zu erkunden?",
+    "options": [
+      "Durch den Wechsel zwischen komischen und ernsten Szenen",
+      "Durch die Integration surrealen Humors in ernste Situationen",
+      "Durch den Einsatz von Sarkasmus in Momenten der Trauer",
+      "Durch das Hervorheben der Absurdität des Lebens"
+    ],
+    "answer": "Durch die Integration surrealen Humors in ernste Situationen"
+  },
+  {
+    "id": 284,
+    "question": "In 'Close Rick-counters of the Rick Kind', was symbolisiert das wiederkehrende Motiv von Spiegeln im Kontext der Selbstexploration?",
+    "options": [
+      "Die Vielfalt des Selbst",
+      "Die Fragmentierung der Identität",
+      "Die Wiederholung des Selbst",
+      "Die Dualität der Existenz"
+    ],
+    "answer": "Die Fragmentierung der Identität"
+  },
+  {
+    "id": 285,
+    "question": "In 'Rickmancing the Stone', was impliziert die Darstellung einer gesetzlosen Umgebung über den menschlichen Zustand?",
+    "options": [
+      "Dass Chaos die natürliche Ordnung ist",
+      "Dass die menschliche Existenz zerbrechlich ist",
+      "Dass das Fehlen von Ordnung die Bedeutungslosigkeit des Menschen offenbart",
+      "Dass soziale Normen lediglich Konstrukte sind"
+    ],
+    "answer": "Dass das Fehlen von Ordnung die Bedeutungslosigkeit des Menschen offenbart"
+  },
+  {
+    "id": 286,
+    "question": "In 'The Rickshank Rickdemption', was suggeriert Ricks aufwendiger Fluchtplan über seine Sicht auf Opfer?",
+    "options": [
+      "Dass Opfer für Freiheit notwendig sind",
+      "Dass persönliche Opfer bedeutungslos sind",
+      "Dass Selbstaufopferung den Triumph des Genies bedeutet",
+      "Dass das Streben nach Freiheit immer mit Verlust einhergeht"
+    ],
+    "answer": "Dass persönliche Opfer bedeutungslos sind"
+  },
+  {
+    "id": 287,
+    "question": "In 'Morty's Mind Blowers', wie wird das Thema unterdrückter Traumata durch die Erzählstruktur vermittelt?",
+    "options": [
+      "Durch Fragmentierung der Erzählung",
+      "Durch das Hervorheben wiederkehrender Erinnerungsfetzen",
+      "Durch den bewussten Aufbau von Narrativlücken",
+      "Durch eine Kombination dieser Ansätze"
+    ],
+    "answer": "Durch eine Kombination dieser Ansätze"
+  },
+  {
+    "id": 288,
+    "question": "In 'Pickle Rick', was offenbart Ricks extreme Verwandlung über die Grenzen der menschlichen Form?",
+    "options": [
+      "Dass die physische Form vergänglich ist",
+      "Dass die wahre Essenz jenseits des Körpers liegt",
+      "Dass Begrenzungen überwunden werden können",
+      "Dass Transformation immer mit Schmerz verbunden ist"
+    ],
+    "answer": "Dass die wahre Essenz jenseits des Körpers liegt"
+  },
+  {
+    "id": 289,
+    "question": "In 'The Whirly Dirly Conspiracy', was deutet die erzwungene Zusammenarbeit mit Jerry über die Dysfunktion in Ricks familiären Beziehungen an?",
+    "options": [
+      "Dass familiäre Bindungen immer problematisch sind",
+      "Dass Zusammenarbeit oft unfreiwillig ist",
+      "Dass Isolation vorherrscht",
+      "Dass Konflikte unausweichlich sind"
+    ],
+    "answer": "Dass Zusammenarbeit oft unfreiwillig ist"
+  },
+  {
+    "id": 290,
+    "question": "In 'Close Rick-counters of the Rick Kind', welche philosophische Frage wirft das wiederkehrende Auftauchen nahezu identischer Ricks auf?",
+    "options": [
+      "Was definiert Individualität?",
+      "Ist freier Wille nur eine Illusion?",
+      "Führt Replikation zur Perfektion?",
+      "Bedeuten Ähnlichkeiten ein geteiltes Schicksal?"
+    ],
+    "answer": "Was definiert Individualität?"
+  },
+  {
+    "id": 291,
+    "question": "In 'Rickmancing the Stone', wie spiegelt der Zusammenbruch gesellschaftlicher Strukturen die inneren Konflikte der Charaktere wider?",
+    "options": [
+      "Indem äußere Umstände innere Zustände widerspiegeln",
+      "Indem der Verlust von Ordnung die innere Zerbrechlichkeit offenlegt",
+      "Indem der Konflikt um Freiheit betont wird",
+      "Indem die Charaktere ihre eigenen Dämonen konfrontieren"
+    ],
+    "answer": "Indem äußere Umstände innere Zustände widerspiegeln"
+  },
+  {
+    "id": 292,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks Manipulation von Zeit und Realität über seine Weltanschauung?",
+    "options": [
+      "Dass Zeit ein formbares Konstrukt ist",
+      "Dass er die traditionelle Logik ablehnt",
+      "Dass Kontrolle eine Illusion ist",
+      "Dass sein Genie alle Umstände überwindet"
+    ],
+    "answer": "Dass Zeit ein formbares Konstrukt ist"
+  },
+  {
+    "id": 293,
+    "question": "In 'Morty's Mind Blowers', wie fordert das Zusammenspiel von Erinnerung und Identität traditionelle Erzählweisen heraus?",
+    "options": [
+      "Indem es die subjektive Natur der Wahrheit zeigt",
+      "Indem es widersprüchliche Erinnerungen präsentiert",
+      "Indem es die Komplexität des Gedächtnisses hervorhebt",
+      "Indem es den Unterschied zwischen Vergangenheit und Gegenwart verwischt"
+    ],
+    "answer": "Indem es die subjektive Natur der Wahrheit zeigt"
+  },
+  {
+    "id": 294,
+    "question": "In 'Pickle Rick', was deutet Ricks extreme Verwandlung über seine Perspektive auf körperliche Beschränkungen an?",
+    "options": [
+      "Dass die physische Form nur ein Gefäß ist",
+      "Dass körperliche Begrenzungen überwunden werden können",
+      "Dass Transformation immer mit Schmerz verbunden ist",
+      "Dass wahre Stärke jenseits des Körpers liegt"
+    ],
+    "answer": "Dass die physische Form nur ein Gefäß ist"
+  },
+  {
+    "id": 295,
+    "question": "In 'The Whirly Dirly Conspiracy', wie wird traditioneller Heldentum kritisiert?",
+    "options": [
+      "Indem gezeigt wird, dass heldenhafte Taten sinnlos sind",
+      "Indem die Schwächen der Helden offenbart werden",
+      "Indem konventionelle Moralvorstellungen unterlaufen werden",
+      "Indem das Ideal des Heldentums verspottet wird"
+    ],
+    "answer": "Indem das Ideal des Heldentums verspottet wird"
+  },
+  {
+    "id": 296,
+    "question": "In 'Close Rick-counters of the Rick Kind', was impliziert die Fülle ähnlicher Ricks über die Individualität im Multiversum?",
+    "options": [
+      "Dass Individualität verwässert wird",
+      "Dass jeder Rick einzigartig ist",
+      "Dass Wiederholung unvermeidlich ist",
+      "Dass Identität ein emergentes Phänomen ist"
+    ],
+    "answer": "Dass Individualität verwässert wird"
+  },
+  {
+    "id": 297,
+    "question": "In 'Rickmancing the Stone', wie kommentiert das Fehlen gesellschaftlicher Ordnung die persönliche Freiheit?",
+    "options": [
+      "Indem es den Preis der Freiheit verdeutlicht",
+      "Indem es zeigt, dass Freiheit ohne Ordnung chaotisch ist",
+      "Indem es betont, dass gesellschaftliche Normen lediglich Konstrukte sind",
+      "Indem es persönliche Freiheit als ultimatives Gut darstellt"
+    ],
+    "answer": "Indem es betont, dass gesellschaftliche Normen lediglich Konstrukte sind"
+  },
+  {
+    "id": 298,
+    "question": "In 'The Rickshank Rickdemption', was offenbart Ricks Manipulation von Machtstrukturen über seine Sicht auf Schicksal und Kontrolle?",
+    "options": [
+      "Dass Schicksal und Kontrolle untrennbar sind",
+      "Dass individuelle Genialität über Institutionen triumphiert",
+      "Dass Macht immer korrumpiert",
+      "Dass Freiheit nur ein Trugbild ist"
+    ],
+    "answer": "Dass individuelle Genialität über Institutionen triumphiert"
+  },
+  {
+    "id": 299,
+    "question": "In 'Morty's Mind Blowers', wie fordert das Zusammenspiel von Erinnerung und Identität traditionelle Erzählweisen heraus?",
+    "options": [
+      "Indem es die subjektive Natur der Wahrheit zeigt",
+      "Indem es widersprüchliche Erinnerungen präsentiert",
+      "Indem es die Komplexität des Gedächtnisses hervorhebt",
+      "Indem es den Unterschied zwischen Vergangenheit und Gegenwart verwischt"
+    ],
+    "answer": "Indem es die subjektive Natur der Wahrheit zeigt"
+  },
+  {
+    "id": 300,
+    "question": "In 'Pickle Rick', welche existenzielle Frage wirft Ricks Verwandlung letztlich über den menschlichen Zustand auf?",
+    "options": [
+      "Ist das physische Dasein notwendig für wahre Freiheit?",
+      "Können menschliche Grenzen überwunden werden?",
+      "Ist Identität ausschließlich an die körperliche Form gebunden?",
+      "Enthüllt extreme Transformation tiefere Wahrheiten?"
+    ],
+    "answer": "Ist Identität ausschließlich an die körperliche Form gebunden?"
+  },
+{
+    "id": 301,
+    "question": "In 'The Old Man and the Seat', welches einzigartige Element integriert Rick in sein privates Toilettendesign, um absolute Privatsphäre zu gewährleisten?",
+    "options": [
+      "Ein Quantenverschlüsselungssystem",
+      "Ein dimensionsübergreifender Rissmechanismus",
+      "Ein KI-Überwachungssystem",
+      "Ein Selbstzerstörungsprotokoll"
+    ],
+    "answer": "Ein dimensionsübergreifender Rissmechanismus"
+  },
+  {
+    "id": 302,
+    "question": "In 'The ABC's of Beth', welche metaphorische Rolle spielt Froopyland in Beths inneren Konflikten?",
+    "options": [
+      "Es repräsentiert ihre verlorene kindliche Unschuld",
+      "Es symbolisiert chaotische Kreativität",
+      "Es spiegelt ihren Kampf mit Identität und Kontrolle wider",
+      "Es ist eine Utopie, die sie erschaffen möchte"
+    ],
+    "answer": "Es spiegelt ihren Kampf mit Identität und Kontrolle wider"
+  },
+  {
+    "id": 303,
+    "question": "In 'Edge of Tomorty: Rick Die Rickpeat', welches Paradoxon wird durch Mortys wiederholte Versuche, seine Zukunft zu ändern, hervorgehoben?",
+    "options": [
+      "Zeitliche Trägheit",
+      "Bootstrap-Paradoxon",
+      "Unendliche Rekursion",
+      "Prädestinationsparadoxon"
+    ],
+    "answer": "Prädestinationsparadoxon"
+  },
+  {
+    "id": 304,
+    "question": "In 'Vindicators 3: The Return of Worldender', was ist der größte Fehler im Ansatz der Vindicators zum Heldentum?",
+    "options": [
+      "Ihre Arroganz und mangelnde Selbstwahrnehmung",
+      "Ihre Abhängigkeit von Technologie",
+      "Ihre Unfähigkeit, als Team zu arbeiten",
+      "Ihr Mangel an Rücksichtnahme auf Zivilisten"
+    ],
+    "answer": "Ihre Arroganz und mangelnde Selbstwahrnehmung"
+  },
+  {
+    "id": 305,
+    "question": "In 'The Rickshank Rickdemption', wie heißt der hybride Charakter, der aus Abraham Lincoln und Adolf Hitler erschaffen wurde?",
+    "options": [
+      "Abradolf Lincler",
+      "Adolibrahm",
+      "Lincoltpig",
+      "Adolfbrad"
+    ],
+    "answer": "Abradolf Lincler"
+  },
+  {
+    "id": 306,
+    "question": "In 'Rickmancing the Stone', was ist die primäre Funktion eines Mr. Meeseeks?",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 307,
+    "question": "In 'Pickle Rick', warum verwandelt sich Rick in eine Gurke?",
+    "options": [
+      "Um Familientherapie zu vermeiden",
+      "Um eine Wette zu gewinnen",
+      "Um ein gefährliches Experiment durchzuführen",
+      "Um Morty zu beeindrucken"
+    ],
+    "answer": "Um Familientherapie zu vermeiden"
+  },
+  {
+    "id": 308,
+    "question": "In 'The Ricks Must Be Crazy', was ist die primäre Energiequelle für Ricks Autobatterie?",
+    "options": [
+      "Ein mini Universum",
+      "Ein Plutoniumreaktor",
+      "Dunkle Materie",
+      "Interdimensionale Kristalle"
+    ],
+    "answer": "Ein mini Universum"
+  },
+  {
+    "id": 309,
+    "question": "In 'Pickle Rick', welches unkonventionelle Material benutzt Rick, um sein Exoskelett zu konstruieren?",
+    "options": [
+      "Rattenkadaver",
+      "Alte Reifen",
+      "Schrottmetall",
+      "Plankton"
+    ],
+    "answer": "Rattenkadaver"
+  },
+  {
+    "id": 310,
+    "question": "In 'Meeseeks and Destroy', welche existenzielle Krise erleben die Mr. Meeseeks?",
+    "options": [
+      "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen",
+      "Ihr schwindendes Dasein",
+      "Gefangen in einer Zeitschleife",
+      "Mangel an Sinn nach Aufgabenabschluss"
+    ],
+    "answer": "Die Unfähigkeit, eine immer schwierigere Aufgabe zu erfüllen"
+  },
+  {
+    "id": 311,
+    "question": "In 'The Rickshank Rickdemption', welche Bedeutung hat die Zahl '42' als Easter Egg?",
+    "options": [
+      "Es ist Ricks geheimer Code",
+      "Es verweist auf 'The Hitchhiker's Guide to the Galaxy'",
+      "Es repräsentiert die Anzahl der Universen",
+      "Es symbolisiert unendliche Möglichkeiten"
+    ],
+    "answer": "Es verweist auf 'The Hitchhiker's Guide to the Galaxy'"
+  },
+  {
+    "id": 312,
+    "question": "In 'Anatomy Park', welcher versteckte Hinweis ist eine Anspielung auf eine beliebte Fantasy-Serie?",
+    "options": [
+      "Ein Poster eines berühmten Fantasy-Autors",
+      "Ein Buch mit dem Titel 'Infinite Universes'",
+      "Ein subtiler visueller Hinweis",
+      "Der Name eines Charakters"
+    ],
+    "answer": "Ein subtiler visueller Hinweis"
+  },
+  {
+    "id": 313,
+    "question": "Auf welchen Film spielt ein verstecktes Nummernschild an, das als Easter Egg dient?",
+    "options": [
+      "Blade Runner",
+      "Star Wars",
+      "The Matrix",
+      "Back to the Future"
+    ],
+    "answer": "Blade Runner"
+  },
+  {
+    "id": 314,
+    "question": "Welche wiederkehrende Zahl ist eine Anspielung auf 'The Hitchhiker's Guide to the Galaxy'?",
+    "options": [
+      "7",
+      "42",
+      "137",
+      "101"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 315,
+    "question": "In 'Anatomy Park', welche Fantasy-Serie wird durch einen visuellen Hinweis subtil referenziert?",
+    "options": [
+      "Harry Potter",
+      "Der Herr der Ringe",
+      "Game of Thrones",
+      "Die Chroniken von Narnia"
+    ],
+    "answer": "Harry Potter"
+  },
+  {
+    "id": 316,
+    "question": "Welcher versteckte Hinweis in Rick and Morty ist eine Hommage an Quentin Tarantino?",
+    "options": [
+      "Ein Dialog eines Charakters",
+      "Ein Hintergrundplakat",
+      "Ein Nummernschild",
+      "Ein verstecktes Tattoo"
+    ],
+    "answer": "Ein Hintergrundplakat"
+  },
+  {
+    "id": 317,
+    "question": "In mehreren Episoden, welche Zahl erscheint als Easter Egg auf einem digitalen Uhrdisplay?",
+    "options": [
+      "13",
+      "42",
+      "69",
+      "137"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 318,
+    "question": "In 'Close Rick-counters of the Rick Kind', auf welchen Kultfilm wird in einer Dialogzeile angespielt?",
+    "options": [
+      "The Shining",
+      "Fight Club",
+      "A Clockwork Orange",
+      "Donnie Darko"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 319,
+    "question": "Welcher versteckte Easter Egg-Hinweis im Hintergrund verweist auf einen bekannten Comic?",
+    "options": [
+      "Ein versteckter Comic im Regal",
+      "Ein Superhelden-Logo an der Wand",
+      "Eine Anspielung im Namen eines Charakters",
+      "Eine codierte Nachricht auf einem Plakat"
+    ],
+    "answer": "Ein versteckter Comic im Regal"
+  },
+  {
+    "id": 320,
+    "question": "Welches subtile visuelle Element dient als Easter Egg für Fans von Science-Fiction-Literatur?",
+    "options": [
+      "Eine digitale Uhr, die '42' anzeigt",
+      "Ein Buch mit dem Titel 'Infinite Universes'",
+      "Ein Plakat eines berühmten Sci-Fi-Autors",
+      "Ein versteckter Slogan im Hintergrund"
+    ],
+    "answer": "Eine digitale Uhr, die '42' anzeigt"
+  },
+  {
+    "id": 321,
+    "question": "Welches Schlagwort von Rick wurde zu einem viralen Meme?",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Get Schwifty",
+      "Pickle Rick",
+      "I turned myself into a pickle"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 322,
+    "question": "Was ist Mortys Nachname?",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 323,
+    "question": "Welches Gerät benutzt Rick, um zwischen Dimensionen zu reisen?",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 324,
+    "question": "Wer ist Ricks Tochter?",
+    "options": [
+      "Beth",
+      "Summer",
+      "Jessica",
+      "Tammy"
+    ],
+    "answer": "Beth"
+  },
+  {
+    "id": 325,
+    "question": "Wer ist Ricks Enkel?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Tony",
+      "Leo"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 326,
+    "question": "Welcher Charakter ist bekannt für das Schlagwort 'Wubba Lubba Dub Dub'?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 327,
+    "question": "Aus welcher Dimension stammt Rick hauptsächlich?",
+    "options": [
+      "Dimension C-137",
+      "Dimension 35-C",
+      "Dimension J-19",
+      "Dimension K-22"
+    ],
+    "answer": "Dimension C-137"
+  },
+  {
+    "id": 328,
+    "question": "Welcher Charakter verwandelt sich berühmt in eine Gurke?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 329,
+    "question": "Was ist die Hauptfunktion eines Mr. Meeseeks?",
+    "options": [
+      "Eine Aufgabe erfüllen",
+      "Feiern",
+      "Kämpfen",
+      "Lehren"
+    ],
+    "answer": "Eine Aufgabe erfüllen"
+  },
+  {
+    "id": 330,
+    "question": "Welcher Charakter wird oft als unsicher und unbeholfen dargestellt?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 331,
+    "question": "Welche Farbe hat typischerweise Ricks Laborkittel?",
+    "options": [
+      "Weiß",
+      "Blau",
+      "Grün",
+      "Variiert"
+    ],
+    "answer": "Weiß"
+  },
+  {
+    "id": 332,
+    "question": "Wie heißt Mortys Schwarm in der Schule?",
+    "options": [
+      "Jessica",
+      "Tammy",
+      "Beth",
+      "Summer"
+    ],
+    "answer": "Jessica"
+  },
+  {
+    "id": 333,
+    "question": "Welcher Charakter ruft häufig 'Get Schwifty'?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 334,
+    "question": "Mit welcher Organisation gerät Rick häufig in Konflikt?",
+    "options": [
+      "Die Galactic Federation",
+      "Der Rat der Ricks",
+      "Die Vindicators",
+      "Die Mortys"
+    ],
+    "answer": "Die Galactic Federation"
+  },
+  {
+    "id": 335,
+    "question": "Wer ist Ricks bester Freund und ein wiederkehrender außerirdischer Charakter?",
+    "options": [
+      "Birdperson",
+      "Squanchy",
+      "Gearhead",
+      "Mr. Poopybutthole"
+    ],
+    "answer": "Birdperson"
+  },
+  {
+    "id": 336,
+    "question": "Welcher Charakter ist bekannt für seinen sarkastischen Humor und seine Intelligenz?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 337,
+    "question": "Welcher Charakter zeigt oft den Wunsch nach Abenteuern trotz Angst?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Beth",
+      "Summer"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 338,
+    "question": "Was benutzt Rick, um Portale zu erzeugen?",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 339,
+    "question": "Welcher Charakter wird häufig wegen seiner Inkompetenz verspottet?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 340,
+    "question": "Wie steht Rick allgemein zu konventionellen Regeln?",
+    "options": [
+      "Er missachtet sie",
+      "Er hält sich strikt daran",
+      "Er stellt sie in Frage",
+      "Er ignoriert sie"
+    ],
+    "answer": "Er missachtet sie"
+  },
+  {
+    "id": 341,
+    "question": "Welcher Charakter zeigt oft emotionale Verletzlichkeit?",
+    "options": [
+      "Morty",
+      "Rick",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 342,
+    "question": "Was ist das Hauptgenre von Rick and Morty?",
+    "options": [
+      "Sci-fi Komödie",
+      "Drama",
+      "Action",
+      "Horror"
+    ],
+    "answer": "Sci-fi Komödie"
+  },
+  {
+    "id": 343,
+    "question": "Was ist Ricks Beziehung zu Morty?",
+    "options": [
+      "Großvater",
+      "Vater",
+      "Onkel",
+      "Bruder"
+    ],
+    "answer": "Großvater"
+  },
+  {
+    "id": 344,
+    "question": "Welcher Charakter ist bekannt für seine rebellische Haltung?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 345,
+    "question": "Welche Dimension wird in der Serie am häufigsten erwähnt?",
+    "options": [
+      "C-137",
+      "D-99",
+      "J-19",
+      "K-22"
+    ],
+    "answer": "C-137"
+  },
+  {
+    "id": 346,
+    "question": "Welche Farbe haben üblicherweise die Portale, die Rick erzeugt?",
+    "options": [
+      "Grün",
+      "Blau",
+      "Rot",
+      "Lila"
+    ],
+    "answer": "Grün"
+  },
+  {
+    "id": 347,
+    "question": "Welcher Charakter dient häufig als Comic Relief?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 348,
+    "question": "Welcher Charakter ist bekannt für seine außergewöhnliche Intelligenz?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 349,
+    "question": "Was macht Mr. Meeseeks, wenn er eine Aufgabe bekommt?",
+    "options": [
+      "Er erfüllt sie",
+      "Er scheitert",
+      "Er gibt auf",
+      "Er ruft Rick"
+    ],
+    "answer": "Er erfüllt sie"
+  },
+  {
+    "id": 350,
+    "question": "Welcher Charakter ist bekannt dafür, sich in verschiedene Formen zu verwandeln (wie Pickle Rick)?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Birdperson",
+      "Squanchy"
+    ],
+    "answer": "Rick"
+  },
+ {
+    "id": 401,
+    "question": "Welcher Charakter wird als der Comic Relief in der Serie angesehen?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 402,
+    "question": "Wie lautet der Familienname von Rick und Morty?",
+    "options": [
+      "Smith",
+      "Johnson",
+      "Williams",
+      "Brown"
+    ],
+    "answer": "Smith"
+  },
+  {
+    "id": 403,
+    "question": "Welcher Charakter zeigt häufig Verantwortungsbewusstsein?",
+    "options": [
+      "Beth",
+      "Morty",
+      "Summer",
+      "Jerry"
+    ],
+    "answer": "Beth"
+  },
+  {
+    "id": 404,
+    "question": "Welcher Charakter ist bekannt für ihre rebellische Haltung?",
+    "options": [
+      "Summer",
+      "Beth",
+      "Jessica",
+      "Tammy"
+    ],
+    "answer": "Summer"
+  },
+  {
+    "id": 405,
+    "question": "Welches Gerät ist zentral für Ricks interdimensionale Reisen?",
+    "options": [
+      "Portal Gun",
+      "Zeitmaschine",
+      "Teleporter",
+      "Raumschiff"
+    ],
+    "answer": "Portal Gun"
+  },
+  {
+    "id": 406,
+    "question": "Welches gemeinsame Merkmal beschreibt Ricks Persönlichkeit am besten?",
+    "options": [
+      "Bravheit",
+      "Schüchternheit",
+      "Unsicherheit",
+      "Mäßigkeit"
+    ],
+    "answer": "Bravheit"
+  },
+  {
+    "id": 407,
+    "question": "Welcher Charakter gilt allgemein als der intelligenteste?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 408,
+    "question": "Was macht Rick häufig, wenn er vor einer Herausforderung steht?",
+    "options": [
+      "Er erfindet ein Gerät",
+      "Er gerät in Panik",
+      "Er bittet um Hilfe",
+      "Er ignoriert es"
+    ],
+    "answer": "Er erfindet ein Gerät"
+  },
+  {
+    "id": 409,
+    "question": "Welcher Charakter ist bekannt dafür, an Selbstvertrauen zu mangeln?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 410,
+    "question": "Was ist der Hauptfokus von Ricks Abenteuern?",
+    "options": [
+      "Interdimensionale Reisen",
+      "Familiendrama",
+      "Romantische Eskapaden",
+      "Politische Intrigen"
+    ],
+    "answer": "Interdimensionale Reisen"
+  },
+  {
+    "id": 411,
+    "question": "Welches wiederkehrende visuelle Element ist ein Markenzeichen von Ricks Labor?",
+    "options": [
+      "Seltsame Flüssigkeiten",
+      "Leuchtende Geräte",
+      "Futuristische Bildschirme",
+      "Alle oben genannten"
+    ],
+    "answer": "Alle oben genannten"
+  },
+  {
+    "id": 412,
+    "question": "Welcher Charakter wird als humorvoll und selbstironisch dargestellt?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Rick",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 413,
+    "question": "Wie reagiert Morty typischerweise in gefährlichen Situationen?",
+    "options": [
+      "Er gerät in Panik",
+      "Er bleibt ruhig",
+      "Er wird aufgeregt",
+      "Er zeigt Gleichgültigkeit"
+    ],
+    "answer": "Er gerät in Panik"
+  },
+  {
+    "id": 414,
+    "question": "Welcher Charakter kämpft häufig mit Selbstzweifeln?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 415,
+    "question": "Wie steht Rick zur Wissenschaft?",
+    "options": [
+      "Er ist besessen davon",
+      "Er zeigt Desinteresse",
+      "Er ist pragmatisch",
+      "Er ist neugierig"
+    ],
+    "answer": "Er ist besessen davon"
+  },
+  {
+    "id": 416,
+    "question": "Welcher Charakter ist für seinen abenteuerlichen Geist bekannt?",
+    "options": [
+      "Morty",
+      "Jerry",
+      "Beth",
+      "Summer"
+    ],
+    "answer": "Summer"
+  },
+  {
+    "id": 417,
+    "question": "Was ist die häufigste Umgebung für Ricks und Mortys Abenteuer?",
+    "options": [
+      "Verschiedene Dimensionen",
+      "Das Smith-Haus",
+      "Eine futuristische Stadt",
+      "Ein außerirdischer Planet"
+    ],
+    "answer": "Verschiedene Dimensionen"
+  },
+  {
+    "id": 418,
+    "question": "Welcher Charakter wird häufig für seinen Mangel an gesundem Menschenverstand kritisiert?",
+    "options": [
+      "Jerry",
+      "Rick",
+      "Morty",
+      "Beth"
+    ],
+    "answer": "Jerry"
+  },
+  {
+    "id": 419,
+    "question": "Welches Thema ist ein häufiges Motiv im Humor der Serie?",
+    "options": [
+      "Absurdität",
+      "Schwarzer Humor",
+      "Satire",
+      "Alle oben genannten"
+    ],
+    "answer": "Alle oben genannten"
+  },
+  {
+    "id": 420,
+    "question": "Welcher Charakter ist bekannt für das Schlagwort 'Wubba Lubba Dub Dub'?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 421,
+    "question": "Was bedeutet Ricks wiederholte Verwendung des Schlagworts 'Wubba Lubba Dub Dub' laut tieferer Interpretation?",
+    "options": [
+      "Es ist nur ein humorvoller Spruch",
+      "Es verbirgt einen Hilferuf",
+      "Es drückt seine Lebensfreude aus",
+      "Es spiegelt seine Realitätsferne wider"
+    ],
+    "answer": "Es verbirgt einen Hilferuf"
+  },
+  {
+    "id": 422,
+    "question": "Wie stellt das Konzept unendlicher Universen traditionelle Vorstellungen des freien Willens in Frage?",
+    "options": [
+      "Es bekräftigt, dass jede Entscheidung vorbestimmt ist",
+      "Es hebt die Komplexität der Entscheidungsfindung hervor",
+      "Es legt nahe, dass Entscheidungen letztlich bedeutungslos sind",
+      "Es garantiert, dass jedes Ergebnis möglich ist"
+    ],
+    "answer": "Es hebt die Komplexität der Entscheidungsfindung hervor"
+  },
+  {
+    "id": 423,
+    "question": "Was deutet Ricks Ablehnung konventioneller Moral in Bezug auf seine Wahrheitsauffassung an?",
+    "options": [
+      "Dass Wahrheit absolut ist",
+      "Dass Wahrheit subjektiv und fließend ist",
+      "Dass Wahrheit im Multiversum irrelevant ist",
+      "Dass Moral von der Gesellschaft auferlegt wird"
+    ],
+    "answer": "Dass Wahrheit subjektiv und fließend ist"
+  },
+  {
+    "id": 424,
+    "question": "Wie wird interdimensionale Reise als Metapher für persönliche Transformation in der Serie genutzt?",
+    "options": [
+      "Es repräsentiert den Verlust der Identität",
+      "Es symbolisiert endlose Möglichkeiten zur Neuerfindung",
+      "Es ist nur ein erzählerisches Mittel ohne tiefere Bedeutung",
+      "Es deutet auf einen Abstieg ins Chaos hin"
+    ],
+    "answer": "Es symbolisiert endlose Möglichkeiten zur Neuerfindung"
+  },
+  {
+    "id": 425,
+    "question": "Welche Rolle spielt existenzieller Nihilismus in Ricks Weltbild?",
+    "options": [
+      "Er rechtfertigt sein rücksichtsloses Verhalten",
+      "Er untergräbt jegliche auferlegte Bedeutung",
+      "Er gibt ihm einen moralischen Kompass",
+      "Er ermutigt ihn, echte Verbindungen einzugehen"
+    ],
+    "answer": "Er untergräbt jegliche auferlegte Bedeutung"
+  },
+  {
+    "id": 426,
+    "question": "Wie kritisiert die Serie das Konzept von Familie durch die Darstellung dysfunktionaler Beziehungen?",
+    "options": [
+      "Indem sie das Fehlen echter Verbindung hervorhebt",
+      "Indem sie zeigt, dass familiäre Bande unzerbrechlich sind",
+      "Indem sie nicht-traditionelle Familienstrukturen idealisiert",
+      "Indem sie ausschließlich individuellen Ehrgeiz fokussiert"
+    ],
+    "answer": "Indem sie das Fehlen echter Verbindung hervorhebt"
+  },
+  {
+    "id": 427,
+    "question": "Wie trägt die nicht-lineare Erzählstruktur der Serie zur Diskussion über die Natur der Realität bei?",
+    "options": [
+      "Indem sie komplexe Ereignisse vereinfacht",
+      "Indem sie das Verständnis von Zeit in Frage stellt",
+      "Indem sie einen strikten Ursache-Wirkung-Zusammenhang durchsetzt",
+      "Indem sie klare lineare Erklärungen liefert"
+    ],
+    "answer": "Indem sie das Verständnis von Zeit in Frage stellt"
+  },
+  {
+    "id": 428,
+    "question": "Welches philosophische Thema wird durch das wiederkehrende Erscheinen mehrerer Ricks in der Serie aufgeworfen?",
+    "options": [
+      "Was definiert Individualität?",
+      "Gibt es einen überlegenen Rick?",
+      "Teilen alle Ricks dasselbe Schicksal?",
+      "Sind alle Entscheidungen letztlich identisch?"
+    ],
+    "answer": "Was definiert Individualität?"
+  },
+  {
+    "id": 429,
+    "question": "Wie dient Ricks Einsatz von Technologie als Metapher für menschlichen Ehrgeiz und seine Grenzen?",
+    "options": [
+      "Es symbolisiert den unermüdlichen Fortschritt",
+      "Es enthüllt die Hybris, die menschliche Bestrebungen begleitet",
+      "Es zeigt, dass Technologie alle Probleme lösen kann",
+      "Es betont das Potenzial unendlicher Macht"
+    ],
+    "answer": "Es enthüllt die Hybris, die menschliche Bestrebungen begleitet"
+  },
+  {
+    "id": 430,
+    "question": "Welche Aussage macht die Serie über das Verhältnis von Wissenschaft und Moral?",
+    "options": [
+      "Wissenschaft ist völlig von Ethik getrennt",
+      "Wissenschaftlicher Fortschritt erfordert ethische Reflexion",
+      "Moral behindert wissenschaftliche Entdeckungen",
+      "Ethik ist irrelevant auf der Suche nach Wissen"
+    ],
+    "answer": "Wissenschaftlicher Fortschritt erfordert ethische Reflexion"
+  },
+  {
+    "id": 431,
+    "question": "Wie spiegelt Ricks zynisches Verhalten breitere existenzielle Themen in der Serie wider?",
+    "options": [
+      "Es weist auf einen tiefen inneren Konflikt hin",
+      "Es dient rein dem humorvollen Effekt",
+      "Es zeigt seine Akzeptanz eines vorbestimmten Schicksals",
+      "Es hat keine tiefere Bedeutung als Satire"
+    ],
+    "answer": "Es weist auf einen tiefen inneren Konflikt hin"
+  },
+  {
+    "id": 432,
+    "question": "Was impliziert die häufige Darstellung chaotischer, unvorhersehbarer Ereignisse in der Serie?",
+    "options": [
+      "Dass Chaos ein fundamentaler Aspekt der Realität ist",
+      "Dass Ordnung die einzige Wahrheit ist",
+      "Dass Unvorhersehbarkeit ein erzählerisches Mittel ist",
+      "Dass das Universum von Natur aus wohlwollend ist"
+    ],
+    "answer": "Dass Chaos ein fundamentaler Aspekt der Realität ist"
+  },
+  {
+    "id": 433,
+    "question": "Wie stellt das Thema der Erinnerungslöschung die traditionelle Vorstellung von persönlicher Identität in Frage?",
+    "options": [
+      "Indem es beweist, dass Erinnerungen unzuverlässig sind",
+      "Indem es zeigt, dass Identität fluid und konstruiert ist",
+      "Indem es behauptet, dass Erinnerungen unveränderlich sind",
+      "Indem es andeutet, dass Vergessen befreiend ist"
+    ],
+    "answer": "Indem es zeigt, dass Identität fluid und konstruiert ist"
+  },
+  {
+    "id": 434,
+    "question": "Was ist die tiefere Bedeutung von Ricks häufigem Einsatz von schwarzem Humor bei existenziellen Dilemmata?",
+    "options": [
+      "Er verharmlost die Herausforderungen der Existenz",
+      "Er dient als Bewältigungsmechanismus für inneren Schmerz",
+      "Er spiegelt seine aufrichtige Zufriedenheit wider",
+      "Er lenkt von seinem wahren Glück ab"
+    ],
+    "answer": "Er dient als Bewältigungsmechanismus für inneren Schmerz"
+  },
+  {
+    "id": 435,
+    "question": "Wie lädt die Kombination von Absurdität und Tiefsinn im Serienstil die Zuschauer ein, traditionelle Sinn-Erzählungen zu hinterfragen?",
+    "options": [
+      "Indem klare, eindeutige Antworten angeboten werden",
+      "Indem Humor mit tiefgründigen philosophischen Fragen kombiniert wird",
+      "Indem ernste Themen vermieden werden",
+      "Indem etablierte gesellschaftliche Normen bekräftigt werden"
+    ],
+    "answer": "Indem Humor mit tiefgründigen philosophischen Fragen kombiniert wird"
+  },
+  {
+    "id": 436,
+    "question": "In 'The Rickshank Rickdemption', auf welchen berühmten Horrorfilm wird subtil als Easter Egg angespielt?",
+    "options": [
+      "The Shining",
+      "Psycho",
+      "The Exorcist",
+      "Halloween"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 437,
+    "question": "In 'Rick Potion #9', verweist ein verstecktes Easter Egg auf welchen ikonischen Sci-Fi-Film?",
+    "options": [
+      "Blade Runner",
+      "Star Wars",
+      "The Matrix",
+      "Back to the Future"
+    ],
+    "answer": "Blade Runner"
+  },
+  {
+    "id": 438,
+    "question": "Welche wiederkehrende Zahl, die oft als Easter Egg auftaucht, ist eine Anspielung auf 'The Hitchhiker's Guide to the Galaxy'?",
+    "options": [
+      "7",
+      "42",
+      "137",
+      "101"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 439,
+    "question": "In 'Anatomy Park', verweist ein Easter Egg subtil auf welche beliebte Fantasy-Serie?",
+    "options": [
+      "Harry Potter",
+      "Der Herr der Ringe",
+      "Game of Thrones",
+      "Die Chroniken von Narnia"
+    ],
+    "answer": "Harry Potter"
+  },
+  {
+    "id": 440,
+    "question": "Welches versteckte Detail in Rick and Morty ist eine Anspielung auf Quentin Tarantinos Filme?",
+    "options": [
+      "Ein Dialog einer Figur",
+      "Ein Hintergrundplakat",
+      "Eine Nummernschild-Nummer",
+      "Ein verstecktes Tattoo"
+    ],
+    "answer": "Ein Hintergrundplakat"
+  },
+  {
+    "id": 441,
+    "question": "In mehreren Episoden erscheint eine Digitaluhr mit welcher Zahl als Easter Egg?",
+    "options": [
+      "13",
+      "42",
+      "69",
+      "137"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 442,
+    "question": "In 'Close Rick-counters of the Rick Kind', auf welchen Kultfilm bezieht sich eine Dialogzeile?",
+    "options": [
+      "The Shining",
+      "Fight Club",
+      "A Clockwork Orange",
+      "Donnie Darko"
+    ],
+    "answer": "The Shining"
+  },
+  {
+    "id": 443,
+    "question": "Welches versteckte Easter Egg im Hintergrund verweist auf einen bekannten Comic?",
+    "options": [
+      "Ein versteckter Comic im Regal",
+      "Ein Superhelden-Logo an der Wand",
+      "Eine Anspielung im Namen einer Figur",
+      "Eine codierte Nachricht auf einem Plakat"
+    ],
+    "answer": "Ein versteckter Comic im Regal"
+  },
+  {
+    "id": 444,
+    "question": "Welches subtile visuelle Element dient als Easter Egg für Sci-Fi-Literaturfans?",
+    "options": [
+      "Eine Digitaluhr, die '42' anzeigt",
+      "Ein Buch mit dem Titel 'Infinite Universes'",
+      "Ein Plakat eines berühmten Sci-Fi-Autors",
+      "Ein versteckter Slogan im Hintergrund"
+    ],
+    "answer": "Eine Digitaluhr, die '42' anzeigt"
+  },
+  {
+    "id": 445,
+    "question": "In 'Close Rick-counters of the Rick Kind', welcher Easter Egg-Hinweis in der Dialogzeile spielt auf einen berühmten Kultfilm an?",
+    "options": [
+      "Eine Anspielung auf 'The Shining'",
+      "Eine Erwähnung von 'Blade Runner'",
+      "Ein Verweis auf 'Pulp Fiction'",
+      "Ein Rückbezug auf '2001: A Space Odyssey'"
+    ],
+    "answer": "Eine Anspielung auf 'The Shining'"
+  },
+  {
+    "id": 446,
+    "question": "Welches Schlagwort von Rick wurde zu einem viralen Meme im Internet?",
+    "options": [
+      "Wubba Lubba Dub Dub",
+      "Get Schwifty",
+      "Pickle Rick",
+      "I turned myself into a pickle"
+    ],
+    "answer": "Wubba Lubba Dub Dub"
+  },
+  {
+    "id": 447,
+    "question": "Welcher Charakters verwirrter Gesichtsausdruck wird häufig als Reaktions-Meme verwendet?",
+    "options": [
+      "Morty",
+      "Rick",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Morty"
+  },
+  {
+    "id": 448,
+    "question": "Welche Episode löste aufgrund ihrer absurden Handlung mit einer Gurkenverwandlung ein virales Meme aus?",
+    "options": [
+      "Pickle Rick",
+      "Total Rickall",
+      "Close Rick-counters of the Rick Kind",
+      "Rickmancing the Stone"
+    ],
+    "answer": "Pickle Rick"
+  },
+  {
+    "id": 449,
+    "question": "Welcher Charakters Verwandlung in eine Gurke wurde zu einem populären Meme und Kultbezug?",
+    "options": [
+      "Rick",
+      "Morty",
+      "Jerry",
+      "Beth"
+    ],
+    "answer": "Rick"
+  },
+  {
+    "id": 450,
+    "question": "Welcher Meme-Slogan aus der Serie wird humorvoll zur Einleitung chaotischer Ereignisse genutzt?",
+    "options": [
+      "Get Schwifty",
+      "Wubba Lubba Dub Dub",
+      "Pickle Rick",
+      "Time to get schwifty"
+    ],
+    "answer": "Get Schwifty"
+  },
+
+
+  {
+    "id": 451,
+    "question": "In 'The Rickshank Rickdemption' gibt es eine versteckte Notiz, in der Rick einen kryptischen Code erwähnt. Welcher Code wird dort angedeutet?",
+    "options": [
+      "R-137",
+      "LMN-42",
+      "XJ9-47",
+      "QW3-19"
+    ],
+    "answer": "LMN-42"
+  },
+  {
+    "id": 452,
+    "question": "Welche mathematische Konstante wird in mehreren Anspielungen als Symbol für die Unendlichkeit des Multiversums verwendet?",
+    "options": [
+      "π (Pi)",
+      "e",
+      "φ (Phi)",
+      "√2"
+    ],
+    "answer": "φ (Phi)"
+  },
+  {
+    "id": 453,
+    "question": "In der Episode 'Anatomy Park' gibt es einen obskuren Hinweis auf eine chemische Verbindung. Welche Verbindung wird subtil erwähnt?",
+    "options": [
+      "Aspirin",
+      "Caffeine",
+      "Acetaminophen",
+      "Serotonin"
+    ],
+    "answer": "Serotonin"
+  },
+  {
+    "id": 454,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen Hinweis auf die Anzahl der parallelen Ricks. Wie viele Ricks werden in einer einzigen Szene als minimale Anzahl gezeigt?",
+    "options": [
+      "13",
+      "27",
+      "42",
+      "101"
+    ],
+    "answer": "27"
+  },
+  {
+    "id": 455,
+    "question": "Welcher obskure philosophische Begriff wird in 'Total Rickall' als subtiler Kommentar zur Erinnerungskultur verwendet?",
+    "options": [
+      "Epistemologie",
+      "Skeptizismus",
+      "Ontologie",
+      "Existenzialismus"
+    ],
+    "answer": "Existenzialismus"
+  },
+  {
+    "id": 456,
+    "question": "In 'Pickle Rick' gibt es eine versteckte Anspielung auf klassische Literatur. Welcher Roman wird durch eine subtile Referenz erwähnt?",
+    "options": [
+      "Moby Dick",
+      "1984",
+      "Ulysses",
+      "Faust"
+    ],
+    "answer": "Faust"
+  },
+  {
+    "id": 457,
+    "question": "In 'The Ricks Must Be Crazy' wird eine Miniaturwelt erschaffen. Welche physikalische Theorie wird implizit als Grundlage für diese Schöpfung genannt?",
+    "options": [
+      "Relativitätstheorie",
+      "Quantenmechanik",
+      "Stringtheorie",
+      "Chaos-Theorie"
+    ],
+    "answer": "Quantenmechanik"
+  },
+  {
+    "id": 458,
+    "question": "Welche obskure wissenschaftliche Disziplin wird in 'Rickmancing the Stone' als Inspiration für Ricks Experimente erwähnt?",
+    "options": [
+      "Astrobiologie",
+      "Neuroinformatik",
+      "Molekulare Gastronomie",
+      "Quantengravitation"
+    ],
+    "answer": "Quantengravitation"
+  },
+  {
+    "id": 459,
+    "question": "In einer versteckten Szene von 'The Rickshank Rickdemption' ist ein Zahlencode zu sehen. Welcher Code taucht dort auf und wird als Hinweis auf die Zeitlichkeit interpretiert?",
+    "options": [
+      "101",
+      "137",
+      "404",
+      "007"
+    ],
+    "answer": "137"
+  },
+  {
+    "id": 460,
+    "question": "Welches seltene literarische Stilmittel wird in 'Morty's Mind Blowers' verwendet, um den fragmentierten Charakter von Erinnerungen darzustellen?",
+    "options": [
+      "Stream of Consciousness",
+      "Metafiktion",
+      "Intertextualität",
+      "Paradoxie"
+    ],
+    "answer": "Stream of Consciousness"
+  },
+  {
+    "id": 461,
+    "question": "In 'Vindicators 3: The Return of Worldender' gibt es eine subtile Anspielung auf klassische Heldengeschichten. Welcher antike Held wird in einem Vergleich erwähnt?",
+    "options": [
+      "Achilles",
+      "Herkules",
+      "Odysseus",
+      "Theseus"
+    ],
+    "answer": "Odysseus"
+  },
+  {
+    "id": 462,
+    "question": "Welches seltene astronomische Phänomen wird in 'Interdimensional Cable 2: Tempting Fate' als Metapher für die unendlichen Möglichkeiten des Multiversums verwendet?",
+    "options": [
+      "Schwarze Löcher",
+      "Supernovae",
+      "Quasare",
+      "Neutronensterne"
+    ],
+    "answer": "Quasare"
+  },
+  {
+    "id": 463,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein verstecktes Gerät erwähnt, das zur Manipulation von Wahrnehmungen dient. Wie heißt dieses Gerät?",
+    "options": [
+      "Perzeptionsmodulator",
+      "Realitätsdistorter",
+      "Sensormischer",
+      "Illusionsgenerator"
+    ],
+    "answer": "Illusionsgenerator"
+  },
+  {
+    "id": 464,
+    "question": "In 'Morty's Mind Blowers' gibt es einen obskuren Hinweis auf einen parallelen Zeitstrang. Welcher Begriff wird verwendet, um diesen Zeitstrang zu beschreiben?",
+    "options": [
+      "Chrono-Divergenz",
+      "Temporal Rift",
+      "Zeitkaskade",
+      "Synchronizitätsbruch"
+    ],
+    "answer": "Chrono-Divergenz"
+  },
+  {
+    "id": 465,
+    "question": "In 'Anatomy Park' wird eine veränderte biologische Struktur dargestellt. Welche ungewöhnliche Funktion wird dieser Struktur zugeschrieben?",
+    "options": [
+      "Nährstoffsynthese",
+      "Gedächtnisspeicherung",
+      "Selbstreparatur",
+      "Energieumwandlung"
+    ],
+    "answer": "Gedächtnisspeicherung"
+  },
+  {
+    "id": 466,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen obskuren mathematischen Hinweis. Welche abstrakte mathematische Struktur wird als Anspielung auf Unendlichkeit genutzt?",
+    "options": [
+      "E=mc²",
+      "Fibonacci-Folge",
+      "Mandelbrot-Menge",
+      "Pythagoras' Theorem"
+    ],
+    "answer": "Mandelbrot-Menge"
+  },
+  {
+    "id": 467,
+    "question": "In 'Total Rickall' wird ein Paradoxon thematisiert. Welcher paradoxe Ausdruck wird verwendet, um die Unmöglichkeit klarer Erinnerungen zu beschreiben?",
+    "options": [
+      "Das Paradoxon des Vergessens",
+      "Das Erinnerungsdilemma",
+      "Der Widerspruch der Erinnerung",
+      "Das unlösbare Gedächtnisparadox"
+    ],
+    "answer": "Das unlösbare Gedächtnisparadox"
+  },
+  {
+    "id": 468,
+    "question": "In 'Pickle Rick' gibt es eine subtile Anspielung auf ein klassisches Science-Fiction-Werk. Welches Werk wird implizit erwähnt?",
+    "options": [
+      "Dune",
+      "Neuromancer",
+      "Solaris",
+      "Foundation"
+    ],
+    "answer": "Dune"
+  },
+  {
+    "id": 469,
+    "question": "In 'The Rickchurian Mortydate' wird ein komplexer politischer Konflikt angedeutet. Welcher politische Begriff wird dabei in einem obskuren Dialog verwendet?",
+    "options": [
+      "Anarchie",
+      "Plutokratie",
+      "Oligarchie",
+      "Technokratie"
+    ],
+    "answer": "Technokratie"
+  },
+  {
+    "id": 470,
+    "question": "Welche seltene, interdisziplinäre Wissenschaft wird in 'Meeseeks and Destroy' als Grundlage für Ricks Experimente erwähnt?",
+    "options": [
+      "Neurophilosophie",
+      "Biokomplexität",
+      "Kognitionswissenschaft",
+      "Quantenpsychologie"
+    ],
+    "answer": "Quantenpsychologie"
+  },
+  {
+    "id": 471,
+    "question": "In 'Rickmancing the Stone' wird ein obskurer geologischer Begriff als Metapher verwendet. Welcher Begriff wird dafür genutzt?",
+    "options": [
+      "Metamorphose",
+      "Verwerfung",
+      "Erosion",
+      "Subduktion"
+    ],
+    "answer": "Subduktion"
+  },
+  {
+    "id": 472,
+    "question": "In 'The Rickshank Rickdemption' wird ein kryptischer Name für eine geheime Organisation erwähnt. Wie lautet dieser Name?",
+    "options": [
+      "Die Schattenricks",
+      "Das Multiversum-Konsortium",
+      "Die unendliche Verschwörung",
+      "Die Nexus-Allianz"
+    ],
+    "answer": "Die Nexus-Allianz"
+  },
+  {
+    "id": 473,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen subtilen Hinweis auf einen berühmten Künstler. Welcher Künstler wird implizit referenziert?",
+    "options": [
+      "Picasso",
+      "Dali",
+      "Van Gogh",
+      "Warhol"
+    ],
+    "answer": "Dali"
+  },
+  {
+    "id": 474,
+    "question": "In 'Morty's Mind Blowers' wird ein abstraktes Konzept der Identität erörtert. Welcher Begriff wird verwendet, um die fluiden Grenzen des Selbst zu beschreiben?",
+    "options": [
+      "Metamorphose",
+      "Transzendenz",
+      "Ambiguität",
+      "Inkonstanz"
+    ],
+    "answer": "Ambiguität"
+  },
+  {
+    "id": 475,
+    "question": "In 'Vindicators 3: The Return of Worldender' wird ein obskurer Hinweis auf klassische Mythologie gegeben. Welcher mythologische Held wird in einem Vergleich erwähnt?",
+    "options": [
+      "Herakles",
+      "Perseus",
+      "Jason",
+      "Theseus"
+    ],
+    "answer": "Jason"
+  },
+  {
+    "id": 476,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein kryptischer Kanalname gezeigt. Welcher dieser Namen taucht in einem kurzen Blick auf?",
+    "options": [
+      "Xenon TV",
+      "Nebula Network",
+      "Cosmic Relay",
+      "Quantum Broadcast"
+    ],
+    "answer": "Quantum Broadcast"
+  },
+  {
+    "id": 477,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein selten verwendeter Begriff zur Beschreibung von Raum-Zeit-Krümmung genutzt. Welcher Begriff ist das?",
+    "options": [
+      "Graviton",
+      "Singularität",
+      "Hyperboloid",
+      "Geodäsie"
+    ],
+    "answer": "Singularität"
+  },
+  {
+    "id": 478,
+    "question": "In 'Pickle Rick' gibt es eine subtile Anspielung auf eine antike Philosophie. Welche Philosophie wird implizit erwähnt?",
+    "options": [
+      "Stoizismus",
+      "Epikureismus",
+      "Skeptizismus",
+      "Existenzialismus"
+    ],
+    "answer": "Stoizismus"
+  },
+  {
+    "id": 479,
+    "question": "In 'Total Rickall' wird ein komplexer Begriff für Wahrnehmungsverzerrung verwendet. Welcher Begriff beschreibt dieses Phänomen?",
+    "options": [
+      "Kognitive Dissonanz",
+      "Illusion der Kontrolle",
+      "Perzeptuelle Verzerrung",
+      "Subjektive Realität"
+    ],
+    "answer": "Kognitive Dissonanz"
+  },
+  {
+    "id": 480,
+    "question": "In 'Anatomy Park' wird eine ungewöhnliche biologische Struktur als Analogie verwendet. Welche Struktur wird als Metapher für das menschliche Nervensystem dargestellt?",
+    "options": [
+      "Ein Netzwerk von Wurzeln",
+      "Ein Spinnennetz",
+      "Ein neuronales Labyrinth",
+      "Ein Geflecht aus Seidenfäden"
+    ],
+    "answer": "Ein neuronales Labyrinth"
+  },
+  {
+    "id": 481,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen Hinweis auf mathematische Unendlichkeit. Welcher Begriff wird verwendet, um diesen Zustand zu beschreiben?",
+    "options": [
+      "Aleph-Null",
+      "Unendlichkeit",
+      "Transfinite Zahlen",
+      "Cantor's Diagonal"
+    ],
+    "answer": "Aleph-Null"
+  },
+  {
+    "id": 482,
+    "question": "In 'The Rickchurian Mortydate' wird ein obskurer Begriff für interstellare Kommunikation erwähnt. Welcher Begriff wird verwendet?",
+    "options": [
+      "Quantenkollaboration",
+      "Telepathische Synchronisation",
+      "Dimensionales Flüstern",
+      "Kosmische Resonanz"
+    ],
+    "answer": "Kosmische Resonanz"
+  },
+  {
+    "id": 483,
+    "question": "In 'Rickmancing the Stone' wird ein obskurer, veralteter wissenschaftlicher Begriff als Metapher verwendet. Welcher Begriff ist das?",
+    "options": [
+      "Phlogiston",
+      "Aether",
+      "Caloric",
+      "Vitalismus"
+    ],
+    "answer": "Aether"
+  },
+  {
+    "id": 484,
+    "question": "In 'The Rickshank Rickdemption' gibt es eine obskure Anspielung auf ein historisches Ereignis. Welches Ereignis wird subtil referenziert?",
+    "options": [
+      "Die Französische Revolution",
+      "Der Fall der Berliner Mauer",
+      "Die Mondlandung",
+      "Die Industrielle Revolution"
+    ],
+    "answer": "Die Mondlandung"
+  },
+  {
+    "id": 485,
+    "question": "In 'Morty's Mind Blowers' wird ein psychologisches Konzept zur Fragmentierung des Gedächtnisses thematisiert. Welcher Begriff wird genutzt?",
+    "options": [
+      "Dissoziation",
+      "Repression",
+      "Regression",
+      "Projektion"
+    ],
+    "answer": "Dissoziation"
+  },
+  {
+    "id": 486,
+    "question": "In 'Vindicators 3: The Return of Worldender' wird ein obskurer Begriff für heldenhafte Selbstaufopferung verwendet. Welcher Begriff wird erwähnt?",
+    "options": [
+      "Altruismus",
+      "Selbstmarter",
+      "Eid der Helden",
+      "Opfermut"
+    ],
+    "answer": "Altruismus"
+  },
+  {
+    "id": 487,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver Artikel erwähnt, der eine interstellare Währung beschreibt. Wie heißt diese Währung?",
+    "options": [
+      "Galaktische Credits",
+      "Dimensional Coins",
+      "Cosmic Tokens",
+      "Quantum Quids"
+    ],
+    "answer": "Quantum Quids"
+  },
+  {
+    "id": 488,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein naturwissenschaftliches Phänomen als Metapher genutzt. Welches Phänomen wird beschrieben?",
+    "options": [
+      "Polarlichter",
+      "Aurora Borealis",
+      "Biolumineszenz",
+      "Corona-Entladung"
+    ],
+    "answer": "Biolumineszenz"
+  },
+  {
+    "id": 489,
+    "question": "In 'Pickle Rick' gibt es eine subtile Andeutung auf ein philosophisches Dilemma. Welcher Begriff wird verwendet, um Ricks innere Zerrissenheit zu beschreiben?",
+    "options": [
+      "Zerrissenheit",
+      "Dualismus",
+      "Dichotomie",
+      "Paradoxie"
+    ],
+    "answer": "Dualismus"
+  },
+  {
+    "id": 490,
+    "question": "In 'Total Rickall' wird ein obskurer Begriff zur Unterscheidung von Realität und Fiktion verwendet. Welcher Begriff ist das?",
+    "options": [
+      "Hyperrealität",
+      "Simulakrum",
+      "Fiktionalität",
+      "Meta-Ebene"
+    ],
+    "answer": "Hyperrealität"
+  },
+  {
+    "id": 491,
+    "question": "In 'Anatomy Park' wird ein ungewöhnlicher biologischer Prozess als Analogie verwendet. Welche Funktion wird als Metapher genannt?",
+    "options": [
+      "Zellteilung",
+      "Photosynthese",
+      "Apoptose",
+      "Proteinbiosynthese"
+    ],
+    "answer": "Apoptose"
+  },
+  {
+    "id": 492,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine kryptische Anspielung auf einen bekannten Philosophen. Welcher Philosoph wird indirekt erwähnt?",
+    "options": [
+      "Nietzsche",
+      "Kant",
+      "Descartes",
+      "Sartre"
+    ],
+    "answer": "Nietzsche"
+  },
+  {
+    "id": 493,
+    "question": "In 'The Rickchurian Mortydate' wird ein obskurer Begriff für politische Infiltration verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Subversion",
+      "Infiltration",
+      "Sabotage",
+      "Putsch"
+    ],
+    "answer": "Subversion"
+  },
+  {
+    "id": 494,
+    "question": "In 'Rickmancing the Stone' wird ein altes philosophisches Konzept als Grundlage für den Überlebenskampf genannt. Welcher Begriff wird erwähnt?",
+    "options": [
+      "Der Wille zum Leben",
+      "Existenz",
+      "Sisyphos",
+      "Hedonismus"
+    ],
+    "answer": "Der Wille zum Leben"
+  },
+  {
+    "id": 495,
+    "question": "In 'The Rickshank Rickdemption' wird eine obskure numerologische Theorie angedeutet. Welche Zahl wird als Symbol für das Schicksal hervorgehoben?",
+    "options": [
+      "7",
+      "13",
+      "42",
+      "101"
+    ],
+    "answer": "13"
+  },
+  {
+    "id": 496,
+    "question": "In 'Morty's Mind Blowers' wird ein psychologischer Mechanismus zur selektiven Erinnerung thematisiert. Welcher Begriff wird verwendet?",
+    "options": [
+      "Memory Pruning",
+      "Selective Amnesia",
+      "Cognitive Filtering",
+      "Repressed Recall"
+    ],
+    "answer": "Cognitive Filtering"
+  },
+  {
+    "id": 497,
+    "question": "In 'Vindicators 3: The Return of Worldender' wird ein literarischer Verweis genutzt, um den Heldenmut zu kommentieren. Welcher Schriftsteller wird indirekt genannt?",
+    "options": [
+      "Hemingway",
+      "Faulkner",
+      "Kerouac",
+      "Salinger"
+    ],
+    "answer": "Kerouac"
+  },
+  {
+    "id": 498,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver physikalischer Prozess als Metapher genutzt. Wie lautet dieser Prozess?",
+    "options": [
+      "Dimensional Decay",
+      "Quantum Entanglement",
+      "Spatial Fracturing",
+      "Temporal Flux"
+    ],
+    "answer": "Temporal Flux"
+  },
+  {
+    "id": 499,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein Begriff aus der Thermodynamik als Metapher genutzt. Welcher Begriff wird genannt?",
+    "options": [
+      "Entropie",
+      "Enthalpie",
+      "Isothermie",
+      "Adiabatik"
+    ],
+    "answer": "Entropie"
+  },
+  {
+    "id": 500,
+    "question": "In 'Pickle Rick' wird ein Hinweis auf ein philosophisches Paradoxon gegeben. Welcher Begriff beschreibt dieses Paradoxon am besten?",
+    "options": [
+      "Zerrissenheit",
+      "Selbstbezüglichkeit",
+      "Paradoxie",
+      "Inkonsequenz"
+    ],
+    "answer": "Selbstbezüglichkeit"
+  },
+  {
+    "id": 501,
+    "question": "In 'The Rickshank Rickdemption' wird ein wissenschaftlicher Begriff verwendet, um Ricks Wahrnehmung der Realität zu beschreiben. Welcher Begriff ist das?",
+    "options": [
+      "Subjektivität",
+      "Relativismus",
+      "Konstruktivismus",
+      "Perzeptuelle Variabilität"
+    ],
+    "answer": "Konstruktivismus"
+  },
+  {
+    "id": 502,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen versteckten Hinweis auf ein mathematisches Konzept. Welcher Begriff wird verwendet?",
+    "options": [
+      "Fraktal",
+      "Chaos",
+      "Algorithmus",
+      "Topologie"
+    ],
+    "answer": "Fraktal"
+  },
+  {
+    "id": 503,
+    "question": "In 'Morty's Mind Blowers' wird ein seltener psychologischer Mechanismus erwähnt. Welcher Mechanismus wird thematisiert?",
+    "options": [
+      "Verdrängung",
+      "Repression",
+      "Projektion",
+      "Rationalisierung"
+    ],
+    "answer": "Verdrängung"
+  },
+  {
+    "id": 504,
+    "question": "In 'Total Rickall' wird ein Begriff verwendet, um die Instabilität von Erinnerungen zu beschreiben. Welcher Begriff ist das?",
+    "options": [
+      "Memorielle Instabilität",
+      "Erinnerungsfluktuation",
+      "Gedächtniszerfall",
+      "Neuronale Dysfunktion"
+    ],
+    "answer": "Erinnerungsfluktuation"
+  },
+  {
+    "id": 505,
+    "question": "In 'Anatomy Park' wird ein biologischer Prozess als Analogie für städtische Dynamik verwendet. Welcher Prozess wird genannt?",
+    "options": [
+      "Zellteilung",
+      "Wundheilung",
+      "Metabolismus",
+      "Osmose"
+    ],
+    "answer": "Metabolismus"
+  },
+  {
+    "id": 506,
+    "question": "In 'Rickmancing the Stone' wird ein archaischer Begriff genutzt, um den Kampf ums Überleben zu beschreiben. Welcher Begriff wird genannt?",
+    "options": [
+      "Kampfgeist",
+      "Überlebenswille",
+      "Bitterkeit",
+      "Lebensdurst"
+    ],
+    "answer": "Überlebenswille"
+  },
+  {
+    "id": 507,
+    "question": "In 'The Rickchurian Mortydate' gibt es eine subtile Anspielung auf einen historischen Staatsstreich. Welcher Staatsstreich wird indirekt erwähnt?",
+    "options": [
+      "Der Putsch von 1964",
+      "Der Chile-Putsch 1973",
+      "Der Putsch in der Türkei 1980",
+      "Der Umsturz in Iran 1979"
+    ],
+    "answer": "Der Chile-Putsch 1973"
+  },
+  {
+    "id": 508,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver wissenschaftlicher Artikel erwähnt. Welcher Titel wird als Referenz genannt?",
+    "options": [
+      "Die Quantendynamik des Chaos",
+      "Interdimensionale Ströme und ihre Konsequenzen",
+      "Das Paradox der Parallelwelten",
+      "Die Synthese von Raum und Zeit"
+    ],
+    "answer": "Das Paradox der Parallelwelten"
+  },
+  {
+    "id": 509,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein Begriff für temporäre Raum-Anomalien genutzt. Welcher Begriff wird verwendet?",
+    "options": [
+      "Spatiotemporale Lücken",
+      "Räumliche Diskontinuität",
+      "Temporal Rift",
+      "Schnittstellenanomalie"
+    ],
+    "answer": "Temporal Rift"
+  },
+  {
+    "id": 510,
+    "question": "In 'Pickle Rick' wird ein subtiler Hinweis auf ein antikes philosophisches Konzept gegeben. Welcher Begriff wird genannt?",
+    "options": [
+      "Sophrologie",
+      "Logos",
+      "Telos",
+      "Eudaimonia"
+    ],
+    "answer": "Telos"
+  },
+  {
+    "id": 511,
+    "question": "In 'Total Rickall' gibt es eine kryptische Anspielung auf die Unstetigkeit der Zeit. Welcher Begriff wird verwendet?",
+    "options": [
+      "Zeitdilatation",
+      "Chrono-Fluidität",
+      "Temporal Instabilität",
+      "Ewige Gegenwart"
+    ],
+    "answer": "Temporal Instabilität"
+  },
+  {
+    "id": 512,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es einen Hinweis auf die Dualität von Licht und Dunkelheit. Welcher Begriff fasst dieses Konzept zusammen?",
+    "options": [
+      "Dichotomie",
+      "Polarität",
+      "Dualismus",
+      "Ambivalenz"
+    ],
+    "answer": "Polarität"
+  },
+  {
+    "id": 513,
+    "question": "In 'Morty's Mind Blowers' wird ein seltener Begriff für die selektive Wahrnehmung von Informationen erwähnt. Welcher Begriff ist das?",
+    "options": [
+      "Selektive Wahrnehmung",
+      "Informationsfilterung",
+      "Perzeptuelle Selektion",
+      "Kognitive Auswahl"
+    ],
+    "answer": "Informationsfilterung"
+  },
+  {
+    "id": 514,
+    "question": "In 'The Rickshank Rickdemption' wird ein abstrakter Begriff genutzt, um den Zerfall gesellschaftlicher Strukturen zu beschreiben. Welcher Begriff wird verwendet?",
+    "options": [
+      "Dekonstruktion",
+      "Erosion",
+      "Dekomposition",
+      "Desintegration"
+    ],
+    "answer": "Desintegration"
+  },
+  {
+    "id": 515,
+    "question": "In 'Anatomy Park' wird ein Vergleich zwischen biologischen Systemen und städtischen Strukturen gezogen. Welcher Begriff wird verwendet?",
+    "options": [
+      "Metropolis",
+      "Urbanität",
+      "Stadtorganismus",
+      "Soziale Matrix"
+    ],
+    "answer": "Stadtorganismus"
+  },
+  {
+    "id": 516,
+    "question": "In 'Rickmancing the Stone' wird ein literarischer Bezug hergestellt. Welcher klassische Schriftsteller wird in einem Dialog indirekt erwähnt?",
+    "options": [
+      "Kafka",
+      "Orwell",
+      "Huxley",
+      "Shakespeare"
+    ],
+    "answer": "Kafka"
+  },
+  {
+    "id": 517,
+    "question": "In 'The Rickchurian Mortydate' wird ein Begriff zur Beschreibung emotionaler Isolation verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Apathie",
+      "Emotionales Vakuum",
+      "Gefühllosigkeit",
+      "Innere Leere"
+    ],
+    "answer": "Emotionales Vakuum"
+  },
+  {
+    "id": 518,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein Begriff aus der Quantenphysik als Metapher genutzt. Welcher Begriff ist das?",
+    "options": [
+      "Superposition",
+      "Verschränkung",
+      "Quantenfluktuation",
+      "Wellenfunktion"
+    ],
+    "answer": "Verschränkung"
+  },
+  {
+    "id": 519,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein archaischer Begriff zur Beschreibung von Schicksal verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Fatum",
+      "Moira",
+      "Destiny",
+      "Providenz"
+    ],
+    "answer": "Providenz"
+  },
+  {
+    "id": 520,
+    "question": "In 'Pickle Rick' wird ein subtiler Hinweis auf ein philosophisches Paradoxon gegeben. Welcher Ausdruck wird verwendet?",
+    "options": [
+      "Cogito ergo sum",
+      "Was ist der Sinn des Lebens?",
+      "Die Frage nach der Existenz",
+      "Sein oder Nichtsein"
+    ],
+    "answer": "Was ist der Sinn des Lebens?"
+  },
+  {
+    "id": 521,
+    "question": "In 'Total Rickall' wird ein Begriff verwendet, um die Relativität von Wahrheit zu hinterfragen. Welcher Begriff wird genutzt?",
+    "options": [
+      "Relativismus",
+      "Subjektivismus",
+      "Konstruktivismus",
+      "Postmodernismus"
+    ],
+    "answer": "Postmodernismus"
+  },
+  {
+    "id": 522,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine subtile Anspielung auf ein philosophisches Paradoxon. Welcher Begriff wird verwendet?",
+    "options": [
+      "Zenos Paradoxon",
+      "Das Henne-Ei-Problem",
+      "Das Paradoxon der Wahl",
+      "Das Paradox der Selbstbezüglichkeit"
+    ],
+    "answer": "Das Paradox der Selbstbezüglichkeit"
+  },
+  {
+    "id": 523,
+    "question": "In 'Morty's Mind Blowers' wird ein Begriff verwendet, um die Fragmentierung der Erinnerungen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Gedächtnis-Kollage",
+      "Erinnerungsfraktal",
+      "Memorielle Dekonstruktion",
+      "Neuronale Fragmentierung"
+    ],
+    "answer": "Memorielle Dekonstruktion"
+  },
+  {
+    "id": 524,
+    "question": "In 'The Rickshank Rickdemption' wird ein kryptischer Code gezeigt, der als Hinweis auf Ricks Vergangenheit dient. Welche Zahl erscheint dabei regelmäßig?",
+    "options": [
+      "7",
+      "13",
+      "42",
+      "137"
+    ],
+    "answer": "42"
+  },
+  {
+    "id": 525,
+    "question": "In 'Anatomy Park' wird ein ungewöhnlicher Vergleich gezogen. Welcher organische Prozess wird als Metapher für städtische Dynamik verwendet?",
+    "options": [
+      "Zellteilung",
+      "Wundheilung",
+      "Metabolismus",
+      "Osmose"
+    ],
+    "answer": "Metabolismus"
+  },
+  {
+    "id": 526,
+    "question": "In 'Rickmancing the Stone' wird ein literarischer Vergleich gezogen. Welcher Begriff beschreibt den Zusammenbruch sozialer Strukturen am treffendsten?",
+    "options": [
+      "Kollaps",
+      "Dekadenz",
+      "Desintegration",
+      "Zerfall"
+    ],
+    "answer": "Dekadenz"
+  },
+  {
+    "id": 527,
+    "question": "In 'The Rickchurian Mortydate' wird ein Begriff zur Beschreibung innerer Verzweiflung verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Melancholie",
+      "Verzweiflung",
+      "Nihilismus",
+      "Depression"
+    ],
+    "answer": "Nihilismus"
+  },
+  {
+    "id": 528,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver Begriff als Metapher für den Zerfall von Raum-Zeit-Strukturen genutzt. Welcher Begriff wird verwendet?",
+    "options": [
+      "Singularität",
+      "Ruptur",
+      "Fraktur",
+      "Dissonanz"
+    ],
+    "answer": "Ruptur"
+  },
+  {
+    "id": 529,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein musikalischer Hinweis eingebaut. Welcher Musikstil wird subtil angedeutet, um Ricks Stimmung zu spiegeln?",
+    "options": [
+      "Jazz",
+      "Klassik",
+      "Blues",
+      "Progressive Rock"
+    ],
+    "answer": "Jazz"
+  },
+  {
+    "id": 530,
+    "question": "In 'Pickle Rick' gibt es eine kryptische Andeutung auf eine historische Erfindung. Auf welche Erfindung wird dabei subtil Bezug genommen?",
+    "options": [
+      "Dampfmaschine",
+      "Glühbirne",
+      "Telefon",
+      "Lokomotive"
+    ],
+    "answer": "Lokomotive"
+  },
+  {
+    "id": 531,
+    "question": "In 'Total Rickall' wird ein Begriff für die Manipulation von Erinnerungen verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Erinnerungsmanipulation",
+      "Memorielle Reprogrammierung",
+      "Gedächtnisüberarbeitung",
+      "Neuro-Rekalibrierung"
+    ],
+    "answer": "Memorielle Reprogrammierung"
+  },
+  {
+    "id": 532,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine subtile Anspielung auf ein klassisches philosophisches Werk. Welches Werk wird angedeutet?",
+    "options": [
+      "Die Republik",
+      "Die Nikomachische Ethik",
+      "Kritik der reinen Vernunft",
+      "Also sprach Zarathustra"
+    ],
+    "answer": "Also sprach Zarathustra"
+  },
+  {
+    "id": 533,
+    "question": "In 'Morty's Mind Blowers' wird ein Begriff verwendet, um die Zerbrechlichkeit von Erinnerungen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Fragilität",
+      "Empfindlichkeit",
+      "Zerbrechlichkeit",
+      "Verwundbarkeit"
+    ],
+    "answer": "Fragilität"
+  },
+  {
+    "id": 534,
+    "question": "In 'The Rickshank Rickdemption' wird ein kryptischer Name für eine geheime Technologie erwähnt. Wie lautet dieser Name?",
+    "options": [
+      "NeuroSync",
+      "QuantumCore",
+      "MetaDrive",
+      "HyperLink"
+    ],
+    "answer": "QuantumCore"
+  },
+  {
+    "id": 535,
+    "question": "In 'Anatomy Park' wird ein biologischer Mechanismus als Analogie verwendet. Welcher Mechanismus wird genannt?",
+    "options": [
+      "Osmose",
+      "Diffusion",
+      "Endozytose",
+      "Exozytose"
+    ],
+    "answer": "Endozytose"
+  },
+  {
+    "id": 536,
+    "question": "In 'Rickmancing the Stone' wird ein Begriff verwendet, um den Verlust von Hoffnung zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Verzweiflung",
+      "Hopplosigkeit",
+      "Nihilismus",
+      "Resignation"
+    ],
+    "answer": "Resignation"
+  },
+  {
+    "id": 537,
+    "question": "In 'The Rickchurian Mortydate' gibt es eine subtile Anspielung auf einen verkannten Künstler. Welcher Künstler wird erwähnt?",
+    "options": [
+      "Basquiat",
+      "Warhol",
+      "Pollock",
+      "Kandinsky"
+    ],
+    "answer": "Basquiat"
+  },
+  {
+    "id": 538,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein physikalischer Begriff genutzt, um den Zerfall von Raum und Zeit zu beschreiben. Welcher Begriff wird verwendet?",
+    "options": [
+      "Zeitkrümmung",
+      "Raumkontraktion",
+      "Dimensionale Dekonstruktion",
+      "Kosmische Dislokation"
+    ],
+    "answer": "Dimensionale Dekonstruktion"
+  },
+  {
+    "id": 539,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein archaischer Begriff für natürlichen Zerfall verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Verfall",
+      "Verwitterung",
+      "Erosion",
+      "Dekadenz"
+    ],
+    "answer": "Verwitterung"
+  },
+  {
+    "id": 540,
+    "question": "In 'Pickle Rick' gibt es eine subtile Anspielung auf einen berühmten mathematischen Satz. Welcher Satz wird indirekt referenziert?",
+    "options": [
+      "Pythagoras' Theorem",
+      "Fermats letzter Satz",
+      "Eulers Identität",
+      "Satz des Pythagoras"
+    ],
+    "answer": "Eulers Identität"
+  },
+  {
+    "id": 541,
+    "question": "In 'Total Rickall' wird ein Begriff verwendet, um die Unstetigkeit der Realität zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Fluktuation",
+      "Instabilität",
+      "Variabilität",
+      "Diskontinuität"
+    ],
+    "answer": "Diskontinuität"
+  },
+  {
+    "id": 542,
+    "question": "In 'Close Rick-counters of the Rick Kind' gibt es eine kryptische Anspielung auf ein literarisches Werk der Postmoderne. Welches Werk wird angedeutet?",
+    "options": [
+      "Infinite Jest",
+      "Gravity's Rainbow",
+      "White Noise",
+      "Pale Fire"
+    ],
+    "answer": "Gravity's Rainbow"
+  },
+  {
+    "id": 543,
+    "question": "In 'Morty's Mind Blowers' wird ein psychologischer Begriff verwendet, um die Repression von Erinnerungen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Suppressive Mechanismen",
+      "Erinnerungsverdrängung",
+      "Kognitive Blockade",
+      "Subjektive Amnesie"
+    ],
+    "answer": "Erinnerungsverdrängung"
+  },
+  {
+    "id": 544,
+    "question": "In 'The Rickshank Rickdemption' wird ein technologischer Begriff als Metapher für Ricks intellektuelle Überlegenheit verwendet. Welcher Begriff ist das?",
+    "options": [
+      "Nano-Intelligenz",
+      "Cybergenese",
+      "Hyperintelligenz",
+      "Techno-Suprematie"
+    ],
+    "answer": "Hyperintelligenz"
+  },
+  {
+    "id": 545,
+    "question": "In 'Anatomy Park' wird ein Begriff verwendet, um den dynamischen Fluss biologischer Prozesse zu beschreiben. Welcher Begriff wird verwendet?",
+    "options": [
+      "Biologische Fluidität",
+      "Organische Strömung",
+      "Lebensdynamik",
+      "Cellulärer Fluss"
+    ],
+    "answer": "Biologische Fluidität"
+  },
+  {
+    "id": 546,
+    "question": "In 'Rickmancing the Stone' gibt es eine subtile Anspielung auf einen historischen Philosophen. Welcher Philosoph wird indirekt erwähnt?",
+    "options": [
+      "Platon",
+      "Aristoteles",
+      "Heraklit",
+      "Sokrates"
+    ],
+    "answer": "Heraklit"
+  },
+  {
+    "id": 547,
+    "question": "In 'The Rickchurian Mortydate' wird ein Begriff zur Beschreibung von Machtstrukturen verwendet. Welcher Begriff wird genutzt?",
+    "options": [
+      "Hierarchie",
+      "Oligarchie",
+      "Hegemonie",
+      "Dominanz"
+    ],
+    "answer": "Hegemonie"
+  },
+  {
+    "id": 548,
+    "question": "In 'Interdimensional Cable 2: Tempting Fate' wird ein fiktiver Begriff als Metapher für das Verschwinden von Informationen verwendet. Welcher Begriff wird genannt?",
+    "options": [
+      "Informationsverlust",
+      "Daten-Decay",
+      "Bit-Desintegration",
+      "Signal-Dämpfung"
+    ],
+    "answer": "Daten-Decay"
+  },
+  {
+    "id": 549,
+    "question": "In 'The Whirly Dirly Conspiracy' wird ein Begriff verwendet, um den Zerfall sozialer Strukturen zu beschreiben. Welcher Begriff wird genutzt?",
+    "options": [
+      "Dekadenz",
+      "Disintegration",
+      "Zerfall",
+      "Auflösung"
+    ],
+    "answer": "Auflösung"
+  },
+  {
+    "id": 550,
+    "question": "In 'Pickle Rick' wird ein seltener philosophischer Begriff verwendet, um Ricks existenzielle Krise zu beschreiben. Welcher Begriff wird erwähnt?",
+    "options": [
+      "Existenzialismus",
+      "Nihilismus",
+      "Absurdismus",
+      "Pessimismus"
+    ],
+    "answer": "Absurdismus"
+  }
+
+
+
+
+
+
+
+]

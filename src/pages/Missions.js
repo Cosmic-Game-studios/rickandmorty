@@ -129,7 +129,7 @@ const DAILY_CHARACTER_MISSIONS = [
 
 function Missions() {
   const isMobile = useIsMobile();
-  const { completeMission, unlockCharacter, addCoins, level, coins } = useContext(UserContext);
+  const { completeMission, unlockCharacter, addCoins, level } = useContext(UserContext);
   const [filter, setFilter] = useState('all');
   const [toast, setToast] = useState({ visible: false, message: '', type: 'success' });
   const [autoHideCompleted, setAutoHideCompleted] = useState(true);
@@ -205,11 +205,33 @@ function Missions() {
     return 0;
   }, []);
 
+  // Überprüft, ob eine Mission abgeschlossen ist
+  const isMissionCompleted = useCallback((missionId) => {
+    // Kombiniere die Arrays für die Suche
+    const allMissions = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
+    const mission = allMissions.find(m => m.id === missionId);
+
+    if (mission && mission.daily) {
+      return dailyMissionsData.completed.includes(missionId);
+    }
+
+    return completedMissions.includes(missionId);
+  }, [completedMissions, dailyMissionsData]);
+
+  // Überprüft, ob eine Mission verfügbar ist (Level-Anforderungen erfüllt)
+  const isMissionAvailable = useCallback((mission) => {
+    if (mission.requiredLevel && level < mission.requiredLevel) {
+      return false;
+    }
+
+    return true;
+  }, [level]);
+
   // Filtere Missionen basierend auf der aktuellen Filterauswahl
   const filteredMissions = useMemo(() => {
     // Kombiniere die Standard- und täglichen Missionen
     const allMissions = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
-    
+
     return allMissions.filter(mission => {
       // Prüfe, ob die Mission dem ausgewählten Filter entspricht
       if (filter === 'character' && mission.type !== MISSION_TYPES.CHARACTER && mission.type !== MISSION_TYPES.SPECIAL) {
@@ -224,41 +246,21 @@ function Missions() {
       if (filter === 'available' && (isMissionCompleted(mission.id) || !isMissionAvailable(mission))) {
         return false;
       }
-      
+
       // Wenn "auto-hide" aktiviert ist, verstecke abgeschlossene Missionen,
       // außer sie sind kürzlich abgeschlossen oder "Abgeschlossen"-Filter ist aktiv
-      if (autoHideCompleted && 
-          isMissionCompleted(mission.id) && 
-          filter !== 'completed' && 
+      if (autoHideCompleted &&
+          isMissionCompleted(mission.id) &&
+          filter !== 'completed' &&
           !recentlyCompleted.includes(mission.id)) {
         return false;
       }
-      
+
       return true;
     });
-  }, [filter, level, completedMissions, dailyMissionsData, autoHideCompleted, recentlyCompleted]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter, autoHideCompleted, recentlyCompleted, isMissionCompleted, isMissionAvailable]);
 
-  // Überprüft, ob eine Mission abgeschlossen ist
-  function isMissionCompleted(missionId) {
-    // Kombiniere die Arrays für die Suche
-    const allMissions = [...MISSIONS_DATA, ...DAILY_CHARACTER_MISSIONS];
-    const mission = allMissions.find(m => m.id === missionId);
-    
-    if (mission && mission.daily) {
-      return dailyMissionsData.completed.includes(missionId);
-    }
-    
-    return completedMissions.includes(missionId);
-  }
-
-  // Überprüft, ob eine Mission verfügbar ist (Level-Anforderungen erfüllt)
-  function isMissionAvailable(mission) {
-    if (mission.requiredLevel && level < mission.requiredLevel) {
-      return false;
-    }
-    
-    return true;
-  }
 
   // Überprüft den Fortschritt einer Daily-Mission mit Quiz-Anforderungen
   function getDailyMissionProgress(mission) {

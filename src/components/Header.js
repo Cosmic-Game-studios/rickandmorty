@@ -39,7 +39,15 @@ function Header() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <AppBar position="sticky" sx={{ background: 'linear-gradient(90deg, #4b0082, #9400d3)' }}>
+    <AppBar
+      position="sticky"
+      sx={{
+        background: 'linear-gradient(135deg, rgba(26, 42, 108, 0.95) 0%, rgba(74, 0, 130, 0.95) 100%)',
+        backdropFilter: 'blur(20px)',
+        borderBottom: '1px solid rgba(0, 184, 212, 0.2)',
+        boxShadow: '0 4px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 184, 212, 0.1)',
+      }}
+    >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingY: { xs: 1, sm: 0 } }}>
         {/* Site Title */}
         <Typography
@@ -49,12 +57,19 @@ function Header() {
           sx={{
             fontFamily: "'Bangers', cursive",
             fontSize: { xs: '1.8rem', sm: '2.5rem', md: '3rem' },
-            color: '#f0e130',
+            background: 'linear-gradient(135deg, #00b8d4 0%, #f0e130 50%, #00ff88 100%)',
+            backgroundSize: '200% auto',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
             textDecoration: 'none',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+            textShadow: 'none',
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            position: 'relative',
             '&:hover': {
-              color: '#fff',
-              textShadow: '0 0 10px #f0e130',
+              backgroundPosition: 'right center',
+              filter: 'drop-shadow(0 0 20px rgba(0, 184, 212, 0.5))',
+              transform: 'scale(1.05)',
             },
           }}
         >
@@ -73,11 +88,17 @@ function Header() {
                 color: 'white',
                 fontFamily: "'Roboto', sans-serif",
                 fontWeight: 'bold',
-                border: isActive(link.path) ? '2px solid #f0e130' : '2px solid transparent',
-                backgroundColor: isActive(link.path) ? 'rgba(240, 225, 48, 0.3)' : 'transparent',
+                borderRadius: '12px',
+                padding: '8px 16px',
+                border: isActive(link.path) ? '2px solid #00b8d4' : '2px solid transparent',
+                backgroundColor: isActive(link.path) ? 'rgba(0, 184, 212, 0.2)' : 'transparent',
+                backdropFilter: 'blur(10px)',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                  borderColor: '#f0e130',
-                  backgroundColor: 'rgba(240, 225, 48, 0.2)',
+                  borderColor: '#00b8d4',
+                  backgroundColor: 'rgba(0, 184, 212, 0.3)',
+                  boxShadow: '0 0 20px rgba(0, 184, 212, 0.4)',
+                  transform: 'translateY(-2px)',
                 },
                 marginLeft: 1,
               }}
@@ -88,9 +109,34 @@ function Header() {
         </Box>
 
         {/* Coin Display */}
-        <Box sx={{ display: 'flex', alignItems: 'center', background: 'rgba(0,0,0,0.2)', padding: '5px 12px', borderRadius: '20px', boxShadow: 'inset 0 0 5px rgba(0,0,0,0.3)', marginLeft: { xs: 'auto', md: 2 } }}>
-          <Coin size="medium" /> {/* Ensure Coin component is compatible */}
-          <Typography sx={{ marginLeft: 1, fontFamily: "'Bangers', cursive", fontSize: '1.4rem', color: '#f0e130' }}>
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          background: 'rgba(17, 25, 54, 0.6)',
+          backdropFilter: 'blur(10px)',
+          padding: '8px 16px',
+          borderRadius: '24px',
+          border: '1px solid rgba(0, 184, 212, 0.3)',
+          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.3), 0 0 20px rgba(240, 225, 48, 0.2)',
+          marginLeft: { xs: 'auto', md: 2 },
+          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+          '&:hover': {
+            background: 'rgba(17, 25, 54, 0.8)',
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 25px rgba(240, 225, 48, 0.4)',
+            transform: 'scale(1.05)',
+          }
+        }}>
+          <Coin size="medium" />
+          <Typography sx={{
+            marginLeft: 1,
+            fontFamily: "'Bangers', cursive",
+            fontSize: '1.4rem',
+            background: 'linear-gradient(135deg, #f0e130 0%, #ffff6b 100%)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 10px rgba(240, 225, 48, 0.5)',
+          }}>
             {coins}
           </Typography>
         </Box>
@@ -123,8 +169,10 @@ function Header() {
             onClose={handleCloseNavMenu}
             sx={{
               '& .MuiPaper-root': {
-                background: 'linear-gradient(180deg, #4b0082, #9400d3)',
-                boxShadow: '0 8px 10px rgba(0,0,0,0.3)',
+                background: 'linear-gradient(135deg, rgba(26, 42, 108, 0.98) 0%, rgba(74, 0, 130, 0.98) 100%)',
+                backdropFilter: 'blur(20px)',
+                border: '1px solid rgba(0, 184, 212, 0.3)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 184, 212, 0.2)',
               },
             }}
           >
@@ -136,17 +184,18 @@ function Header() {
                 to={link.path}
                 sx={{
                   justifyContent: 'center',
-                  color: isActive(link.path) ? '#f0e130' : '#fff',
+                  color: isActive(link.path) ? '#00b8d4' : '#fff',
                   fontFamily: "'Roboto', sans-serif",
                   fontWeight: 'bold',
-                  backgroundColor: isActive(link.path) ? 'rgba(240, 225, 48, 0.3)' : 'transparent',
-                  '&:hover': {
-                    backgroundColor: 'rgba(240, 225, 48, 0.2)',
-                  },
+                  backgroundColor: isActive(link.path) ? 'rgba(0, 184, 212, 0.2)' : 'transparent',
+                  borderRadius: '12px',
                   margin: '5px 10px',
-                  borderRadius: '5px',
-                  border: isActive(link.path) ? '2px solid #f0e130' : '2px solid transparent',
-
+                  border: isActive(link.path) ? '2px solid #00b8d4' : '2px solid transparent',
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                  '&:hover': {
+                    backgroundColor: 'rgba(0, 184, 212, 0.3)',
+                    boxShadow: '0 0 15px rgba(0, 184, 212, 0.4)',
+                  },
                 }}
               >
                 {link.title}

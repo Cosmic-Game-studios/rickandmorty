@@ -12,14 +12,15 @@ function Footer() {
     <Box
       component="footer"
       sx={{
-        // Replicating the gradient from Header or using theme's palette
-        background: 'linear-gradient(90deg, #4b0082, #9400d3)',
-        color: 'rgba(255, 255, 255, 0.8)', // var(--text-secondary)
+        background: 'linear-gradient(135deg, rgba(26, 42, 108, 0.95) 0%, rgba(74, 0, 130, 0.95) 100%)',
+        backdropFilter: 'blur(20px)',
+        color: 'rgba(255, 255, 255, 0.9)',
         textAlign: 'center',
-        paddingY: 3, // py: 3 (MUI spacing unit, 1 = 8px, so 3*8=24px which is close to 0.9375rem * 1.5 for top/bottom)
+        paddingY: 3,
         fontSize: '0.9rem',
-        boxShadow: '0 -4px 8px rgba(0, 0, 0, 0.3)', // 0 -0.25rem 0.5rem
-        mt: 'auto', // Pushes footer to bottom if main content is short
+        borderTop: '1px solid rgba(0, 184, 212, 0.2)',
+        boxShadow: '0 -4px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 184, 212, 0.1)',
+        mt: 'auto',
       }}
     >
       <Container maxWidth="lg">
@@ -48,10 +49,15 @@ function Footer() {
               component={RouterLink}
               to="/privacy"
               sx={{
-                color: 'inherit', // var(--text-secondary)
+                color: 'rgba(255, 255, 255, 0.8)',
                 textDecoration: 'none',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                  color: '#f0e130', // var(--accent-color)
+                  color: '#00b8d4',
+                  background: 'rgba(0, 184, 212, 0.1)',
+                  boxShadow: '0 0 15px rgba(0, 184, 212, 0.3)',
                 },
               }}
             >
@@ -61,10 +67,15 @@ function Footer() {
               component={RouterLink}
               to="/terms"
               sx={{
-                color: 'inherit',
+                color: 'rgba(255, 255, 255, 0.8)',
                 textDecoration: 'none',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                  color: '#f0e130',
+                  color: '#00b8d4',
+                  background: 'rgba(0, 184, 212, 0.1)',
+                  boxShadow: '0 0 15px rgba(0, 184, 212, 0.3)',
                 },
               }}
             >
@@ -74,10 +85,15 @@ function Footer() {
               component={RouterLink}
               to="/contact"
               sx={{
-                color: 'inherit',
+                color: 'rgba(255, 255, 255, 0.8)',
                 textDecoration: 'none',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                  color: '#f0e130',
+                  color: '#00b8d4',
+                  background: 'rgba(0, 184, 212, 0.1)',
+                  boxShadow: '0 0 15px rgba(0, 184, 212, 0.3)',
                 },
               }}
             >

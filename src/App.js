@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { UserProvider } from './context/UserContext';
 import ErrorBoundary from './components/ErrorBoundary';
+import PWAInstallPrompt from './components/PWAInstallPrompt';
+import OfflineIndicator from './components/OfflineIndicator';
 
 // Lazy load all page components for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -45,6 +47,10 @@ function App() {
       <CssBaseline />
       <UserProvider>
         <ErrorBoundary>
+          {/* PWA Components */}
+          <OfflineIndicator />
+          <PWAInstallPrompt />
+
           <div className="app">
             <Header />
             <main>

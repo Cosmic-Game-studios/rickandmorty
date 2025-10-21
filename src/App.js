@@ -1,68 +1,84 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import theme from './theme'; // Adjust path if needed
+import { Box, CircularProgress } from '@mui/material';
+import theme from './theme';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Characters from './pages/Characters';
-import CharacterDetails from './pages/CharacterDetails';
-import Episodes from './pages/Episodes';
-import EpisodeDetails from './pages/EpisodeDetails';
-import Locations from './pages/Locations';
-import LocationDetails from './pages/LocationDetails';
-import Missions from './pages/Missions';
-import Quiz from './pages/Quiz';
-import Profile from './pages/Profile';
-import Shop from './pages/Shop';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { UserProvider } from './context/UserContext';
+import ErrorBoundary from './components/ErrorBoundary';
+
+// Lazy load all page components for better performance
+const Home = lazy(() => import('./pages/Home'));
+const Characters = lazy(() => import('./pages/Characters'));
+const CharacterDetails = lazy(() => import('./pages/CharacterDetails'));
+const Episodes = lazy(() => import('./pages/Episodes'));
+const EpisodeDetails = lazy(() => import('./pages/EpisodeDetails'));
+const Locations = lazy(() => import('./pages/Locations'));
+const LocationDetails = lazy(() => import('./pages/LocationDetails'));
+const Missions = lazy(() => import('./pages/Missions'));
+const Quiz = lazy(() => import('./pages/Quiz'));
+const Profile = lazy(() => import('./pages/Profile'));
+const Shop = lazy(() => import('./pages/Shop'));
 
 /**
- * Verbesserte App-Komponente mit organisiertem Routing
- * 
- * Zukünftige Verbesserungsmöglichkeiten:
- * - Lazy Loading für Komponenten implementieren (React.lazy)
- * - Suspense mit einem LoadingScreen hinzufügen
- * - ErrorBoundary für Fehlerbehandlung einrichten
- * - Seiten-Übergänge mit AnimatePresence (von framer-motion)
+ * Loading fallback component displayed while lazy components load
+ */
+const LoadingFallback = () => (
+  <Box
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+    minHeight="60vh"
+  >
+    <CircularProgress size={60} />
+  </Box>
+);
+
+/**
+ * Improved App component with organized routing, lazy loading, and error boundaries
  */
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <UserProvider>
-        <div className="app">
-          <Header />
-          <main>
-            <Routes>
-              {/* Hauptseiten */}
-              <Route path="/" element={<Home />} />
+        <ErrorBoundary>
+          <div className="app">
+            <Header />
+            <main>
+              <Suspense fallback={<LoadingFallback />}>
+                <Routes>
+                  {/* Main pages */}
+                  <Route path="/" element={<Home />} />
 
-              {/* Charakter-Routen */}
-              <Route path="/characters" element={<Characters />} />
-              <Route path="/character/:id" element={<CharacterDetails />} />
+                  {/* Character routes */}
+                  <Route path="/characters" element={<Characters />} />
+                  <Route path="/character/:id" element={<CharacterDetails />} />
 
-              {/* Episoden-Routen */}
-              <Route path="/episodes" element={<Episodes />} />
-              <Route path="/episode/:id" element={<EpisodeDetails />} />
+                  {/* Episode routes */}
+                  <Route path="/episodes" element={<Episodes />} />
+                  <Route path="/episode/:id" element={<EpisodeDetails />} />
 
-              {/* Locations-Routen */}
-              <Route path="/locations" element={<Locations />} />
-              <Route path="/location/:id" element={<LocationDetails />} />
+                  {/* Location routes */}
+                  <Route path="/locations" element={<Locations />} />
+                  <Route path="/location/:id" element={<LocationDetails />} />
 
-              {/* Weitere Seiten */}
-              <Route path="/missions" element={<Missions />} />
-              <Route path="/quiz" element={<Quiz />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/shop" element={<Shop />} />
+                  {/* Additional pages */}
+                  <Route path="/missions" element={<Missions />} />
+                  <Route path="/quiz" element={<Quiz />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/shop" element={<Shop />} />
 
-              {/* Für alle nicht gefundenen Routen - Fallback auf Home */}
-              <Route path="*" element={<Home />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+                  {/* Fallback for not found routes */}
+                  <Route path="*" element={<Home />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </ErrorBoundary>
       </UserProvider>
     </ThemeProvider>
   );

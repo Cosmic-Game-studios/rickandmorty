@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useMemo } from 'react';
+import PropTypes from 'prop-types';
 import { UserContext } from '../context/UserContext';
 
 function CharacterCard({ character, unlocked }) {
@@ -50,5 +51,18 @@ function CharacterCard({ character, unlocked }) {
     </div>
   );
 }
+
+CharacterCard.propTypes = {
+  character: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    requiredLevel: PropTypes.number,
+    baseSpeed: PropTypes.number,
+    characterLevel: PropTypes.number,
+    rarity: PropTypes.number
+  }).isRequired,
+  unlocked: PropTypes.bool
+};
 
 export default React.memo(CharacterCard);

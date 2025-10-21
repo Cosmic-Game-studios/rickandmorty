@@ -169,13 +169,13 @@ function Quiz() {
   // Fetch quiz questions from JSON file
   useEffect(() => {
     if (!language) return;
-    
+
     setLoading(true);
     setError('');
-    
+
     // Determine which JSON file to load based on language
     const quizFile = language === 'en' ? '/quizData.en.json' : '/quizData.de.json';
-    
+
     fetch(quizFile)
       .then(response => {
         if (!response.ok) {
@@ -190,7 +190,7 @@ function Quiz() {
           difficulty: determineQuestionDifficulty(q),
           points: getPointsForDifficulty(determineQuestionDifficulty(q))
         }));
-        
+
         setAllQuestions(processedQuestions);
         selectQuizQuestions(processedQuestions, difficultyLevel);
         setLoading(false);
@@ -200,6 +200,7 @@ function Quiz() {
         setError(err.message || 'Error loading quiz questions');
         setLoading(false);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
   // Save language preference to localStorage
@@ -245,6 +246,7 @@ function Quiz() {
     if (allQuestions.length > 0) {
       selectQuizQuestions(allQuestions, difficultyLevel);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [difficultyLevel]);
 
   // Handle difficulty change

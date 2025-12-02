@@ -1,18 +1,14 @@
 /* ===================================================================== */
-/* Profile Page Styles - Mit Scoping auf die Profile-Komponente           */
+/* Profile Page Styles - Modern Interdimensional Design 2.0              */
 /* ===================================================================== */
 
-/* Profile Page Container - Hauptcontainer, der alle anderen Elemente umschließt */
+/* Profile Page Container */
 .profile-page {
-  padding: var(--space-lg);
   max-width: 1200px;
   margin: 0 auto;
-  color: var(--text-primary);
-  background: var(--bg-section);
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-dark);
+  padding: var(--space-xl);
+  min-height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 
 .profile-page::before {
@@ -21,26 +17,40 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: var(--gradient-header);
-  z-index: 1;
+  height: 300px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Profile Header - speziell für die Profilseite */
+/* Profile Header */
 .profile-page .profile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  z-index: 1;
 }
 
-.profile-page .profile-header h2 {
+.profile-page .profile-header h2,
+.profile-page > h2 {
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: var(--accent-color);
+  font-size: var(--text-4xl);
   margin: 0;
-  text-align: center;
-  text-shadow: var(--shadow-text);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-secondary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+  text-shadow: none;
+  filter: drop-shadow(0 0 30px var(--color-primary-glow));
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
 }
 
 .profile-page .settings-link {
@@ -48,38 +58,53 @@
   color: var(--text-secondary);
   text-decoration: none;
   padding: var(--space-sm);
-  border-radius: 50%;
-  transition: background-color var(--transition-duration);
+  border-radius: var(--radius-full);
+  background: var(--bg-glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
 }
 
 .profile-page .settings-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: var(--bg-glass-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: rotate(90deg);
 }
 
-/* Legacy h2 für Abwärtskompatibilität */
-.profile-page > h2 {
+/* Section Headers */
+.profile-page h3,
+.profile-page .section-header h3 {
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: var(--accent-color);
-  margin-bottom: var(--space-lg);
-  text-align: center;
-  text-shadow: var(--shadow-text);
-}
-
-/* Abschnittsüberschriften */
-.profile-page h3 {
-  font-family: var(--font-display);
-  color: var(--accent-color);
+  color: var(--color-secondary);
   margin: var(--space-xl) 0 var(--space-md);
-  font-size: 1.6rem;
-  text-shadow: var(--shadow-text);
+  font-size: var(--text-2xl);
+  text-shadow: 0 0 20px var(--color-secondary-glow);
 }
 
-/* Section Container und Header */
+/* Section Container */
 .profile-page .section {
-  background: var(--bg-section);
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-lg);
   margin-bottom: var(--space-xl);
   position: relative;
+  overflow: hidden;
+}
+
+.profile-page .section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-accent), transparent);
 }
 
 .profile-page .section-header {
@@ -89,64 +114,69 @@
   margin-bottom: var(--space-md);
 }
 
-.profile-page .section-header h3 {
-  font-family: var(--font-display);
-  color: var(--accent-color);
-  margin: 0;
-  font-size: 1.6rem;
-  text-shadow: var(--shadow-text);
-}
-
 .profile-page .section-description {
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: var(--space-md);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: var(--text-sm);
+  line-height: 1.6;
 }
 
 .profile-page .help-button {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--bg-glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
   cursor: pointer;
   color: var(--text-secondary);
+  transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-page .help-button:hover {
+  background: var(--color-primary);
+  color: var(--bg-deep-space);
+  border-color: var(--color-primary);
 }
 
 .profile-page .collection-count {
-  background-color: var(--bg-card);
+  background: var(--bg-glass);
   color: var(--text-secondary);
   padding: var(--space-xs) var(--space-md);
-  border-radius: 15px;
-  font-size: 0.9rem;
+  border-radius: var(--radius-xl);
+  font-size: var(--text-sm);
   font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Profile Stats Cards */
 .profile-page .profile-info {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-lg);
-  justify-content: center;
   margin-bottom: var(--space-xl);
+  position: relative;
+  z-index: 1;
 }
 
 .profile-page .profile-card {
-  background: var(--bg-light);
+  background: var(--gradient-card);
   padding: var(--space-lg);
-  border-radius: var(--border-radius-md);
-  width: 220px;
+  border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-dark);
-  transition: transform var(--transition-duration) var(--transition-timing);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: var(--transition-base);
   position: relative;
   overflow: hidden;
 }
 
 .profile-page .profile-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .profile-page .profile-card::before {
@@ -154,27 +184,45 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 3px;
-  background: var(--gradient-button);
+  background: var(--gradient-portal);
+}
+
+.profile-page .profile-card:nth-child(1)::before {
+  background: var(--gradient-gold);
+}
+
+.profile-page .profile-card:nth-child(2)::before {
+  background: var(--gradient-portal);
+}
+
+.profile-page .profile-card:nth-child(3)::before {
+  background: var(--gradient-success);
 }
 
 .profile-page .profile-card h3 {
   margin: 0 0 var(--space-sm);
-  font-size: 1.3rem;
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  text-shadow: none;
 }
 
 .profile-page .profile-card p,
 .profile-page .card-value {
-  font-size: 1.6rem;
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
   font-weight: bold;
   margin: 0;
-  color: var(--text-primary);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .profile-page .card-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
   margin-top: var(--space-xs);
 }
 
@@ -186,39 +234,57 @@
 }
 
 .profile-page .card-icon {
-  font-size: 1.2rem;
-  color: var(--accent-color);
-  margin-bottom: var(--space-xs);
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
 }
 
 /* Level Progress Bar */
 .profile-page .level-progress-wrapper {
   display: flex;
   align-items: center;
-  margin-top: var(--space-sm);
+  margin-top: var(--space-md);
   width: 100%;
   gap: var(--space-sm);
 }
 
 .profile-page .level-progress-container {
   flex-grow: 1;
-  height: 8px;
-  background: var(--bg-card);
-  border-radius: 4px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
   overflow: hidden;
+  position: relative;
 }
 
 .profile-page .level-progress-bar {
   height: 100%;
-  background: var(--gradient-header);
-  border-radius: 4px;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: var(--radius-md);
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.profile-page .level-progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .profile-page .progress-text {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  width: 40px;
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  font-weight: 600;
+  min-width: 45px;
   text-align: right;
 }
 
@@ -227,69 +293,75 @@
   display: flex;
   overflow-x: auto;
   gap: var(--space-md);
-  padding: var(--space-sm) 0;
+  padding: var(--space-md) var(--space-xs);
   margin-bottom: var(--space-md);
   scrollbar-width: thin;
-  scrollbar-color: var(--accent-color) var(--bg-card);
+  scrollbar-color: var(--color-primary) rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
 }
 
 .profile-page .coin-farm-scroll::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 
 .profile-page .coin-farm-scroll::-webkit-scrollbar-track {
-  background: var(--bg-card);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
 }
 
 .profile-page .coin-farm-scroll::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
-  border-radius: 10px;
+  background: var(--gradient-portal);
+  border-radius: var(--radius-md);
 }
 
 .profile-page .coin-farm-card {
   flex: 0 0 auto;
-  background: var(--bg-light);
+  background: var(--gradient-card);
   padding: var(--space-sm);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--radius-lg);
   cursor: pointer;
   text-align: center;
-  transition: all var(--transition-duration) var(--transition-timing);
-  box-shadow: var(--shadow-light);
-  width: 120px;
+  transition: var(--transition-base);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 130px;
   position: relative;
 }
 
 .profile-page .coin-farm-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-dark);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .profile-page .coin-farm-card.selected {
-  border: 2px solid var(--accent-color);
-  background: rgba(240, 225, 48, 0.1);
+  border: 2px solid var(--color-primary);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(57, 255, 20, 0.1) 100%);
+  box-shadow: var(--shadow-glow-primary);
 }
 
 .profile-page .character-image-container {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto var(--space-xs);
-  border-radius: var(--border-radius-sm);
+  width: 85px;
+  height: 85px;
+  margin: 0 auto var(--space-sm);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .profile-page .coin-farm-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: var(--border-radius-sm);
+  width: 85px;
+  height: 85px;
+  border-radius: var(--radius-md);
   object-fit: cover;
-  margin: 0 auto var(--space-xs);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 auto var(--space-sm);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform var(--transition-slow);
+}
+
+.profile-page .coin-farm-card:hover img {
+  transform: scale(1.1);
 }
 
 .profile-page .character-image-container img {
@@ -300,11 +372,13 @@
 
 .profile-page .coin-farm-card p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 var(--space-xs);
+  color: var(--text-primary);
 }
 
 .profile-page .character-speed {
@@ -312,28 +386,30 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-xs);
-  font-size: 0.85rem;
+  font-size: var(--text-xs);
   color: var(--text-secondary);
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .profile-page .speed-icon {
-  color: var(--accent-color);
+  color: var(--color-accent);
 }
 
 .profile-page .selected-indicator {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: var(--accent-color);
-  color: black;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  background: var(--gradient-portal);
+  color: var(--bg-deep-space);
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  font-size: 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
+  box-shadow: var(--shadow-glow-primary);
 }
 
 /* Unlocked Characters List */
@@ -347,26 +423,27 @@
 .profile-page .unlocked-card {
   display: flex;
   align-items: center;
-  background: var(--bg-light);
+  background: var(--gradient-card);
   padding: var(--space-md);
-  border-radius: var(--border-radius-md);
-  transition: all var(--transition-duration) var(--transition-timing);
-  box-shadow: var(--shadow-light);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-base);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   animation: fadeIn 0.3s ease-out;
 }
 
 .profile-page .unlocked-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-dark);
+  transform: translateX(8px);
+  border-color: rgba(0, 212, 255, 0.3);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .profile-page .unlocked-card img {
   width: 80px;
   height: 80px;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--radius-md);
   margin-right: var(--space-md);
   object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .profile-page .unlocked-card .character-image-container {
@@ -378,14 +455,15 @@
 
 .profile-page .character-level {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: #333;
-  color: white;
-  border-radius: 10px;
-  font-size: 0.7rem;
-  padding: 0.1rem 0.4rem;
-  font-weight: 500;
+  top: -6px;
+  right: -6px;
+  background: var(--gradient-portal);
+  color: var(--bg-deep-space);
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  padding: 2px 8px;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
 }
 
 .profile-page .card-details {
@@ -395,71 +473,76 @@
 
 .profile-page .card-details p {
   margin: var(--space-xs) 0;
-  font-size: inherit;
+  font-size: var(--text-sm);
   font-weight: normal;
+  color: var(--text-secondary);
 }
 
-.profile-page .card-details p:first-child {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--accent-color);
-}
-
+.profile-page .card-details p:first-child,
 .profile-page .card-details h4 {
+  font-weight: 600;
+  font-size: var(--text-lg);
+  color: var(--text-primary);
   margin: 0 0 var(--space-xs) 0;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--accent-color);
 }
 
 .profile-page .character-stats {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
 }
 
 .profile-page .character-stats p {
-  margin: var(--space-xs) 0;
-  font-size: 0.85rem;
+  margin: 0;
+  font-size: var(--text-xs);
+  background: var(--bg-glass);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .profile-page .stat-label {
   font-weight: 500;
   margin-right: var(--space-xs);
-  color: var(--text-secondary);
+  color: var(--text-muted);
 }
 
 .profile-page .stat-value {
-  color: var(--text-primary);
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* Upgrade Button */
 .profile-page .upgrade-button {
   background: var(--gradient-button);
   border: none;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--border-radius-sm);
-  color: #000;
-  font-weight: bold;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  color: var(--bg-deep-space);
+  font-weight: 700;
+  font-size: var(--text-sm);
   cursor: pointer;
-  transition: all var(--transition-duration) var(--transition-timing);
+  transition: var(--transition-base);
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .profile-page .upgrade-button:hover:not(.disabled) {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-primary);
 }
 
 .profile-page .upgrade-button.disabled {
   opacity: 0.5;
   cursor: not-allowed;
-  background: var(--bg-light);
-  color: var(--text-secondary);
+  background: var(--bg-glass);
+  color: var(--text-muted);
 }
 
 .profile-page .coin-cost {
-  font-weight: 500;
+  font-weight: 600;
   margin-left: var(--space-xs);
 }
 
@@ -469,50 +552,51 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-md);
-  margin: var(--space-md) 0;
+  margin: var(--space-lg) 0;
 }
 
 .profile-page .pagination-controls button,
 .profile-page .pagination-button {
-  background: var(--gradient-button);
-  border: none;
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--border-radius-sm);
-  color: #000;
-  font-weight: bold;
+  background: var(--bg-glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-duration) var(--transition-timing);
+  transition: var(--transition-base);
 }
 
 .profile-page .pagination-controls button:hover:not(:disabled),
 .profile-page .pagination-button:hover:not(:disabled) {
-  background: var(--gradient-button-hover);
+  background: var(--gradient-button);
+  color: var(--bg-deep-space);
+  border-color: transparent;
   transform: translateY(-2px);
 }
 
 .profile-page .pagination-controls button:disabled,
 .profile-page .pagination-button:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
-  background: var(--bg-light);
-  color: var(--text-secondary);
 }
 
 .profile-page .pagination-controls span,
 .profile-page .page-indicator {
-  font-weight: bold;
-  color: var(--accent-color);
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: var(--text-sm);
 }
 
 /* Fusion Panel */
 .profile-page .fusion-panel {
-  background: var(--bg-light);
-  padding: var(--space-lg);
-  border-radius: var(--border-radius-md);
+  background: var(--gradient-card);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
   text-align: center;
-  margin: var(--space-lg) auto;
+  margin: var(--space-xl) auto;
   max-width: 800px;
-  box-shadow: var(--shadow-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
   overflow: hidden;
 }
@@ -522,40 +606,44 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--accent-color), #9400d3);
+  background: linear-gradient(90deg, var(--color-primary), #9400d3, var(--color-accent));
 }
 
 /* Empty States */
-.profile-page .empty-state, 
+.profile-page .empty-state,
 .profile-page .empty-collection,
 .profile-page > p {
   text-align: center;
-  padding: var(--space-lg);
-  background: var(--bg-light);
-  border-radius: var(--border-radius-md);
-  margin: var(--space-md) 0;
-  color: var(--text-secondary);
+  padding: var(--space-xl);
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  margin: var(--space-lg) 0;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .profile-page .cta-button,
 .profile-page .hero-button {
   display: inline-block;
   background: var(--gradient-button);
-  color: #000;
+  color: var(--bg-deep-space);
   text-decoration: none;
-  padding: var(--space-sm) var(--space-lg);
-  border-radius: var(--border-radius-sm);
-  font-weight: bold;
+  padding: var(--space-sm) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-weight: 700;
   margin-top: var(--space-md);
-  transition: all var(--transition-duration) var(--transition-timing);
+  transition: var(--transition-base);
+  text-transform: uppercase;
+  font-size: var(--text-sm);
 }
 
 .profile-page .cta-button:hover,
 .profile-page .hero-button:hover {
   background: var(--gradient-button-hover);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-primary);
 }
 
 /* Loading State */
@@ -563,98 +651,115 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: var(--space-lg) 0;
+  justify-content: center;
+  padding: var(--space-3xl);
+  gap: var(--space-md);
 }
 
 .profile-page .loading-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  border-top: 4px solid var(--accent-color);
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 212, 255, 0.2);
+  border-radius: var(--radius-full);
+  border-top-color: var(--color-primary);
   animation: spin 1s linear infinite;
-  margin-bottom: var(--space-sm);
 }
 
 /* Error State */
 .profile-page .error-state {
   text-align: center;
-  padding: var(--space-lg);
-  color: #f44336;
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.1) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(244, 67, 54, 0.3);
   margin: var(--space-lg) 0;
 }
 
+.profile-page .error-state p {
+  color: var(--color-error);
+  margin-bottom: var(--space-md);
+}
+
 .profile-page .retry-button {
-  background: linear-gradient(90deg, #f44336, #e57373);
+  background: linear-gradient(135deg, #f44336 0%, #e57373 100%);
   color: white;
   border: none;
-  border-radius: var(--border-radius-sm);
-  padding: var(--space-sm) var(--space-lg);
-  font-size: 1rem;
-  font-weight: bold;
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-xl);
+  font-size: var(--text-sm);
+  font-weight: 700;
   cursor: pointer;
-  margin-top: var(--space-md);
-  transition: all var(--transition-duration) var(--transition-timing);
+  transition: var(--transition-base);
+  text-transform: uppercase;
 }
 
 .profile-page .retry-button:hover {
-  background: linear-gradient(90deg, #e57373, #f44336);
+  background: linear-gradient(135deg, #e57373 0%, #f44336 100%);
   transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(244, 67, 54, 0.3);
 }
 
-/* Animationen - beschränkt auf die Profile-Seite */
+/* Animations */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive Adjustments - beschränkt auf die Profile-Seite */
+/* Responsive Design */
 @media (max-width: 768px) {
   .profile-page {
     padding: var(--space-md);
   }
-  
+
   .profile-page .profile-info {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-  
+
   .profile-page .profile-card {
-    width: 100%;
-    max-width: 300px;
+    max-width: none;
   }
-  
+
   .profile-page h2,
   .profile-page .profile-header h2 {
-    font-size: 2rem;
+    font-size: var(--text-3xl);
   }
-  
+
   .profile-page h3,
   .profile-page .section-header h3 {
-    font-size: 1.4rem;
+    font-size: var(--text-xl);
   }
-  
+
   .profile-page .unlocked-card {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .profile-page .unlocked-card img,
   .profile-page .unlocked-card .character-image-container {
-    margin: 0 auto var(--space-sm);
+    margin: 0 auto var(--space-md);
   }
-  
+
   .profile-page .card-details {
     text-align: center;
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
   }
-  
+
+  .profile-page .character-stats {
+    justify-content: center;
+  }
+
   .profile-page .upgrade-button {
     width: 100%;
   }
@@ -664,49 +769,53 @@
   .profile-page {
     padding: var(--space-sm);
   }
-  
+
   .profile-page .profile-info {
     gap: var(--space-sm);
   }
-  
+
   .profile-page .profile-card {
     padding: var(--space-md);
-    max-width: 100%;
   }
-  
+
   .profile-page h2,
   .profile-page .profile-header h2 {
-    font-size: 1.8rem;
+    font-size: var(--text-2xl);
     margin-bottom: var(--space-md);
   }
-  
+
   .profile-page h3,
   .profile-page .section-header h3 {
-    font-size: 1.2rem;
+    font-size: var(--text-lg);
     margin: var(--space-lg) 0 var(--space-sm);
   }
-  
+
   .profile-page .coin-farm-card {
-    width: 100px;
+    width: 110px;
+    padding: var(--space-xs);
   }
-  
+
   .profile-page .coin-farm-card img,
-  .profile-page .coin-farm-card .character-image-container {
+  .profile-page .character-image-container {
     width: 70px;
     height: 70px;
   }
-  
+
   .profile-page .pagination-controls {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: var(--space-sm);
   }
-  
+
   .profile-page .card-details p {
-    font-size: 0.9rem;
+    font-size: var(--text-sm);
   }
-  
+
   .profile-page .card-details p:first-child,
   .profile-page .card-details h4 {
-    font-size: 1rem;
+    font-size: var(--text-base);
+  }
+
+  .profile-page .section {
+    padding: var(--space-md);
   }
 }
